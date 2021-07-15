@@ -1,0 +1,140 @@
+/*---BASE---*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: sans-serif;
+  line-height: 1; }
+
+img {
+  max-width: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+input:focus {
+  outline: 0 none; }
+
+textarea:focus {
+  outline: 0 none; }
+
+/*---LAYOUTS---*/
+.wrapper {
+  padding: 0 32px;
+  margin: 0 auto; }
+
+.sign {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+  .sign > img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover; }
+  .sign .inner_section {
+    margin-top: -40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px 16px 0px 0px;
+    background-color: #fff;
+    height: inherit; }
+    .sign .inner_section .house_icon {
+      margin-top: -24px;
+      margin-bottom: 32px; }
+    .sign .inner_section h1 {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 150%;
+      margin-bottom: 19px; }
+    .sign .inner_section form {
+      display: flex;
+      flex-direction: column; }
+      .sign .inner_section form input[type='tel'], .sign .inner_section form input[type='password'], .sign .inner_section form input[type='text'] {
+        border-color: #F1F2F4;
+        border-width: 0 0 1px 0;
+        font-family: 'Noto Sans SC', sans-serif;
+        font-size: 16px;
+        line-height: 160%;
+        color: #001730;
+        padding: 9.5px 0 16.5px 16px;
+        width: 100%; }
+        .sign .inner_section form input[type='tel']::placeholder, .sign .inner_section form input[type='password']::placeholder, .sign .inner_section form input[type='text']::placeholder {
+          color: #001730; }
+        .sign .inner_section form input[type='tel'].phone, .sign .inner_section form input[type='password'].phone, .sign .inner_section form input[type='text'].phone {
+          margin-bottom: 19px; }
+      .sign .inner_section form .password_block {
+        display: flex;
+        position: relative;
+        margin-bottom: 4px; }
+        .sign .inner_section form .password_block img {
+          position: absolute;
+          right: 16px;
+          top: 10.5px;
+          cursor: pointer; }
+      .sign .inner_section form .forgot_password {
+        color: #27C4BC;
+        font-size: 12px;
+        line-height: 160%;
+        font-family: 'Noto Sans SC', sans-serif;
+        margin-left: 16px;
+        margin-bottom: 77px;
+        text-decoration: none;
+        width: fit-content; }
+      .sign .inner_section form button {
+        background: #D11241;
+        box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        font-family: 'Noto Sans SC', sans-serif;
+        padding: 10px 0;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        cursor: pointer; }

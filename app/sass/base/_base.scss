@@ -59,3 +59,11 @@ img {
 body {
 	font-family: 'Open Sans', sans-serif;
 }
+
+input:focus {
+	outline: 0 none;
+}
+
+textarea:focus {
+	outline: 0 none;
+}
