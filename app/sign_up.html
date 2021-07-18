@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign In</title>
-    <link rel="stylesheet" href="./css/sign_in.css">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/sign_up.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -15,15 +15,20 @@
         <img src='./img/started_bg.png'>
         <div class="wrapper">
             <a href='#' class='home'><img class='house_icon' src='./img/svg/house.svg'></a>
-            <h1>Welcome Back</h1>
+            <h1>New account</h1>
             <form action='#'>
+                <input class='name' type='text' placeholder='Full Name'>
                 <input class='phone' type='tel' placeholder='Phone'>
+                <input class='email' type='email' placeholder='Email'>
                 <div class="password_block">
                     <input class='password' type='password' placeholder='Password'>
                     <img id='showPassword' src='./img/svg/eye.svg'>
                 </div>
-                <a class='forgot_password' href='#'>Forgot Password?</a>
-                <button type='submit'>Sign In</button>
+                <div class="password_block">
+                    <input class='password password-repeat' type='password' placeholder='Repeat Password'>
+                    <img id='showPassword' src='./img/svg/eye.svg'>
+                </div>
+                <button type='submit'>Sign Up</button>
             </form>
         </div>
     </section>

@@ -1,0 +1,76 @@
+/*---BASE---*/
+@import './base/_base.scss';
+
+.menu {
+    background-color:  #001730;
+    position: relative;
+    height: 100vh;
+    .close {
+        position: absolute;
+        top: 17px;
+        left: 29px;
+        display: flex;
+    }
+    .wrapper {
+        padding: 0 24px;
+        header {
+            padding: 80px 0 32px;
+            border-bottom: 1px solid rgba(255,255,255,.5);
+            display: flex;
+            align-items: center;
+            .image {
+                margin-right: 8px;
+                img {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 12px;
+                    
+                }
+            }
+            .user-info {
+                .name {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 28px;
+                    letter-spacing: 0.15px;
+                    color: #FFFFFF;
+                    margin-bottom: 4px;
+                }
+                .position {
+                    display: flex;
+                    img {
+                        margin-right: 5.33px;
+                    }
+                    p {
+                        color: #D11241;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.005em;
+                    }
+                }
+            }
+        }
+        .links {
+            padding-top: 24px;
+            .link {
+                padding: 12px 0;
+                display: flex;
+                height: 26px;
+                align-items: center;
+                .icon {
+                    margin-right: 18px;
+                }
+                a {
+                    text-decoration: unset;
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #FFFFFF;
+                }
+                &:last-child {
+                    position: absolute;
+                    bottom: 42.76px;
+                }
+            }
+        }
+    }
+}

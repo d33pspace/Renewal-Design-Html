@@ -1,0 +1,118 @@
+/*---BASE---*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #1F1F2D;
+  line-height: 1; }
+
+img {
+  max-width: 100%; }
+
+input:focus {
+  outline: 0 none; }
+
+textarea:focus {
+  outline: 0 none; }
+
+.menu {
+  background-color: #001730;
+  position: relative;
+  height: 100vh; }
+  .menu .close {
+    position: absolute;
+    top: 17px;
+    left: 29px;
+    display: flex; }
+  .menu .wrapper {
+    padding: 0 24px; }
+    .menu .wrapper header {
+      padding: 80px 0 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: center; }
+      .menu .wrapper header .image {
+        margin-right: 8px; }
+        .menu .wrapper header .image img {
+          width: 56px;
+          height: 56px;
+          border-radius: 12px; }
+      .menu .wrapper header .user-info .name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.15px;
+        color: #FFFFFF;
+        margin-bottom: 4px; }
+      .menu .wrapper header .user-info .position {
+        display: flex; }
+        .menu .wrapper header .user-info .position img {
+          margin-right: 5.33px; }
+        .menu .wrapper header .user-info .position p {
+          color: #D11241;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.005em; }
+    .menu .wrapper .links {
+      padding-top: 24px; }
+      .menu .wrapper .links .link {
+        padding: 12px 0;
+        display: flex;
+        height: 26px;
+        align-items: center; }
+        .menu .wrapper .links .link .icon {
+          margin-right: 18px; }
+        .menu .wrapper .links .link a {
+          text-decoration: unset;
+          font-size: 16px;
+          line-height: 160%;
+          color: #FFFFFF; }
+        .menu .wrapper .links .link:last-child {
+          position: absolute;
+          bottom: 42.76px; }

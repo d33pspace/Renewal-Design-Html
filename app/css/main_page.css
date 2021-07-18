@@ -1,0 +1,218 @@
+/*---BASE---*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #1F1F2D;
+  line-height: 1; }
+
+img {
+  max-width: 100%; }
+
+input:focus {
+  outline: 0 none; }
+
+textarea:focus {
+  outline: 0 none; }
+
+.wrapper {
+  padding: 0 16px; }
+
+header {
+  background-color: #001730; }
+  header .profile_section {
+    padding: 24px 0 8px;
+    position: relative; }
+    header .profile_section .profile {
+      display: flex;
+      align-items: flex-end; }
+      header .profile_section .profile .image {
+        margin-right: 8px; }
+        header .profile_section .profile .image img {
+          width: 44px;
+          height: 44px;
+          border-radius: 12px; }
+      header .profile_section .profile .position {
+        display: flex; }
+        header .profile_section .profile .position img {
+          margin-right: 5.33px; }
+        header .profile_section .profile .position p {
+          color: #D11241;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.005em; }
+    header .profile_section .burger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      bottom: 20px; }
+      header .profile_section .burger .line {
+        width: 18px;
+        height: 2px;
+        background-color: #DADADA; }
+        header .profile_section .burger .line:not(:last-child) {
+          margin-bottom: 3px; }
+  header .total_section {
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+    header .total_section .total .title {
+      color: #848790;
+      font-size: 12px;
+      line-height: 160%; }
+    header .total_section .total .total_guests {
+      font-size: 24px;
+      line-height: 35px;
+      color: #fff;
+      font-weight: 700; }
+    header .total_section .serve_button {
+      text-decoration: unset;
+      padding: 10px 22px 10px 46px;
+      border: 2px solid #D11241;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      position: relative;
+      transition: .3s; }
+      header .total_section .serve_button:before {
+        content: '';
+        position: absolute;
+        background: url("../img/svg/serve.svg");
+        width: 16px;
+        height: 18px;
+        left: 18px; }
+      header .total_section .serve_button:hover {
+        background-color: #D11241; }
+
+main .list .title {
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 160%;
+  color: #848790;
+  text-transform: uppercase; }
+
+main .list .card {
+  padding: 9px 0;
+  display: flex;
+  justify-content: space-between; }
+  main .list .card.empty .coma, main .list .card.empty .city, main .list .card.empty .serve_icon {
+    display: none; }
+  main .list .card .user_info {
+    display: flex; }
+    main .list .card .user_info.unactive {
+      opacity: .5; }
+    main .list .card .user_info .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      margin-right: 16px; }
+    main .list .card .user_info .info_details {
+      display: flex;
+      flex-direction: column; }
+      main .list .card .user_info .info_details .name {
+        color: #1F1F2D;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 160%;
+        display: flex; }
+        main .list .card .user_info .info_details .name .hieroglyph {
+          margin-right: 4px; }
+        main .list .card .user_info .info_details .name .transcription {
+          margin-left: 4px; }
+      main .list .card .user_info .info_details .age_city {
+        font-size: 14px;
+        line-height: 20px;
+        color: #001730;
+        letter-spacing: 0.005em;
+        display: flex; }
+        main .list .card .user_info .info_details .age_city .come {
+          margin-right: 3px; }
+  main .list .card .time {
+    display: flex;
+    flex-direction: column; }
+    main .list .card .time .remain_time {
+      margin-bottom: 6px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 160%;
+      color: #27C4BC; }
+      main .list .card .time .remain_time.waiting {
+        color: #FFB946; }
+      main .list .card .time .remain_time.bold {
+        font-weight: bold; }
+      main .list .card .time .remain_time.unactive {
+        color: #848790; }
+    main .list .card .time .serve_icon {
+      width: 16px;
+      height: 18px;
+      margin: 0 auto; }
+      main .list .card .time .serve_icon.active {
+        filter: brightness(0) saturate(100%) invert(14%) sepia(74%) saturate(4474%) hue-rotate(335deg) brightness(96%) contrast(98%); }
+      main .list .card .time .serve_icon.unactive {
+        filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%); }
+
+.chat {
+  padding: 21px 18px;
+  background-color: #D11241;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 24px;
+  display: flex;
+  width: fit-content;
+  position: fixed;
+  right: 16px;
+  bottom: 17px; }
+  .chat img {
+    width: 20px;
+    height: 14px; }
