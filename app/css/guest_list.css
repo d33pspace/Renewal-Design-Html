@@ -1,0 +1,174 @@
+/*---BASE---*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #1F1F2D;
+  line-height: 1; }
+
+img {
+  max-width: 100%; }
+
+input:focus {
+  outline: 0 none; }
+
+textarea:focus {
+  outline: 0 none; }
+
+.wrapper {
+  padding: 0 16px; }
+
+header {
+  padding: 20px 0; }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between; }
+    header .wrapper a {
+      display: flex; }
+
+main .search_block h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+  color: #001730;
+  padding-bottom: 24px; }
+
+main .search_block .search_form {
+  position: relative; }
+  main .search_block .search_form:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    background: url("../img/svg/search.svg"); }
+  main .search_block .search_form input {
+    padding: 11px 12px 11px 44px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #848790;
+    position: relative;
+    border: 1px solid #F1F2F4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%; }
+    main .search_block .search_form input::placeholder {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.005em;
+      color: #848790; }
+
+main .guest_block .title {
+  padding: 20px 0 12px;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 160%;
+  color: #848790;
+  text-transform: uppercase; }
+
+main .guest_block .card {
+  padding: 9px 0;
+  display: flex;
+  justify-content: space-between; }
+  main .guest_block .card .user_info {
+    display: flex; }
+    main .guest_block .card .user_info .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      margin-right: 16px; }
+    main .guest_block .card .user_info .info_details {
+      display: flex;
+      flex-direction: column; }
+      main .guest_block .card .user_info .info_details .name {
+        color: #1F1F2D;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 160%;
+        display: flex; }
+        main .guest_block .card .user_info .info_details .name .hieroglyph {
+          margin-right: 4px; }
+        main .guest_block .card .user_info .info_details .name .transcription {
+          margin-left: 4px; }
+      main .guest_block .card .user_info .info_details .age_city {
+        font-size: 14px;
+        line-height: 20px;
+        color: #001730;
+        letter-spacing: 0.005em;
+        display: flex; }
+        main .guest_block .card .user_info .info_details .age_city .coma {
+          margin-right: 3px; }
+  main .guest_block .card .order_date {
+    display: flex;
+    flex-direction: column; }
+    main .guest_block .card .order_date .date {
+      margin-bottom: 10px;
+      color: #848790;
+      font-size: 12px;
+      line-height: 160%; }
+    main .guest_block .card .order_date .link_to_order {
+      margin-left: auto;
+      margin-right: 15px;
+      display: flex; }
+
+.add {
+  padding: 21px 21px;
+  background-color: #D11241;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 24px;
+  display: flex;
+  width: fit-content;
+  position: fixed;
+  right: 16px;
+  bottom: 17px; }
+  .add img {
+    width: 14px;
+    height: 14px; }

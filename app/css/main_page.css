@@ -177,7 +177,7 @@ main .list .card {
         color: #001730;
         letter-spacing: 0.005em;
         display: flex; }
-        main .list .card .user_info .info_details .age_city .come {
+        main .list .card .user_info .info_details .age_city .coma {
           margin-right: 3px; }
   main .list .card .time {
     display: flex;
