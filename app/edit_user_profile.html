@@ -21,26 +21,65 @@
             <h1 class='title'>Account</h1>
             <form action='#' class='account_form'>
                 <img class='avatar' src='./img/user_avatar_main.png'>
-                <a href='#'>Upload Image</a>
-                <div class="input_name">
+                <a class='upload_image' href='#'>Upload Image</a>
+                <div class="input_name input_block">
                     <label for='name'>Name</label>
                     <input id='name' placeholder='Cheng Pengfei' type='text'>
                 </div>
-                <div class="input_position">
+                <div class="input_position input_block">
                     <img src='./img/svg/heart.svg'>
                     <label for='position'>Role</label>
                     <input id='position' placeholder='Volunteer' type='text'>
                 </div>
-                <div class="input_phone">
+                <div class="input_phone input_block">
                     <label for='phone'>Phone</label>
                     <input id='phone' placeholder='+86 13918580484' type='tel'>
                 </div>
-                <div class="input_email">
-                    <label for='phone'>Email</label>
-                    <input id='phone' placeholder='cheng_pen@gmail.com' type='email'>
+                <div class="input_email input_block">
+                    <label for='email'>Email</label>
+                    <input id='email' placeholder='cheng_pen@gmail.com' type='email'>
+                </div>
+            </form>
+            <div class="password_block">
+                <h4>Password</h4>
+                <a id='password_change' href='#'>Change</a>
+            </div>
+            <div class="delete_profile">
+                <a id='delete_profile' href='#'>Delete my profile</a>
+            </div>
+        </div>
+    </main>
+    <section class="password_change overlay">
+        <div class="wrapper">
+            <a href='#' class='home'><img class='house_icon' src='./img/svg/house.svg'></a>
+            <form>
+                <h4 class='title'>Change password</h4>
+                <div class="password_block">
+                    <input class='password_new' type='password' placeholder='New Password'>
+                    <img class='showPassword' src='./img/svg/eye.svg'>
+                </div>
+                <div class="password_block">
+                    <input class='password_current' type='password' placeholder='Password'>
+                    <img class='showPassword' src='./img/svg/eye.svg'>
+                </div>
+                <div class="submit_block button_block">
+                    <button class='cancel'>Cancel</button>
+                    <button class='proceed submit' type='submit'>Save</button>
                 </div>
             </form>
         </div>
-    </main>
-
+    </section>
+    <section class="delete_profile overlay">
+        <div class="wrapper">
+            <h4 class="title">Delete your profile?</h4>
+            <p class='text'>Are you sure you want to delete your profile? It will be permanently deleted from the database.</p>
+            <div class="delete_block button_block">
+                <button class='cancel'>Cancel</button>
+                <button class='proceed delete' type='submit'>Save</button>
+            </div>
+        </div>
+    </section>
+    <div class='done' href='#'><img src='./img/svg/check.svg'></div>
+    <script defer src="./js/show_password.js"></script>
+    <script defer src="./js/change_password_toggle.js"></script>
 </body>

@@ -19,8 +19,276 @@ header {
             line-height: 20px;
             letter-spacing: 0.005em;
             color: #27C4BC;
-            text-decoration: none;
         }
     }
 }
 
+main {
+    .title {
+        padding: 8px 0;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 35px;
+        color: #001730;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border: 1px solid #DDDFE4;
+            box-sizing: border-box;
+            border-radius: 32px;
+            margin-bottom: 16px;
+        }
+        .upload_image {
+            margin-bottom: 16px;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 26px;
+            color: #27C4BC;
+        }
+        .input_block {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+            padding-top: 3px;
+            label {
+                font-size: 12px;
+                line-height: 160%;
+                color: #848790;
+                padding-left: 16px;
+            }
+            input {
+                font-family: 'Noto Sans SC', sans-serif;
+                padding-left: 16px;
+                padding-bottom: 7px;
+                border-color: #27C4BC;
+                border-style: solid;
+                border-width: 0 0 1px 0;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 26px;
+                color: #001730;
+                &::placeholder {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #001730;
+                }
+            }
+            &.input_position {
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 18px;
+                    top: 13.5px;
+                    width: 20px;
+                    height: 18px;
+                }
+                label, input {
+                    padding-left: 52px;
+                }
+            }
+        }
+    }
+    .password_block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        h4 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 0.15px;
+            color: #000000;
+        }
+        a {
+            font-size: 16px;
+            line-height: 26px;
+            color: #27C4BC;
+        }
+    }
+    .delete_profile {
+        margin-bottom: 77px;
+        a {
+            font-size: 16px;
+            line-height: 26px;
+            color: #27C4BC;
+        }
+    }
+}
+
+.overlay {
+    background-color: rgba(0, 23, 48, 0.4);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    transition: .3s;
+    z-index: -1;
+    opacity: 0;
+    &.active {
+        z-index: 9;
+        opacity: 1;
+    }
+}
+
+.button_block {
+    display: flex;
+    justify-content: space-between;
+    button {
+        width: calc(50% - 5px);
+        padding: 8px 0;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 20px;
+        outline: unset;
+        cursor: pointer;
+        &.cancel {
+            border: 1px solid #F1F2F4;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #848790;
+            background: transparent;
+        }
+        &.proceed {
+            background: #D11241;
+            box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            border: unset;
+        }
+    }
+}
+
+.password_change {
+    align-items: flex-end;
+    .wrapper {
+        padding: 56px 32px 64px 32px;
+        background-color: #fff;
+        width: 100%;
+        position: relative;
+        border-radius: 16px 16px 0px 0px;
+        transition: .3s;
+        transform: translateY(calc(100% + 24px));
+        &.active {
+            transform: translateY(0);
+        }
+        .home {
+            position: absolute;
+            top: -24px;
+        }
+        form {
+            .title {
+                margin-bottom: 16px;
+                font-size: 24px;
+                line-height: 150%;
+                color: #1F1F2D;
+            }
+            .password_block {
+                display: flex;
+                position: relative;
+                margin-bottom: 16px;
+                input {
+                    border-color: #F1F2F4;
+                    border-width: 0 0 1px 0;
+                    font-family: 'Noto Sans SC', sans-serif;
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #001730;
+                    padding: 9.5px 0 16.5px 16px;
+                    width: -webkit-fill-available;
+                }
+                img {
+                    position: absolute;
+                    right: 16px;
+                    top: 10.5px;
+                    cursor: pointer;
+                }
+            }
+            .submit_block {
+                margin-top: 100px;
+            }
+        }
+    }
+}
+
+.delete_profile {
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    .wrapper {
+        padding: 24px;
+        background: #fff;
+        box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.16);
+        border-radius: 8px;
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0.15px;
+            color: #001730;
+            margin-bottom: 16px;
+        }
+        .text {
+            padding: 8px 0;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.005em;
+            color: #848790;
+        }
+        .delete_block {
+            margin-top: 16px;
+        }
+    }
+}
+
+.done {
+    padding: 21px 19px;
+    background-color: #D11241;
+    box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+    border-radius: 24px;
+    display: flex;
+    width: fit-content;
+    position: fixed;
+    right: 16px;
+    bottom: 17px;
+    opacity: 0;
+    transition: .3s;
+    &.active {
+        animation-duration: 5s;
+        animation-name: done;
+    }
+    img {
+        width: 18px;
+        height: 14px;
+        
+    }
+}
+
+.delete_profile {
+
+}
+
+@keyframes done {
+    0% {
+      opacity: 0
+    }
+
+    30% {
+        opacity: 1;
+    }
+  
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+  }

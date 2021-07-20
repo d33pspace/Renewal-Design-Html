@@ -1,4 +1,4 @@
-let showPass = document.querySelectorAll('#showPassword')
+let showPass = document.querySelectorAll('.showPassword')
 let pass = document.querySelectorAll('.password')
 
 showPass.forEach((item) => {

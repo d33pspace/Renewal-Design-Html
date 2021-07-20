@@ -61,6 +61,9 @@ input:focus {
 textarea:focus {
   outline: 0 none; }
 
+a {
+  text-decoration: unset; }
+
 .wrapper {
   padding: 0 16px; }
 
