@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Guest</title>
+    <link rel="stylesheet" href="./css/new_guest.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <h1 class="title">New Guest</h1>
+            <div class="avatar_block">
+                <img class='avatar' src='./img/empty_big.png' alt='avatar'>
+                <a href='#'><img class='icon' src='./img/svg/photo_camera.svg'></a>
+            </div>
+            <form action='#'>
+                <input required type="text" class="name" placeholder='Name in Hanzi'>
+                <input required type="text" class="pinyin" placeholder='Pinyin'>
+                <input required type='text' class='birthdate' placeholder='Birthdate'>
+                <div class="dropdown gender">
+                    <div class="current"><p>Gender</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
+                    <div class="list">
+                        <div class="option">Male</div>
+                        <div class="option">Female</div>
+                    </div>
+                </div>
+                <div class="dropdown province">
+                    <div class="current"><p>Province</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
+                    <div class="list">
+                        <div class="option">Male</div>
+                        <div class="option">Female</div>
+                    </div>
+                </div>
+                <input required type='tel' class='phone' placeholder='Guest Phone'>
+                <input required type='text' class='id' placeholder='Giest ID'>
+            </form>
+        </div>
+    </main>
+    <script defer src="./js/guest_dropdown.js"></script>
+</body>
