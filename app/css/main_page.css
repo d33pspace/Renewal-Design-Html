@@ -65,10 +65,12 @@ a {
   text-decoration: unset; }
 
 @media (min-width: 768px) {
+  body {
+    background-color: #a6a6a6; }
   .desktop-wrapper {
-    border-color: #ccc;
-    border-style: solid;
-    border-width: 0 1px 1px 1px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #000;
     max-width: 768px;
     margin: 0 auto; } }
 
@@ -224,6 +226,9 @@ main .list .card {
   position: fixed;
   right: 16px;
   bottom: 17px; }
+  @media (min-width: 768px) {
+    .chat {
+      right: calc(((100vw - 768px)/2) + 16px); } }
   .chat img {
     width: 20px;
     height: 14px; }

@@ -200,6 +200,9 @@ main {
     position: fixed;
     right: 16px;
     bottom: 17px;
+    @media(min-width: 768px) {
+        right: calc(((100vw - 768px)/2) + 16px)
+    }
     img {
         width: 20px;
         height: 14px;
