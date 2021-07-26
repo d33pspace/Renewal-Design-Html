@@ -22,7 +22,7 @@ input.onkeypress = (e) => {
     }
 }
 
-form.onsubmit = (e) => {s
+form.onsubmit = (e) => {
     toggleReview ()
 }
 
