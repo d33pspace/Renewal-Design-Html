@@ -47,7 +47,8 @@ button.forEach((item) => {
 let overlay = document.querySelector('.overlay')
 let menuIcon = document.querySelectorAll('.menu-icon')
 
-proceed.onclick = () => {
+proceed.onclick = (e) => {
+    e.preventDefault()
     overlay.classList.toggle('active')
     menuIcon.forEach((item) => {
         item.classList.toggle('active')

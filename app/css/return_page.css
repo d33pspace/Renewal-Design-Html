@@ -232,7 +232,7 @@ main .laundry {
       border-radius: 16px;
       margin-top: 16px;
       opacity: 0;
-      transition-duration: .1s; }
+      transition-duration: .2s; }
       .overlay .icons .menu-icon.active {
         opacity: 1; }
       .overlay .icons .menu-icon:nth-child(6) {
