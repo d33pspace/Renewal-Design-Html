@@ -186,7 +186,8 @@ main .delete_profile {
   opacity: 0; }
   @media (min-width: 768px) {
     .overlay {
-      width: 768px; } }
+      max-width: 768px;
+      left: calc((100% - 770px)/2 - 8px); } }
   .overlay.active {
     z-index: 9;
     opacity: 1; }
@@ -295,7 +296,7 @@ main .delete_profile {
   transition: .3s; }
   @media (min-width: 768px) {
     .done {
-      right: calc(((100vw - 768px)/2) + 16px); } }
+      right: calc(((100vw - 770px)/2) + 24px); } }
   .done.active {
     animation-duration: 5s;
     animation-name: done; }

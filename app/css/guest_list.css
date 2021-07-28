@@ -184,7 +184,7 @@ main .guest_block .card {
   bottom: 17px; }
   @media (min-width: 768px) {
     .add {
-      right: calc(((100vw - 768px)/2) + 16px); } }
+      right: calc(((100vw - 770px)/2) + 24px); } }
   .add img {
     width: 14px;
     height: 14px; }

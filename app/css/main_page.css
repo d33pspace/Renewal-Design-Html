@@ -228,7 +228,7 @@ main .list .card {
   bottom: 17px; }
   @media (min-width: 768px) {
     .chat {
-      right: calc(((100vw - 768px)/2) + 16px); } }
+      right: calc(((100vw - 770px)/2) + 24px); } }
   .chat img {
     width: 20px;
     height: 14px; }

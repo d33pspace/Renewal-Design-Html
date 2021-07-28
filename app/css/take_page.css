@@ -87,12 +87,10 @@ header {
     header .wrapper a {
       display: flex; }
 
-main .tag {
-  padding: 8px 16px 16px 16px;
-  background: #001730;
-  border-radius: 16px;
-  position: relative; }
-  main .tag:after {
+main #tag {
+  position: relative;
+  padding: 8px 16px 16px 16px; }
+  main #tag:after {
     content: '';
     width: 18px;
     height: 18px;
@@ -100,6 +98,17 @@ main .tag {
     right: 27px;
     bottom: 29px;
     background: url("../img/svg/edit.svg"); }
+  main #tag.submit:after {
+    background: url("../img/svg/submit.svg");
+    right: 27px;
+    bottom: 41px;
+    width: 18px;
+    height: 14px; }
+
+main .tag {
+  background: #001730;
+  border-radius: 16px;
+  margin-bottom: 16px; }
   main .tag label {
     margin: 0 8px 8px 8px;
     font-size: 12px;
@@ -107,99 +116,154 @@ main .tag {
     text-transform: uppercase;
     color: #FFFFFF; }
   main .tag input {
+    margin-top: 8px;
     padding: 8px;
     font-weight: 500;
     font-size: 48px;
     line-height: 100%;
+    height: 48px;
     color: #FFFFFF;
     width: -webkit-fill-available;
     background: transparent;
-    border: unset; }
+    border: unset;
+    border-radius: 8px;
+    transition: .3s; }
+    main .tag input:focus {
+      background-color: rgba(255, 255, 255, 0.1); }
     main .tag input::placeholder {
       font-weight: 500;
       font-size: 48px;
       line-height: 100%;
       color: #FFFFFF; }
 
-main .laundry {
-  margin-top: 28px; }
-  main .laundry .head {
+main .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px 12px 0; }
+  main .head .col-title {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: #848790; }
+
+main .common .card {
+  padding: 5px 0;
+  min-height: 48px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  main .common .card .item {
+    display: flex;
+    align-items: center; }
+    main .common .card .item img {
+      margin-right: 8px; }
+    main .common .card .item .title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #001730;
+      margin-bottom: 4px; }
+    main .common .card .item .name {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.005em;
+      color: #848790; }
+  main .common .card .button {
+    margin-right: 14px;
+    cursor: pointer; }
+
+main .common .common-cards {
+  margin-top: 8px; }
+
+main .search {
+  padding: 8px 0;
+  position: relative; }
+  main .search:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: url("../img/svg/search.svg");
+    left: 15px;
+    top: calc(50% - 9px); }
+  main .search form {
+    display: flex; }
+  main .search input {
+    width: 100%;
+    padding: 12px 44px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #848790;
+    background: #FAFBFC;
+    border: 1px solid #F1F2F4;
+    box-sizing: border-box;
+    border-radius: 8px; }
+    main .search input::placeholder {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.005em;
+      color: #848790; }
+
+main .full-cards .card {
+  margin: 4px 0; }
+  main .full-cards .card .card-heading {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 8px; }
-    main .laundry .head > div {
+    padding: 4px 15px 4px 0; }
+    main .full-cards .card .card-heading.active .arrow {
+      filter: unset;
+      transform: rotateX(180deg); }
+    main .full-cards .card .card-heading.active + .card-content {
+      transform: scaleY(1);
+      height: auto; }
+    main .full-cards .card .card-heading .card-title {
       display: flex;
       align-items: center; }
-    main .laundry .head .checkbox-all {
-      box-sizing: border-box;
-      height: 15px;
-      width: 15px;
-      margin: 2.5px 10.5px 2.5px 2.5px;
-      border: 2px solid #DADADA;
-      border-radius: 2px;
-      cursor: pointer; }
-      main .laundry .head .checkbox-all.active {
-        border: unset;
-        background-image: url("../img/svg/minus.svg"); }
-    main .laundry .head .title, main .laundry .head .trash, main .laundry .head .lost {
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 160%;
-      text-transform: uppercase;
-      color: #848790; }
-    main .laundry .head .lost {
-      margin: 0 8px 0 24px; }
-  main .laundry .body {
-    margin: 8px 0; }
-    main .laundry .body .card {
+      main .full-cards .card .card-heading .card-title .category-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px; }
+      main .full-cards .card .card-heading .card-title .category-name {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #001730; }
+    main .full-cards .card .card-heading .arrow {
+      filter: brightness(0) saturate(100%) invert(94%) sepia(2%) saturate(2051%) hue-rotate(190deg) brightness(80%) contrast(89%);
+      transition: .3s; }
+  main .full-cards .card .card-content {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0s;
+    height: 0; }
+    main .full-cards .card .card-content .item {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin: 5px 0;
-      min-height: 38px; }
-      main .laundry .body .card > * {
-        display: flex;
-        align-items: center; }
-      main .laundry .body .card .checkbox {
-        box-sizing: border-box;
-        height: 15px;
-        width: 15px;
-        margin: 2.5px 10.5px 2.5px 2.5px;
-        border: 2px solid #DADADA;
-        border-radius: 2px;
-        transition: .1s;
-        cursor: pointer; }
-        main .laundry .body .card .checkbox.active {
-          border: unset;
-          background-image: url("../img/svg/yes.svg"); }
-      main .laundry .body .card .item {
-        display: flex;
-        align-items: center; }
-        main .laundry .body .card .item img {
-          margin-right: 8px; }
-        main .laundry .body .card .item .title {
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 100%;
-          text-transform: uppercase;
-          color: #001730;
-          margin-bottom: 4px;
-          text-transform: uppercase; }
-        main .laundry .body .card .item .name {
-          font-size: 14px;
-          line-height: 20px;
-          letter-spacing: 0.005em;
-          color: #848790; }
-      main .laundry .body .card .buttons img {
-        cursor: pointer;
-        transition: .1s; }
-        main .laundry .body .card .buttons img.delete.active {
-          filter: brightness(0) saturate(100%) invert(46%) sepia(47%) saturate(4382%) hue-rotate(329deg) brightness(101%) contrast(95%); }
-        main .laundry .body .card .buttons img.lost {
-          margin: 0 12.5px 0 40px; }
-          main .laundry .body .card .buttons img.lost.active {
-            filter: brightness(0) saturate(100%) invert(70%) sepia(79%) saturate(420%) hue-rotate(339deg) brightness(100%) contrast(106%); }
+      padding: 12px 14px 12px 8px; }
+      main .full-cards .card .card-content .item .name {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.005em;
+        color: #001730; }
+        main .full-cards .card .card-content .item .name span {
+          margin-right: 15px; }
+      main .full-cards .card .card-content .item .date {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.005em;
+        color: #848790; }
+
+main .laundry div.col-title {
+  display: flex; }
+  main .laundry div.col-title p {
+    margin: 0 8px; }
 
 .overlay {
   background: rgba(0, 23, 48, 0.4);

@@ -352,6 +352,10 @@ main .history-container {
   opacity: 0; }
   @media (min-width: 768px) {
     .overlay {
+      max-width: 768px;
+      left: calc((100% - 770px)/2 - 8px); } }
+  @media (min-width: 768px) {
+    .overlay {
       width: 768px; } }
   .overlay.active {
     z-index: 9;
@@ -460,7 +464,7 @@ main .history-container {
   cursor: pointer; }
   @media (min-width: 768px) {
     .make_review {
-      right: calc(((100vw - 768px)/2) + 16px); } }
+      right: calc(((100vw - 770px)/2) + 24px); } }
   .make_review img {
     width: 24px;
     height: 22px; }
