@@ -133,7 +133,7 @@ main {
     opacity: 0;
     @media(min-width: 768px) {
         max-width: 768px;
-        left: calc((100% - 770px)/2 - 8px)
+        left: calc((100% - 770px)/2 + 1px)
     }
     &.active {
         z-index: 9;

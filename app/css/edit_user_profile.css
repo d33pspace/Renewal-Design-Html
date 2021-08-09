@@ -187,7 +187,7 @@ main .delete_profile {
   @media (min-width: 768px) {
     .overlay {
       max-width: 768px;
-      left: calc((100% - 770px)/2 - 8px); } }
+      left: calc((100% - 770px)/2 + 1px); } }
   .overlay.active {
     z-index: 9;
     opacity: 1; }

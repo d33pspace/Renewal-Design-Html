@@ -1,0 +1,111 @@
+/*---BASE---*/
+@import './base/_base.scss';
+
+.wrapper {
+    padding: 0 16px;
+}
+
+header {
+    padding: 28px 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: flex;
+        }
+        .edit {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.005em;
+            color: #27C4BC;
+        }
+    }
+}
+
+main {
+    .title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 35px;
+        color: #001730;
+        margin-bottom: 24px;
+        padding: 0 16px;
+    }
+    .subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.15px;
+        color: #001730;
+        margin-bottom: 7px;
+        padding: 0 16px;
+    }
+    .account {
+        margin-bottom: 31px;
+    }
+    .setting {
+        padding: 9px 16px;
+        border-top: 1px solid #F1F2F4;
+        display: flex;
+        justify-content: space-between;
+        &:last-child {
+            border-bottom: 1px solid #F1F2F4;
+        }
+        .info {
+            display: flex;
+            .avatar {
+                width: 44px;
+                height: 44px;
+                border: 1px solid #DDDFE4;
+                border-radius: 12px;
+            }
+            .desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 16px;
+                .name {
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0.01em;
+                    color: #001730;
+                }
+                .position {
+                    padding-left: 20px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.005em;
+                    color: #D11241;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 12px;
+                        height: 15px;
+                        background: url('../img/svg/position_icon.svg');
+                        left: 2px;
+                        top: calc(50% - 7.5px);
+                    }
+                }
+                .current {
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.005em;
+                    color: #848790;
+                }
+            }
+        }
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            background: #F1F2F4;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+    }
+}
