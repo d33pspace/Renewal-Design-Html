@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reports - Behavior</title>
+    <link rel="stylesheet" href="./css/reports_behavior.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="desktop-wrapper">
+        <header>
+            <div class="wrapper">
+                <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
+                <h3 class="title">Reports</h3>
+                <p class="filter">Show: <span>Today</span></p>
+            </div>
+        </header>
+        <main>
+            <div class="cards">
+                <div class="card">
+                    <p class="title">Tital visits</p>
+                    <h4 class="count">150 people</h4>
+                    <div class="data">
+                        <img src='./img/svg/trends_up.svg'>
+                        <p class='green'>+ 10 people</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Avg Waiting time</p>
+                    <h4 class="count">30 min</h4>
+                    <div class="data">
+                        <img src='./img/svg/watch_red.svg'>
+                        <p class='red'>+ 2 min</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Meals served</p>
+                    <h4 class="count">60 meals</h4>
+                    <div class="data">
+                        <img src='./img/svg/trends_up.svg'>
+                        <p class='green'>+ 23 meals</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Avg Service time</p>
+                    <h4 class="count">45 min</h4>
+                    <div class="data">
+                        <img src='./img/svg/watch_green.svg'>
+                        <p class='green'>- 5min</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Item distributed</p>
+                    <h4 class="count">140 items</h4>
+                    <div class="data">
+                        <img src='./img/svg/trends_up.svg'>
+                        <p class='green'>+ 15 items</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="title">Laundry taken</p>
+                    <h4 class="count">230 items</h4>
+                    <div class="data">
+                        <img src='./img/svg/trends_up.svg'>
+                        <p class='red'>- 40 items</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay">
+        <div id="datepicker"></div>
+        <input type="hidden" id="datepicker_value" value="01.08.2019">
+        <div class="closeoverlay">
+            <button class="cancel">Cancel</button>
+            <button class="done active">Done</button>
+        </div>
+    </div>
+    <script defer src="./js/datepicker.js"></script>
+</body>

@@ -105,7 +105,9 @@ main {
             height: 46px;
             background: #F1F2F4;
             border-radius: 12px;
-            cursor: pointer;
+            &.change {
+                cursor: pointer;
+            }
         }
     }
 }

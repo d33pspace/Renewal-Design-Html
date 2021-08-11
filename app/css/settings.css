@@ -72,7 +72,9 @@ a {
     background-color: #fff;
     border: 1px solid #000;
     max-width: 768px;
-    margin: 0 auto; } }
+    margin: 0 auto;
+    min-height: 100vh;
+    box-sizing: border-box; } }
 
 .wrapper {
   padding: 0 16px; }
@@ -163,5 +165,6 @@ main .setting {
     width: 46px;
     height: 46px;
     background: #F1F2F4;
-    border-radius: 12px;
-    cursor: pointer; }
+    border-radius: 12px; }
+    main .setting .icon.change {
+      cursor: pointer; }

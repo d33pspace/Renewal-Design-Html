@@ -1,0 +1,54 @@
+/*---BASE---*/
+@import './base/_base.scss';
+
+.wrapper {
+    padding: 0 16px;
+}
+
+header {
+    padding: 28px 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: flex;
+        }
+    }
+}
+
+main {
+    .title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 35px;
+        color: #001730;
+        margin-bottom: 24px;
+    }
+    .option {
+        padding: 3.5px 0 7.5px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        &.active .check  {
+            opacity: 1;
+        }
+        .name {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26x;
+            color: #001730;
+        }
+        .name_en {
+            font-size: 12px;
+            line-height: 160%;
+            color: #848790;
+        }
+        .check {
+            margin-right: 3px;
+            opacity: 0;
+            transition: .2s;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+/*---BASE---*/
+@import './base/_base.scss';
+
+.wrapper {
+    padding: 0 16px;
+}
+
+header {
+    padding: 28px 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: flex;
+        }
+    }
+}
+
+main {
+    .title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 35px;
+        color: #001730;
+        margin-bottom: 16px;
+    }
+    .option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 11px 16px 8px;
+        border-bottom: 1px solid #F1F2F4;
+        .name {
+            font-size: 16px;
+            line-height: 160%;
+            color: #001730;
+            .desc {
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.005em;
+                color: #848790;
+            }
+        }
+        .counter {
+            display: flex;
+            .counter_input{
+                margin: 0 12px;
+                box-sizing: border-box;
+                border: unset;
+                width: 40px;
+                height: 40px;
+                background: #F1F2F4;
+                border-radius: 12px;
+                font-size: 16px;
+                line-height: 160%;
+                color: #001730;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .minus, .plus {
+                cursor: pointer;
+            }
+        }
+    }
+}
