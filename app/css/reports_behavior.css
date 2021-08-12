@@ -80,7 +80,7 @@ a {
   padding: 0 16px; }
 
 header {
-  padding: 20px 0 10.5px;
+  padding: 20px 0 10.5px 4px;
   background: #F1F2F4; }
   header .wrapper {
     display: flex;

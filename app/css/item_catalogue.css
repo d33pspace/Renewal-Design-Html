@@ -80,61 +80,45 @@ a {
   padding: 0 16px; }
 
 header {
-  padding: 28px 0 0 4px; }
+  padding: 20px 0 20px 0; }
   header .wrapper {
     display: flex;
-    justify-content: space-between; }
-    header .wrapper a {
-      display: flex; }
-
-main .title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
-  color: #001730;
-  margin-bottom: 24px; }
-
-main .options {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  main .options .option {
-    margin-bottom: 10px;
-    padding: 16px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    cursor: pointer; }
-    main .options .option.w100 {
-      width: 100%;
-      background: #001730; }
-    main .options .option.w50 {
-      width: calc(50% - 5px);
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      height: 150px; }
-    main .options .option.behavior_interview {
-      background: #ED4A75; }
-    main .options .option.items_we_lost {
-      background: #3E9BCF; }
-    main .options .option.unfulfilled_requests {
-      background: #2DB7B7; }
-    main .options .option.items_we_trashed {
-      background: #FFD366; }
-    main .options .option .icon {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 4px;
-      width: 40px;
-      height: 40px;
+    justify-content: space-between;
+    flex-direction: column; }
+    header .wrapper .back {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 8px; }
-    main .options .option .option-title {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 28px;
-      letter-spacing: 0.15px;
-      color: #FFFFFF; }
+      margin-bottom: 24px; }
+    header .wrapper .title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 35px;
+      color: #001730;
+      margin-bottom: 24px;
+      margin-left: 16px; }
+    header .wrapper .search_form {
+      position: relative; }
+      header .wrapper .search_form:after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 9px);
+        left: 15px;
+        width: 18px;
+        height: 18px;
+        background: url("../img/svg/search.svg"); }
+      header .wrapper .search_form input {
+        padding: 11px 12px 11px 44px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.005em;
+        color: #848790;
+        position: relative;
+        border: 1px solid #F1F2F4;
+        border-radius: 8px;
+        box-sizing: border-box;
+        width: 100%;
+        background: #FAFBFC; }
+        header .wrapper .search_form input::placeholder {
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.005em;
+          color: #848790; }

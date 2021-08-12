@@ -114,7 +114,8 @@ main .search_block .search_form {
     border: 1px solid #F1F2F4;
     border-radius: 8px;
     box-sizing: border-box;
-    width: 100%; }
+    width: 100%;
+    background: #FAFBFC; }
     main .search_block .search_form input::placeholder {
       font-size: 14px;
       line-height: 20px;

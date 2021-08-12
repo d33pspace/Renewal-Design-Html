@@ -1,0 +1,160 @@
+/*---BASE---*/
+@import './base/_base.scss';
+
+.wrapper {
+    padding: 0 16px;
+}
+
+header {
+    padding: 20px 0 18.5px 4px;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .back {
+            display: flex;
+            margin-bottom: 24px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 35px;
+            color: #001730;
+            margin-bottom: 10.5px;
+        }
+        .filter {
+            font-size: 12px;
+            line-height: 160%;
+            color: #001730;
+            span {
+                text-decoration-line: underline;
+                color: #13ADAD;
+                cursor: pointer;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+main {
+    .header {
+        padding: 16px 36px 16px 16px;
+        border-bottom: 1px solid #F1F2F4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title {
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 160%;
+            text-transform: uppercase;
+            color: #848790;
+        }
+        .icons {
+            display: flex;
+            align-items: flex-end;
+            .icon {
+                width: 34px;
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 13px;
+                    object-fit: contain;
+                    object-position: bottom;
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(27%) saturate(3817%) hue-rotate(179deg) brightness(107%) contrast(80%);
+                }
+            }
+        }
+    }
+    .cards {
+        .card {
+            transition: .2s;
+            &.active {
+                .expand {
+                    transform: rotateX(180deg);
+                    filter: unset;
+                }
+                .dropdown {
+                    opacity: 1;
+                    max-height: 100%;
+                    transform: scaleY(1);
+                }
+            }
+        }
+        .body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 15px 36px 16px 16px;
+            border-bottom: 1px solid #F1F2F4;
+            .item {
+                display: flex;
+                align-items: center;
+                .name {
+                    margin-left: 8px;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    color: #3A3C40;
+                    width: 105px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .expand {
+                position: absolute;
+                right: 21px;
+                width: 10px;
+                cursor: pointer;
+                transition: transform .2s;
+                filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(6717%) hue-rotate(176deg) brightness(82%) contrast(91%);
+            }
+        }
+        .dropdown {
+            transform: scaleY(0);
+            transition: .2s;
+            transform-origin: top;
+            opacity: 0;
+            max-height: 0;
+            .card-expand {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;  
+                padding: 15px 36px 15px 16px;  
+                background:#FAFBFC;
+                .name {
+                    color: #848790;
+                    font-size: 12px;
+                    height: 14px;
+                    line-height: 100%;
+                    width: 135px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .values p {
+                    letter-spacing: 0.005em;
+                    color: #848790;
+                }
+            }
+        }
+        .values {
+            display: flex;
+            p {
+                width: 34px;
+                text-align: center;
+                font-size: 12px;
+                line-height: 100%;
+                text-align: center;
+                color: #3A3C40;
+                
+                &.alert {
+                    color: #F95557;
+                }
+            }
+        }
+    }
+}
