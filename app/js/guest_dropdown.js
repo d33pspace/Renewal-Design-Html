@@ -7,6 +7,7 @@ dropdown.forEach((item) => {
     }
     item.lastElementChild.childNodes.forEach((e) => {
         e.onclick = () => {
+            item.classList.remove('active')
             item.firstElementChild.classList.add('filled')
             item.lastElementChild.classList.remove('active')
             item.firstElementChild.firstElementChild.innerHTML = e.innerHTML

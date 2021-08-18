@@ -23,22 +23,22 @@
             <form action='#' class='account_form'>
                 <img class='avatar' src='./img/user_avatar_main.png'>
                 <a class='upload_image' href='#'>Upload Image</a>
-                <div class="input_name input_block">
+                <div class="input_name input_block input-wrapper">
                     <label for='name'>Name</label>
-                    <input id='name' placeholder='Cheng Pengfei' type='text'>
+                    <input id='name' type='text'>
                 </div>
-                <div class="input_position input_block">
+                <div class="input_position input_block input-wrapper">
                     <img src='./img/svg/heart.svg'>
                     <label for='position'>Role</label>
-                    <input id='position' placeholder='Volunteer' type='text'>
+                    <input id='position' type='text'>
                 </div>
-                <div class="input_phone input_block">
+                <div class="input_phone input_block input-wrapper">
                     <label for='phone'>Phone</label>
-                    <input id='phone' placeholder='+86 13918580484' type='tel'>
+                    <input id='phone' type='tel'>
                 </div>
-                <div class="input_email input_block">
+                <div class="input_email input_block input-wrapper">
                     <label for='email'>Email</label>
-                    <input id='email' placeholder='cheng_pen@gmail.com' type='email'>
+                    <input id='email' type='email'>
                 </div>
             </form>
             <div class="password_block">
@@ -55,12 +55,14 @@
             <a href='#' class='home'><img class='house_icon' src='./img/svg/house.svg'></a>
             <form>
                 <h4 class='title'>Change password</h4>
-                <div class="password_block">
-                    <input class='password_new' type='password' placeholder='New Password'>
+                <div class="password_block input-wrapper">
+                    <label for='password_new'>New Password</label>
+                    <input id='password_new' class='password_new' type='password'>
                     <img class='showPassword' src='./img/svg/eye.svg'>
                 </div>
-                <div class="password_block">
-                    <input class='password_current' type='password' placeholder='Password'>
+                <div class="password_block input-wrapper">
+                    <label for='password_current'>Password</label>
+                    <input id='password_current' class='password_current' type='password'>
                     <img class='showPassword' src='./img/svg/eye.svg'>
                 </div>
                 <div class="submit_block button_block">
@@ -84,4 +86,5 @@
     </div>
     <script defer src="./js/show_password.js"></script>
     <script defer src="./js/change_password_toggle.js"></script>
+    <script defer src="./js/input.js"></script>
 </body>

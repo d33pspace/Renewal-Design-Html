@@ -64,6 +64,37 @@ textarea:focus {
 a {
   text-decoration: unset; }
 
+.input-wrapper {
+  position: relative;
+  margin-bottom: 16px; }
+  .input-wrapper.active label {
+    font-size: 12px;
+    line-height: 160%;
+    color: #848790;
+    top: 3px; }
+  .input-wrapper.active input {
+    border-color: #13ADAD; }
+  .input-wrapper label {
+    transition: .3s;
+    position: absolute;
+    font-size: 16px;
+    line-height: 160%;
+    color: #001730;
+    left: 16px;
+    top: 12.5px; }
+  .input-wrapper input {
+    transition: .3s;
+    font-family: 'Noto Sans SC', sans-serif;
+    width: 100%;
+    height: 56px;
+    padding: 22px 0 8px 16px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #001730;
+    box-sizing: border-box;
+    border-bottom: 1px solid #F1F2F4;
+    border-width: 0 0 1px 0; }
+
 @media (min-width: 768px) {
   body {
     background-color: #a6a6a6; }
@@ -143,23 +174,25 @@ header {
       header .total_section .serve_button:before {
         content: '';
         position: absolute;
-        background: url("../img/svg/serve.svg");
-        width: 16px;
+        background: url("../img/svg/serve_white.svg");
+        width: 18px;
         height: 18px;
         left: 18px; }
       header .total_section .serve_button:hover {
         background-color: #D11241; }
 
 main .list .title {
-  padding: 12px 0;
+  padding: 12px 16px;
   font-weight: bold;
   font-size: 10px;
   line-height: 160%;
   color: #848790;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  border-bottom: 1px solid #F1F2F4; }
 
 main .list .card {
-  padding: 9px 0;
+  padding: 9px 16px;
+  border-bottom: 1px solid #F1F2F4;
   display: flex;
   justify-content: space-between; }
   main .list .card.empty .coma, main .list .card.empty .city, main .list .card.empty .serve_icon {
@@ -210,8 +243,8 @@ main .list .card {
       main .list .card .time .remain_time.unactive {
         color: #848790; }
     main .list .card .time .serve_icon {
-      width: 16px;
-      height: 18px;
+      width: 24px;
+      height: 24px;
       margin: 0 auto; }
       main .list .card .time .serve_icon.active {
         filter: brightness(0) saturate(100%) invert(14%) sepia(74%) saturate(4474%) hue-rotate(335deg) brightness(96%) contrast(98%); }
@@ -234,3 +267,85 @@ main .list .card {
   .chat img {
     width: 20px;
     height: 14px; }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #001730;
+  z-index: 999;
+  transform: translateY(100%);
+  padding: 20px 24px;
+  transition: .3s;
+  box-sizing: border-box; }
+  .menu.active {
+    transform: translateY(0); }
+  @media (min-width: 768px) {
+    .menu {
+      max-width: 768px;
+      left: calc((100% - 770px)/2 - 8px); } }
+  .menu .close {
+    margin-left: 5px;
+    width: 14px;
+    height: 14px;
+    margin-bottom: 50px;
+    cursor: pointer; }
+  .menu .user {
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 36px; }
+    .menu .user .avatar {
+      height: 56px;
+      width: 56px;
+      border: 1px solid #DDDFE4;
+      box-sizing: border-box;
+      border-radius: 12px;
+      margin-right: 8px; }
+    .menu .user .name {
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.15px;
+      color: #FFFFFF; }
+    .menu .user .position {
+      display: flex;
+      align-items: center; }
+      .menu .user .position img {
+        width: 13px;
+        height: 12px;
+        margin-right: 5px; }
+      .menu .user .position p {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.005em;
+        color: #D11241; }
+  .menu .nav {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px; }
+    .menu .nav a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 160%;
+      color: #FFFFFF; }
+      .menu .nav a img {
+        margin-right: 18px; }
+  .menu .sign-out {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #FFFFFF;
+    position: absolute;
+    left: 34px;
+    bottom: 60px; }
+    .menu .sign-out img {
+      margin-right: 18px; }

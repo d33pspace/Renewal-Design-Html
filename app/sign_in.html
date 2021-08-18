@@ -18,9 +18,13 @@
             <a href='#' class='home'><img class='house_icon' src='./img/svg/house.svg'></a>
             <h1>Welcome Back</h1>
             <form action='#'>
-                <input class='phone' type='tel' placeholder='Phone'>
-                <div class="password_block">
-                    <input class='password' type='password' placeholder='Password'>
+                <div class="input-wrapper">
+                    <label for='phone'>Phone</label>
+                    <input id='phone' class='phone' type='tel'>
+                </div>
+                <div class="password_block input-wrapper">
+                    <label for='password'>Password</label>
+                    <input id='password' class='password' type='password'>
                     <img class='showPassword' src='./img/svg/eye.svg'>
                 </div>
                 <a class='forgot_password' href='#'>Forgot Password?</a>
@@ -30,4 +34,5 @@
     </section>
     </div>
     <script defer src="./js/show_password.js"></script>
+    <script defer src="./js/input.js"></script>
 </body>

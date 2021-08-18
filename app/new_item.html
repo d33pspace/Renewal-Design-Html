@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Item</title>
+    <link rel="stylesheet" href="./css/new_item.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop-wrapper">
+        <header>
+            <div class="wrapper">
+                <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
+                <h3 class="title">New Item</h3>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <form action='#'>
+                    <div class="input-wrapper">
+                        <label for='english_title'>English title</label>
+                        <input id='english_title' type='text'>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for='chinese_title'>Chinese title</label>
+                        <input id='chinese_title' type='text'>
+                    </div>
+                    <div class="dropdown item_type">
+                        <div class="current">
+                            Item Type
+                        </div>
+                        <img class='arrow' src='./img/svg/down_arrow.svg'>
+                        <div class="list">
+                            <div class="option">
+                                <img src='./img/svg/category_outerwear.svg'>
+                                <p>outwear</p>
+                            </div>
+                            <div class="option">
+                                <img src='./img/svg/category_shirt.svg'>
+                                <p>shirt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown policy">
+                        <div class="current">
+                            Distribution policy
+                        </div>
+                        <img class='arrow' src='./img/svg/down_arrow.svg'>
+                        <div class="list">
+                            <div class="option">
+                                <p>30 days</p>
+                            </div>
+                            <div class="option">
+                                <p>14 days</p>
+                            </div>
+                            <div class="option">
+                                <p>7 days</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type='checkbox' id='checkbox'>
+                        <label for="checkbox">Can be washed</label>
+                    </div>
+                    <label for='switch' class="switch">
+                        <input type="checkbox" id='switch'>
+                        <span class="slider round"></span>
+                        <p>Active item</p>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <section class="edit_policy overlay">
+            <div class="wrapper">
+                <h4 class="title">Edit policy?</h4>
+                <p class='text'>Distribution policy will change for all items for the current type in the database.</p>
+                <div class="delete_block button_block">
+                    <button class='cancel'>Cancel</button>
+                    <button class='proceed delete' type='submit'>Edit</button>
+                </div>
+            </div>
+        </section>
+        <section class='change_message'>
+            <p>Policy for the whole item's type changed. </p>
+        </section>
+        <a class='done' href='#'><img src='./img/svg/check.svg'></a>
+    </div>
+    <script defer src="./js/new_item.js"></script>
+</body>

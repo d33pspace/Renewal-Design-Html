@@ -42,7 +42,7 @@ header {
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-        padding: 4px 31px 4px 16px;
+        padding: 16px 31px 16px 16px;
         border-bottom: 1px solid #F1F2F4;
         box-sizing: border-box;
         &.active {
@@ -107,10 +107,10 @@ header {
             padding: 12px 14px 12px 8px;
             border-bottom: 1px solid #F1F2F4;
             .name {
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 20px;
                 letter-spacing: 0.005em;
-                color: #001730;
+                color: #848790;
                 span {
                     margin-right: 15px;
                 }

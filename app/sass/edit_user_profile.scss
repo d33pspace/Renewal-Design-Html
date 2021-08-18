@@ -55,30 +55,6 @@ main {
             flex-direction: column;
             margin-bottom: 16px;
             padding-top: 3px;
-            label {
-                font-size: 12px;
-                line-height: 160%;
-                color: #848790;
-                padding-left: 16px;
-            }
-            input {
-                font-family: 'Noto Sans SC', sans-serif;
-                padding-left: 16px;
-                padding-bottom: 7px;
-                border-color: #27C4BC;
-                border-style: solid;
-                border-width: 0 0 1px 0;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 26px;
-                color: #001730;
-                &::placeholder {
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 26px;
-                    color: #001730;
-                }
-            }
             &.input_position {
                 position: relative;
                 img {
@@ -198,13 +174,7 @@ main {
                 position: relative;
                 margin-bottom: 16px;
                 input {
-                    border-color: #F1F2F4;
-                    border-width: 0 0 1px 0;
-                    font-family: 'Noto Sans SC', sans-serif;
-                    font-size: 16px;
-                    line-height: 160%;
-                    color: #001730;
-                    padding: 9.5px 0 16.5px 16px;
+
                     width: -webkit-fill-available;
                 }
                 img {
@@ -263,6 +233,7 @@ main {
     bottom: 17px;
     opacity: 0;
     transition: .3s;
+    z-index: -1;
     @media(min-width: 768px) {
         right: calc(((100vw - 770px)/2) + 24px)
     }
@@ -283,6 +254,7 @@ main {
     }
 
     30% {
+        z-index: 999;
         opacity: 1;
     }
   
@@ -291,6 +263,7 @@ main {
     }
 
     100% {
+        z-index: -1;
         opacity: 0;
     }
 

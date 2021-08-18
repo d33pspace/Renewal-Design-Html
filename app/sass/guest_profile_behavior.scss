@@ -1,0 +1,102 @@
+/*---BASE---*/
+@import './base/_base.scss';
+
+.wrapper {
+    padding: 0 16px;
+}
+
+header {
+    padding: 20px 0 16px;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        a {
+            display: flex;
+            margin-left: 4px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 35px;
+            color: #001730;
+        }
+    }
+}
+
+main {
+    .card {
+        margin-bottom: 16px;
+        padding: 8px;
+        border-bottom: 1px solid #F1F2F4;
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            .profile-info {
+                display: flex;
+                align-items: center;
+                .avatar {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 12px;
+                    border: 1px solid #DDDFE4;
+                    box-sizing: border-box;
+                    margin-right: 8px;
+                }
+                .name {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 100%;
+                    color: #001730;
+                    margin-bottom: 8px;
+                }
+                .date {
+                    font-size: 14px;
+                    line-height: 100%;
+                    color: #3A3C40;
+                }
+            }
+            .review-type {
+                display: flex;
+                align-items: center;
+                .plus {
+                    margin-right: 8px;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.01em;
+                    color: #13ADAD;
+                }
+                &.negative .plus {
+                    color: #D11241;
+                }
+                img {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+        }
+        .body {
+            .review-text {
+                font-size: 16px;
+                line-height: 26px;
+                color: #848790;
+                .more {
+                    display: none;
+                }
+                &.opened {
+                    .more {
+                        display: inline;
+                    } 
+                    .dots {
+                        display: none;
+                    }
+                }
+                a {
+                    color: #13ADAD;
+                }
+            }
+        }
+    }
+}
