@@ -74,6 +74,10 @@ a {
     top: 3px; }
   .input-wrapper.active input {
     border-color: #13ADAD; }
+  .input-wrapper.error label {
+    color: #F95557; }
+  .input-wrapper.error input {
+    background: #FFEBED; }
   .input-wrapper label {
     transition: .3s;
     position: absolute;
@@ -257,7 +261,7 @@ main .delete_profile {
       .password_change .wrapper form .password_block img {
         position: absolute;
         right: 16px;
-        top: 10.5px;
+        top: calc(50% - 7.5px);
         cursor: pointer; }
     .password_change .wrapper form .submit_block {
       margin-top: 100px; }

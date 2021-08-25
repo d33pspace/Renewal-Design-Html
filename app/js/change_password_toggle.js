@@ -27,8 +27,8 @@ change_block.onclick = (e) => {
 }
 
 submit.onclick = (e) => {
-    e.preventDefault()
-    toggleChange()
+    // e.preventDefault()
+    // toggleChange()
     doneIcon.classList.add('active')
 }
 

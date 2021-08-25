@@ -73,6 +73,10 @@ a {
     top: 3px; }
   .input-wrapper.active input {
     border-color: #13ADAD; }
+  .input-wrapper.error label {
+    color: #F95557; }
+  .input-wrapper.error input {
+    background: #FFEBED; }
   .input-wrapper label {
     transition: .3s;
     position: absolute;

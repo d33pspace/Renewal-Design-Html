@@ -180,7 +180,7 @@ main {
                 img {
                     position: absolute;
                     right: 16px;
-                    top: 10.5px;
+                    top: calc(50% - 7.5px);
                     cursor: pointer;
                 }
             }

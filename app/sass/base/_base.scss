@@ -83,6 +83,14 @@ a {
             border-color: #13ADAD;
         }
     }
+    &.error {
+      label {
+        color: #F95557;
+      }
+      input {
+        background: #FFEBED;
+      }
+    }
     label {
         transition: .3s;
         position: absolute;
