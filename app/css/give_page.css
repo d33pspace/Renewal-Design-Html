@@ -76,7 +76,8 @@ a {
   .input-wrapper.error label {
     color: #F95557; }
   .input-wrapper.error input {
-    background: #FFEBED; }
+    background: #FFEBED;
+    border-color: #F95557; }
   .input-wrapper label {
     transition: .3s;
     position: absolute;
