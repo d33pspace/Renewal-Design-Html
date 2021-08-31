@@ -25,9 +25,27 @@
                 <a href='#'><img class='icon' src='./img/svg/photo_camera.svg'></a>
             </div>
             <form action='#'>
-                <input required type="text" class="name" placeholder='Name in Hanzi' value="李娜">
-                <input required type="text" class="pinyin" placeholder='Pinyin' value='Li Na'>
-                <input required type='text' class='birthdate' placeholder='Birthdate' value='1976.05.17'>
+                <div class="input-wrapper">
+                    <label for='name'>Name in Hanzi</label>
+                    <input id='name' required type="text" class="name">
+                    <p class="error-message">Error</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for='pinyin'>Pinyin</label>
+                    <input id='pinyin' required type="text" class="pinyin">
+                    <p class="error-message">Error</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for='pinyin'>Pinyin</label>
+                    <input id='pinyin' required type="text" class="pinyin">
+                    <p class="error-message">Error</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for='birthdate'>Birthdate</label>
+                    <input id='birthdate' required type='text' class='birthdate'>
+                    <p class="error-message">Error</p>
+                </div>
+                
                 <div class="dropdown gender">
                     <div class="current filled"><p>Female</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
                     <div class="list">
@@ -42,11 +60,20 @@
                         <div class="option">Female</div>
                     </div>
                 </div>
-                <input required type='tel' class='phone' placeholder='Guest Phone' value='+86 13918580484'>
-                <input required type='text' class='id' placeholder='Giest ID' value='477376197205082595'>
+                <div class="input-wrapper">
+                    <label for='phone'>Guest Phone</label>
+                    <input id='phone' required type='tel' class='phone'>
+                    <p class="error-message">Error</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for='id'>Giest ID</label>
+                    <input id='id' required type='text' class='id'>
+                    <p class="error-message">Error</p>
+                </div>
             </form>
         </div>
     </main>
     </div>
     <script defer src="./js/guest_dropdown.js"></script>
+    <script defer src="./js/input.js"></script>
 </body>

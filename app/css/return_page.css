@@ -65,7 +65,9 @@ a {
 
 .input-wrapper {
   position: relative;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column; }
   .input-wrapper.active label {
     font-size: 12px;
     line-height: 160%;
@@ -78,6 +80,8 @@ a {
   .input-wrapper.error input {
     background: #FFEBED;
     border-color: #F95557; }
+  .input-wrapper.error .error-message {
+    display: flex; }
   .input-wrapper label {
     transition: .3s;
     position: absolute;
@@ -98,6 +102,12 @@ a {
     box-sizing: border-box;
     border-bottom: 1px solid #F1F2F4;
     border-width: 0 0 1px 0; }
+  .input-wrapper .error-message {
+    padding-left: 16px;
+    color: #F95557;
+    font-size: 12px;
+    line-height: 160%;
+    display: none; }
 
 @media (min-width: 768px) {
   body {

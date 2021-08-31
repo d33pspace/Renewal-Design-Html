@@ -18,16 +18,32 @@
             <a href='#' class='home'><img class='house_icon' src='./img/svg/house.svg'></a>
             <h1>New account</h1>
             <form action='#'>
-                <input class='name' type='text' placeholder='Full Name'>
-                <input class='phone' type='tel' placeholder='Phone'>
-                <input class='email' type='email' placeholder='Email'>
-                <div class="password_block">
-                    <input class='password' type='password' placeholder='Password'>
-                    <img class='showPassword' src='./img/svg/eye.svg'>
+                <div class="input-wrapper">
+                    <label for='name'>Full Name</label>
+                    <input id='name' class='name' type='text'>
+                    <p class="error-message">Error</p>
                 </div>
-                <div class="password_block">
-                    <input class='password password-repeat' type='password' placeholder='Repeat Password'>
+                <div class="input-wrapper">
+                    <label for='phone'>Phone</label>
+                    <input id='phone' class='phone' type='tel'>
+                    <p class="error-message">Error</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for='email'>Email</label>
+                    <input id='email' class='email' type='email'>
+                    <p class="error-message">Error</p>
+                </div>
+                <div class="password_block input-wrapper">
+                    <label for='email'>Password</label>
+                    <input id='password' class='password' type='password'>
                     <img class='showPassword' src='./img/svg/eye.svg'>
+                    <p class="error-message">Error</p>
+                </div>
+                <div class="password_block input-wrapper">
+                    <label for='password-repeat'>Repeat Password</label>
+                    <input id='password-repeat' class='password password-repeat' type='password'>
+                    <img class='showPassword' src='./img/svg/eye.svg'>
+                    <p class="error-message">Error</p>
                 </div>
                 <button type='submit'>Sign Up</button>
             </form>
@@ -35,4 +51,5 @@
     </section>
     </div>
     <script defer src="./js/show_password.js"></script>
+    <script defer src="./js/input.js"></script>
 </body>

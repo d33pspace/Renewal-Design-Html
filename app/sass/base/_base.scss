@@ -72,6 +72,8 @@ a {
 .input-wrapper {
     position: relative;
     margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
     &.active {
         label {
             font-size: 12px;
@@ -90,6 +92,9 @@ a {
       input {
         background: #FFEBED;
         border-color: #F95557;
+      }
+      .error-message {
+        display: flex;
       }
     }
     label {
@@ -113,6 +118,13 @@ a {
         box-sizing: border-box;
         border-bottom: 1px solid #F1F2F4;
         border-width: 0 0 1px 0;
+    }
+    .error-message {
+      padding-left: 16px;
+      color: #F95557;
+      font-size: 12px;
+      line-height: 160%;
+      display: none;
     }
 }
 

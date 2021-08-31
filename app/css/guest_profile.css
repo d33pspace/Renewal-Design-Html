@@ -66,7 +66,9 @@ a {
 
 .input-wrapper {
   position: relative;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column; }
   .input-wrapper.active label {
     font-size: 12px;
     line-height: 160%;
@@ -79,6 +81,8 @@ a {
   .input-wrapper.error input {
     background: #FFEBED;
     border-color: #F95557; }
+  .input-wrapper.error .error-message {
+    display: flex; }
   .input-wrapper label {
     transition: .3s;
     position: absolute;
@@ -99,6 +103,12 @@ a {
     box-sizing: border-box;
     border-bottom: 1px solid #F1F2F4;
     border-width: 0 0 1px 0; }
+  .input-wrapper .error-message {
+    padding-left: 16px;
+    color: #F95557;
+    font-size: 12px;
+    line-height: 160%;
+    display: none; }
 
 @media (min-width: 768px) {
   body {
@@ -449,7 +459,7 @@ main .options {
   @media (min-width: 768px) {
     .overlay {
       max-width: 768px;
-      left: calc((100% - 770px)/2 - 8px); } }
+      left: calc((100% - 770px)/2); } }
   @media (min-width: 768px) {
     .overlay {
       width: 768px; } }
@@ -503,7 +513,7 @@ main .options {
         margin-bottom: 36px;
         display: flex;
         flex-direction: column; }
-        .daily_review .wrapper form .input_box input {
+        .daily_review .wrapper form .input_box textarea {
           background: #FFFFFF;
           border-radius: 8px 8px 0px 0px;
           border-bottom: 1px solid #F1F2F4;
@@ -515,18 +525,19 @@ main .options {
           box-shadow: unset;
           font-size: 16px;
           line-height: 26px;
-          color: #001730; }
-          .daily_review .wrapper form .input_box input::placeholder {
+          color: #001730;
+          font-family: 'Noto Sans SC', sans-serif; }
+          .daily_review .wrapper form .input_box textarea::placeholder {
             font-size: 16px;
             line-height: 26px;
             color: #001730; }
-          .daily_review .wrapper form .input_box input:focus {
+          .daily_review .wrapper form .input_box textarea:focus {
             border-color: #13ADAD; }
-          .daily_review .wrapper form .input_box input.invalid {
+          .daily_review .wrapper form .input_box textarea.invalid {
             background-color: #FFEBED;
             color: #F95557;
             border-color: #F95557; }
-            .daily_review .wrapper form .input_box input.invalid + .required_message {
+            .daily_review .wrapper form .input_box textarea.invalid + .required_message {
               opacity: 1; }
         .daily_review .wrapper form .input_box .required_message {
           padding: 0 16px;
