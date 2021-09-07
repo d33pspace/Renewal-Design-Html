@@ -196,7 +196,6 @@ main .card .card-heading {
 main .card .card-content {
   transform: scaleY(0);
   transform-origin: top;
-  transition: 0.3s;
   height: 0;
   background: #FAFBFC;
   padding: 0 16px; }

@@ -60,6 +60,7 @@ main {
                 display: flex;
                 align-items: center;
                 padding: 16px 16px 8px 16px;
+                cursor: pointer;
                 .avatar {
                     border: 1px solid #F1F2F4;
                     box-sizing: border-box;
@@ -108,7 +109,6 @@ main {
             }
             .dropdown {
                 transform: scaleY(0);
-                transition: .2s;
                 transform-origin: top;
                 opacity: 0;
                 max-height: 0;

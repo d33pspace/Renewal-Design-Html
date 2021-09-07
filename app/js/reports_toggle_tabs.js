@@ -1,7 +1,7 @@
-let expand = document.querySelectorAll('.expand')
+let expand = document.querySelectorAll('.card .body')
 
 expand.forEach(item => {
     item.onclick = () => {
-        item.parentElement.parentElement.classList.toggle('active')
+        item.parentElement.classList.toggle('active')
     }
 });

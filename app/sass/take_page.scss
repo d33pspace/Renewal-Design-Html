@@ -190,10 +190,10 @@ main {
                     }
                     .category-name {
                         font-weight: 500;
-                        font-size: 14px;
+                        font-size: 12px;
                         line-height: 100%;
                         text-transform: uppercase;
-                        color: #001730;
+                        color: #3A3C40;
                     }
                     .counter {
                         margin-left: 8px;
@@ -335,24 +335,6 @@ main {
             transition-duration: .2s;
             &.active {
                 opacity: 1;
-            }
-            &:nth-child(6) {
-                transition-delay: .1s;
-            }
-            &:nth-child(5) {
-                transition-delay: .2s;
-            }
-            &:nth-child(4) {
-                transition-delay: .3s;
-            }
-            &:nth-child(3) {
-                transition-delay: .4s;
-            }
-            &:nth-child(2) {
-                transition-delay: .5s;
-            }
-            &:nth-child(1) {
-                transition-delay: .6s;
             }
         }
     }

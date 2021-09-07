@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users List</title>
+    <link rel="stylesheet" href="./css/users_list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop-wrapper">
+    <header>
+        <div class="wrapper">
+            <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
+        </div>
+    </header>
+    <main>
+        <div class="search_block">
+            <h1 class='title'>Users List</h1>
+            <form action='#' class='search_form'>
+                <input type='text' placeholder='Search ...'>
+            </form>
+        </div>
+        <div class="users_block">
+            <div class="titles">
+                <p>Sort By Name</p>
+                <p>Last visit</p>
+            </div>
+            <div class="card">
+                <div class="user_info">
+                    <img class='avatar' src='./img/user-avatar.png'>
+                    <div class="info_details">
+                        <p class='name'>Gao Jie</p>
+                        <div class='position admin'>
+                            <img class='icon' src='./img/svg/admin.svg'>
+                            <p>Admin</p>
+                        </div>
+                    </div>
+                </div>
+                <p class='date'>2021-05-12</p>
+            </div>
+            <div class="card">
+                <div class="user_info">
+                    <img class='avatar' src='./img/reviews-avatar.png'>
+                    <div class="info_details">
+                        <p class='name'>Liao Yanyu</p>
+                        <div class='position volunteer'>
+                            <img class='icon' src='./img/svg/heart.svg'>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+                <p class='date'>2021-03-14</p>
+            </div>
+            <div class="card">
+                <div class="user_info">
+                    <img class='avatar' src='./img/avatar-6.png'>
+                    <div class="info_details">
+                        <p class='name'>Peng Ning</p>
+                        <div class='position volunteer'>
+                            <img class='icon' src='./img/svg/heart.svg'>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+                <p class='date'>2020-01-19</p>
+            </div>
+            <div class="card">
+                <div class="user_info">
+                    <img class='avatar' src='./img/avatar-5.png'>
+                    <div class="info_details">
+                        <p class='name'>Qi Tengfei</p>
+                        <div class='position volunteer'>
+                            <img class='icon' src='./img/svg/heart.svg'>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+                <p class='date'>2021-05-26</p>
+            </div>
+            <div class="card inactive">
+                <div class="user_info">
+                    <img class='avatar' src='./img/avatar-5.png'>
+                    <div class="info_details">
+                        <p class='name'>Ma Xiurong</p>
+                        <div class='position volunteer'>
+                            <img class='icon' src='./img/svg/heart.svg'>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+                <p class='date'>Inactive</p>
+            </div>
+            <div class="card">
+                <div class="user_info">
+                    <img class='avatar' src='./img/user-avatar.png'>
+                    <div class="info_details">
+                        <p class='name'>Jin Xiaoli</p>
+                        <div class='position volunteer'>
+                            <img class='icon' src='./img/svg/heart.svg'>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+                <p class='date'>2021-05-26</p>
+            </div>
+        </div>
+    </main>
+    <a class='copy_link' href='#'><img src='./img/svg/copy_link.svg'></a>
+    <section class="link_modal overlay">
+        <div class="wrapper">
+            <a href='#' class='home'><img class='house_icon' src='./img/svg/house.svg'></a>
+        </div>
+    </section>
+    </div>
+    <script defer src="./js/users_list.js"></script>
+</body>

@@ -179,8 +179,6 @@ main .wrapper {
         border-radius: 2px;
         transition: .2s;
         cursor: pointer; }
-        main .wrapper form .dropdown .current.filled {
-          background-color: #EEFBFA; }
         main .wrapper form .dropdown .current .arrow {
           position: absolute;
           right: 22px;

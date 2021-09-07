@@ -191,7 +191,8 @@ main .cards .body {
   align-items: center;
   position: relative;
   padding: 15px 36px 16px 16px;
-  border-bottom: 1px solid #F1F2F4; }
+  border-bottom: 1px solid #F1F2F4;
+  cursor: pointer; }
   main .cards .body .item {
     display: flex;
     align-items: center; }
@@ -216,7 +217,6 @@ main .cards .body {
 
 main .cards .dropdown {
   transform: scaleY(0);
-  transition: .2s;
   transform-origin: top;
   opacity: 0;
   max-height: 0; }

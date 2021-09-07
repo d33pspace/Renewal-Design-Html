@@ -126,7 +126,7 @@ a {
   padding: 0 16px; }
 
 header {
-  padding: 28px 0 0 4px; }
+  padding: 28px 0 20px 4px; }
   header .wrapper {
     display: flex;
     justify-content: space-between; }

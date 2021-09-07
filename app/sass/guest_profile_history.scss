@@ -40,7 +40,6 @@ main {
         }
     }
     .card {
-
         .card-heading {
             cursor: pointer;
             display: flex;
@@ -93,7 +92,6 @@ main {
         .card-content {
             transform: scaleY(0);
             transform-origin: top;
-            transition: 0.3s;
             height: 0;
             background: #FAFBFC;
             padding: 0 16px;

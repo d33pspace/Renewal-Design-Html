@@ -176,7 +176,7 @@ main {
     transition: .2s;
     @media(min-width: 768px) {
         max-width: 768px;
-        left: calc((100% - 770px)/2 - 8px)
+        left: calc((100% - 770px)/2);
     }
     &.active {
         opacity: 1;
@@ -202,24 +202,6 @@ main {
             transition-duration: .2s;
             &.active {
                 opacity: 1;
-            }
-            &:nth-child(6) {
-                transition-delay: .1s;
-            }
-            &:nth-child(5) {
-                transition-delay: .2s;
-            }
-            &:nth-child(4) {
-                transition-delay: .3s;
-            }
-            &:nth-child(3) {
-                transition-delay: .4s;
-            }
-            &:nth-child(2) {
-                transition-delay: .5s;
-            }
-            &:nth-child(1) {
-                transition-delay: .6s;
             }
         }
     }
@@ -255,7 +237,7 @@ main {
         }
     }
     @media(min-width: 768px) {
-        right: calc(((100vw - 770px)/2) + 24px)
+        right: calc(((100vw - 770px)/2) + 16px)
     }
     img {
         width: 20px;

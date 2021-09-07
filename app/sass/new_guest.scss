@@ -70,9 +70,6 @@ main {
                     border-radius: 2px;
                     transition: .2s;
                     cursor: pointer;
-                    &.filled {
-                        background-color: #EEFBFA;
-                    }
                     .arrow {
                         position: absolute;
                         right: 22px;
