@@ -25,6 +25,26 @@ dropdown.forEach((item) => {
     item.firstElementChild.onclick = () => {
         item.classList.toggle('active')
         item.lastElementChild.classList.toggle('active')
+        let search = item.querySelector('.search')
+        let list = item.querySelectorAll('.option')
+        if(search) {
+            search.focus()
+            search.oninput = () => {
+                list.forEach(e => {
+                    if (!e.lastElementChild.innerHTML.includes(search.value) ) {
+                        e.classList.add('disable')
+                    } else {
+                        e.classList.remove('disable')
+                    }
+                })
+            }
+            search.onblur = () => {
+                list.forEach(e => {
+                    e.classList.remove('disable')
+                })
+                search.value = ''
+            }
+        }
     }
     item.lastElementChild.childNodes.forEach((e) => {
         e.onclick = () => {
@@ -37,6 +57,36 @@ dropdown.forEach((item) => {
     })
 })
 
+let arrow = document.querySelectorAll('.arrow')
+
+arrow.forEach((item) => {
+    item.onclick = () => {
+        item.parentElement.classList.toggle('active')
+        item.parentElement.lastElementChild.classList.toggle('active')
+        let search = item.parentElement.querySelector('.search')
+        let list = item.parentElement.querySelectorAll('.option')
+        if(search) {
+            search.focus()
+            search.oninput = () => {
+                list.forEach(e => {
+                    if (!e.lastElementChild.innerHTML.includes(search.value) ) {
+                        e.classList.add('disable')
+                    } else {
+                        e.classList.remove('disable')
+                    }
+                })
+            }
+            search.onblur = () => {
+                list.forEach(e => {
+                    e.classList.remove('disable')
+                })
+                search.value = ''
+            }
+        }
+    }
+})
+
+
 document.querySelector('.checkbox').onclick = () => {
     done.classList.add('active')
 }
@@ -46,6 +96,9 @@ document.querySelector('.switch').onclick = () => {
 
 function toggleOverlay () {
     overlay.classList.toggle('active');
+    if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+        overlay.classList.add('scroll')
+    }
 }
 
 

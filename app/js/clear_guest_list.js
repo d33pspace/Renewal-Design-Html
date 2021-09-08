@@ -20,4 +20,7 @@ clear_proceed.onclick = () => {
 
 function toggleOverlay () {
     overlay.classList.toggle('active')
+    if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+        overlay.classList.add('scroll')
+    }
 }

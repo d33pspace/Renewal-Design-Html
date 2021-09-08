@@ -5,6 +5,9 @@ item.forEach(e => {
     e.onclick = () => {
         disOverlay.classList.add('active')
         disOverlay.firstElementChild.classList.add('active')
+        if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+            disOverlay.classList.add('scroll')
+        }
     }
 })
 

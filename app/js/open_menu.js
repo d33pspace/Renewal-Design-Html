@@ -12,4 +12,7 @@ closeMenu.onclick = () => {
 
 function menuToggle() {
     menu.classList.toggle('active')
+    if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+        menu.classList.add('scroll')
+    }
 }

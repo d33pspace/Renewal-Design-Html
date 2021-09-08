@@ -128,6 +128,30 @@ a {
     }
 }
 
+.overlay {
+  background-color: rgba(0, 23, 48, 0.4);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  transition: .3s;
+  z-index: -1;
+  opacity: 0;
+  @media(min-width: 768px) {
+      max-width: 768px;
+      left: calc((100% - 770px)/2);
+      &.scroll {
+        left: calc((100% - 770px)/2 - 8px);  
+    }
+  }
+  &.active {
+      z-index: 9;
+      opacity: 1;
+  }
+}
+
 @media(min-width: 768px) {
 	body {
 		background-color: #a6a6a6;

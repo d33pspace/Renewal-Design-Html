@@ -54,4 +54,7 @@ proceed.onclick = (e) => {
         item.classList.toggle('active')
     })
     proceed.classList.toggle('opened')
+    if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+        overlay.classList.add('scroll')
+    }
 }

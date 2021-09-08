@@ -37,6 +37,9 @@ function toggleReview () {
     wrapper.classList.toggle('active')
     form.reset()
     input.classList.remove('invalid')
+    if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+        overlay.classList.add('scroll')
+    }
 }
 
 let review_type = document.querySelectorAll('.review-type img')

@@ -35,6 +35,9 @@ submit.onclick = (e) => {
 function toggleChange () {
     change_block.classList.toggle('active');
     wrapper.classList.toggle('active');
+    if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+        change_block.classList.add('scroll')
+    }
 }
 
 
@@ -45,6 +48,9 @@ delete_button.onclick = (e) => {
 
 function toggleDelete () {
     delete_block.classList.toggle('active');
+    if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+        delete_block.classList.add('scroll')
+    }
 }
 
 delete_block.onclick = (e) => {
