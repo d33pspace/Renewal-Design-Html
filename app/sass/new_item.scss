@@ -73,6 +73,11 @@ main {
             top: 22px;
             cursor: pointer;
         }
+        &.item_type .list {
+            z-index: 99;
+            max-height: 168px;
+            overflow-y: scroll;
+        }
         &.active .list {
             transform: scaleY(1);
         }
@@ -126,8 +131,6 @@ main {
             z-index: 9;
             width: 100%;
             background-color: #fff;
-            max-height: 168px;
-            overflow-y: scroll;
             .option {
                 height: 56px;
                 box-sizing: border-box;
