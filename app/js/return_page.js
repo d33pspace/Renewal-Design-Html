@@ -58,3 +58,14 @@ proceed.onclick = (e) => {
         overlay.classList.add('scroll')
     }
 }
+
+
+let cards = document.querySelectorAll('.laundry .card')
+
+cards.forEach((item => {
+    item.onclick = (e) => {
+        if (e.target !== item.querySelector('.delete') && e.target !== item.querySelector('.lost') && e.target !== item.querySelector('.checkbox')) {
+            item.querySelector('.checkbox').click()
+        }
+    }
+}))

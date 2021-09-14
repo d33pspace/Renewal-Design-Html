@@ -113,6 +113,7 @@ main {
             border-bottom: 1px solid #F1F2F4;
             display: flex;
             justify-content: space-between;
+            cursor: pointer;
             &.empty {
                 .coma, .city, .serve_icon {
                     display: none;
@@ -180,11 +181,10 @@ main {
                     width: 24px;
                     height: 24px;
                     margin: 0 auto;
+                    cursor: pointer;
+                    filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
                     &.active {
                         filter: brightness(0) saturate(100%) invert(14%) sepia(74%) saturate(4474%) hue-rotate(335deg) brightness(96%) contrast(98%);
-                    }
-                    &.unactive {
-                        filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
                     }
                 }
             }

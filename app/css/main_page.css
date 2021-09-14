@@ -282,6 +282,7 @@ main .list .card {
   border-bottom: 1px solid #F1F2F4;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 main .list .card.empty .coma, main .list .card.empty .city, main .list .card.empty .serve_icon {
   display: none;
@@ -349,12 +350,11 @@ main .list .card .time .serve_icon {
   width: 24px;
   height: 24px;
   margin: 0 auto;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
 }
 main .list .card .time .serve_icon.active {
   filter: brightness(0) saturate(100%) invert(14%) sepia(74%) saturate(4474%) hue-rotate(335deg) brightness(96%) contrast(98%);
-}
-main .list .card .time .serve_icon.unactive {
-  filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
 }
 
 .chat {
