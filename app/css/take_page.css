@@ -197,6 +197,8 @@ header .wrapper a {
 main #tag_form {
   position: relative;
   padding: 8px 16px 8px 16px;
+  display: flex;
+  flex-direction: column;
 }
 main #tag_form img {
   display: none;
@@ -230,13 +232,13 @@ main .tag label {
   display: inline-block;
 }
 main .tag input {
+  width: auto;
   padding: 6px 8px;
   font-weight: 500;
   font-size: 32px;
   line-height: 100%;
   height: 32px;
   color: #FFFFFF;
-  width: -webkit-fill-available;
   background: transparent;
   border: unset;
   border-radius: 8px;

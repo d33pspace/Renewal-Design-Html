@@ -8,6 +8,7 @@ serve_icon.forEach((item => {
 
 
 let waitingCards = document.querySelectorAll('.waiting_list .card')
+let waitingCards = document.querySelectorAll('.waiting_list .card')
 
 
 waitingCards.forEach((item => {
