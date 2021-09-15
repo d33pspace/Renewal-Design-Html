@@ -73,7 +73,6 @@ main {
             padding: 9px 16px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             border-bottom: 1px solid #F1F2F4;
             .user_info {
                 display: flex;
@@ -111,10 +110,20 @@ main {
                     }
                 }
             }
-            .date {
-                color: #848790;
-                font-size: 12px;
-                line-height: 160%;
+            .order_date {
+                display: flex;
+                flex-direction: column;
+                .date {
+                    color: #848790;
+                    font-size: 12px;
+                    line-height: 160%;
+                    margin-bottom: 10px;
+                }
+                .link_to_order {
+                    margin-left: auto;
+                    margin-right: 15px;
+                    display: flex;
+                }
             }
         }
     }

@@ -41,6 +41,13 @@ let button = document.querySelectorAll('.button')
 button.forEach((item) => {
     item.onclick = () => {
         item.classList.toggle('active')
+        if(item.nextElementSibling) {
+            item.nextElementSibling.classList.remove('active')
+        }
+
+        if(item.previousElementSibling) {
+            item.previousElementSibling.classList.remove('active')
+        }
     }
 })
 
@@ -64,7 +71,7 @@ let cards = document.querySelectorAll('.laundry .card')
 
 cards.forEach((item => {
     item.onclick = (e) => {
-        if (e.target !== item.querySelector('.delete') && e.target !== item.querySelector('.lost') && e.target !== item.querySelector('.checkbox')) {
+        if (e.target !== item.querySelector('.delete') && e.target !== item.querySelector('.lost') && e.target !== item.querySelector('.checkbox') && e.target !== item.querySelector('.delete img') && e.target !== item.querySelector('.lost img')) {
             item.querySelector('.checkbox').click()
         }
     }

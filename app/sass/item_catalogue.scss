@@ -72,15 +72,23 @@ main {
             line-height: 160%;
             text-transform: uppercase;
             color: #848790;
+            margin-right: 8px;
         }
     }
     .body {
-        .card {
+        .card.active .arrow {
+            filter: unset;
+        }
+        .card.active {
+            cursor: pointer;
+        }
+        .card-title {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 16px 16px 16px;
             border-bottom: 1px solid #F1F2F4;
+            position: relative;
             &.one-off .item p {
                 font-size: 16px;
                 line-height: 160%;
@@ -97,12 +105,53 @@ main {
                     color: #3A3C40;
                     margin-left: 8px;
                 }
+                .count {
+                    font-weight: bold;
+                    font-size: 12px;
+                    color: #3A3C40;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #F1F2F4;
+                    border-radius: 4px;
+                }
             }
             .policy {
                 font-size: 14px;
                 line-height: 100%;
                 letter-spacing: 0.005em;
                 color: #001730;
+                margin-right: 54px;
+            }
+            .arrow {
+                position: absolute;
+                right: 31px;
+                top: calc(50% - 4px);
+                filter: brightness(0) saturate(100%) invert(84%) sepia(12%) saturate(193%) hue-rotate(186deg) brightness(89%) contrast(84%);
+            }
+        }
+        .card-extend {
+            flex-direction: column;
+            padding: 0 16px;
+            display: none;
+            &.active {
+                display: flex;
+            }
+            .item {
+                padding: 12px 0 11px 7px;
+                border-bottom: 1px solid #F1F2F4;
+                display: flex;
+                p {
+                    font-size: 12px;
+                    line-height: 20px;
+                    letter-spacing: 0.005em;
+                    color: #848790;
+                    &.count {
+                        margin-right: 14px;
+                    }
+                }
             }
         }
     }

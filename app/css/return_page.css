@@ -274,15 +274,14 @@ main .laundry .body {
 main .laundry .body .card {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   cursor: pointer;
   min-height: 38px;
-  padding: 13px 16px 14px 16px;
   border-bottom: 1px solid #F1F2F4;
 }
-main .laundry .body .card > * {
+main .laundry .body .card .choose-item {
   display: flex;
   align-items: center;
+  padding: 13px 0 14px 16px;
 }
 main .laundry .body .card .checkbox {
   box-sizing: border-box;
@@ -320,17 +319,24 @@ main .laundry .body .card .item .name {
   letter-spacing: 0.005em;
   color: #848790;
 }
-main .laundry .body .card .buttons img {
+main .laundry .body .card .buttons {
+  display: flex;
+}
+main .laundry .body .card .buttons .button {
   cursor: pointer;
   transition: 0.1s;
+  display: flex;
 }
-main .laundry .body .card .buttons img.delete.active {
+main .laundry .body .card .buttons .button.delete {
+  padding: 0 18.5px 0 28.5px;
+}
+main .laundry .body .card .buttons .button.delete.active img {
   filter: brightness(0) saturate(100%) invert(46%) sepia(47%) saturate(4382%) hue-rotate(329deg) brightness(101%) contrast(95%);
 }
-main .laundry .body .card .buttons img.lost {
-  margin: 0 12.5px 0 40px;
+main .laundry .body .card .buttons .button.lost {
+  padding: 0 28.5px 0 18.5px;
 }
-main .laundry .body .card .buttons img.lost.active {
+main .laundry .body .card .buttons .button.lost.active img {
   filter: brightness(0) saturate(100%) invert(70%) sepia(79%) saturate(420%) hue-rotate(339deg) brightness(100%) contrast(106%);
 }
 

@@ -245,7 +245,6 @@ main .guest_block .card {
   padding: 9px 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid #F1F2F4;
 }
 main .guest_block .card .user_info {
@@ -284,10 +283,20 @@ main .guest_block .card .user_info .info_details .age_city {
 main .guest_block .card .user_info .info_details .age_city .coma {
   margin-right: 3px;
 }
-main .guest_block .card .date {
+main .guest_block .card .order_date {
+  display: flex;
+  flex-direction: column;
+}
+main .guest_block .card .order_date .date {
   color: #848790;
   font-size: 12px;
   line-height: 160%;
+  margin-bottom: 10px;
+}
+main .guest_block .card .order_date .link_to_order {
+  margin-left: auto;
+  margin-right: 15px;
+  display: flex;
 }
 
 .add {
