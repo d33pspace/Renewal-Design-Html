@@ -22,7 +22,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -78,6 +78,13 @@ textarea:focus {
 
 a {
   text-decoration: unset;
+}
+
+header .wrapper .sort {
+  display: none;
+}
+header .wrapper .sort.active {
+  display: flex;
 }
 
 .input-wrapper {
@@ -176,35 +183,48 @@ a {
     box-sizing: border-box;
   }
 }
+.fixed_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .fixed_header {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    max-width: 768px;
+    left: calc((100% - 770px)/2 + 1px);
+  }
+  .fixed_header.scroll {
+    left: calc((100% - 770px)/2 - 7px);
+  }
+}
+
 .wrapper {
   padding: 0 16px;
 }
 
 header {
+  background: #fff;
   padding: 20px 0;
 }
-header .wrapper {
-  display: flex;
-  justify-content: space-between;
-}
 header .wrapper a {
+  padding-bottom: 20px;
   display: flex;
 }
-
-main .search_block {
-  padding: 0 16px;
-}
-main .search_block h1 {
+header .wrapper .search_block h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   color: #001730;
   padding-bottom: 24px;
 }
-main .search_block .search_form {
+header .wrapper .search_block .search_form {
   position: relative;
 }
-main .search_block .search_form:after {
+header .wrapper .search_block .search_form:after {
   content: "";
   position: absolute;
   top: calc(50% - 9px);
@@ -213,7 +233,7 @@ main .search_block .search_form:after {
   height: 18px;
   background: url("../img/svg/search.svg");
 }
-main .search_block .search_form input {
+header .wrapper .search_block .search_form input {
   padding: 11px 12px 11px 44px;
   font-size: 14px;
   line-height: 20px;
@@ -226,17 +246,21 @@ main .search_block .search_form input {
   width: 100%;
   background: #FAFBFC;
 }
-main .search_block .search_form input::placeholder {
+header .wrapper .search_block .search_form input::placeholder {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.005em;
   color: #848790;
 }
+
+main {
+  margin-top: 179px;
+}
 main .users_block .titles {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #F1F2F4;
-  padding: 20px 16px 12px 16px;
+  padding: 0px 16px 12px 16px;
 }
 main .users_block .titles p {
   font-weight: bold;

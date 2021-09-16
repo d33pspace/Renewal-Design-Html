@@ -20,7 +20,7 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, hgroup, menu, nav, section {
 	display: block;
 }
 body {
@@ -71,6 +71,13 @@ textarea:focus {
 
 a {
 	text-decoration: unset;
+}
+
+header .wrapper .sort {
+  display: none;
+  &.active {
+    display: flex;
+  }
 }
 
 .input-wrapper {
@@ -169,4 +176,22 @@ a {
 		min-height: 100vh;
 		box-sizing: border-box;
 	}
+}
+
+.fixed_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-sizing: border-box;
+
+  @media(min-width: 768px) {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    max-width: 768px;
+    left: calc((100% - 770px)/2 + 1px);
+    &.scroll {
+      left: calc((100% - 770px)/2 - 7px);  
+    }
+  }
 }
