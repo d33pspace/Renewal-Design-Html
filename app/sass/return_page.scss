@@ -9,17 +9,27 @@
 }
 
 header {
-    padding: 20px 4px;
+    padding: 0 0 0 4px;
+    background: #fff;
     .wrapper {
         display: flex;
         justify-content: space-between;
         a {
+            margin: 20px 0;
             display: flex;
         }
+    }
+    .title {
+        padding: 10.5px 16px 18.5px 16px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 35px;
+        color: #001730;
     }
 }
 
 main {
+    margin-top: 120px;
     .tag {
         padding: 8px 16px 16px 16px;
         background: #001730;

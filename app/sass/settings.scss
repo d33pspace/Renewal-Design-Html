@@ -6,12 +6,13 @@
 }
 
 header {
-    padding: 28px 0;
+    background: #fff;
     .wrapper {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         a {
             display: flex;
+            margin: 28px 0;
         }
         .edit {
             font-weight: 500;
@@ -20,18 +21,18 @@ header {
             letter-spacing: 0.005em;
             color: #27C4BC;
         }
+        .title {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 35px;
+            color: #001730;
+            margin-bottom: 24px;
+        }
     }
 }
 
 main {
-    .title {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 35px;
-        color: #001730;
-        margin-bottom: 24px;
-        padding: 0 16px;
-    }
+    margin-top: 131px;
     .subtitle {
         font-weight: 500;
         font-size: 18px;

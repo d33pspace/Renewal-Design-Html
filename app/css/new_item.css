@@ -194,6 +194,7 @@ header .wrapper .sort.active {
   .fixed_header {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     max-width: 768px;
     left: calc((100% - 770px)/2 + 1px);
   }
@@ -207,6 +208,7 @@ header .wrapper .sort.active {
 }
 
 header {
+  background: #fff;
   padding: 20px 0 0 0;
 }
 header .wrapper {
@@ -227,6 +229,9 @@ header .wrapper .title {
   margin-left: 16px;
 }
 
+main {
+  margin-top: 119px;
+}
 main .input-wrapper {
   position: relative;
   margin-bottom: 16px;

@@ -12,20 +12,20 @@
 </head>
 <body>
     <div class="desktop-wrapper">
-    <header>
+    <header class="fixed_header">
         <div class="wrapper">
             <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
             <a class='sort active' href='#'><img src='./img/svg/sorting_name.svg'></a>
             <a class='sort' href='#'><img src='./img/svg/sorting_date.svg'></a>
         </div>
-    </header>
-    <main>
         <div class="search_block">
             <h1 class='title'>Guest List</h1>
             <form action='#' class='search_form'>
                 <input type='text' placeholder='Search ...'>
             </form>
         </div>
+    </header>
+    <main>
         <div class="guest_block">
             <h4 class='title'>Sort By Name</h4>
             <a href='./guest_profile.html'>
@@ -166,4 +166,5 @@
     <a class='add' href='#'><img src='./img/svg/add.svg'></a>
     </div>
     <script defer src="./js/sorting.js"></script>
+    <script defer src="./js/fixed_header.js"></script>
 </body>

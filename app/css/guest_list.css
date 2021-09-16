@@ -194,6 +194,7 @@ header .wrapper .sort.active {
   .fixed_header {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     max-width: 768px;
     left: calc((100% - 770px)/2 + 1px);
   }
@@ -207,30 +208,31 @@ header .wrapper .sort.active {
 }
 
 header {
-  padding: 20px 0;
+  background: #fff;
 }
 header .wrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 header .wrapper a {
   display: flex;
 }
-
-main .search_block {
+header .search_block {
   padding: 0 16px;
 }
-main .search_block h1 {
+header .search_block h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   color: #001730;
   padding-bottom: 24px;
 }
-main .search_block .search_form {
+header .search_block .search_form {
   position: relative;
 }
-main .search_block .search_form:after {
+header .search_block .search_form:after {
   content: "";
   position: absolute;
   top: calc(50% - 9px);
@@ -239,7 +241,7 @@ main .search_block .search_form:after {
   height: 18px;
   background: url("../img/svg/search.svg");
 }
-main .search_block .search_form input {
+header .search_block .search_form input {
   padding: 11px 12px 11px 44px;
   font-size: 14px;
   line-height: 20px;
@@ -252,11 +254,15 @@ main .search_block .search_form input {
   width: 100%;
   background: #FAFBFC;
 }
-main .search_block .search_form input::placeholder {
+header .search_block .search_form input::placeholder {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.005em;
   color: #848790;
+}
+
+main {
+  margin-top: 163px;
 }
 main .guest_block .title {
   padding: 20px 16px 12px 16px;

@@ -193,6 +193,7 @@ header .wrapper .sort.active {
   .fixed_header {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     max-width: 768px;
     left: calc((100% - 770px)/2 + 1px);
   }
@@ -210,14 +211,23 @@ header .wrapper .sort.active {
 }
 
 header {
-  padding: 20px 4px;
+  padding: 0 0 0 4px;
+  background: #fff;
 }
 header .wrapper {
   display: flex;
   justify-content: space-between;
 }
 header .wrapper a {
+  margin: 20px 0;
   display: flex;
+}
+header .title {
+  padding: 10.5px 16px 18.5px 16px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+  color: #001730;
 }
 
 .subheader {
@@ -325,6 +335,9 @@ header .wrapper a {
   color: #848790;
 }
 
+main {
+  margin-top: 120px;
+}
 main .head {
   display: flex;
   justify-content: space-between;

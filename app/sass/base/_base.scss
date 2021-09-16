@@ -188,6 +188,7 @@ header .wrapper .sort {
   @media(min-width: 768px) {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     max-width: 768px;
     left: calc((100% - 770px)/2 + 1px);
     &.scroll {

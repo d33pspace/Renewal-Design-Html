@@ -194,6 +194,7 @@ header .wrapper .sort.active {
   .fixed_header {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     max-width: 768px;
     left: calc((100% - 770px)/2 + 1px);
   }
@@ -207,6 +208,7 @@ header .wrapper .sort.active {
 }
 
 header {
+  background: #fff;
   padding: 20px 0 16px;
 }
 header .wrapper {
@@ -225,6 +227,9 @@ header .wrapper h3 {
   color: #001730;
 }
 
+main {
+  margin-top: 107px;
+}
 main .card {
   margin-bottom: 16px;
   padding: 8px;

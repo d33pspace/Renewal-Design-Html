@@ -194,6 +194,7 @@ header .wrapper .sort.active {
   .fixed_header {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     max-width: 768px;
     left: calc((100% - 770px)/2 + 1px);
   }
@@ -208,6 +209,7 @@ header .wrapper .sort.active {
 
 header {
   padding: 20px 0 20px 0;
+  background: #fff;
 }
 header .wrapper {
   display: flex;
@@ -259,6 +261,7 @@ header .wrapper .search_form input::placeholder {
 }
 
 main {
+  margin-top: 183px;
   padding-bottom: 35px;
 }
 main .head {

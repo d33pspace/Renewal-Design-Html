@@ -5,19 +5,15 @@
 
 
 header {
-    padding: 20px;
+    padding: 0 20px;
+    background: #fff;
     .wrapper {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         a {
             display: flex;
+            margin: 20px 0;
         }
-    }
-}
-
-main {
-    .wrapper {
-        padding: 0 16px;
         .title {
             font-weight: bold;
             font-size: 24px;
@@ -25,6 +21,13 @@ main {
             color: #001730;
             margin-bottom: 24px;
         }
+    }
+}
+
+main {
+    margin-top: 115px;
+    .wrapper {
+        padding: 0 16px;
         .avatar_block {
             position: relative;
             width: fit-content;

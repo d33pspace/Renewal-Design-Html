@@ -194,6 +194,7 @@ header .wrapper .sort.active {
   .fixed_header {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     max-width: 768px;
     left: calc((100% - 770px)/2 + 1px);
   }
@@ -203,25 +204,30 @@ header .wrapper .sort.active {
 }
 
 header {
-  padding: 20px;
+  padding: 0 20px;
+  background: #fff;
 }
 header .wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 header .wrapper a {
   display: flex;
+  margin: 20px 0;
 }
-
-main .wrapper {
-  padding: 0 16px;
-}
-main .wrapper .title {
+header .wrapper .title {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   color: #001730;
   margin-bottom: 24px;
+}
+
+main {
+  margin-top: 115px;
+}
+main .wrapper {
+  padding: 0 16px;
 }
 main .wrapper .avatar_block {
   position: relative;

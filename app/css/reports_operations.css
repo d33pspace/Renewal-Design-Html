@@ -194,6 +194,7 @@ header .wrapper .sort.active {
   .fixed_header {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     max-width: 768px;
     left: calc((100% - 770px)/2 + 1px);
   }
@@ -208,6 +209,7 @@ header .wrapper .sort.active {
 
 header {
   padding: 20px 0 18.5px 4px;
+  background: #fff;
 }
 header .wrapper {
   display: flex;
@@ -237,6 +239,9 @@ header .wrapper .filter span {
   font-weight: 500;
 }
 
+main {
+  margin-top: 144px;
+}
 main .header {
   padding: 16px 36px 16px 16px;
   border-bottom: 1px solid #F1F2F4;
