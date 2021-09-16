@@ -9,16 +9,20 @@ serve_icon.forEach((item => {
 let serviceCards = document.querySelectorAll('.service_list .card')
 
 serviceCards.forEach((item => {
-    item.onclick = () => {
-        location.href='./return_page.html'
+    item.onclick = (e) => {
+        if (e.target !== item.querySelector('.serve_icon')) {
+            location.href='./return_page.html'
+        }
     }
 }))
 
 let finishedCards = document.querySelectorAll('.finished_list .card')
 
 finishedCards.forEach((item => {
-    item.onclick = () => {
-        location.href='./guest_profile.html'
+    item.onclick = (e) => {
+        if (e.target !== item.querySelector('.serve_icon')) {
+            location.href='./guest_profile.html'
+        }
     }
 }))
 

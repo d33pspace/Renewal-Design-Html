@@ -79,6 +79,9 @@ main {
         .card.active .arrow {
             filter: unset;
         }
+        .card.active .arrow.active {
+            transform: rotateX(180deg);
+        }
         .card.active {
             cursor: pointer;
         }
@@ -136,6 +139,7 @@ main {
             flex-direction: column;
             padding: 0 16px;
             display: none;
+            background: #FAFBFC;
             &.active {
                 display: flex;
             }

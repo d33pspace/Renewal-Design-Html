@@ -253,6 +253,9 @@ main .head p {
 main .body .card.active .arrow {
   filter: unset;
 }
+main .body .card.active .arrow.active {
+  transform: rotateX(180deg);
+}
 main .body .card.active {
   cursor: pointer;
 }
@@ -310,6 +313,7 @@ main .body .card-extend {
   flex-direction: column;
   padding: 0 16px;
   display: none;
+  background: #FAFBFC;
 }
 main .body .card-extend.active {
   display: flex;
