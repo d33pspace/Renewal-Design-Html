@@ -163,7 +163,7 @@ header .wrapper .sort.active {
   }
 }
 .overlay.active {
-  z-index: 9;
+  z-index: 9999;
   opacity: 1;
 }
 
