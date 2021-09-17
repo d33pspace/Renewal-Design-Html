@@ -43,7 +43,6 @@ table {
 }
 
 html, body {
-  height: 100%;
   min-height: 100%;
   overflow-x: hidden;
 }
@@ -184,15 +183,17 @@ header .wrapper .sort {
   width: 100%;
   z-index: 999;
   box-sizing: border-box;
-
+  &.scrolled {
+    box-shadow: 0 2px 8px -6px #3A3C40;
+  }
   @media(min-width: 768px) {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     border-top: 1px solid #000;
     max-width: 768px;
-    left: calc((100% - 770px)/2 + 1px);
-    &.scroll {
-      left: calc((100% - 770px)/2 - 7px);  
-    }
+    transform: translateX(-1px);
+    // &.scroll {
+    //   // left: calc((100% - 770px)/2 - 7px);  
+    // }
   }
 }

@@ -1,7 +1,5 @@
 let card = document.querySelectorAll('.card')
 
-
-
 card.forEach((item => {
     if (!item.querySelector('.card-extend').hasChildNodes()) {
         item.classList.add('no-extend')
