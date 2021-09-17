@@ -1,8 +1,14 @@
-let card = document.querySelectorAll('.card.active .card-title')
+let card = document.querySelectorAll('.card')
+
+
 
 card.forEach((item => {
+    if (!item.querySelector('.card-extend').hasChildNodes()) {
+        item.classList.add('no-extend')
+    }
     item.onclick = () => {
-        item.nextElementSibling.classList.toggle('active')
-        item.querySelector('.arrow').classList.toggle('active')
+        if(item.querySelector('.arrow')) {
+            item.classList.toggle('active')
+        }
     }
 }))

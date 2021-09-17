@@ -281,11 +281,18 @@ main .head p {
 }
 main .body .card.active .arrow {
   filter: unset;
-}
-main .body .card.active .arrow.active {
   transform: rotateX(180deg);
 }
-main .body .card.active {
+main .body .card.active .card-extend {
+  display: flex;
+}
+main .body .card.no-extend {
+  cursor: initial;
+}
+main .body .card.no-extend .arrow {
+  display: none;
+}
+main .body .card {
   cursor: pointer;
 }
 main .body .card-title {
@@ -343,9 +350,6 @@ main .body .card-extend {
   padding: 0 16px;
   display: none;
   background: #FAFBFC;
-}
-main .body .card-extend.active {
-  display: flex;
 }
 main .body .card-extend .item {
   padding: 12px 0 11px 7px;

@@ -78,13 +78,22 @@ main {
         }
     }
     .body {
-        .card.active .arrow {
-            filter: unset;
-        }
-        .card.active .arrow.active {
-            transform: rotateX(180deg);
-        }
         .card.active {
+            .arrow {
+                filter: unset;
+                transform: rotateX(180deg);
+            }
+            .card-extend {
+                display: flex;
+            }
+        }
+        .card.no-extend {
+            cursor: initial;
+            .arrow {
+                display: none;
+            }
+        }
+        .card {
             cursor: pointer;
         }
         .card-title {
@@ -142,9 +151,6 @@ main {
             padding: 0 16px;
             display: none;
             background: #FAFBFC;
-            &.active {
-                display: flex;
-            }
             .item {
                 padding: 12px 0 11px 7px;
                 border-bottom: 1px solid #F1F2F4;
