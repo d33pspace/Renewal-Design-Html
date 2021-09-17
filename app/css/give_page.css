@@ -314,11 +314,11 @@ header .title {
 .card .card-content .item {
   display: flex;
   justify-content: space-between;
-  padding: 12px 14px 12px 8px;
   border-bottom: 1px solid #F1F2F4;
   cursor: pointer;
 }
 .card .card-content .item .name {
+  padding: 12px 0 12px 8px;
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.005em;
@@ -327,11 +327,8 @@ header .title {
 .card .card-content .item .name span {
   margin-right: 15px;
 }
-.card .card-content .item .date {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.005em;
-  color: #848790;
+.card .card-content .item .add {
+  padding: 12px 14px 12px 14px;
 }
 
 main {
@@ -490,4 +487,39 @@ main .head .col-title {
 .proceed img {
   width: 20px;
   height: 14px;
+}
+
+.giving_list {
+  display: none;
+}
+.giving_list.active {
+  display: block;
+}
+.giving_list .buttons-title {
+  display: flex;
+}
+.giving_list .buttons-title .col-title:last-child {
+  margin-left: 8px;
+}
+.giving_list .card {
+  display: none;
+}
+.giving_list .card.active {
+  display: block;
+}
+.giving_list .card .card-heading {
+  cursor: initial;
+  padding: 0;
+}
+.giving_list .card .card-heading .card-title {
+  padding: 16px 0 16px 16px;
+}
+.giving_list .card .buttons {
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+}
+.giving_list .card .buttons img {
+  cursor: pointer;
+  padding: 16px 15px 16px 16px;
 }
