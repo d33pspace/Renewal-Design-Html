@@ -60,7 +60,7 @@ header {
 }
 
 main {
-    margin-top: 183px;
+    margin-top: 140px;
     padding-bottom: 35px;
     .head {
         padding: 0 16px 12px 16px;
@@ -88,7 +88,6 @@ main {
             }
         }
         .card.no-extend {
-            cursor: initial;
             .arrow {
                 display: none;
             }
@@ -143,6 +142,7 @@ main {
                 position: absolute;
                 right: 31px;
                 top: calc(50% - 4px);
+                transition: .3s;
                 filter: brightness(0) saturate(100%) invert(84%) sepia(12%) saturate(193%) hue-rotate(186deg) brightness(89%) contrast(84%);
             }
         }

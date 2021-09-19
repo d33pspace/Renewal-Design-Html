@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="./css/edit_item.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop-wrapper">
+        <header class='fixed_header'>
+            <div class="wrapper">
+                <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
+                <h3 class="title">Edit Item</h3>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <form action='#'>
+                    <div class="input-wrapper active">
+                        <label for='english_title'>English title</label>
+                        <input id='english_title' type='text' value='Heavy coat'>
+                        <p class="error-message">Error</p>
+                    </div>
+                    <div class="input-wrapper active">
+                        <label for='chinese_title'>Chinese title</label>
+                        <input id='chinese_title' type='text' value='厚外套 '>
+                        <p class="error-message">Error</p>
+                    </div>
+                    <div class="dropdown item_type">
+                        <div class="current filled">
+                            <img src='./img/svg/category_outerwear.svg'>
+                            <p>outwear</p>
+                        </div>
+                        <input class='search' type='text' placeholder='Search'>
+                        <img class='arrow' src='./img/svg/down_arrow.svg'>
+                        <div class="list">
+                            <div class="option">
+                                <img src='./img/svg/category_outerwear.svg'>
+                                <p>outwear</p>
+                            </div>
+                            <div class="option">
+                                <img src='./img/svg/category_shirt.svg'>
+                                <p>shirt</p>
+                            </div>
+                            <div class="option">
+                                <img src='./img/svg/category_shirt.svg'>
+                                <p>shirt</p>
+                            </div>
+                            <div class="option">
+                                <img src='./img/svg/category_shirt.svg'>
+                                <p>shirt</p>
+                            </div>
+                            <div class="option">
+                                <img src='./img/svg/category_shirt.svg'>
+                                <p>shirt</p>
+                            </div>
+                            <div class="option">
+                                <img src='./img/svg/category_shirt.svg'>
+                                <p>shirt</p>
+                            </div>
+                            <div class="option">
+                                <img src='./img/svg/category_shirt.svg'>
+                                <p>shirt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown policy">
+                        <div class="current filled">
+                            <p>30 days</p>
+                        </div>
+                        <img class='arrow' src='./img/svg/down_arrow.svg'>
+                        <div class="list">
+                            <div class="option">
+                                <p>30 days</p>
+                            </div>
+                            <div class="option">
+                                <p>14 days</p>
+                            </div>
+                            <div class="option">
+                                <p>7 days</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type='checkbox' id='checkbox' checked>
+                        <label for="checkbox">Can be washed</label>
+                    </div>
+                    <label for='switch' class="switch">
+                        <input type="checkbox" id='switch' checked>
+                        <span class="slider round"></span>
+                        <p>Active item</p>
+                    </label>
+                </form>
+            </div>
+        </main>
+        <section class="edit_policy overlay">
+            <div class="wrapper">
+                <h4 class="title">Edit policy?</h4>
+                <p class='text'>Distribution policy will change for all items for the current type in the database.</p>
+                <div class="delete_block button_block">
+                    <button class='cancel'>Cancel</button>
+                    <button class='proceed delete' type='submit'>Edit</button>
+                </div>
+            </div>
+        </section>
+        <section class='change_message'>
+            <p>Policy for the whole item's type changed. </p>
+        </section>
+        <a class='done' href='#'><img src='./img/svg/check.svg'></a>
+    </div>
+    <script defer src="./js/new_item.js"></script>
+    <script defer src="./js/fixed_header.js"></script>
+</body>
