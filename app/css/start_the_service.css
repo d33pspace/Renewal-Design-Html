@@ -57,6 +57,7 @@ body {
   font-family: "Noto Sans SC", sans-serif;
   color: #1F1F2D;
   line-height: 1;
+  overflow-y: hidden;
 }
 
 img {
@@ -202,21 +203,64 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-
 header {
-  padding: 20px 0;
+  background: #fff;
+  padding: 0 20px;
 }
 header .wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 56px;
 }
 header .wrapper a {
   display: flex;
 }
+header .search_block h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+  color: #001730;
+  padding-bottom: 24px;
+}
+header .search_block .search_form {
+  position: relative;
+}
+header .search_block .search_form:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  background: url("../img/svg/search.svg");
+}
+header .search_block .search_form input {
+  padding: 11px 12px 11px 44px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #848790;
+  position: relative;
+  border: 1px solid #F1F2F4;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #FAFBFC;
+}
+header .search_block .search_form input::placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #848790;
+}
 
+main {
+  margin-top: 160px;
+}
+main .wrapper {
+  padding: 0 16px;
+}
 main .search_block {
   padding: 0 16px;
 }
@@ -273,6 +317,11 @@ main .guest_block .card {
   justify-content: space-between;
   border-bottom: 1px solid #F1F2F4;
 }
+main .guest_block .card a:first-child {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
 main .guest_block .card .user_info {
   display: flex;
 }
@@ -318,6 +367,7 @@ main .guest_block .card .order_date .date {
   font-size: 12px;
   line-height: 160%;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 main .guest_block .card .order_date .link_to_order {
   margin-left: auto;

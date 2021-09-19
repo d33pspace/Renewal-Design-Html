@@ -57,6 +57,7 @@ body {
   font-family: "Noto Sans SC", sans-serif;
   color: #1F1F2D;
   line-height: 1;
+  overflow-y: hidden;
 }
 
 img {
@@ -202,22 +203,17 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-
 header {
+  padding: 0 20px;
   background: #fff;
-  padding: 20px 0 0 0;
 }
 header .wrapper {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
 }
-header .wrapper .back {
+header .wrapper a {
+  margin: 20px 0;
   display: flex;
-  margin-bottom: 24px;
 }
 header .wrapper .title {
   font-weight: bold;
@@ -225,11 +221,13 @@ header .wrapper .title {
   line-height: 35px;
   color: #001730;
   margin-bottom: 24px;
-  margin-left: 16px;
 }
 
 main {
-  margin-top: 119px;
+  margin-top: 115px;
+}
+main .wrapper {
+  padding: 0 16px;
 }
 main .input-wrapper {
   position: relative;

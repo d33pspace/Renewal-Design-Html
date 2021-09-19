@@ -1,20 +1,18 @@
 /*---BASE---*/
 @import './base/_base.scss';
 
-.wrapper {
-    padding: 0 16px;
-}
+
 
 header {
     background: #fff;
-    padding: 20px 0 0 0;
+    padding: 0 20px;
     .wrapper {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         .back {
             display: flex;
-            margin-bottom: 24px;
+            margin: 20px 0;
         }
         .title {
             font-weight: bold;
@@ -22,13 +20,15 @@ header {
             line-height: 35px;
             color: #001730;
             margin-bottom: 24px;
-            margin-left: 16px;
         }
     }
 }
 
 main {
-    margin-top: 119px;
+    margin-top: 116px;
+    .wrapper {
+        padding: 0 16px;
+    }
     .input-wrapper {
         position: relative;
         margin-bottom: 16px;

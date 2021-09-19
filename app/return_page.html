@@ -22,8 +22,12 @@
         <main>
             <div class="wrapper">
                 <div class="tag">
-                    <label for='tag'>laundry tag</label>
-                    <input id='tag' value="#336">
+                    <form action="#" id="tag_form">
+                        <label for='tag'>laundry tag</label>
+                        <input id='tag' value="#336" tabindex="-1" maxlength="4">
+                        <img src='./img/svg/check_settings.svg' class='check'>
+                        <img src='./img/svg/edit.svg' class='edit active'>
+                    </form>
                 </div>
             </div>
             <div class="laundry">
@@ -68,8 +72,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <img src='./img/svg/delete.svg' class='delete button'>
-                            <img src='./img/svg/lost.svg' class='lost button'>
+                            <div class="delete button"><img src='./img/svg/delete.svg'></div>
+                            <div class="lost button"><img src='./img/svg/lost.svg'></div>
                         </div>
                     </div>
                     <div class="card">
@@ -84,8 +88,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <img src='./img/svg/delete.svg' class='delete button'>
-                            <img src='./img/svg/lost.svg' class='lost button'>
+                            <div class="delete button"><img src='./img/svg/delete.svg'></div>
+                            <div class="lost button"><img src='./img/svg/lost.svg'></div>
                         </div>
                     </div>
                     <div class="card">
@@ -99,8 +103,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <img src='./img/svg/delete.svg' class='delete button'>
-                            <img src='./img/svg/lost.svg' class='lost button'>
+                            <div class="delete button"><img src='./img/svg/delete.svg'></div>
+                            <div class="lost button"><img src='./img/svg/lost.svg'></div>
                         </div>
                     </div>
                     <div class="card">
@@ -114,8 +118,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <img src='./img/svg/delete.svg' class='delete button'>
-                            <img src='./img/svg/lost.svg' class='lost button'>
+                            <div class="delete button"><img src='./img/svg/delete.svg'></div>
+                            <div class="lost button"><img src='./img/svg/lost.svg'></div>
                         </div>
                     </div>
                     <div class="card">
@@ -129,8 +133,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <img src='./img/svg/delete.svg' class='delete button'>
-                            <img src='./img/svg/lost.svg' class='lost button'>
+                            <div class="delete button"><img src='./img/svg/delete.svg'></div>
+                            <div class="lost button"><img src='./img/svg/lost.svg'></div>
                         </div>
                     </div>
                     <div class="card">
@@ -144,8 +148,8 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <img src='./img/svg/delete.svg' class='delete button'>
-                            <img src='./img/svg/lost.svg' class='lost button'>
+                            <div class="delete button"><img src='./img/svg/delete.svg'></div>
+                            <div class="lost button"><img src='./img/svg/lost.svg'></div>
                         </div>
                     </div>
                 </div>
@@ -168,4 +172,5 @@
     </div>
 <script defer src="./js/return_page.js"></script>
 <script defer src="./js/fixed_header.js"></script>
+<script defer src="./js/tag.js"></script>
 </body>

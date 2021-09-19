@@ -57,6 +57,7 @@ body {
   font-family: "Noto Sans SC", sans-serif;
   color: #1F1F2D;
   line-height: 1;
+  overflow-y: hidden;
 }
 
 img {
@@ -202,13 +203,9 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-
 header {
   background: #fff;
-  padding: 20px 0 18.5px 4px;
+  padding: 0 20px;
 }
 header .wrapper {
   display: flex;
@@ -217,19 +214,19 @@ header .wrapper {
 }
 header .wrapper .back {
   display: flex;
-  margin-bottom: 24px;
+  margin: 20px 0;
 }
 header .wrapper .title {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   color: #001730;
-  margin-bottom: 10.5px;
 }
 header .wrapper .filter {
   font-size: 12px;
   line-height: 160%;
   color: #001730;
+  margin: 10.5px 0;
 }
 header .wrapper .filter span {
   text-decoration-line: underline;
@@ -239,7 +236,10 @@ header .wrapper .filter span {
 }
 
 main {
-  margin-top: 143px;
+  margin-top: 132px;
+}
+main .wrapper {
+  padding: 0 16px;
 }
 main .cards {
   padding: 8px 0;

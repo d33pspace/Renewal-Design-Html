@@ -57,6 +57,7 @@ body {
   font-family: "Noto Sans SC", sans-serif;
   color: #1F1F2D;
   line-height: 1;
+  overflow-y: hidden;
 }
 
 img {
@@ -202,29 +203,30 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-
 header {
   background: #fff;
-  padding: 20px 0;
+  padding: 0 20px;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
 }
 header .wrapper a {
-  padding-bottom: 20px;
   display: flex;
 }
-header .wrapper .search_block h1 {
+header .search_block h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   color: #001730;
   padding-bottom: 24px;
 }
-header .wrapper .search_block .search_form {
+header .search_block .search_form {
   position: relative;
 }
-header .wrapper .search_block .search_form:after {
+header .search_block .search_form:after {
   content: "";
   position: absolute;
   top: calc(50% - 9px);
@@ -233,7 +235,7 @@ header .wrapper .search_block .search_form:after {
   height: 18px;
   background: url("../img/svg/search.svg");
 }
-header .wrapper .search_block .search_form input {
+header .search_block .search_form input {
   padding: 11px 12px 11px 44px;
   font-size: 14px;
   line-height: 20px;
@@ -246,7 +248,7 @@ header .wrapper .search_block .search_form input {
   width: 100%;
   background: #FAFBFC;
 }
-header .wrapper .search_block .search_form input::placeholder {
+header .search_block .search_form input::placeholder {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.005em;
@@ -254,13 +256,16 @@ header .wrapper .search_block .search_form input::placeholder {
 }
 
 main {
-  margin-top: 179px;
+  margin-top: 160px;
+}
+main .wrapper {
+  padding: 0 16px;
 }
 main .users_block .titles {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #F1F2F4;
-  padding: 0px 16px 12px 16px;
+  padding: 20px 16px 12px 16px;
 }
 main .users_block .titles p {
   font-weight: bold;
@@ -317,7 +322,6 @@ main .users_block .card .user_info .info_details .position img {
   margin: 0 6px 0 2px;
 }
 main .users_block .card .date {
-  margin-bottom: 10px;
   color: #848790;
   font-size: 12px;
   line-height: 160%;

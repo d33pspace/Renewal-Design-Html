@@ -39,5 +39,36 @@ add.forEach(item => {
         let card = document.querySelector('.giving_list').querySelector('*[card-data="' + cardData + '"]')
         card.classList.add('active')
         card.querySelector('.counter').innerHTML++
+        // alert button
+        let alert = document.querySelectorAll('.alert')
+        alert.forEach(i => {
+            i.onclick = () => {
+                i.classList.toggle('active')
+            }
+        })
+        // remove
+        let rmv = document.querySelectorAll('.rmv')
+        rmv.forEach(i => {
+            i.onclick = () => {
+                let counter = i.parentElement.parentElement.querySelector('.counter')
+                counter.innerHTML--
+                if (counter.innerHTML < 1) {
+                    i.parentElement.parentElement.parentElement.classList.remove('active')
+                    if( i.parentElement.parentElement.parentElement.parentElement.querySelectorAll('.card.active').length == 0) {
+                        document.querySelector('.giving_list').classList.remove('active')
+                    }
+                }
+            }
+        })
     }
 })
+
+// menu 
+
+let proceed = document.querySelector('.proceed')
+
+proceed.onclick = (e) => {
+    e.preventDefault()
+    proceed.classList.toggle('opened')
+    document.querySelector('.overlay.menu').classList.toggle('active')
+}

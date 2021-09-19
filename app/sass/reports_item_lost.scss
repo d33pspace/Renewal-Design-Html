@@ -1,32 +1,30 @@
 /*---BASE---*/
 @import './base/_base.scss';
 
-.wrapper {
-    padding: 0 16px;
-}
+
 
 header {
     background: #fff;
-    padding: 20px 0 18.5px 4px;
+    padding: 0 20px;
     .wrapper {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         .back {
             display: flex;
-            margin-bottom: 24px;
+            margin: 20px 0;
         }
         .title {
             font-weight: bold;
             font-size: 24px;
             line-height: 35px;
             color: #001730;
-            margin-bottom: 10.5px;
         }
         .filter {
             font-size: 12px;
             line-height: 160%;
             color: #001730;
+            margin: 10.5px 0;
             span {
                 text-decoration-line: underline;
                 color: #13ADAD;
@@ -38,7 +36,10 @@ header {
 }
 
 main {
-    margin-top: 143px;
+    margin-top: 132px;
+    .wrapper {
+        padding: 0 16px;
+    }
     .header {
         padding: 16px 16px 17px 16px;
         box-sizing: border-box;

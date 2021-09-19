@@ -66,6 +66,16 @@ proceed.onclick = (e) => {
     }
 }
 
+overlay.onclick = (e) => {
+    if (e.target == overlay) {
+        overlay.classList.toggle('active')
+        menuIcon.forEach((item) => {
+            item.classList.toggle('active')
+        })
+        proceed.classList.toggle('opened')
+    }
+}
+
 
 let cards = document.querySelectorAll('.laundry .card')
 

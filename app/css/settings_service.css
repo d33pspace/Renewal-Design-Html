@@ -57,6 +57,7 @@ body {
   font-family: "Noto Sans SC", sans-serif;
   color: #1F1F2D;
   line-height: 1;
+  overflow-y: hidden;
 }
 
 img {
@@ -202,11 +203,8 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-
 header {
+  padding: 0 20px;
   background: #fff;
 }
 header .wrapper {
@@ -214,8 +212,8 @@ header .wrapper {
   flex-direction: column;
 }
 header .wrapper a {
+  margin: 20px 0;
   display: flex;
-  margin: 28px 0;
 }
 header .wrapper .title {
   font-weight: bold;
@@ -226,7 +224,10 @@ header .wrapper .title {
 }
 
 main {
-  margin-top: 131px;
+  margin-top: 160px;
+}
+main .wrapper {
+  padding: 0 16px;
 }
 main .option {
   display: flex;

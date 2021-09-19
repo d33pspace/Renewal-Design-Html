@@ -1,22 +1,68 @@
 /*---BASE---*/
 @import './base/_base.scss';
 
-.wrapper {
-    padding: 0 16px;
-}
+
 
 header {
-    padding: 20px 0;
+    background: #fff;
+    padding: 0 20px;
     .wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: 56px;
         a {
             display: flex;
+        }
+    }
+    .search_block {
+        h1 {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 35px;
+            color: #001730;
+            padding-bottom: 24px;
+        }
+        .search_form {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: calc(50% - 9px);
+                left: 15px;
+                width: 18px;
+                height: 18px;
+                background: url('../img/svg/search.svg');
+            }
+            input {
+                padding: 11px 12px 11px 44px;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.005em;
+                color: #848790;
+                position: relative;
+                border: 1px solid #F1F2F4;
+                border-radius: 8px;
+                box-sizing: border-box;
+                width: 100%;
+                background: #FAFBFC;
+                &::placeholder {
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.005em;
+                    color: #848790;
+                }
+                
+            }
         }
     }
 }
 
 main {
+    margin-top: 160px;
+    .wrapper {
+        padding: 0 16px;
+    }
     .search_block {
         padding: 0 16px;
         h1 {
@@ -74,6 +120,11 @@ main {
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid #F1F2F4;
+            a:first-child {
+                width: -webkit-fill-available;
+                width: -moz-available;
+                width: fill-available;
+            }
             .user_info {
                 display: flex;
                 .avatar {
@@ -118,6 +169,7 @@ main {
                     font-size: 12px;
                     line-height: 160%;
                     margin-bottom: 10px;
+                    white-space: nowrap;
                 }
                 .link_to_order {
                     margin-left: auto;

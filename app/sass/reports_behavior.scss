@@ -1,32 +1,28 @@
 /*---BASE---*/
 @import './base/_base.scss';
 
-.wrapper {
-    padding: 0 16px;
-}
-
 header {
     background: #fff;
-    padding: 20px 0 10.5px 4px;
+    padding: 0 20px;
     .wrapper {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         .back {
             display: flex;
-            margin-bottom: 24px;
+            margin: 20px 0;
         }
         .title {
             font-weight: bold;
             font-size: 24px;
             line-height: 35px;
             color: #001730;
-            margin-bottom: 10.5px;
         }
         .filter {
             font-size: 12px;
             line-height: 160%;
             color: #001730;
+            margin: 10.5px 0;
             span {
                 text-decoration-line: underline;
                 color: #13ADAD;
@@ -38,8 +34,11 @@ header {
 }
 
 main {
-    margin-top: 135px;
-    padding: 24px 32px;
+    padding: 0 32px;
+    margin-top: 132px;
+    .wrapper {
+        padding: 0 16px;
+    }
     .cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -81,6 +80,7 @@ main {
 }
 
 .overlay {
+    flex-direction: column;
     .closeoverlay {
         background: #fff;
         padding: 29px 16px 40px 16px;
@@ -88,6 +88,7 @@ main {
         justify-content: space-between;
         button {
             padding: 10px 48px;
+            cursor: pointer;
             border-radius: 8px;
             border: unset;
             font-family: 'Noto Sans SC', sans-serif;

@@ -1,25 +1,17 @@
 /*---BASE---*/
 @import './base/_base.scss';
 
-.wrapper {
-    padding: 0 16px;
-}
+
 
 header {
+    padding: 0 20px;
     background: #fff;
     .wrapper {
         display: flex;
         flex-direction: column;
         a {
+            margin: 20px 0;
             display: flex;
-            margin: 28px 0;
-        }
-        .edit {
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 20px;
-            letter-spacing: 0.005em;
-            color: #27C4BC;
         }
         .title {
             font-weight: bold;
@@ -32,7 +24,10 @@ header {
 }
 
 main {
-    margin-top: 131px;
+    margin-top: 115px;
+    .wrapper {
+        padding: 0 16px;
+    }
     .subtitle {
         font-weight: 500;
         font-size: 18px;

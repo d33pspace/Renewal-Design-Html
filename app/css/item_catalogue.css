@@ -57,6 +57,7 @@ body {
   font-family: "Noto Sans SC", sans-serif;
   color: #1F1F2D;
   line-height: 1;
+  overflow-y: hidden;
 }
 
 img {
@@ -202,35 +203,30 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-
 header {
-  padding: 20px 0 20px 0;
   background: #fff;
+  padding: 0 20px;
 }
 header .wrapper {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  align-items: center;
+  height: 56px;
 }
-header .wrapper .back {
+header .wrapper a {
   display: flex;
-  margin-bottom: 24px;
 }
-header .wrapper .title {
+header .search_block h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   color: #001730;
-  margin-bottom: 24px;
-  margin-left: 16px;
+  padding-bottom: 24px;
 }
-header .wrapper .search_form {
+header .search_block .search_form {
   position: relative;
 }
-header .wrapper .search_form:after {
+header .search_block .search_form:after {
   content: "";
   position: absolute;
   top: calc(50% - 9px);
@@ -239,7 +235,7 @@ header .wrapper .search_form:after {
   height: 18px;
   background: url("../img/svg/search.svg");
 }
-header .wrapper .search_form input {
+header .search_block .search_form input {
   padding: 11px 12px 11px 44px;
   font-size: 14px;
   line-height: 20px;
@@ -252,7 +248,7 @@ header .wrapper .search_form input {
   width: 100%;
   background: #FAFBFC;
 }
-header .wrapper .search_form input::placeholder {
+header .search_block .search_form input::placeholder {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.005em;
@@ -260,11 +256,14 @@ header .wrapper .search_form input::placeholder {
 }
 
 main {
-  margin-top: 140px;
+  margin-top: 160px;
   padding-bottom: 35px;
 }
+main .wrapper {
+  padding: 0 16px;
+}
 main .head {
-  padding: 0 16px 12px 16px;
+  padding: 20px 16px 12px 16px;
   box-sizing: border-box;
   border-bottom: 1px solid #F1F2F4;
   display: flex;

@@ -56,6 +56,7 @@ body {
   font-family: "Noto Sans SC", sans-serif;
   color: #1F1F2D;
   line-height: 1;
+  overflow-y: hidden;
 }
 
 img {
@@ -201,16 +202,8 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-.wrapper.border {
-  border-bottom: 1px solid #F1F2F4;
-  box-sizing: border-box;
-}
-
 header {
-  padding: 0 0 0 4px;
+  padding: 0 20px;
   background: #fff;
 }
 header .wrapper {
@@ -222,7 +215,7 @@ header .wrapper a {
   display: flex;
 }
 header .title {
-  padding: 10.5px 16px 18.5px 16px;
+  padding-bottom: 24px;
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
@@ -230,7 +223,14 @@ header .title {
 }
 
 main {
-  margin-top: 120px;
+  margin-top: 116px;
+}
+main .wrapper {
+  padding: 0 16px;
+}
+main .wrapper.border {
+  border-bottom: 1px solid #F1F2F4;
+  box-sizing: border-box;
 }
 main #tag_form {
   position: relative;

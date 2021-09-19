@@ -1,18 +1,17 @@
 /*---BASE---*/
 @import './base/_base.scss';
 
-.wrapper {
-    padding: 0 16px;
-}
+
 
 header {
+    padding: 0 20px;
     background: #fff;
     .wrapper {
         display: flex;
         flex-direction: column;
         a {
+            margin: 20px 0;
             display: flex;
-            margin: 28px 0;
         }
         .title {
             font-weight: bold;
@@ -25,7 +24,10 @@ header {
 }
 
 main {
-    margin-top: 131px;
+    margin-top: 115px;
+    .wrapper {
+        padding: 0 16px;
+    }
     .option {
         margin-bottom: 8px;
         padding: 18px 16px 16px 16px;

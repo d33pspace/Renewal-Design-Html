@@ -207,7 +207,7 @@ main {
     right: 16px;
     bottom: 17px;
     @media(min-width: 768px) {
-        right: calc(((100vw - 770px)/2) + 24px)
+        right: calc(((100vw - 768px)/2) + 8px)
     }
     img {
         width: 20px;
