@@ -283,6 +283,7 @@ main .cards .data p.red {
 
 .overlay {
   flex-direction: column;
+  justify-content: flex-end;
 }
 .overlay .closeoverlay {
   background: #fff;

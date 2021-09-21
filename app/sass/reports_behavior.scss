@@ -81,6 +81,7 @@ main {
 
 .overlay {
     flex-direction: column;
+    justify-content: flex-end;
     .closeoverlay {
         background: #fff;
         padding: 29px 16px 40px 16px;

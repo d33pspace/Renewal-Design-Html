@@ -288,6 +288,9 @@ main .dropdown.active .search {
 main .dropdown.active {
   box-shadow: 0px 2px 8px -2px rgba(45, 43, 70, 0.06), 0px 0px 6px rgba(45, 43, 70, 0.08);
 }
+main .dropdown.active .arrow {
+  transform: rotateX(180deg);
+}
 main .dropdown.active .list {
   box-shadow: 0px 2px 8px -2px rgba(45, 43, 70, 0.06), 0px 0px 6px rgba(45, 43, 70, 0.08);
 }
@@ -536,6 +539,12 @@ main .switch p {
 .change_message.active {
   animation-duration: 5s;
   animation-name: done;
+}
+@media (min-width: 768px) {
+  .change_message {
+    max-width: 752px;
+    left: calc((100% - 770px)/2 + 8px);
+  }
 }
 
 .done {

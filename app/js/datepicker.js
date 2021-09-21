@@ -22,3 +22,15 @@ $(function(){
 	});
 	$("#datepicker").datepicker("setDate", $('#datepicker_value').val());
 });
+
+let datepickerButton = document.querySelector('.filter span')
+
+datepickerButton.onclick = () => {
+	document.querySelector('.overlay').classList.add('active')
+}
+
+document.querySelectorAll('.closeoverlay button').forEach(item => {
+	item.onclick = () => {
+		document.querySelector('.overlay').classList.remove('active')
+	}
+})

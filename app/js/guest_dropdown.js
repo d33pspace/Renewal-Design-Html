@@ -2,8 +2,19 @@ let dropdown = document.querySelectorAll('.dropdown')
 
 dropdown.forEach((item) => {
     item.firstElementChild.onclick = () => {
-        item.classList.toggle('active')
-        item.lastElementChild.classList.toggle('active')
+        if (item.classList.contains('active')) {
+            dropdown.forEach((i) => {
+                i.classList.remove('active')
+                i.lastElementChild.classList.remove('active')
+            })
+        } else {
+            dropdown.forEach((i) => {
+                i.classList.remove('active')
+                i.lastElementChild.classList.remove('active')
+            })
+            item.classList.add('active')
+            item.lastElementChild.classList.add('active')
+        }
     }
     item.lastElementChild.childNodes.forEach((e) => {
         e.onclick = () => {

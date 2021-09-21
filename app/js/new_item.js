@@ -23,8 +23,19 @@ let dropdown = document.querySelectorAll('.dropdown')
 
 dropdown.forEach((item) => {
     item.firstElementChild.onclick = () => {
-        item.classList.toggle('active')
-        item.lastElementChild.classList.toggle('active')
+        if (item.classList.contains('active')) {
+            dropdown.forEach((i) => {
+                i.classList.remove('active')
+                i.lastElementChild.classList.remove('active')
+            })
+        } else {
+            dropdown.forEach((i) => {
+                i.classList.remove('active')
+                i.lastElementChild.classList.remove('active')
+            })
+            item.classList.add('active')
+            item.lastElementChild.classList.add('active')
+        }
         let search = item.querySelector('.search')
         let list = item.querySelectorAll('.option')
         if(search) {
@@ -61,8 +72,19 @@ let arrow = document.querySelectorAll('.arrow')
 
 arrow.forEach((item) => {
     item.onclick = () => {
-        item.parentElement.classList.toggle('active')
-        item.parentElement.lastElementChild.classList.toggle('active')
+        if (item.parentElement.classList.contains('active')) {
+            dropdown.forEach((i) => {
+                i.classList.remove('active')
+                i.lastElementChild.classList.remove('active')
+            })
+        } else {
+            dropdown.forEach((i) => {
+                i.classList.remove('active')
+                i.lastElementChild.classList.remove('active')
+            })
+            item.parentElement.classList.add('active')
+            item.parentElement.lastElementChild.classList.add('active')
+        }
         let search = item.parentElement.querySelector('.search')
         let list = item.parentElement.querySelectorAll('.option')
         if(search) {
@@ -120,4 +142,5 @@ cancelChange.onclick = () => {
 changeProceed.onclick = () => {
     toggleOverlay ()
     message.classList.add('active')
+    setInterval(() =>  message.classList.remove('active') , 5000)
 }
