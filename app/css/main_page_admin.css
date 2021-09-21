@@ -220,6 +220,7 @@ header .profile_section .profile {
 }
 header .profile_section .profile .image {
   margin-right: 8px;
+  display: flex;
 }
 header .profile_section .profile .image img {
   width: 44px;
@@ -299,9 +300,15 @@ header .total_section .serve_button:hover:before {
   background: url("../img/svg/serve_white.svg");
 }
 
+main {
+  margin-top: 155px;
+}
+main .list.waiting_list .card.grey {
+  background: #EEFBFA;
+}
 main .list .title {
   padding: 12px 16px;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 10px;
   line-height: 160%;
   color: #848790;
@@ -309,15 +316,16 @@ main .list .title {
   border-bottom: 1px solid #F1F2F4;
 }
 main .list .card {
-  padding: 9px 16px;
   border-bottom: 1px solid #F1F2F4;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 main .list .card.empty .coma, main .list .card.empty .city, main .list .card.empty .serve_icon {
   display: none;
 }
 main .list .card .user_info {
+  padding: 9px 16px;
   display: flex;
 }
 main .list .card .user_info.unactive {
@@ -357,6 +365,7 @@ main .list .card .user_info .info_details .age_city .coma {
   margin-right: 3px;
 }
 main .list .card .time {
+  padding: 9px 16px;
   display: flex;
   flex-direction: column;
 }
@@ -380,12 +389,11 @@ main .list .card .time .serve_icon {
   width: 24px;
   height: 24px;
   margin: 0 auto;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
 }
 main .list .card .time .serve_icon.active {
   filter: brightness(0) saturate(100%) invert(14%) sepia(74%) saturate(4474%) hue-rotate(335deg) brightness(96%) contrast(98%);
-}
-main .list .card .time .serve_icon.unactive {
-  filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
 }
 
 .chat {
@@ -401,7 +409,7 @@ main .list .card .time .serve_icon.unactive {
 }
 @media (min-width: 768px) {
   .chat {
-    right: calc(((100vw - 770px)/2) + 24px);
+    right: calc(((100vw - 768px)/2) + 8px);
   }
 }
 .chat img {
@@ -417,8 +425,8 @@ main .list .card .time .serve_icon.unactive {
   height: 100%;
   background: #001730;
   z-index: 999;
-  transform: translateY(100%);
-  padding: 20px 24px;
+  transform: translateY(-100%);
+  padding: 37px 24px;
   transition: 0.3s;
   box-sizing: border-box;
 }
@@ -428,6 +436,9 @@ main .list .card .time .serve_icon.unactive {
 @media (min-width: 768px) {
   .menu {
     max-width: 768px;
+    left: calc((100% - 770px)/2);
+  }
+  .menu.scroll {
     left: calc((100% - 770px)/2 - 8px);
   }
 }
@@ -435,13 +446,13 @@ main .list .card .time .serve_icon.unactive {
   margin-left: 5px;
   width: 14px;
   height: 14px;
-  margin-bottom: 50px;
+  margin-bottom: 21px;
   cursor: pointer;
 }
 .menu .user {
   display: flex;
   align-items: center;
-  padding-bottom: 32px;
+  padding-bottom: 23px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 36px;
 }
@@ -525,10 +536,21 @@ main .list .card .time .serve_icon.unactive {
   left: 34px;
   bottom: 60px;
 }
+@media (max-height: 660px) {
+  .menu .sign-out {
+    position: static;
+    margin-left: 10px;
+  }
+}
 .menu .sign-out img {
   margin-right: 18px;
 }
 
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .overlay .clear-popup {
   background-color: #fff;
   margin: 0 16px;
@@ -602,7 +624,7 @@ main .list .card .time .serve_icon.unactive {
 @media (min-width: 768px) {
   .message {
     max-width: 752px;
-    left: calc((100% - 770px)/2);
+    left: calc((100% - 770px)/2 + 8px);
   }
 }
 .message p {

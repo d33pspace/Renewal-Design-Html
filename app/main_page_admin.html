@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main Page</title>
+    <title>Main Page - Admin</title>
     <link rel="stylesheet" href="./css/main_page_admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="desktop-wrapper">
-    <header>
+    <header class='fixed_header'>
         <div class="wrapper">
             <div class="profile_section">
                 <div class="profile">
@@ -535,7 +535,7 @@
             Sign out
         </a>
     </div>
-    <a class='chat' href='#'><img src='./img/svg/people.svg'></a>
+    <a class='chat' href='./new_guest.html'><img src='./img/svg/person_add.svg'></a>
     <div class="overlay">
         <div class="clear-popup">
             <h4 class="title">Clear List?</h4>
@@ -550,7 +550,8 @@
         <p>All guest lists cleared. The next reset will be at 12 AM.</p>
     </div>
     </div>
-    <script defer src="./js/show_password.js"></script>
     <script defer src="./js/open_menu.js"></script>
+    <script defer src="./js/main_page_move.js"></script>
+    <script defer src="./js/fixed_header.js"></script>
     <script defer src="./js/clear_guest_list.js"></script>
 </body>

@@ -203,32 +203,31 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-
 header {
+  padding: 0 20px;
   background: #fff;
-  padding: 20px 0 16px;
 }
 header .wrapper {
   display: flex;
   flex-direction: column;
 }
 header .wrapper a {
+  margin: 20px 0;
   display: flex;
-  margin-left: 4px;
-  margin-bottom: 20px;
 }
-header .wrapper h3 {
+header .wrapper .title {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   color: #001730;
+  margin-bottom: 24px;
 }
 
 main {
-  margin-top: 107px;
+  margin-top: 115px;
+}
+main .wrapper {
+  padding: 0 16px;
 }
 main .head {
   display: flex;

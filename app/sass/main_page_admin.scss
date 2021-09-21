@@ -16,6 +16,7 @@ header {
             align-items: flex-end;
             .image {
                 margin-right: 8px;
+                display: flex;
                 img {
                     width: 44px;
                     height: 44px;
@@ -102,10 +103,14 @@ header {
 }
 
 main {
+    margin-top: 155px;
     .list {
+        &.waiting_list .card.grey {
+            background: #EEFBFA;
+        }
         .title {
             padding: 12px 16px;
-            font-weight: bold;
+            font-weight: 500;
             font-size: 10px;
             line-height: 160%;
             color: #848790;
@@ -113,16 +118,18 @@ main {
             border-bottom: 1px solid #F1F2F4;
         }
         .card {
-            padding: 9px 16px;
+            // padding: 9px 16px;
             border-bottom: 1px solid #F1F2F4;
             display: flex;
             justify-content: space-between;
+            cursor: pointer;
             &.empty {
                 .coma, .city, .serve_icon {
                     display: none;
                 }
             }
             .user_info {
+                padding: 9px 16px;
                 display: flex;
                 &.unactive {
                     opacity: .5;
@@ -162,6 +169,7 @@ main {
                 }
             }
             .time {
+                padding: 9px 16px;
                 display: flex;
                 flex-direction: column;
                 .remain_time {
@@ -184,11 +192,10 @@ main {
                     width: 24px;
                     height: 24px;
                     margin: 0 auto;
+                    cursor: pointer;
+                    filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
                     &.active {
                         filter: brightness(0) saturate(100%) invert(14%) sepia(74%) saturate(4474%) hue-rotate(335deg) brightness(96%) contrast(98%);
-                    }
-                    &.unactive {
-                        filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
                     }
                 }
             }
@@ -207,7 +214,7 @@ main {
     right: 16px;
     bottom: 17px;
     @media(min-width: 768px) {
-        right: calc(((100vw - 770px)/2) + 24px)
+        right: calc(((100vw - 768px)/2) + 8px)
     }
     img {
         width: 20px;
@@ -224,8 +231,8 @@ main {
     height: 100%;
     background: #001730;
     z-index: 999;
-    transform: translateY(100%);
-    padding: 20px 24px;
+    transform: translateY(-100%);
+    padding: 37px 24px;
     transition: .3s;
     box-sizing: border-box;
     &.active {
@@ -233,19 +240,22 @@ main {
     }
     @media(min-width: 768px) {
         max-width: 768px;
-        left: calc((100% - 770px)/2 - 8px)
+        left: calc((100% - 770px)/2);
+        &.scroll {
+            left: calc((100% - 770px)/2 - 8px);  
+        }
     }
     .close {
         margin-left: 5px;
         width: 14px;
         height: 14px;
-        margin-bottom: 50px;
+        margin-bottom: 21px;
         cursor: pointer;
     }
     .user {
         display: flex;
         align-items: center;
-        padding-bottom: 32px;
+        padding-bottom: 23px;
         border-bottom: 1px solid rgba(255, 255, 255, .2);
         margin-bottom: 36px;
         .avatar {
@@ -328,6 +338,10 @@ main {
         position: absolute;
         left: 34px;
         bottom: 60px;
+        @media(max-height: 660px) {
+            position: static;
+            margin-left: 10px;
+        }
         img {
             margin-right: 18px;
         }
@@ -335,6 +349,9 @@ main {
 }
 
 .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .clear-popup {
         background-color: #fff;
         margin: 0 16px;
@@ -408,7 +425,7 @@ main {
     }
     @media(min-width: 768px) {
         max-width: 752px;
-        left: calc((100% - 770px)/2)
+        left: calc((100% - 770px)/2 + 8px);
     }
     p {
         font-size: 12px;

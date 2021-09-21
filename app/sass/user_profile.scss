@@ -1,12 +1,8 @@
 /*---BASE---*/
 @import './base/_base.scss';
 
-.wrapper {
-    padding: 0 16px;
-}
-
 header {
-    padding: 26px 0;
+    padding: 20px 20px;
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -16,7 +12,7 @@ header {
         .edit {
             font-weight: 500;
             font-size: 14px;
-            line-height: 20px;
+            line-height: 16px;
             letter-spacing: 0.005em;
             color: #27C4BC;
             text-decoration: none;
@@ -25,6 +21,9 @@ header {
 }
 
 main {
+    .wrapper {
+        padding: 0 16px;
+    }
     .profile {
         display: flex;
         flex-direction: column;

@@ -226,7 +226,7 @@ header .wrapper .filter {
   font-size: 12px;
   line-height: 160%;
   color: #001730;
-  margin: 10.5px 0;
+  margin: 18.5px 0;
 }
 header .wrapper .filter span {
   text-decoration-line: underline;
@@ -236,7 +236,7 @@ header .wrapper .filter span {
 }
 
 main {
-  margin-top: 132px;
+  margin-top: 140px;
 }
 main .wrapper {
   padding: 0 16px;

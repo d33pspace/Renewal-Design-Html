@@ -203,12 +203,8 @@ header .wrapper .sort.active {
   }
 }
 
-.wrapper {
-  padding: 0 16px;
-}
-
 header {
-  padding: 26px 0;
+  padding: 20px 20px;
 }
 header .wrapper {
   display: flex;
@@ -220,12 +216,15 @@ header .wrapper a {
 header .wrapper .edit {
   font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 16px;
   letter-spacing: 0.005em;
   color: #27C4BC;
   text-decoration: none;
 }
 
+main .wrapper {
+  padding: 0 16px;
+}
 main .profile {
   display: flex;
   flex-direction: column;

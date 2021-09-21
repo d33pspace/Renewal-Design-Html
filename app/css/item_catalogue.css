@@ -204,59 +204,27 @@ header .wrapper .sort.active {
 }
 
 header {
-  background: #fff;
   padding: 0 20px;
+  background: #fff;
 }
 header .wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 56px;
+  flex-direction: column;
 }
 header .wrapper a {
+  margin: 20px 0;
   display: flex;
 }
-header .search_block h1 {
+header .wrapper .title {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
   color: #001730;
-  padding-bottom: 24px;
-}
-header .search_block .search_form {
-  position: relative;
-}
-header .search_block .search_form:after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 9px);
-  left: 15px;
-  width: 18px;
-  height: 18px;
-  background: url("../img/svg/search.svg");
-}
-header .search_block .search_form input {
-  padding: 11px 12px 11px 44px;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.005em;
-  color: #848790;
-  position: relative;
-  border: 1px solid #F1F2F4;
-  border-radius: 8px;
-  box-sizing: border-box;
-  width: 100%;
-  background: #FAFBFC;
-}
-header .search_block .search_form input::placeholder {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.005em;
-  color: #848790;
+  margin-bottom: 24px;
 }
 
 main {
-  margin-top: 160px;
+  margin-top: 115px;
   padding-bottom: 35px;
 }
 main .wrapper {
