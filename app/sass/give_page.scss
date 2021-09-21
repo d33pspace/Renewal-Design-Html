@@ -259,7 +259,7 @@ main {
     opacity: 0;
     visibility: hidden;
     transition: .1s;
-    .check {
+    .close {
         display: none;
     }
     &.active {
@@ -268,10 +268,11 @@ main {
     }
     &.opened {
         .close {
-            display: none;
+            display: flex;
         }
         .check {
-            display: flex;
+            
+            display: none;
         }
     }
     @media(min-width: 768px) {

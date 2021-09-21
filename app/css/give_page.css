@@ -450,7 +450,7 @@ main .head .col-title {
   visibility: hidden;
   transition: 0.1s;
 }
-.proceed .check {
+.proceed .close {
   display: none;
 }
 .proceed.active {
@@ -458,10 +458,10 @@ main .head .col-title {
   visibility: visible;
 }
 .proceed.opened .close {
-  display: none;
+  display: flex;
 }
 .proceed.opened .check {
-  display: flex;
+  display: none;
 }
 @media (min-width: 768px) {
   .proceed {
