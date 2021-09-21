@@ -10,7 +10,7 @@ let serviceCards = document.querySelectorAll('.service_list .card')
 
 serviceCards.forEach((item => {
     item.onclick = (e) => {
-        if (e.target !== item.querySelector('.serve_icon') & e.target !== item.querySelector('.remain_time')) {
+        if (e.target !== item.querySelector('.serve_icon') & e.target !== item.querySelector('.remain_time') & e.target !== item.querySelector('.time')) {
             location.href='./return_page.html'
         }
     }
@@ -20,7 +20,7 @@ let finishedCards = document.querySelectorAll('.finished_list .card')
 
 finishedCards.forEach((item => {
     item.onclick = (e) => {
-        if (e.target !== item.querySelector('.serve_icon') & e.target !== item.querySelector('.remain_time')) {
+        if (e.target !== item.querySelector('.serve_icon') & e.target !== item.querySelector('.remain_time') & e.target !== item.querySelector('.time')) {
             location.href='./guest_profile.html'
         }
     }
@@ -32,7 +32,7 @@ let waitingCards = document.querySelectorAll('.waiting_list .card')
 waitingCards.forEach((item => {
     item.onclick = (e) => {
         console.log(e.target)
-        if (e.target !== item.querySelector('.serve_icon') & e.target !== item.querySelector('.remain_time')) {
+        if (e.target !== item.querySelector('.serve_icon') & e.target !== item.querySelector('.remain_time') & e.target !== item.querySelector('.time')) {
             let newCard = item.cloneNode(true)
             newCard.onclick = () => {
                 location.href='./return_page.html'

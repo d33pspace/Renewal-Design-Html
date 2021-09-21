@@ -311,7 +311,6 @@ main .list .title {
   border-bottom: 1px solid #F1F2F4;
 }
 main .list .card {
-  padding: 9px 16px;
   border-bottom: 1px solid #F1F2F4;
   display: flex;
   justify-content: space-between;
@@ -321,6 +320,7 @@ main .list .card.empty .coma, main .list .card.empty .city, main .list .card.emp
   display: none;
 }
 main .list .card .user_info {
+  padding: 9px 16px;
   display: flex;
 }
 main .list .card .user_info.unactive {
@@ -360,6 +360,7 @@ main .list .card .user_info .info_details .age_city .coma {
   margin-right: 3px;
 }
 main .list .card .time {
+  padding: 9px 16px;
   display: flex;
   flex-direction: column;
 }
