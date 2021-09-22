@@ -54,6 +54,15 @@ main {
             right: 27px;
             bottom: 23px;
         }
+        .dies {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 100%;
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 14px;
+            left: 24px;
+        }
     }
     .tag {
         background: #001730;
@@ -69,7 +78,7 @@ main {
         }
         input {
             width: auto;
-            padding: 6px 8px;
+            padding: 6px 8px 6px 26px;
             font-weight: 500;
             font-size: 32px;
             line-height: 100%;

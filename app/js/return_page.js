@@ -28,6 +28,8 @@ checkButton.forEach(item => {
         }
         if (checkCounter == document.querySelectorAll('.checkbox').length) {
             proceed.classList.add('active')
+        } else if (checkCounter == 0) {
+            checkboxAll.classList.remove('active')
         }
         console.log(checkCounter)
     }

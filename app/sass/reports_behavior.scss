@@ -105,95 +105,146 @@ main {
         }
     }
 }
+// #datepicker {
+//     .ui-datepicker {
+//         width: 100%;
+//         padding: 0;
+//         border: unset;
+//         border-radius: 10px 10px 0 0;
+//         .ui-datepicker-header {
+//             border-radius: 10px 10px 0 0;
+//             border: unset;
+//             padding: 40px 25px 35px 25px;
+//             background: #fff;
+//         }
+//         .ui-datepicker-prev {
+//             width: 8px;
+//             height: 12px;
+//             border: unset;
+//             left: 25px;
+//             top: calc(50% - 6px);
+//             cursor: pointer;
+//             &.ui-state-disabled {
+//                 cursor: initial;
+//             }
+//             span {
+//                 position: static;
+//                 width: 8px;
+//                 height: 12px;
+//                 background: url('../img/svg/chevron_left.svg');
+//                 background-size: cover;
+//                 background-repeat: no-repeat;
+//                 margin: unset;
+//             }
+//         }
+//         .ui-datepicker-next {
+//             width: 8px;
+//             height: 12px;
+//             border: unset;
+//             right: 25px;
+//             top: calc(50% - 6px);
+//             cursor: pointer;
+//             span {
+//                 position: static;
+//                 width: 8px;
+//                 height: 12px;
+//                 background: url('../img/svg/chevron_right.svg');
+//                 background-size: cover;
+//                 background-repeat: no-repeat;
+//                 margin: unset;
+//             }
+//         }
+//         .ui-datepicker-year {
+//             display: none;
+//         }
+//         .ui-datepicker-month {
+//             font-weight: bold;
+//             font-size: 18px;
+//             line-height: 21px;
+//             color: #001730;
+//         }
+//         .ui-datepicker-calendar {
+//             margin: 0 32px;
+//             width: calc(100% - 64px);
+//             box-sizing: border-box;
+//         }
+//         table {
+//             font-family: 'Noto Sans SC', sans-serif;
+//         }
+//         th {
+//             padding: 7px 0;
+//             font-weight: 500;
+//             font-size: 18px;
+//             line-height: 28px;
+//             letter-spacing: 0.15px;
+//             color: #13ADAD;
+//         }
+//         td {
+//             padding: 7px 0;
+//             span, a {
+//                 border: unset;
+//                 padding: 0;
+//                 background: #fff;
+//                 color: #001730;
+//                 font-size: 16px;
+//                 line-height: 160%;
+//                 text-align: center;
+//                 border-radius: 8px;
+//                 &.ui-state-active {
+//                     background: #13ADAD;
+//                     color: #fff;
+//                 }
+//             }
+//         }
+//     }
+// }
+
 #datepicker {
-    .ui-datepicker {
+    .vc-container {
         width: 100%;
-        padding: 0;
         border: unset;
-        border-radius: 10px 10px 0 0;
-        .ui-datepicker-header {
-            border-radius: 10px 10px 0 0;
-            border: unset;
-            padding: 40px 25px 35px 25px;
-            background: #fff;
-        }
-        .ui-datepicker-prev {
-            width: 8px;
-            height: 12px;
-            border: unset;
-            left: 25px;
-            top: calc(50% - 6px);
-            cursor: pointer;
-            &.ui-state-disabled {
-                cursor: initial;
-            }
-            span {
-                position: static;
-                width: 8px;
-                height: 12px;
-                background: url('../img/svg/chevron_left.svg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                margin: unset;
-            }
-        }
-        .ui-datepicker-next {
-            width: 8px;
-            height: 12px;
-            border: unset;
-            right: 25px;
-            top: calc(50% - 6px);
-            cursor: pointer;
-            span {
-                position: static;
-                width: 8px;
-                height: 12px;
-                background: url('../img/svg/chevron_right.svg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                margin: unset;
-            }
-        }
-        .ui-datepicker-year {
-            display: none;
-        }
-        .ui-datepicker-month {
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 21px;
-            color: #001730;
-        }
-        .ui-datepicker-calendar {
-            margin: 0 32px;
-            width: calc(100% - 64px);
-            box-sizing: border-box;
-        }
-        table {
-            font-family: 'Noto Sans SC', sans-serif;
-        }
-        th {
-            padding: 7px 0;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 28px;
-            letter-spacing: 0.15px;
-            color: #13ADAD;
-        }
-        td {
-            padding: 7px 0;
-            span, a {
+        border-radius: 10px 10px 0px 0px !important;
+        .vc-arrows-container {
+            padding: 40px 16px 34px 16px;
+            .vc-arrow {
                 border: unset;
-                padding: 0;
-                background: #fff;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+            path {
+                fill: #13ADAD;
+            }
+        }
+        .vc-header {
+            padding: 40px 16px 34px 16px;
+            .vc-title {
+                height: 24px;
+                font-size: 18px;
+                line-height: 21px;
                 color: #001730;
+                font-weight: bold;
+                font-family: 'Noto Sans SC', sans-serif;
+            }
+        }
+        .vc-weeks {
+            font-family: 'Noto Sans SC', sans-serif;
+            padding: 0 32px;
+            .vc-weekday {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.15px;
+                color: #13ADAD;
+                padding: 0 0 17px 0;
+            }
+            .vc-day {
                 font-size: 16px;
                 line-height: 160%;
-                text-align: center;
-                border-radius: 8px;
-                &.ui-state-active {
-                    background: #13ADAD;
-                    color: #fff;
-                }
+            }
+            .vc-highlight {
+                background-color: #13ADAD !important;
             }
         }
     }

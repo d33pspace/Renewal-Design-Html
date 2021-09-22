@@ -308,94 +308,51 @@ main .cards .data p.red {
   color: #fff;
 }
 
-#datepicker .ui-datepicker {
+#datepicker .vc-container {
   width: 100%;
-  padding: 0;
   border: unset;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0px 0px !important;
 }
-#datepicker .ui-datepicker .ui-datepicker-header {
-  border-radius: 10px 10px 0 0;
+#datepicker .vc-container .vc-arrows-container {
+  padding: 40px 16px 34px 16px;
+}
+#datepicker .vc-container .vc-arrows-container .vc-arrow {
   border: unset;
-  padding: 40px 25px 35px 25px;
-  background: #fff;
 }
-#datepicker .ui-datepicker .ui-datepicker-prev {
-  width: 8px;
-  height: 12px;
-  border: unset;
-  left: 25px;
-  top: calc(50% - 6px);
-  cursor: pointer;
+#datepicker .vc-container .vc-arrows-container svg {
+  width: 24px;
+  height: 24px;
 }
-#datepicker .ui-datepicker .ui-datepicker-prev.ui-state-disabled {
-  cursor: initial;
+#datepicker .vc-container .vc-arrows-container path {
+  fill: #13ADAD;
 }
-#datepicker .ui-datepicker .ui-datepicker-prev span {
-  position: static;
-  width: 8px;
-  height: 12px;
-  background: url("../img/svg/chevron_left.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: unset;
+#datepicker .vc-container .vc-header {
+  padding: 40px 16px 34px 16px;
 }
-#datepicker .ui-datepicker .ui-datepicker-next {
-  width: 8px;
-  height: 12px;
-  border: unset;
-  right: 25px;
-  top: calc(50% - 6px);
-  cursor: pointer;
-}
-#datepicker .ui-datepicker .ui-datepicker-next span {
-  position: static;
-  width: 8px;
-  height: 12px;
-  background: url("../img/svg/chevron_right.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: unset;
-}
-#datepicker .ui-datepicker .ui-datepicker-year {
-  display: none;
-}
-#datepicker .ui-datepicker .ui-datepicker-month {
-  font-weight: bold;
+#datepicker .vc-container .vc-header .vc-title {
+  height: 24px;
   font-size: 18px;
   line-height: 21px;
   color: #001730;
-}
-#datepicker .ui-datepicker .ui-datepicker-calendar {
-  margin: 0 32px;
-  width: calc(100% - 64px);
-  box-sizing: border-box;
-}
-#datepicker .ui-datepicker table {
+  font-weight: bold;
   font-family: "Noto Sans SC", sans-serif;
 }
-#datepicker .ui-datepicker th {
-  padding: 7px 0;
+#datepicker .vc-container .vc-weeks {
+  font-family: "Noto Sans SC", sans-serif;
+  padding: 0 32px;
+}
+#datepicker .vc-container .vc-weeks .vc-weekday {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.15px;
   color: #13ADAD;
+  padding: 0 0 17px 0;
 }
-#datepicker .ui-datepicker td {
-  padding: 7px 0;
-}
-#datepicker .ui-datepicker td span, #datepicker .ui-datepicker td a {
-  border: unset;
-  padding: 0;
-  background: #fff;
-  color: #001730;
+#datepicker .vc-container .vc-weeks .vc-day {
   font-size: 16px;
   line-height: 160%;
-  text-align: center;
-  border-radius: 8px;
 }
-#datepicker .ui-datepicker td span.ui-state-active, #datepicker .ui-datepicker td a.ui-state-active {
-  background: #13ADAD;
-  color: #fff;
+#datepicker .vc-container .vc-weeks .vc-highlight {
+  background-color: #13ADAD !important;
 }

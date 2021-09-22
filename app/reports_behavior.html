@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 </head>
 <body>
     <div class="desktop-wrapper">
@@ -76,13 +76,16 @@
         </main>
     </div>
     <div class="overlay">
-        <div id="datepicker"></div>
-        <input type="hidden" id="datepicker_value" value="01.08.2019">
+        <div id='datepicker'>
+            <v-date-picker v-model="range" is-range :min-date="new Date()" />
+        </div>
         <div class="closeoverlay">
             <button class="cancel">Cancel</button>
             <button class="done active">Done</button>
         </div>
     </div>
-    <script defer src="./js/datepicker.js"></script>
+    <script src='https://unpkg.com/vue/dist/vue.js'></script>
+    <script src='https://unpkg.com/v-calendar'></script>
+    <script type="module" defer src="./js/datepicker.js"></script>
     <script defer src="./js/fixed_header.js"></script>
 </body>
