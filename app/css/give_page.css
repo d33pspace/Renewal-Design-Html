@@ -239,9 +239,6 @@ header .title {
   color: #848790;
 }
 
-.card {
-  margin: 4px 0;
-}
 .card .card-heading {
   cursor: pointer;
   display: flex;
@@ -269,7 +266,7 @@ header .title {
 }
 .card .card-heading .card-title .category-name {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   text-transform: uppercase;
   color: #001730;
@@ -473,41 +470,41 @@ main .head .col-title {
   height: 14px;
 }
 
-.giving_list {
+.add_list {
   display: none;
   background: #FAFBFC;
 }
-.giving_list.active {
+.add_list.active {
   display: block;
 }
-.giving_list .buttons-title {
+.add_list .buttons-title {
   display: flex;
 }
-.giving_list .buttons-title .col-title:last-child {
+.add_list .buttons-title .col-title:last-child {
   margin-left: 8px;
 }
-.giving_list .card {
+.add_list .card {
   display: none;
 }
-.giving_list .card.active {
+.add_list .card.active {
   display: block;
 }
-.giving_list .card .card-heading {
+.add_list .card .card-heading {
   cursor: initial;
   padding: 0;
 }
-.giving_list .card .card-heading .card-title {
+.add_list .card .card-heading .card-title {
   padding: 16px 0 16px 16px;
 }
-.giving_list .card .buttons {
+.add_list .card .buttons {
   padding-right: 16px;
   display: flex;
   align-items: center;
 }
-.giving_list .card .buttons img {
+.add_list .card .buttons img {
   cursor: pointer;
   padding: 16px 15px 16px 16px;
 }
-.giving_list .card .buttons .alert.active {
+.add_list .card .buttons .alert.active {
   filter: brightness(0) saturate(100%) invert(45%) sepia(73%) saturate(4042%) hue-rotate(330deg) brightness(101%) contrast(95%);
 }

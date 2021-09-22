@@ -40,7 +40,6 @@ header {
 }
 
 .card {
-    margin: 4px 0;
     .card-heading {
         cursor: pointer;
         display: flex;
@@ -68,7 +67,7 @@ header {
             }
             .category-name {
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 100%;
                 text-transform: uppercase;
                 color: #001730;
@@ -284,7 +283,7 @@ main {
     }
 }
 
-.giving_list {
+.add_list {
     display: none;
     background: #FAFBFC;
     &.active {

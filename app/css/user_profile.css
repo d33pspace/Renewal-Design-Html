@@ -259,12 +259,15 @@ main .profile .position p {
   line-height: 26px;
   color: #D11241;
 }
-main .profile .phone {
+main .profile a {
   font-size: 16px;
   line-height: 26px;
   color: #001730;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   text-decoration: unset;
+}
+main .profile a.mail {
+  margin-bottom: 16px;
 }
 main .profile .work_hours {
   background: #001730;

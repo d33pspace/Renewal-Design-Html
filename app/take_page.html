@@ -30,7 +30,7 @@
                     </form>
                 </div>
             </div>
-            <div class="laundry">
+            <div class="add_list">
                 <div class="wrapper border">
                     <div class="head">
                         <p class="col-title">laundry list</p>
@@ -40,17 +40,251 @@
                         </div>
                     </div>
                 </div>
-                <div class="wrapper">
-                    <div class="laundry-cards">
-                        <div class="card tshirt">
+                <div class="cards">
+                    <div class="card tshirt" card-data='t-shirt'>
+                        <div class="card-heading active">
                             <div class="card-title">
                                 <img class='category-icon' src='./img/svg/category_tshirt.svg'>
                                 <h6 class="category-name">t-shirt</h6>
-                                <div class="counter">2</div>
+                                <div class="counter">0</div>
                             </div>
-                            <div class="card-buttons">
-                                <img class='trash' src='./img/svg/delete.svg'>
-                                <img class='rmv' src='./img/svg/rmv.svg'>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shirt" card-data='shirt'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_shirt.svg'>
+                                <h6 class="category-name">shirt</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card thermal_top_light" card-data='thermal top/light'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_thermal_top_light.svg'>
+                                <h6 class="category-name">thermal top/light</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card thermal_top_heavy" card-data='thermal top/heavy'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_thermal_top_heavy﻿.svg'>
+                                <h6 class="category-name">thermal top/heavy</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card pants" card-data='pants'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_pants.svg'>
+                                <h6 class="category-name">pants</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card thermal_bottom" card-data='thermal bottom'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_thermal_bottom.svg'>
+                                <h6 class="category-name">thermal bottom</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shorts" card-data='shorts'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_shorts﻿.svg'>
+                                <h6 class="category-name">shorts</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card dress_skirt" card-data='dress/skirt'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_dress_skirt.svg'>
+                                <h6 class="category-name">dress/skirt</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card underwear_bottom" card-data='underwear bottom'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_underwear_bottom.svg'>
+                                <h6 class="category-name">underwear bottom</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card underwear_top" card-data='underwear top'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_underwear_top.svg'>
+                                <h6 class="category-name">underwear top</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card socks" card-data='socks'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_socks.svg'>
+                                <h6 class="category-name">socks</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card suit_coat" card-data='suit coat'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_suit_coat.svg'>
+                                <h6 class="category-name">suit coat</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card outwear" card-data='outwear'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_outerwear.svg'>
+                                <h6 class="category-name">outwear</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shoes" card-data='shoes'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_shoes﻿.svg'>
+                                <h6 class="category-name">shoes</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card belts" card-data='belts'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_belts﻿.svg'>
+                                <h6 class="category-name">belts</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card scarf" card-data='scarf'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_scarf﻿.svg'>
+                                <h6 class="category-name">scarf</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card gloves" card-data='gloves'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_gloves.svg'>
+                                <h6 class="category-name">gloves</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card razors" card-data='razors'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_razors﻿.svg'>
+                                <h6 class="category-name">razors</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card one-off" card-data='one-off item'>
+                        <div class="card-heading">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_one-off-item.svg'>
+                                <h6 class="category-name">one-off item</h6>
+                                <div class="counter">0</div>
+                            </div>
+                            <div class="buttons">
+                                <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                <img src='./img/svg/min.svg' class='rmv'>
                             </div>
                         </div>
                     </div>
@@ -64,7 +298,7 @@
                     </div>
                 </div>
                     <div class="common-cards">
-                        <div class="card">
+                        <div class="card" card-data='t-shirt'>
                             <div class="item">
                                 <img src='./img/svg/category_shirt.svg'>
                                 <div class="desc">
@@ -74,7 +308,7 @@
                             </div>
                             <img src='./img/svg/add2.svg' class='add button'>
                         </div>
-                        <div class="card">
+                        <div class="card" card-data='t-shirt'>
                             <div class="item">
                                 <img src='./img/svg/category_shirt.svg'>
                                 <div class="desc">
@@ -84,7 +318,7 @@
                             </div>
                             <img src='./img/svg/add2.svg' class='add button'>
                         </div>
-                        <div class="card">
+                        <div class="card" card-data='pants'>
                             <div class="item">
                                 <img src='./img/svg/category_pants.svg'>
                                 <div class="desc">
@@ -94,7 +328,7 @@
                             </div>
                             <img src='./img/svg/add2.svg' class='add button'>
                         </div>
-                        <div class="card">
+                        <div class="card" card-data='underwear bottom'>
                             <div class="item">
                                 <img src='./img/svg/category_underwear_bottom.svg'>
                                 <div class="desc">
@@ -103,17 +337,17 @@
                             </div>
                             <img src='./img/svg/add2.svg' class='add button'>
                         </div>
-                        <div class="card">
+                        <div class="card" card-data='thermal bottom'>
                             <div class="item">
                                 <img src='./img/svg/category_thermal_bottom.svg'>
                                 <div class="desc">
-                                    <h6 class='title'>termal bottom</h6>
+                                    <h6 class='title'>thermal bottom</h6>
                                     <p class='name'>Heavy</p>
                                 </div>
                             </div>
                             <img src='./img/svg/add2.svg' class='add button'>
                         </div>
-                        <div class="card">
+                        <div class="card" card-data='socks'>
                             <div class="item">
                                 <img src='./img/svg/category_socks.svg'>
                                 <div class="desc">
@@ -122,7 +356,7 @@
                             </div>
                             <img src='./img/svg/add2.svg' class='add button'>
                         </div>
-                        <div class="card">
+                        <div class="card" card-data='scarf'>
                             <div class="item">
                                 <img src='./img/svg/category_scarf﻿.svg'>
                                 <div class="desc">
@@ -131,7 +365,7 @@
                             </div>
                             <img src='./img/svg/add2.svg' class='add button'>
                         </div>
-                        <div class="card">
+                        <div class="card" card-data='razors'>
                             <div class="item">
                                 <img src='./img/svg/category_razors﻿.svg'>
                                 <div class="desc">
@@ -149,15 +383,8 @@
                         <p class="col-title">add</p>
                     </div>
                 </div>
-                <div class="wrapper border">
-                    <div class="search">
-                        <from action='#'>
-                            <input type='text' placeholder='Search...'>
-                        </from>
-                    </div>
-                </div>
                     <div class="full-cards">
-                        <div class="card tshirt">
+                        <div class="card tshirt" card-data='t-shirt'>
                             <div class="card-heading active">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_tshirt.svg'>
@@ -189,7 +416,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card shirt">
+                        <div class="card shirt" card-data='shirt'>
                             <div class="card-heading active">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_shirt.svg'>
@@ -209,7 +436,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card thermal_top_light">
+                        <div class="card thermal_top_light" card-data='thermal top/light'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_thermal_top_light.svg'>
@@ -228,7 +455,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card thermal_top_heavy">
+                        <div class="card thermal_top_heavy" card-data='thermal top/heavy'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_thermal_top_heavy﻿.svg'>
@@ -247,7 +474,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card pants">
+                        <div class="card pants" card-data='thermal top/light'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_pants.svg'>
@@ -266,11 +493,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card thermal_bottom">
+                        <div class="card thermal_bottom" card-data='thermal bottom'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_thermal_bottom.svg'>
-                                    <h6 class="category-name">thermal botom</h6>
+                                    <h6 class="category-name">thermal bottom</h6>
                                 </div>
                                 <img class='arrow' src='./img/svg/down_arrow.svg'>
                             </div>
@@ -285,7 +512,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card shorts">
+                        <div class="card shorts" card-data='shorts'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_shorts﻿.svg'>
@@ -304,7 +531,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card dress_skirt">
+                        <div class="card dress_skirt" card-data='dress/skirt'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_dress_skirt.svg'>
@@ -323,7 +550,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card underwear_bottom">
+                        <div class="card underwear_bottom" card-data='underwear bottom'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_underwear_bottom.svg'>
@@ -342,7 +569,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card underwear_top">
+                        <div class="card underwear_top" card-data='underwear top'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_underwear_top.svg'>
@@ -361,7 +588,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card socks">
+                        <div class="card socks" card-data='socks'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_socks.svg'>
@@ -380,7 +607,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card suit_coat">
+                        <div class="card suit_coat" card-data='suit coat'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_suit_coat.svg'>
@@ -399,7 +626,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card outwear">
+                        <div class="card outwear" card-data='outwear'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_outerwear.svg'>
@@ -418,7 +645,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card shoes">
+                        <div class="card shoes" card-data='shoes'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_shoes﻿.svg'>
@@ -437,7 +664,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card belts">
+                        <div class="card belts" card-data='belts'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_belts﻿.svg'>
@@ -456,7 +683,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card scarf">
+                        <div class="card scarf" card-data='scarf'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_scarf﻿.svg'>
@@ -475,7 +702,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card gloves">
+                        <div class="card gloves" card-data='gloves'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_gloves.svg'>
@@ -494,7 +721,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card razors">
+                        <div class="card razors" card-data='razors'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_razors﻿.svg'>
@@ -513,7 +740,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card one-off">
+                        <div class="card one-off" card-data='one-off item'>
                             <div class="card-heading">
                                 <div class="card-title">
                                     <img class='category-icon' src='./img/svg/category_one-off-item.svg'>
@@ -548,7 +775,7 @@
         <div class="message">
             <p>The current Laundry Tag has already assigned. Please refresh the tag field.</p>
         </div>
-        <a class='proceed' href='#'>
+        <a class='proceed active' href='#'>
             <img class='check' src='./img/svg/check.svg'>
             <img class='close' src='./img/svg/close.svg'>
         </a>
@@ -557,4 +784,5 @@
 <script defer src="./js/open_tab.js"></script>
 <script defer src="./js/tag.js"></script>
 <script defer src="./js/fixed_header.js"></script>
+<script defer src="./js/add_list.js"></script>
 </body>

@@ -248,7 +248,12 @@ main .header {
   justify-content: space-between;
   align-items: center;
 }
-main .header .title {
+@media (min-width: 720px) {
+  main .header {
+    padding-right: 56px;
+  }
+}
+main .header p {
   font-weight: 500;
   font-size: 10px;
   line-height: 160%;
@@ -259,16 +264,14 @@ main .header .icons {
   display: flex;
   align-items: flex-end;
 }
-main .header .icons .icon {
+main .header .icons p {
   width: 34px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
-main .header .icons .icon img {
-  width: 13px;
-  object-fit: contain;
-  object-position: bottom;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(27%) saturate(3817%) hue-rotate(179deg) brightness(107%) contrast(80%);
+@media (min-width: 720px) {
+  main .header .icons p {
+    width: 48px;
+  }
 }
 main .cards .card {
   transition: 0.2s;
@@ -290,6 +293,11 @@ main .cards .body {
   padding: 15px 36px 16px 16px;
   border-bottom: 1px solid #F1F2F4;
   cursor: pointer;
+}
+@media (min-width: 720px) {
+  main .cards .body {
+    padding-right: 56px;
+  }
 }
 main .cards .body .item {
   display: flex;
@@ -315,6 +323,11 @@ main .cards .body .expand {
   transition: transform 0.2s;
   filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(6717%) hue-rotate(176deg) brightness(82%) contrast(91%);
 }
+@media (min-width: 720px) {
+  main .cards .body .expand {
+    right: 25px;
+  }
+}
 main .cards .dropdown {
   transform: scaleY(0);
   transform-origin: top;
@@ -328,12 +341,19 @@ main .cards .dropdown .card-expand {
   padding: 15px 36px 15px 16px;
   background: #FAFBFC;
 }
+@media (min-width: 720px) {
+  main .cards .dropdown .card-expand {
+    padding-right: 56px;
+  }
+}
+main .cards .dropdown .card-expand .item {
+  overflow: hidden;
+}
 main .cards .dropdown .card-expand .name {
   color: #848790;
   font-size: 12px;
   height: 14px;
   line-height: 100%;
-  width: 135px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -348,10 +368,15 @@ main .cards .values {
 main .cards .values p {
   width: 34px;
   text-align: center;
-  font-size: 12px;
-  line-height: 100%;
-  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
   color: #3A3C40;
+}
+@media (min-width: 720px) {
+  main .cards .values p {
+    width: 48px;
+  }
 }
 main .cards .values p.alert {
   color: #F95557;

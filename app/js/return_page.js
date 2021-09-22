@@ -1,55 +1,56 @@
-let checkbox = document.querySelectorAll('.checkbox')
+
 let checkboxAll = document.querySelector('.checkbox-all')
 let proceed = document.querySelector('.proceed')
+let checkButton = document.querySelectorAll('.check')
 
-checkbox.forEach((item) => {
+
+let checkCounter = 0
+
+
+checkButton.forEach(item => {
     item.onclick = () => {
-        let checked = false
-        item.classList.toggle('active')
-        checkboxAll.classList.add('active')
-        proceed.classList.add('active')
-        checkbox.forEach((e) => {
-            if(e.classList.contains('active')) {
-                checked = true
-            } 
-        })
-        if (!checked) {
-            checkboxAll.classList.remove('active') 
+        if(item.classList.contains('active')) {
+            item.classList.remove('active')
+            checkCounter--
             proceed.classList.remove('active')
+        } else {
+            item.closest('.card').querySelectorAll('.check').forEach(i => {
+                if(i.classList.contains('active')) {
+                    i.classList.remove('active')
+                    checkCounter--
+                }
+            })
+            item.classList.add('active')
+            checkCounter++
+            if(item.classList.contains('checkbox')) {
+                checkboxAll.classList.add('active')
+            }
         }
+        if (checkCounter == document.querySelectorAll('.checkbox').length) {
+            proceed.classList.add('active')
+        }
+        console.log(checkCounter)
     }
 })
 
 checkboxAll.onclick = () => {
     if (checkboxAll.classList.contains('active')) {
+        document.querySelectorAll('.check').forEach(i => {
+            i.classList.remove('active')
+        })
         checkboxAll.classList.remove('active')
         proceed.classList.remove('active')
-        checkbox.forEach((item) => {
-            item.classList.remove('active')
-        })
+        checkCounter = 0
     } else {
+        document.querySelectorAll('.checkbox').forEach(i => {
+            i.click()
+        })
         checkboxAll.classList.add('active')
         proceed.classList.add('active')
-        checkbox.forEach((item) => {
-            item.classList.add('active')
-        })
+        checkCounter = document.querySelectorAll('.checkbox').length
     }
+    console.log(checkCounter)
 }
-
-let button = document.querySelectorAll('.button')
-
-button.forEach((item) => {
-    item.onclick = () => {
-        item.classList.toggle('active')
-        if(item.nextElementSibling) {
-            item.nextElementSibling.classList.remove('active')
-        }
-
-        if(item.previousElementSibling) {
-            item.previousElementSibling.classList.remove('active')
-        }
-    }
-})
 
 let overlay = document.querySelector('.overlay')
 let menuIcon = document.querySelectorAll('.menu-icon')
@@ -86,3 +87,4 @@ cards.forEach((item => {
         }
     }
 }))
+
