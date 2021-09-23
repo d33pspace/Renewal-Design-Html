@@ -508,3 +508,41 @@ main .head .col-title {
 .add_list .card .buttons .alert.active {
   filter: brightness(0) saturate(100%) invert(45%) sepia(73%) saturate(4042%) hue-rotate(330deg) brightness(101%) contrast(95%);
 }
+
+.common .card {
+  padding: 15px 16px 16px 16px;
+  min-height: 48px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F2F4;
+}
+.common .card .item {
+  display: flex;
+  align-items: center;
+}
+.common .card .item img {
+  margin-right: 8px;
+}
+.common .card .item .title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #3A3C40;
+  margin-bottom: 4px;
+}
+.common .card .item .name {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #848790;
+}
+.common .card .button {
+  margin-right: 14px;
+  cursor: pointer;
+}
+.common .common-cards {
+  margin-top: 8px;
+}

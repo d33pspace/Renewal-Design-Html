@@ -12,8 +12,11 @@ check.onclick = () => {
 
 function inputState () { 
     if(input.getAttribute('tabindex') == '-1') {
-        input.setAttribute('tabindex', '')
+        input.setAttribute('tabindex', '3')
         input.focus()
+        let val = input.value
+        input.value = ''
+        input.value = val
     } else {
         input.setAttribute('tabindex', '-1')
     }

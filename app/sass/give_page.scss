@@ -321,3 +321,43 @@ main {
         }
     }
 }
+
+.common {
+    .card {
+        padding: 15px 16px 16px 16px;
+        min-height: 48px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #F1F2F4;
+        .item {
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 8px;
+            }
+            .title {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: #3A3C40;
+                margin-bottom: 4px;
+            }
+            .name {
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 0.005em;
+                color: #848790;
+            }
+        }
+        .button {
+            margin-right: 14px;
+            cursor: pointer;
+        }
+    }
+.common-cards {
+    margin-top: 8px;
+    }
+}
