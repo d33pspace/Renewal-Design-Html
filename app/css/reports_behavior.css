@@ -289,7 +289,7 @@ main .cards .data p.red {
   background: #fff;
   padding: 29px 16px 40px 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .overlay .closeoverlay button {
   padding: 10px 48px;

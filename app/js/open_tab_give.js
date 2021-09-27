@@ -1,18 +1,13 @@
-let cardHeading = document.querySelectorAll('.card-heading')
+let cardHeading = document.querySelectorAll('.card-heading .card-title')
 let disOverlay = document.querySelector('.overlay.distribution')
 
 cardHeading.forEach((item) => {
     item.onclick = (e) => {
-        if (e.target == item.querySelector('.arrow')) {
-            item.classList.toggle('active')
-        } else {
-            disOverlay.classList.add('active')
-            disOverlay.firstElementChild.classList.add('active')
-            if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
-                disOverlay.classList.add('scroll')
-            }
+        disOverlay.classList.add('active')
+        disOverlay.firstElementChild.classList.add('active')
+        if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+            disOverlay.classList.add('scroll')
         }
-        
     }
 })
 
@@ -36,3 +31,22 @@ if(buttons) {
     })
 }
 
+let arrow = document.querySelectorAll('.arrow')
+
+arrow.forEach(item => {
+    item.onclick = () => {
+        item.closest('.card-heading').classList.toggle('active')
+    }
+})
+
+let cardItem = document.querySelectorAll('.card>.item')
+
+cardItem.forEach((item) => {
+    item.onclick = (e) => {
+        disOverlay.classList.add('active')
+        disOverlay.firstElementChild.classList.add('active')
+        if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+            disOverlay.classList.add('scroll')
+        }
+    }
+})

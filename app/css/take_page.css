@@ -318,7 +318,6 @@ main .head .col-title {
   color: #848790;
 }
 main .common .card {
-  padding: 15px 16px 16px 16px;
   min-height: 48px;
   box-sizing: border-box;
   display: flex;
@@ -329,6 +328,7 @@ main .common .card {
 main .common .card .item {
   display: flex;
   align-items: center;
+  padding: 15px 16px 16px 16px;
 }
 main .common .card .item img {
   margin-right: 8px;
@@ -348,6 +348,7 @@ main .common .card .item .name {
   color: #848790;
 }
 main .common .card .button {
+  padding: 15px 16px 16px 16px;
   margin-right: 14px;
   cursor: pointer;
 }
@@ -355,6 +356,7 @@ main .common .common-cards {
   margin-top: 8px;
 }
 main .add_list {
+  background: #FAFBFC;
   display: none;
 }
 main .add_list.active {
@@ -520,6 +522,20 @@ main .add_list .cards .card .buttons .trash.active {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card .card-heading .card-title .title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #3A3C40;
+  margin-bottom: 4px;
+}
+.card .card-heading .card-title .name {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #848790;
 }
 .card .card-heading .arrow {
   filter: brightness(0) saturate(100%) invert(94%) sepia(2%) saturate(2051%) hue-rotate(190deg) brightness(80%) contrast(89%);

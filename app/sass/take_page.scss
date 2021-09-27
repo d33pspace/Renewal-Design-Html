@@ -118,7 +118,6 @@ main {
     }
     .common {
         .card {
-            padding: 15px 16px 16px 16px;
             min-height: 48px;
             box-sizing: border-box;
             display: flex;
@@ -128,6 +127,7 @@ main {
             .item {
                 display: flex;
                 align-items: center;
+                padding: 15px 16px 16px 16px;
                 img {
                     margin-right: 8px;
                 }
@@ -147,6 +147,7 @@ main {
                 }
             }
             .button {
+                padding: 15px 16px 16px 16px;
                 margin-right: 14px;
                 cursor: pointer;
             }
@@ -156,6 +157,7 @@ main {
         }
     }
     .add_list {
+        background: #FAFBFC;
         display: none;
         &.active {
             display: block;
@@ -326,6 +328,20 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+            .title {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: #3A3C40;
+                margin-bottom: 4px;
+            }
+            .name {
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 0.005em;
+                color: #848790;
             }
         }
         .arrow {
