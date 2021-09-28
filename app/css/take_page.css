@@ -328,7 +328,10 @@ main .common .card {
 main .common .card .item {
   display: flex;
   align-items: center;
-  padding: 15px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
+}
+main .common .card .item.flash {
+  animation: flash 1s;
 }
 main .common .card .item img {
   margin-right: 8px;
@@ -348,7 +351,7 @@ main .common .card .item .name {
   color: #848790;
 }
 main .common .card .button {
-  padding: 15px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
   margin-right: 14px;
   cursor: pointer;
 }
@@ -388,10 +391,15 @@ main .add_list .cards .card .buttons {
 }
 main .add_list .cards .card .buttons img {
   cursor: pointer;
-  padding: 16px 15px 16px 16px;
 }
 main .add_list .cards .card .buttons .trash.active {
   filter: brightness(0) saturate(100%) invert(59%) sepia(83%) saturate(4769%) hue-rotate(329deg) brightness(103%) contrast(100%);
+}
+main .add_list .cards .card .buttons .trash {
+  padding: 16.5px 14.5px 16.5px 14.5px;
+}
+main .add_list .cards .card .buttons .rmv {
+  padding: 22.5px 18.5px 22.5px 18.5px;
 }
 
 .overlay .icons {
@@ -556,6 +564,9 @@ main .add_list .cards .card .buttons .trash.active {
   border-bottom: 1px solid #F1F2F4;
   cursor: pointer;
 }
+.card .card-content .item.flash {
+  animation: flash 1s;
+}
 .card .card-content .item .name {
   padding: 12px 0 12px 8px;
   font-size: 12px;
@@ -567,5 +578,16 @@ main .add_list .cards .card .buttons .trash.active {
   margin-right: 15px;
 }
 .card .card-content .item .add {
-  padding: 12px 14px 12px 14px;
+  padding: 16px 16px 16px 16px;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }

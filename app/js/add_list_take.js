@@ -11,6 +11,18 @@ add.forEach(item => {
         newCard.classList.add('active')
         card.parentElement.appendChild(newCard)
         
+        // flash
+        if(item.closest('.item')) {
+            let flash = item.closest('.item')
+            flash.classList.add('flash')
+            setInterval(() =>  flash.classList.remove('flash') , 1000)
+        } else {
+            let flash = item.closest('.card').querySelector('.item')
+            flash.classList.add('flash')
+            setInterval(() =>  flash.classList.remove('flash') , 1000)
+        }
+        
+
         // alert button
         let toggle = document.querySelectorAll('.toggle')
         toggle.forEach(i => {

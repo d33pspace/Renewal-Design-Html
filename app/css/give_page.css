@@ -302,6 +302,11 @@ header .title {
   letter-spacing: 0.005em;
   color: #848790;
 }
+.card .card-heading .add {
+  padding: 16px 16px 16px 16px;
+  margin-right: 14px;
+  cursor: pointer;
+}
 .card .card-heading .arrow {
   cursor: pointer;
   margin-right: 15px;
@@ -322,6 +327,9 @@ header .title {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #F1F2F4;
+}
+.card .card-content .item.flash {
+  animation: flash 1s;
 }
 .card .card-content .item .name {
   padding: 12px 0 12px 8px;
@@ -446,6 +454,9 @@ main .head .col-title p {
   padding: 12px 0;
   border-bottom: 1px solid #F1F2F4;
 }
+.overlay.distribution .content .cards .wrapper .item.flash {
+  animation: flash 1s;
+}
 .overlay.distribution .content .cards p {
   font-size: 12px;
   line-height: 20px;
@@ -529,6 +540,9 @@ main .head .col-title p {
 .add_list .card .buttons .alert.active {
   filter: brightness(0) saturate(100%) invert(45%) sepia(73%) saturate(4042%) hue-rotate(330deg) brightness(101%) contrast(95%);
 }
+.add_list .card .buttons .rmv {
+  padding: 22.5px 18.5px 22.5px 18.5px;
+}
 
 .common .card {
   min-height: 48px;
@@ -540,9 +554,12 @@ main .head .col-title p {
 }
 .common .card .item {
   cursor: pointer;
-  padding: 15px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
   display: flex;
   align-items: center;
+}
+.common .card .item.flash {
+  animation: flash 1s;
 }
 .common .card .item img {
   margin-right: 8px;
@@ -562,7 +579,7 @@ main .head .col-title p {
   color: #848790;
 }
 .common .card .button {
-  padding: 15px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
   margin-right: 14px;
   cursor: pointer;
 }
@@ -585,4 +602,15 @@ main .head .col-title p {
 }
 .common .common-cards {
   margin-top: 8px;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }

@@ -103,6 +103,12 @@ header {
                 letter-spacing: 0.005em;
                 color: #848790;
             }
+            
+        }
+        .add {
+            padding: 16px 16px 16px 16px;
+            margin-right: 14px;
+            cursor: pointer;
         }
         .arrow {
             cursor: pointer;
@@ -124,6 +130,9 @@ header {
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid #F1F2F4;
+            &.flash {
+                animation: flash 1s ;
+            }
             .name {
                 padding: 12px 0 12px 8px;
                 font-size: 12px;
@@ -252,6 +261,9 @@ main {
                         justify-content: space-between;
                         padding: 12px 0;
                         border-bottom: 1px solid #F1F2F4;
+                        &.flash {
+                            animation: flash 1s ;
+                        }
                     }
                 }
                 p {
@@ -339,6 +351,9 @@ main {
             .alert.active {
                 filter: brightness(0) saturate(100%) invert(45%) sepia(73%) saturate(4042%) hue-rotate(330deg) brightness(101%) contrast(95%);
             }
+            .rmv {
+                padding: 22.5px 18.5px 22.5px 18.5px;
+            }
         }
     }
 }
@@ -353,9 +368,12 @@ main {
         border-bottom: 1px solid #F1F2F4;
         .item {
             cursor: pointer;
-            padding: 15px 16px 16px 16px;
+            padding: 16px 16px 16px 16px;
             display: flex;
             align-items: center;
+            &.flash {
+                animation: flash 1s ;
+            }
             img {
                 margin-right: 8px;
             }
@@ -375,7 +393,7 @@ main {
             }
         }
         .button {
-            padding: 15px 16px 16px 16px;
+            padding: 16px 16px 16px 16px;
             margin-right: 14px;
             cursor: pointer;
         }
@@ -401,3 +419,15 @@ main {
     margin-top: 8px;
     }
 }
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+  }
