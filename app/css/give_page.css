@@ -259,6 +259,9 @@ header .title {
   display: flex;
   align-items: center;
 }
+.card .card-heading .card-title.flash {
+  animation: flash 1s;
+}
 .card .card-heading .card-title .category-icon {
   width: 32px;
   height: 32px;

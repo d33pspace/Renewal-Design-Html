@@ -60,6 +60,9 @@ header {
             cursor: pointer;
             display: flex;
             align-items: center;
+            &.flash {
+                animation: flash 1s ;
+            }
             .category-icon {
                 width: 32px;
                 height: 32px;
