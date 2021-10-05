@@ -124,13 +124,13 @@ main {
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #F1F2F4;
+            &.flash {
+                animation: flash .3s ;
+            }
             .item {
                 display: flex;
                 align-items: center;
                 padding: 16px 16px 16px 16px;
-                &.flash {
-                    animation: flash 1s ;
-                }
                 img {
                     margin-right: 8px;
                 }
@@ -293,6 +293,9 @@ main {
 }
 
 .card {
+    &.flash {
+        animation: flash .3s ;
+    }
     .card-heading {
         cursor: pointer;
         display: flex;
@@ -316,9 +319,6 @@ main {
             display: flex;
             align-items: center;
             padding: 16px;
-            &.flash {
-                animation: flash 1s ;
-            }
             .category-icon {
                 width: 32px;
                 height: 32px;
@@ -380,7 +380,7 @@ main {
             border-bottom: 1px solid #F1F2F4;
             cursor: pointer;
             &.flash {
-                animation: flash 1s ;
+                animation: flash .3s ;
             }
             .name {
                 padding: 12px 0 12px 8px;
@@ -401,12 +401,13 @@ main {
 
 @keyframes flash {
     0% {
-        opacity: 0;
-        visibility: hidden;
+        background: transparent;
+    }
+    0% {
+        background: rgba(0, 0, 0, .5);
     }
     100% {
-        opacity: 1;
-        visibility: visible;
+        background: transparent;
     }
     
   }

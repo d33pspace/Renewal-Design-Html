@@ -157,10 +157,10 @@ header .wrapper .sort.active {
 @media (min-width: 768px) {
   .overlay {
     max-width: 768px;
-    left: calc((100% - 770px)/2);
+    left: calc((100% - 770px) / 2);
   }
   .overlay.scroll {
-    left: calc((100% - 770px)/2 - 8px);
+    left: calc((100% - 770px) / 2 - 8px);
   }
 }
 .overlay.active {
@@ -350,7 +350,7 @@ main .guest_block .card .order_date .link_to_order {
 }
 @media (min-width: 768px) {
   .add {
-    right: calc(((100vw - 770px)/2) + 24px);
+    right: calc((100vw - 770px) / 2 + 24px);
   }
 }
 .add img {

@@ -156,10 +156,10 @@ header .wrapper .sort.active {
 @media (min-width: 768px) {
   .overlay {
     max-width: 768px;
-    left: calc((100% - 770px)/2);
+    left: calc((100% - 770px) / 2);
   }
   .overlay.scroll {
-    left: calc((100% - 770px)/2 - 8px);
+    left: calc((100% - 770px) / 2 - 8px);
   }
 }
 .overlay.active {
@@ -325,13 +325,13 @@ main .common .card {
   align-items: center;
   border-bottom: 1px solid #F1F2F4;
 }
+main .common .card.flash {
+  animation: flash 0.3s;
+}
 main .common .card .item {
   display: flex;
   align-items: center;
   padding: 16px 16px 16px 16px;
-}
-main .common .card .item.flash {
-  animation: flash 1s;
 }
 main .common .card .item img {
   margin-right: 8px;
@@ -440,7 +440,7 @@ main .add_list .cards .card .buttons .rmv {
 @media (min-width: 768px) {
   .message {
     max-width: 768px;
-    left: calc((100% - 770px)/2 - 8px);
+    left: calc((100% - 770px) / 2 - 8px);
   }
 }
 .message p {
@@ -479,7 +479,7 @@ main .add_list .cards .card .buttons .rmv {
 }
 @media (min-width: 768px) {
   .proceed {
-    right: calc(((100vw - 768px)/2) + 8px);
+    right: calc((100vw - 768px) / 2 + 8px);
   }
 }
 .proceed img {
@@ -487,6 +487,9 @@ main .add_list .cards .card .buttons .rmv {
   height: 14px;
 }
 
+.card.flash {
+  animation: flash 0.3s;
+}
 .card .card-heading {
   cursor: pointer;
   display: flex;
@@ -509,9 +512,6 @@ main .add_list .cards .card .buttons .rmv {
   display: flex;
   align-items: center;
   padding: 16px;
-}
-.card .card-heading .card-title.flash {
-  animation: flash 1s;
 }
 .card .card-heading .card-title .category-icon {
   width: 32px;
@@ -574,7 +574,7 @@ main .add_list .cards .card .buttons .rmv {
   cursor: pointer;
 }
 .card .card-content .item.flash {
-  animation: flash 1s;
+  animation: flash 0.3s;
 }
 .card .card-content .item .name {
   padding: 12px 0 12px 8px;
@@ -592,11 +592,12 @@ main .add_list .cards .card .buttons .rmv {
 
 @keyframes flash {
   0% {
-    opacity: 0;
-    visibility: hidden;
+    background: transparent;
+  }
+  0% {
+    background: rgba(0, 0, 0, 0.5);
   }
   100% {
-    opacity: 1;
-    visibility: visible;
+    background: transparent;
   }
 }

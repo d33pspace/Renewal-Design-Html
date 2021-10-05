@@ -156,10 +156,10 @@ header .wrapper .sort.active {
 @media (min-width: 768px) {
   .overlay {
     max-width: 768px;
-    left: calc((100% - 770px)/2);
+    left: calc((100% - 770px) / 2);
   }
   .overlay.scroll {
-    left: calc((100% - 770px)/2 - 8px);
+    left: calc((100% - 770px) / 2 - 8px);
   }
 }
 .overlay.active {
@@ -427,7 +427,7 @@ main .laundry .body .card .buttons .button.lost.active img {
 @media (min-width: 768px) {
   .overlay {
     max-width: 768px;
-    left: calc((100% - 770px)/2);
+    left: calc((100% - 770px) / 2);
   }
 }
 .overlay.active {
@@ -488,7 +488,7 @@ main .laundry .body .card .buttons .button.lost.active img {
 }
 @media (min-width: 768px) {
   .proceed {
-    right: calc(((100vw - 770px)/2) + 16px);
+    right: calc((100vw - 770px) / 2 + 16px);
   }
 }
 .proceed img {

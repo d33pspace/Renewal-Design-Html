@@ -16,15 +16,16 @@ add.forEach(item => {
             let flash = item.closest('.item')
             flash.classList.add('flash')
             setInterval(() =>  flash.classList.remove('flash') , 1000)
-        } else if(item.closest('.card').querySelector('.item')) {
-            let flash = item.closest('.card').querySelector('.item')
+        } else if(item.closest('.card')) {
+            let flash = item.closest('.card')
             flash.classList.add('flash')
             setInterval(() =>  flash.classList.remove('flash') , 1000)
-        } else if (item.closest('.card').querySelector('.card-title')) {
-            let flash = item.closest('.card').querySelector('.card-title')
-            flash.classList.add('flash')
-            setInterval(() =>  flash.classList.remove('flash') , 1000)
-        }
+        } 
+        // else if (item.closest('.card').querySelector('.card-title')) {
+        //     let flash = item.closest('.card').querySelector('.card-title')
+        //     flash.classList.add('flash')
+        //     setInterval(() =>  flash.classList.remove('flash') , 1000)
+        // }
         
 
         // alert button

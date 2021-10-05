@@ -156,10 +156,10 @@ header .wrapper .sort.active {
 @media (min-width: 768px) {
   .overlay {
     max-width: 768px;
-    left: calc((100% - 770px)/2);
+    left: calc((100% - 770px) / 2);
   }
   .overlay.scroll {
-    left: calc((100% - 770px)/2 - 8px);
+    left: calc((100% - 770px) / 2 - 8px);
   }
 }
 .overlay.active {
@@ -497,7 +497,7 @@ main .head .col-title p {
 }
 @media (min-width: 768px) {
   .proceed {
-    right: calc(((100vw - 768px)/2) + 8px);
+    right: calc((100vw - 768px) / 2 + 8px);
   }
 }
 .proceed img {

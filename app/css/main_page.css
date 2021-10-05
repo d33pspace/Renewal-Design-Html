@@ -157,10 +157,10 @@ header .wrapper .sort.active {
 @media (min-width: 768px) {
   .overlay {
     max-width: 768px;
-    left: calc((100% - 770px)/2);
+    left: calc((100% - 770px) / 2);
   }
   .overlay.scroll {
-    left: calc((100% - 770px)/2 - 8px);
+    left: calc((100% - 770px) / 2 - 8px);
   }
 }
 .overlay.active {
@@ -405,7 +405,7 @@ main .list .card .time .serve_icon.active {
 }
 @media (min-width: 768px) {
   .chat {
-    right: calc(((100vw - 768px)/2) + 8px);
+    right: calc((100vw - 768px) / 2 + 8px);
   }
 }
 .chat img {
@@ -432,10 +432,10 @@ main .list .card .time .serve_icon.active {
 @media (min-width: 768px) {
   .menu {
     max-width: 768px;
-    left: calc((100% - 770px)/2);
+    left: calc((100% - 770px) / 2);
   }
   .menu.scroll {
-    left: calc((100% - 770px)/2 - 8px);
+    left: calc((100% - 770px) / 2 - 8px);
   }
 }
 .menu .close {
