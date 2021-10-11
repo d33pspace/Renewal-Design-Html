@@ -12,15 +12,21 @@ add.forEach(item => {
         card.parentElement.appendChild(newCard)
         
         // flash
-        if(item.closest('.item')) {
-            let flash = item.closest('.item')
-            flash.classList.add('flash')
-            setInterval(() =>  flash.classList.remove('flash') , 1000)
-        } else if(item.closest('.card')) {
-            let flash = item.closest('.card')
-            flash.classList.add('flash')
-            setInterval(() =>  flash.classList.remove('flash') , 1000)
-        } 
+
+        let rect = document.querySelector('.add_list').getBoundingClientRect();
+        console.log(rect.bottom)
+        if (rect.bottom < 0) {
+            if(item.closest('.item')) {
+                let flash = item.closest('.item')
+                flash.classList.add('flash')
+                setInterval(() =>  flash.classList.remove('flash') , 1000)
+            } else if(item.closest('.card')) {
+                let flash = item.closest('.card')
+                flash.classList.add('flash')
+                setInterval(() =>  flash.classList.remove('flash') , 1000)
+            } 
+        }
+
         // else if (item.closest('.card').querySelector('.card-title')) {
         //     let flash = item.closest('.card').querySelector('.card-title')
         //     flash.classList.add('flash')

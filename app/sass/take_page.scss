@@ -125,7 +125,7 @@ main {
             align-items: center;
             border-bottom: 1px solid #F1F2F4;
             &.flash {
-                animation: flash .3s ;
+                animation: flash .5s ;
             }
             .item {
                 display: flex;
@@ -294,7 +294,7 @@ main {
 
 .card {
     &.flash {
-        animation: flash .3s ;
+        animation: flash .5s ;
     }
     .card-heading {
         cursor: pointer;
@@ -380,7 +380,7 @@ main {
             border-bottom: 1px solid #F1F2F4;
             cursor: pointer;
             &.flash {
-                animation: flash .3s ;
+                animation: flash .5s ;
             }
             .name {
                 padding: 12px 0 12px 8px;
@@ -403,7 +403,7 @@ main {
     0% {
         background: transparent;
     }
-    0% {
+    20% {
         background: rgba(0, 0, 0, .5);
     }
     100% {

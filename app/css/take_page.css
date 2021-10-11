@@ -326,7 +326,7 @@ main .common .card {
   border-bottom: 1px solid #F1F2F4;
 }
 main .common .card.flash {
-  animation: flash 0.3s;
+  animation: flash 0.5s;
 }
 main .common .card .item {
   display: flex;
@@ -488,7 +488,7 @@ main .add_list .cards .card .buttons .rmv {
 }
 
 .card.flash {
-  animation: flash 0.3s;
+  animation: flash 0.5s;
 }
 .card .card-heading {
   cursor: pointer;
@@ -574,7 +574,7 @@ main .add_list .cards .card .buttons .rmv {
   cursor: pointer;
 }
 .card .card-content .item.flash {
-  animation: flash 0.3s;
+  animation: flash 0.5s;
 }
 .card .card-content .item .name {
   padding: 12px 0 12px 8px;
@@ -594,7 +594,7 @@ main .add_list .cards .card .buttons .rmv {
   0% {
     background: transparent;
   }
-  0% {
+  20% {
     background: rgba(0, 0, 0, 0.5);
   }
   100% {
