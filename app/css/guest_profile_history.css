@@ -168,6 +168,11 @@ header .wrapper .sort.active {
   opacity: 1;
 }
 
+.desktop-wrapper {
+  min-height: calc(100vh - 2px);
+  border: 1px solid transparent;
+}
+
 @media (min-width: 768px) {
   body {
     background-color: #a6a6a6;

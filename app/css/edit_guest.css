@@ -168,6 +168,11 @@ header .wrapper .sort.active {
   opacity: 1;
 }
 
+.desktop-wrapper {
+  min-height: calc(100vh - 2px);
+  border: 1px solid transparent;
+}
+
 @media (min-width: 768px) {
   body {
     background-color: #a6a6a6;
@@ -306,4 +311,33 @@ main .wrapper form .dropdown .list .option {
   line-height: 26px;
   color: #001730;
   cursor: pointer;
+}
+
+.proceed {
+  z-index: 9999;
+  padding: 21px 18px;
+  background-color: #D11241;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 24px;
+  display: flex;
+  width: fit-content;
+  position: fixed;
+  right: 16px;
+  bottom: 17px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+.proceed.active {
+  opacity: 1;
+  visibility: visible;
+}
+@media (min-width: 768px) {
+  .proceed {
+    right: calc((100vw - 770px) / 2 + 16px);
+  }
+}
+.proceed img {
+  width: 20px;
+  height: 14px;
 }

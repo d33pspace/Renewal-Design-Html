@@ -168,6 +168,11 @@ header .wrapper .sort.active {
   opacity: 1;
 }
 
+.desktop-wrapper {
+  min-height: calc(100vh - 2px);
+  border: 1px solid transparent;
+}
+
 @media (min-width: 768px) {
   body {
     background-color: #a6a6a6;
@@ -207,6 +212,11 @@ header .wrapper .sort.active {
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+@media (max-height: 680px) {
+  .content {
+    height: auto;
+  }
 }
 .content > img {
   width: 100%;
@@ -270,7 +280,7 @@ header .wrapper .sort.active {
   bottom: 16px;
   width: calc(100% - 64px);
 }
-@media (min-height: 670px) {
+@media (min-height: 720px) {
   .content .wrapper button {
     bottom: 64px;
   }

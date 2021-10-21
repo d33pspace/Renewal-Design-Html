@@ -12,64 +12,69 @@
 </head>
 <body>
     <div class="desktop-wrapper">
-    <header class='fixed_header'>
-        <div class="wrapper">
-            <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
-            <h1 class="title">Edit Guest</h1>
-        </div>
-    </header>
-    <main>
-        <div class="wrapper">
-            <div class="avatar_block">
-                <img class='avatar' src='./img/avatar_big.png' alt='avatar'>
-                <a href='#'><img class='icon' src='./img/svg/photo_camera.svg'></a>
+        <header class='fixed_header'>
+            <div class="wrapper">
+                <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
+                <h1 class="title">Edit Guest</h1>
             </div>
-            <form action='#'>
-                <div class="input-wrapper">
-                    <label for='name'>Name in Hanzi</label>
-                    <input id='name' required type="text" class="name">
-                    <p class="error-message">Error</p>
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="avatar_block">
+                    <img class='avatar' src='./img/avatar_big.png' alt='avatar'>
+                    <a href='#'><img class='icon' src='./img/svg/photo_camera.svg'></a>
                 </div>
-                <div class="input-wrapper">
-                    <label for='pinyin'>Pinyin</label>
-                    <input id='pinyin' required type="text" class="pinyin">
-                    <p class="error-message">Error</p>
-                </div>
-                <div class="input-wrapper">
-                    <label for='birthdate'>Birthdate</label>
-                    <input id='birthdate' required type='text' class='birthdate'>
-                    <p class="error-message">Error</p>
-                </div>
-                
-                <div class="dropdown gender">
-                    <div class="current filled"><p>Gender</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
-                    <div class="list">
-                        <div class="option">Male</div>
-                        <div class="option">Female Female</div>
+                <form action='#'>
+                    <div class="input-wrapper">
+                        <label for='name'>Name in Hanzi</label>
+                        <input id='name' required type="text" class="name">
+                        <p class="error-message">Error</p>
                     </div>
-                </div>
-                <div class="dropdown province">
-                    <div class="current filled"><p>Province</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
-                    <div class="list">
-                        <div class="option">Shanghai</div>
-                        <div class="option">Beijing</div>
+                    <div class="input-wrapper">
+                        <label for='pinyin'>Pinyin</label>
+                        <input id='pinyin' required type="text" class="pinyin">
+                        <p class="error-message">Error</p>
                     </div>
-                </div>
-                <div class="input-wrapper">
-                    <label for='phone'>Guest Phone</label>
-                    <input id='phone' required type='tel' class='phone'>
-                    <p class="error-message">Error</p>
-                </div>
-                <div class="input-wrapper">
-                    <label for='id'>Guest ID</label>
-                    <input id='id' required type='text' class='id'>
-                    <p class="error-message">Error</p>
-                </div>
-            </form>
-        </div>
-    </main>
+                    <div class="input-wrapper">
+                        <label for='birthdate'>Birthdate</label>
+                        <input id='birthdate' required type='text' class='birthdate'>
+                        <p class="error-message">Error</p>
+                    </div>
+                    
+                    <div class="dropdown gender">
+                        <div class="current filled"><p>Gender</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
+                        <div class="list">
+                            <div class="option">Male</div>
+                            <div class="option">Female Female</div>
+                        </div>
+                    </div>
+                    <div class="dropdown province">
+                        <div class="current filled"><p>Province</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
+                        <div class="list">
+                            <div class="option">Shanghai</div>
+                            <div class="option">Beijing</div>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for='phone'>Guest Phone</label>
+                        <input id='phone' required type='tel' class='phone'>
+                        <p class="error-message">Error</p>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for='id'>Guest ID</label>
+                        <input id='id' required type='text' class='id'>
+                        <p class="error-message">Error</p>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <a class='proceed' href='#'>
+            <img class='check' src='./img/svg/check.svg'>
+        </a>
     </div>
+    <script defer src="./js/edit_guest.js"></script>
     <script defer src="./js/guest_dropdown.js"></script>
     <script defer src="./js/input.js"></script>
     <script defer src="./js/fixed_header.js"></script>
+
 </body>

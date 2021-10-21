@@ -22,6 +22,8 @@ dropdown.forEach((item) => {
             item.firstElementChild.classList.add('filled')
             item.lastElementChild.classList.remove('active')
             item.firstElementChild.firstElementChild.innerHTML = e.innerHTML
+            proceed.classList.add('active')
+            dropCount = true
         }
     })
 })
