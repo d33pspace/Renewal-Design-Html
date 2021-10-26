@@ -58,6 +58,34 @@ main {
                 position: relative;
                 border-radius: 8px 8px 0 0;
                 margin-bottom: 16px;
+                .arrow {
+                    position: absolute;
+                    right: 22px;
+                    top: 22px;
+                    transition: .3s;
+                    cursor: pointer;
+                }
+                .search {
+                    display: none;
+                    position: absolute;
+                    height: 56px;
+                    width: calc(100% - 34px);
+                    top: 0;
+                    box-sizing: border-box;
+                    border: unset;
+                    padding: 12.5px 16px 17.5px 16px;
+                    color: #001730;
+                    font-size: 16px;
+                    line-height: 26px;
+                    &::placeholder {
+                        color: #001730;
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                }
+                &.active .search {
+                    display: flex;
+                }
                 &.active {
                     box-shadow: 0px 2px 8px -2px rgba(45, 43, 70, 0.06), 0px 0px 6px rgba(45, 43, 70, 0.08);
                     .arrow {
@@ -76,11 +104,8 @@ main {
                     border-radius: 2px;
                     transition: .2s;
                     cursor: pointer;
-                    .arrow {
-                        position: absolute;
-                        right: 22px;
-                        top: 22px;
-                        transition: .3s;
+                    &.filled {
+                        border-color: #13ADAD;
                     }
                 }
                 .list {
@@ -96,12 +121,18 @@ main {
                         transform: scaleY(1);
                         box-shadow: 0px 2px 8px -2px rgba(45, 43, 70, 0.06), 0px 0px 6px rgba(45, 43, 70, 0.08);
                     }
+                    &.long_list {
+                        max-height: 126px;
+                    }
                     .option {
                         padding: 8px 24px;
                         font-size: 16px;
                         line-height: 26px;
                         color: #001730;
                         cursor: pointer;
+                        &.disable {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -134,5 +165,83 @@ main {
     img {
         width: 20px;
         height: 14px;
+    }
+}
+
+.overlay {
+    flex-direction: column;
+    justify-content: flex-end;
+    .closeoverlay {
+        background: #fff;
+        padding: 29px 16px 40px 16px;
+        display: flex;
+        justify-content: space-around;
+        button {
+            padding: 10px 48px;
+            cursor: pointer;
+            border-radius: 8px;
+            border: unset;
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000;
+            &.active {
+                background: #13ADAD;
+                box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
+                color: #fff;
+            }
+        }
+    }
+}
+
+#datepicker {
+    .vc-container {
+        width: 100%;
+        border: unset;
+        border-radius: 10px 10px 0px 0px !important;
+        .vc-arrows-container {
+            padding: 40px 16px 34px 16px;
+            .vc-arrow {
+                border: unset;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+            path {
+                fill: #13ADAD;
+            }
+        }
+        .vc-header {
+            padding: 40px 16px 34px 16px;
+            .vc-title {
+                height: 24px;
+                font-size: 18px;
+                line-height: 21px;
+                color: #001730;
+                font-weight: bold;
+                font-family: 'Noto Sans SC', sans-serif;
+            }
+        }
+        .vc-weeks {
+            font-family: 'Noto Sans SC', sans-serif;
+            padding: 0 32px;
+            .vc-weekday {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.15px;
+                color: #13ADAD;
+                padding: 0 0 17px 0;
+            }
+            .vc-day {
+                font-size: 16px;
+                line-height: 160%;
+            }
+            .vc-highlight {
+                background-color: #13ADAD !important;
+            }
+        }
     }
 }

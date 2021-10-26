@@ -1,29 +1,6 @@
-// $.datepicker.regional['ru'] = {
-// 	dayNamesShort: ['S','M','T','W','T','F','S'],
-// 	dayNamesMin: ['S','M','T','W','T','F','S'],
-// 	dateFormat: 'dd.mm.yy',
-// 	firstDay: 1,
-// 	isRTL: false,
-// 	showMonthAfterYear: false,
-// 	yearSuffix: ''
-// };
-// $.datepicker.setDefaults($.datepicker.regional['ru']);
 
 
-// $(function(){
-// 	$("#datepicker").datepicker({
-// 		onSelect: function(date){
-// 			$('#datepicker_value').val(date)
-// 		},
-//         minDate: 0,
-//         // showButtonPanel: true,
-//         showOtherMonths: true,
-//         selectOtherMonths: true
-// 	});
-// 	$("#datepicker").datepicker("setDate", $('#datepicker_value').val());
-// });
-
-let datepickerButton = document.querySelector('.filter span')
+let datepickerButton = document.querySelector('.datepicker')
 let overlay = document.querySelector('.overlay')
 
 datepickerButton.onclick = () => {
@@ -48,5 +25,16 @@ new Vue({
 		range: {
 			start: new Date()
 		  }
+	},
+	methods: {
+		onDayClick(day) {
+			let birthInput = document.querySelector('#birthdate')
+			if (birthInput) {
+				birthInput.value = day.id
+				birthInput.parentElement.classList.add('active')
+				overlay.classList.remove('active')
+				proceed.classList.add('active')
+			}
+		}
 	}
   })

@@ -208,6 +208,12 @@ header .wrapper .sort.active {
   }
 }
 
+.dropdown .list.long_list {
+  z-index: 99;
+  max-height: 168px;
+  overflow-y: scroll;
+}
+
 header {
   padding: 0 20px;
   background: #fff;
@@ -266,6 +272,34 @@ main .wrapper form .dropdown {
   border-radius: 8px 8px 0 0;
   margin-bottom: 16px;
 }
+main .wrapper form .dropdown .arrow {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main .wrapper form .dropdown .search {
+  display: none;
+  position: absolute;
+  height: 56px;
+  width: calc(100% - 34px);
+  top: 0;
+  box-sizing: border-box;
+  border: unset;
+  padding: 12.5px 16px 17.5px 16px;
+  color: #001730;
+  font-size: 16px;
+  line-height: 26px;
+}
+main .wrapper form .dropdown .search::placeholder {
+  color: #001730;
+  font-size: 16px;
+  line-height: 26px;
+}
+main .wrapper form .dropdown.active .search {
+  display: flex;
+}
 main .wrapper form .dropdown.active {
   box-shadow: 0px 2px 8px -2px rgba(45, 43, 70, 0.06), 0px 0px 6px rgba(45, 43, 70, 0.08);
 }
@@ -285,11 +319,8 @@ main .wrapper form .dropdown .current {
   transition: 0.2s;
   cursor: pointer;
 }
-main .wrapper form .dropdown .current .arrow {
-  position: absolute;
-  right: 22px;
-  top: 22px;
-  transition: 0.3s;
+main .wrapper form .dropdown .current.filled {
+  border-color: #13ADAD;
 }
 main .wrapper form .dropdown .list {
   padding: 8px 0;
@@ -305,12 +336,18 @@ main .wrapper form .dropdown .list.active {
   transform: scaleY(1);
   box-shadow: 0px 2px 8px -2px rgba(45, 43, 70, 0.06), 0px 0px 6px rgba(45, 43, 70, 0.08);
 }
+main .wrapper form .dropdown .list.long_list {
+  max-height: 126px;
+}
 main .wrapper form .dropdown .list .option {
   padding: 8px 24px;
   font-size: 16px;
   line-height: 26px;
   color: #001730;
   cursor: pointer;
+}
+main .wrapper form .dropdown .list .option.disable {
+  display: none;
 }
 
 .proceed {
@@ -340,4 +377,80 @@ main .wrapper form .dropdown .list .option {
 .proceed img {
   width: 20px;
   height: 14px;
+}
+
+.overlay {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.overlay .closeoverlay {
+  background: #fff;
+  padding: 29px 16px 40px 16px;
+  display: flex;
+  justify-content: space-around;
+}
+.overlay .closeoverlay button {
+  padding: 10px 48px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: unset;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+.overlay .closeoverlay button.active {
+  background: #13ADAD;
+  box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
+  color: #fff;
+}
+
+#datepicker .vc-container {
+  width: 100%;
+  border: unset;
+  border-radius: 10px 10px 0px 0px !important;
+}
+#datepicker .vc-container .vc-arrows-container {
+  padding: 40px 16px 34px 16px;
+}
+#datepicker .vc-container .vc-arrows-container .vc-arrow {
+  border: unset;
+}
+#datepicker .vc-container .vc-arrows-container svg {
+  width: 24px;
+  height: 24px;
+}
+#datepicker .vc-container .vc-arrows-container path {
+  fill: #13ADAD;
+}
+#datepicker .vc-container .vc-header {
+  padding: 40px 16px 34px 16px;
+}
+#datepicker .vc-container .vc-header .vc-title {
+  height: 24px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #001730;
+  font-weight: bold;
+  font-family: "Noto Sans SC", sans-serif;
+}
+#datepicker .vc-container .vc-weeks {
+  font-family: "Noto Sans SC", sans-serif;
+  padding: 0 32px;
+}
+#datepicker .vc-container .vc-weeks .vc-weekday {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #13ADAD;
+  padding: 0 0 17px 0;
+}
+#datepicker .vc-container .vc-weeks .vc-day {
+  font-size: 16px;
+  line-height: 160%;
+}
+#datepicker .vc-container .vc-weeks .vc-highlight {
+  background-color: #13ADAD !important;
 }

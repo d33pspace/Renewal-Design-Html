@@ -203,3 +203,9 @@ header .wrapper .sort {
     // }
   }
 }
+
+.dropdown .list.long_list {
+  z-index: 99;
+  max-height: 168px;
+  overflow-y: scroll;
+}

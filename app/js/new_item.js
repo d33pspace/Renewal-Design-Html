@@ -22,6 +22,9 @@ input.forEach(item => {
 let dropdown = document.querySelectorAll('.dropdown')
 
 dropdown.forEach((item) => {
+    if (item.querySelectorAll('.list>*').length > 3) {
+        item.querySelector('.list').classList.add('long_list')
+    }
     item.firstElementChild.onclick = () => {
         if (item.classList.contains('active')) {
             dropdown.forEach((i) => {
@@ -42,7 +45,7 @@ dropdown.forEach((item) => {
             search.focus()
             search.oninput = () => {
                 list.forEach(e => {
-                    if (!e.lastElementChild.innerHTML.includes(search.value) ) {
+                    if (!e.lastElementChild.innerHTML.toLowerCase().includes(search.value.toLowerCase()) ) {
                         e.classList.add('disable')
                     } else {
                         e.classList.remove('disable')

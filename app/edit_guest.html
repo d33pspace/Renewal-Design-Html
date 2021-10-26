@@ -32,26 +32,30 @@
                     </div>
                     <div class="input-wrapper">
                         <label for='pinyin'>Pinyin</label>
-                        <input id='pinyin' required type="text" class="pinyin">
+                        <input id='pinyin' required type="text" class="pinyin ">
                         <p class="error-message">Error</p>
                     </div>
                     <div class="input-wrapper">
                         <label for='birthdate'>Birthdate</label>
-                        <input id='birthdate' required type='text' class='birthdate'>
+                        <input autocomplete="off" id='birthdate' required type='text' class='birthdate datepicker'>
                         <p class="error-message">Error</p>
                     </div>
                     
                     <div class="dropdown gender">
-                        <div class="current filled"><p>Gender</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
+                        <div class="current"><p>Gender</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
                         <div class="list">
                             <div class="option">Male</div>
                             <div class="option">Female Female</div>
                         </div>
                     </div>
                     <div class="dropdown province">
-                        <div class="current filled"><p>Province</p> <img class='arrow' src='./img/svg/down_arrow.svg'></div>
+                        <div class="current"><p>Province</p></div>
+                        <input class='search' type='text' placeholder='Search'>
+                        <img class='arrow' src='./img/svg/down_arrow.svg'>
                         <div class="list">
                             <div class="option">Shanghai</div>
+                            <div class="option">Beijing</div>
+                            <div class="option">Beijing</div>
                             <div class="option">Beijing</div>
                         </div>
                     </div>
@@ -72,9 +76,20 @@
             <img class='check' src='./img/svg/check.svg'>
         </a>
     </div>
+    <div class="overlay">
+        <div id='datepicker'>
+            <v-calendar @dayclick="onDayClick" />
+        </div>
+        <div class="closeoverlay">
+            <button class="cancel">Cancel</button>
+            <button class="done active">Done</button>
+        </div>
+    </div>
     <script defer src="./js/edit_guest.js"></script>
     <script defer src="./js/guest_dropdown.js"></script>
     <script defer src="./js/input.js"></script>
     <script defer src="./js/fixed_header.js"></script>
-
+    <script src='https://unpkg.com/vue/dist/vue.js'></script>
+    <script src='https://unpkg.com/v-calendar'></script>
+    <script type="module" defer src="./js/datepicker.js"></script>
 </body>
