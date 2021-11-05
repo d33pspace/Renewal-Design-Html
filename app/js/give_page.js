@@ -22,6 +22,7 @@ overlay.forEach(e => {
         }
         if (i.target == disOverlay) {
             disOverlay.firstElementChild.classList.remove('active')
+            document.documentElement.classList.remove('no-scroll')
         }
     }
 })

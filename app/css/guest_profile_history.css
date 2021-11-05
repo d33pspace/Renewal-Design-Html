@@ -60,6 +60,10 @@ body {
   overflow-y: hidden;
 }
 
+html.no-scroll {
+  overflow-y: hidden;
+}
+
 img {
   max-width: 100%;
 }

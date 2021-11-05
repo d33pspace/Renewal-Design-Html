@@ -5,6 +5,7 @@ cardHeading.forEach((item) => {
     item.onclick = (e) => {
         disOverlay.classList.add('active')
         disOverlay.firstElementChild.classList.add('active')
+        document.documentElement.classList.add('no-scroll')
         if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
             disOverlay.classList.add('scroll')
         }
