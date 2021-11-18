@@ -73,14 +73,14 @@ main {
                     font-size: 14px;
                     line-height: 20px;
                     letter-spacing: 0.005em;
-                    color: #D11241;
+                    color: #13ADAD;
                     position: relative;
                     &:after {
                         content: '';
                         position: absolute;
                         width: 12px;
                         height: 15px;
-                        background: url('../img/svg/position_icon.svg');
+                        background: url('../img/svg/admin.svg');
                         left: 2px;
                         top: calc(50% - 7.5px);
                     }
@@ -101,6 +101,9 @@ main {
             height: 44px;
             background: rgba(0, 163, 80, 0.1);;
             border-radius: 8px;
+            &.service {
+                background: rgba(217, 24, 74, 0.1);
+            }
             &.change {
                 cursor: pointer;
                 width: 46px;
