@@ -134,13 +134,19 @@ main {
     width: fit-content;
     position: fixed;
     right: 16px;
-    bottom: 17px;
+    bottom: 16px;
     @media(min-width: 768px) {
-        right: calc(((100vw - 770px)/2) + 24px)
+        right: calc(((100vw - 766px)/2) + 16px);
     }
     img {
         width: 14px;
         height: 14px;
         
+    }
+}
+
+@media(min-width: 768px) {
+    .scroll .add {
+        right: calc(((100vw - 766px)/2) + 16px - (var(--scroll-width) / 2));
     }
 }

@@ -114,7 +114,6 @@ main {
             border-bottom: 1px solid #F1F2F4;
         }
         .card {
-            // padding: 9px 16px;
             border-bottom: 1px solid #F1F2F4;
             display: flex;
             justify-content: space-between;
@@ -127,71 +126,68 @@ main {
             .user_info {
                 padding: 9px 16px;
                 display: flex;
+                align-items: center;
                 &.unactive {
                     opacity: .5;
                 }
                 .avatar {
-                    width: 44px;
-                    height: 44px;
-                    border-radius: 12px;
-                    margin-right: 16px;
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 8px;
+                    margin-right: 8px;
+                    border: 1px solid #DDDFE4;
                 }
                 .info_details {
                     display: flex;
                     flex-direction: column;
-                    .name {
-                        color: #1F1F2D;
+                    .name_hanzi {
+                        color: #001730;
                         font-weight: bold;
                         font-size: 16px;
                         line-height: 160%;
-                        display: flex;
-                        .hieroglyph {
-                            margin-right: 4px;
-                        }
-                        .transcription {
-                            margin-left: 4px;
-                        }
                     }
-                    .age_city {
-                        font-size: 14px;
-                        line-height: 20px;
-                        color: #001730;
-                        letter-spacing: 0.005em;
-                        display: flex;
-                        .coma {
-                            margin-right: 3px;
-                        }
+                    .name_english {
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: #848790;
                     }
                 }
             }
             .time {
                 padding: 9px 16px;
                 display: flex;
-                flex-direction: column;
+                align-items: center;
+                &.unactive {
+                    opacity: .5;
+                }
                 .remain_time {
-                    margin-bottom: 6px;
-                    font-weight: 400;
+                    margin-left: 8px;
+                    font-weight: 500;
                     font-size: 12px;
-                    line-height: 160%;
-                    color: #27C4BC;
+                    line-height: 150%;
+                    color: #13ADAD;
+                }
+                .img_wrapper_serve {
+                    background: #FAFBFC;
+                    border: 1px solid #F1F2F4;
+                    box-sizing: border-box;
+                    border-radius: 8px;
                     width: 40px;
-                    text-align: center;
-                    &.waiting {
-                        color: #FFB946;
-                    }
-                    &.bold {
-                        font-weight: bold;
-                    }
-                    &.unactive {
-                        color: #848790;
-                    }
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .shower_icon {
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 8px;
                 }
                 .serve_icon {
-                    width: 24px;
-                    height: 24px;
-                    margin: 0 auto;
+                    width: 16px;
+                    height: 16px;
                     cursor: pointer;
-                    filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(128%) hue-rotate(186deg) brightness(101%) contrast(82%);
+                    filter: brightness(0) saturate(100%) invert(58%) sepia(13%) saturate(186%) hue-rotate(187deg) brightness(89%) contrast(96%);
                     &.active {
                         filter: brightness(0) saturate(100%) invert(14%) sepia(74%) saturate(4474%) hue-rotate(335deg) brightness(96%) contrast(98%);
                     }
@@ -210,14 +206,20 @@ main {
     width: fit-content;
     position: fixed;
     right: 16px;
-    bottom: 17px;
+    bottom: 16px;
     @media(min-width: 768px) {
-        right: calc(((100vw - 768px)/2) + 8px)
+        right: calc(((100vw - 766px)/2) + 16px);
     }
     img {
         width: 20px;
         height: 14px;
         
+    }
+}
+
+@media(min-width: 768px) {
+    .scroll .chat {
+        right: calc(((100vw - 766px)/2) + 16px - (var(--scroll-width) / 2));
     }
 }
 

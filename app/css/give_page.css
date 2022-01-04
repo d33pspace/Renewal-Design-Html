@@ -493,7 +493,7 @@ main .head .col-title p {
   width: fit-content;
   position: fixed;
   right: 16px;
-  bottom: 17px;
+  bottom: 16px;
   opacity: 0;
   visibility: hidden;
   transition: 0.1s;
@@ -513,7 +513,7 @@ main .head .col-title p {
 }
 @media (min-width: 768px) {
   .proceed {
-    right: calc((100vw - 768px) / 2 + 8px);
+    right: calc((100vw - 766px) / 2 + 16px);
   }
 }
 .proceed img {
@@ -521,6 +521,11 @@ main .head .col-title p {
   height: 14px;
 }
 
+@media (min-width: 768px) {
+  .scroll .proceed {
+    right: calc((100vw - 766px) / 2 + 16px - var(--scroll-width) / 2);
+  }
+}
 .add_list {
   display: none;
   background: #FAFBFC;

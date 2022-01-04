@@ -422,11 +422,11 @@ main .list .card .time .serve_icon.active {
   width: fit-content;
   position: fixed;
   right: 16px;
-  bottom: 17px;
+  bottom: 16px;
 }
 @media (min-width: 768px) {
   .chat {
-    right: calc((100vw - 768px) / 2 + 8px);
+    right: calc((100vw - 766px) / 2 + 16px);
   }
 }
 .chat img {
@@ -434,6 +434,11 @@ main .list .card .time .serve_icon.active {
   height: 14px;
 }
 
+@media (min-width: 768px) {
+  .scroll .chat {
+    right: calc((100vw - 766px) / 2 + 16px - var(--scroll-width) / 2);
+  }
+}
 .menu {
   position: fixed;
   top: 0;

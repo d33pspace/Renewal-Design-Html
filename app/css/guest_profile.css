@@ -731,16 +731,22 @@ main .options .option .option-title {
   width: fit-content;
   position: fixed;
   right: 16px;
-  bottom: 17px;
+  bottom: 16px;
   transition: 0.3s;
   cursor: pointer;
 }
 @media (min-width: 768px) {
   .make_review {
-    right: calc((100vw - 770px) / 2 + 24px);
+    right: calc((100vw - 766px) / 2 + 16px);
   }
 }
 .make_review img {
   width: 24px;
   height: 22px;
+}
+
+@media (min-width: 768px) {
+  .scroll .make_review {
+    right: calc((100vw - 766px) / 2 + 16px - var(--scroll-width) / 2);
+  }
 }

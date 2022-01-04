@@ -354,11 +354,11 @@ main .users_block .card .date {
   width: fit-content;
   position: fixed;
   right: 16px;
-  bottom: 17px;
+  bottom: 16px;
 }
 @media (min-width: 768px) {
   .copy_link {
-    right: calc((100vw - 770px) / 2 + 24px);
+    right: calc((100vw - 766px) / 2 + 16px);
   }
 }
 .copy_link img {
@@ -366,6 +366,11 @@ main .users_block .card .date {
   height: 14px;
 }
 
+@media (min-width: 768px) {
+  .scroll .copy_link {
+    right: calc((100vw - 766px) / 2 + 16px - var(--scroll-width) / 2);
+  }
+}
 .link_modal {
   align-items: flex-end;
 }
