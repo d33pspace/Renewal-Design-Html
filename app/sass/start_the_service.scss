@@ -79,6 +79,9 @@ main {
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid #F1F2F4;
+            &.disabled {
+                opacity: .5;
+            }
             a:first-child {
                 width: -webkit-fill-available;
                 width: -moz-available;

@@ -294,6 +294,9 @@ main .guest_block .card {
   justify-content: space-between;
   border-bottom: 1px solid #F1F2F4;
 }
+main .guest_block .card.disabled {
+  opacity: 0.5;
+}
 main .guest_block .card a:first-child {
   width: -webkit-fill-available;
   width: -moz-available;
