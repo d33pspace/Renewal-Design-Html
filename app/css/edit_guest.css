@@ -125,6 +125,9 @@ header .wrapper .sort.active {
   left: 16px;
   top: 12.5px;
 }
+.input-wrapper label span.required {
+  color: #CD455C;
+}
 .input-wrapper input {
   transition: 0.3s;
   font-family: "Noto Sans SC", sans-serif;
@@ -420,6 +423,12 @@ main .wrapper form .dropdown .list .option.disable {
   box-shadow: 0px -8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
   border-radius: 16px 16px 0px 0px;
   /* date */
+}
+#datepicker ul {
+  list-style: none !important;
+}
+#datepicker ul li::marker {
+  display: none !important;
 }
 #datepicker .actual_date {
   margin-bottom: 16px;

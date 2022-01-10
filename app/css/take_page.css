@@ -124,6 +124,9 @@ header .wrapper .sort.active {
   left: 16px;
   top: 12.5px;
 }
+.input-wrapper label span.required {
+  color: #CD455C;
+}
 .input-wrapper input {
   transition: 0.3s;
   font-family: "Noto Sans SC", sans-serif;

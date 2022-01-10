@@ -29,7 +29,7 @@ var objToday = new Date(),
 	curMonth = months[objToday.getMonth()],
 	curYear = objToday.getFullYear()
 var today = dayOfWeek + ", " + curMonth + ' ' + dayOfMonth + ", " + curYear;
-date.innerHTML = today;
+// date.innerHTML = today;
 
 
 

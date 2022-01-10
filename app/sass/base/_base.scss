@@ -120,6 +120,9 @@ header .wrapper .sort {
         color: #001730;
         left: 16px;
         top: 12.5px;
+        span.required {
+          color: #CD455C;
+        }
     }
     input {
         transition: .3s;
