@@ -93,11 +93,14 @@ header .wrapper .sort {
         label {
             font-size: 12px;
             line-height: 160%;
-            color: #848790;
+            color: #13ADAD;
             top: 3px;
         }
         input {
             border-color: #13ADAD;
+        }
+        .showPassword {
+          filter: brightness(0) saturate(100%) invert(51%) sepia(98%) saturate(358%) hue-rotate(131deg) brightness(89%) contrast(100%);
         }
     }
     &.error {
@@ -107,6 +110,7 @@ header .wrapper .sort {
       input {
         background: #FFEBED;
         border-color: #F95557;
+        border-radius: 8px 8px 0 0;
       }
       .error-message {
         display: flex;
@@ -143,6 +147,9 @@ header .wrapper .sort {
       font-size: 12px;
       line-height: 160%;
       display: none;
+    }
+    .showPassword {
+      top: calc(50% - 7.5px);
     }
 }
 

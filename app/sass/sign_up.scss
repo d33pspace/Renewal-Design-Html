@@ -41,7 +41,6 @@
             img {
                 position: absolute;
                 right: 16px;
-                top: 10.5px;
                 cursor: pointer;
             }
         }
@@ -70,6 +69,16 @@
             position: absolute;
             bottom: 16px;
             width: calc(100% - 64px);
+            transition: .3s;
+            &:hover {
+                background-color: #ED2C5B;
+            }
+            &:active {
+                background-color: #A40E33;
+            }
+            &.disabled {
+                background-color: #F58AA4;
+            }
             @media(min-height: 720px) {
                 bottom: 64px;
             }

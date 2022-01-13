@@ -100,11 +100,14 @@ header .wrapper .sort.active {
 .input-wrapper.active label {
   font-size: 12px;
   line-height: 160%;
-  color: #848790;
+  color: #13ADAD;
   top: 3px;
 }
 .input-wrapper.active input {
   border-color: #13ADAD;
+}
+.input-wrapper.active .showPassword {
+  filter: brightness(0) saturate(100%) invert(51%) sepia(98%) saturate(358%) hue-rotate(131deg) brightness(89%) contrast(100%);
 }
 .input-wrapper.error label {
   color: #F95557;
@@ -112,6 +115,7 @@ header .wrapper .sort.active {
 .input-wrapper.error input {
   background: #FFEBED;
   border-color: #F95557;
+  border-radius: 8px 8px 0 0;
 }
 .input-wrapper.error .error-message {
   display: flex;
@@ -147,6 +151,9 @@ header .wrapper .sort.active {
   font-size: 12px;
   line-height: 160%;
   display: none;
+}
+.input-wrapper .showPassword {
+  top: calc(50% - 7.5px);
 }
 
 .overlay {
@@ -273,7 +280,6 @@ header .wrapper .sort.active {
 .content .wrapper form .password_block img {
   position: absolute;
   right: 16px;
-  top: 10.5px;
   cursor: pointer;
 }
 .content .wrapper form .forgot_password {
