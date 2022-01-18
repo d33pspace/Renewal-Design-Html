@@ -2,25 +2,35 @@
 @import './base/_base.scss';
 
 header {
-    padding: 20px 20px;
+    padding: 0 20px;
+    background: #001730;
     .wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: 56px;
         a {
             display: flex;
-        }
-        .edit {
             font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;
-            letter-spacing: 0.005em;
-            color: #27C4BC;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.15px;
+            color: #FFFFFF;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            img {
+                padding-right: 16px;
+                width: 16px;
+                height: 16px;
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(103%) contrast(104%);
+            }
         }
     }
 }
 
 main {
+    margin-top: 72px;
     .wrapper {
         padding: 0 16px;
     }
@@ -33,7 +43,7 @@ main {
             border-radius: 32px;
             width: 148px;
             height: 148px;
-            margin: 4px 0 28px;
+            margin: 0 0 28px;
         }
         .name {
             font-weight: bold;

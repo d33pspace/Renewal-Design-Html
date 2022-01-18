@@ -228,23 +228,23 @@ header .wrapper .sort.active {
 }
 
 header {
-  background: #fff;
-  padding: 0 20px;
+  padding: 0 18px;
+  background: #CD455C;
 }
 header .wrapper {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  height: 56px;
 }
-header .wrapper a {
-  margin: 20px 0;
-  display: flex;
+header .wrapper img {
+  margin-right: 14px;
 }
-header .title {
-  padding-bottom: 24px;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
-  color: #001730;
+header .wrapper p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
 }
 
 .subheader {
@@ -386,7 +386,7 @@ header .title {
 }
 
 main {
-  margin-top: 116px;
+  margin-top: 56px;
 }
 main .wrapper {
   padding: 0 16px;

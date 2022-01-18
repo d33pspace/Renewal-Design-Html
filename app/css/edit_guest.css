@@ -792,8 +792,8 @@ main .wrapper form .dropdown .list .option.disable {
   transform: translate(0, -50%);
   width: 100%;
   background-color: #fff;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border-top: 1px solid #DDDFE4;
+  border-bottom: 1px solid #DDDFE4;
   color: #CD455C;
   font-size: 24px;
   overflow: hidden;
