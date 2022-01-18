@@ -152,7 +152,7 @@ header .wrapper .sort.active {
   display: none;
 }
 .input-wrapper .showPassword {
-  top: calc(50% - 7.5px);
+  top: 18px !important;
 }
 
 .overlay {
@@ -554,6 +554,15 @@ main .head .col-title p {
 }
 .add_list .card.active {
   display: block;
+  overflow: hidden;
+  height: 0px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+.add_list .card.active.animation {
+  height: 69px;
+  transform: scaleY(1);
 }
 .add_list .card .card-heading {
   cursor: initial;

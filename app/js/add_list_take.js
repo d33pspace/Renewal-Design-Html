@@ -10,20 +10,19 @@ add.forEach(item => {
         let newCard = card.cloneNode(true)
         newCard.classList.add('active')
         card.parentElement.appendChild(newCard)
-        
+        setTimeout(() =>  newCard.classList.add('animation') , 1)
         // flash
 
         let rect = document.querySelector('.add_list').getBoundingClientRect();
-        console.log(rect.bottom)
         if (rect.bottom < 0) {
             if(item.closest('.item')) {
                 let flash = item.closest('.item')
                 flash.classList.add('flash')
-                setInterval(() =>  flash.classList.remove('flash') , 1000)
+                setTimeout(() =>  flash.classList.remove('flash') , 1000)
             } else if(item.closest('.card')) {
                 let flash = item.closest('.card')
                 flash.classList.add('flash')
-                setInterval(() =>  flash.classList.remove('flash') , 1000)
+                setTimeout(() =>  flash.classList.remove('flash') , 1000)
             } 
         }
 
@@ -47,9 +46,11 @@ add.forEach(item => {
             i.onclick = () => {
                 let card = i.closest('.card')
                 if( i.closest('.cards').querySelectorAll('.card.active').length == 1) {
-                    document.querySelector('.add_list').classList.remove('active')
+                    setTimeout(() =>  document.querySelector('.add_list').classList.remove('active') , 300)
+                    
                 }
-                card.remove()
+                card.classList.remove('animation')
+                setTimeout(() =>  card.remove() , 300)
             }
         })
 

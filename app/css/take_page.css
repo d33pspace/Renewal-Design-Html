@@ -152,7 +152,7 @@ header .wrapper .sort.active {
   display: none;
 }
 .input-wrapper .showPassword {
-  top: calc(50% - 7.5px);
+  top: 18px !important;
 }
 
 .overlay {
