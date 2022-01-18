@@ -348,13 +348,24 @@ header .title {
   transition: 0s;
   height: 0;
   background: #FAFBFC;
-  padding: 0 16px;
   box-sizing: border-box;
 }
 .card .card-content .item {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #F1F2F4;
+  border-bottom: 1px solid transparent;
+  padding: 0 16px;
+  position: relative;
+}
+.card .card-content .item::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 32px);
+  left: 16px;
+  bottom: -1px;
+  background: #F1F2F4;
+  z-index: -1;
 }
 .card .card-content .item.flash {
   animation: flash 0.5s;
