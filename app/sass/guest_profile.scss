@@ -4,25 +4,36 @@
 
 
 header {
-    padding: 20px 20px;
+    padding: 0 28px 0 20px;
+    background: #CD455C;
     .wrapper {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        a {
-            display: flex;
+        height: 56px;
+        img {
+            filter: brightness(0) saturate(100%) invert(94%) sepia(55%) saturate(2%) hue-rotate(125deg) brightness(102%) contrast(100%);
+        }
+        .back {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.15px;
+            color: #FFFFFF;
+            img {
+                padding-right: 16px;
+                width: 16px;
+                height: 16px;
+            }
         }
         .edit {
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;
-            letter-spacing: 0.005em;
-            color: #27C4BC;
-            text-decoration: none;
+            cursor: pointer;
         }
     }
 }
 
 main {
+    margin-top: 72px;
     .wrapper {
         padding: 0 16px;
     }

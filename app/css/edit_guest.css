@@ -230,26 +230,32 @@ header .wrapper .sort.active {
 
 header {
   padding: 0 20px;
-  background: #fff;
+  background: #CD455C;
 }
 header .wrapper {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
 }
-header .wrapper a {
-  margin: 20px 0;
-  display: flex;
+header .wrapper img {
+  filter: invert(94%) sepia(55%) saturate(2%) hue-rotate(125deg) brightness(102%) contrast(100%);
 }
-header .wrapper .title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
-  color: #001730;
-  margin-bottom: 24px;
+header .wrapper .back {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+}
+header .wrapper .back img {
+  padding-right: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 main {
-  margin-top: 115px;
+  margin-top: 72px;
 }
 main .wrapper {
   padding: 0 16px;

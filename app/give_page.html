@@ -19,21 +19,49 @@
             </div>
         </header>
         <main>
-            <div class="add_list">
-                <div class="wrapper border">
+            <div class='subheader'>
+                <div class="wrapper">
+                    <div class="user">
+                        <img class='avatar' src='./img/avatar-1.png'>
+                        <div class="user-info">
+                            <p class="name">张韦</p>
+                            <p class="subname">Zhang Wei </p>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="action food"><img src='./img/svg/serve2.svg'></div>
+                        <div class="action faces"><img src='./img/svg/faces.svg'></div>
+                    </div>
+                </div>
+            </div>
+            <div class="add_list active">
+                <div class="wrapper">
                     <div class="head">
-                        <p class="col-title">Giving list</p>
+                        <p class="col-title main-title">Giving list</p>
                         <div class="col-title">
                             <p>Not found</p>
-                            <p>rmv</p>
+                            <p>RMV</p>
                         </div>
                     </div>
                 </div>
                 <div class="cards">
+                    <div class="card blank active animation">
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/avatar_blank.svg'>
+                                <div class="desc">
+                                    <h6 class='title'>--</h6>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card tshirt" card-data='t-shirt'>
                         <div class="card-heading active">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_tshirt.svg'>
+                                <img class='category-icon' src='./img/svg/category_tshirt_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>t-shirt</h6>
                                     <p class='name'>Sleeveless t-shirt</p>
@@ -48,7 +76,7 @@
                     <div class="card shirt" card-data='shirt'>
                         <div class="card-heading active">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_shirt.svg'>
+                                <img class='category-icon' src='./img/svg/category_shirt_nobg.svg'>
                                 <h6 class="category-name">shirt</h6>
                             </div>
                             <div class="buttons">
@@ -60,7 +88,7 @@
                     <div class="card thermal_top_light" card-data='thermal top/light'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_thermal_top_light.svg'>
+                                <img class='category-icon' src='./img/svg/category_thermal_top_nobg.svg'>
                                 <h6 class="category-name">thermal top/light</h6>
                             </div>
                             <div class="buttons">
@@ -72,7 +100,7 @@
                     <div class="card thermal_top_heavy" card-data='thermal top/heavy'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_thermal_top_heavy﻿.svg'>
+                                <img class='category-icon' src='./img/svg/category_thermal_top_nobg.svg'>
                                 <h6 class="category-name">thermal top/heavy</h6>
                             </div>
                             <div class="buttons">
@@ -84,7 +112,7 @@
                     <div class="card pants" card-data='pants'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_pants.svg'>
+                                <img class='category-icon' src='./img/svg/category_pants_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>pants</h6>
                                     <p class='name'>Jeans</p>
@@ -99,7 +127,7 @@
                     <div class="card thermal_bottom" card-data='thermal bottom'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_thermal_bottom.svg'>
+                                <img class='category-icon' src='./img/svg/category_thermal_bottom_nobg.svg'>
                                 <h6 class="category-name">thermal bottom</h6>
                             </div>
                             <div class="buttons">
@@ -111,7 +139,7 @@
                     <div class="card shorts" card-data='shorts'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_shorts﻿.svg'>
+                                <img class='category-icon' src='./img/svg/category_shorts_nobg.svg'>
                                 <h6 class="category-name">shorts</h6>
                             </div>
                             <div class="buttons">
@@ -123,7 +151,7 @@
                     <div class="card dress_skirt" card-data='dress/skirt'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_dress_skirt.svg'>
+                                <img class='category-icon' src='./img/svg/category_skirt_nobg.svg'>
                                 <h6 class="category-name">dress/skirt</h6>
                             </div>
                             <div class="buttons">
@@ -135,7 +163,7 @@
                     <div class="card underwear_bottom" card-data='underwear bottom'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_underwear_bottom.svg'>
+                                <img class='category-icon' src='./img/svg/category_underwear_bottom_nobg.svg'>
                                 <h6 class="category-name">underwear bottom</h6>
                             </div>
                             <div class="buttons">
@@ -147,7 +175,7 @@
                     <div class="card underwear_top" card-data='underwear top'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_underwear_top.svg'>
+                                <img class='category-icon' src='./img/svg/category_underwear_top_nobg.svg'>
                                 <h6 class="category-name">underwear top</h6>
                             </div>
                             <div class="buttons">
@@ -159,7 +187,7 @@
                     <div class="card socks" card-data='socks'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_socks.svg'>
+                                <img class='category-icon' src='./img/svg/category_socks_nobg.svg'>
                                 <h6 class="category-name">socks</h6>
                             </div>
                             <div class="buttons">
@@ -171,7 +199,7 @@
                     <div class="card suit_coat" card-data='suit coat'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_suit_coat.svg'>
+                                <img class='category-icon' src='./img/svg/category_suit_coat_nobg.svg'>
                                 <h6 class="category-name">suit coat</h6>
                             </div>
                             <div class="buttons">
@@ -183,7 +211,7 @@
                     <div class="card outwear" card-data='outwear'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_outerwear.svg'>
+                                <img class='category-icon' src='./img/svg/category_outerwear_nobg.svg'>
                                 <h6 class="category-name">outwear</h6>
                             </div>
                             <div class="buttons">
@@ -195,7 +223,7 @@
                     <div class="card shoes" card-data='shoes'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_shoes﻿.svg'>
+                                <img class='category-icon' src='./img/svg/category_shoes_nobg.svg'>
                                 <h6 class="category-name">shoes</h6>
                             </div>
                             <div class="buttons">
@@ -207,7 +235,7 @@
                     <div class="card belts" card-data='belts'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_belts﻿.svg'>
+                                <img class='category-icon' src='./img/svg/category_belts_nobg.svg'>
                                 <h6 class="category-name">belts</h6>
                             </div>
                             <div class="buttons">
@@ -219,7 +247,7 @@
                     <div class="card scarf" card-data='scarf'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_scarf﻿.svg'>
+                                <img class='category-icon' src='./img/svg/category_scarf_nobg.svg'>
                                 <h6 class="category-name">scarf</h6>
                             </div>
                             <div class="buttons">
@@ -231,7 +259,7 @@
                     <div class="card gloves" card-data='gloves'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_gloves.svg'>
+                                <img class='category-icon' src='./img/svg/category_gloves_nobg.svg'>
                                 <h6 class="category-name">gloves</h6>
                             </div>
                             <div class="buttons">
@@ -243,7 +271,7 @@
                     <div class="card razors" card-data='razors'>
                         <div class="card-heading">
                             <div class="card-title">
-                                <img class='category-icon' src='./img/svg/category_razors﻿.svg'>
+                                <img class='category-icon' src='./img/svg/category_razors_nobg.svg'>
                                 <h6 class="category-name">razors</h6>
                             </div>
                             <div class="buttons">
@@ -269,95 +297,120 @@
             <div class="common">
                 <div class="wrapper border">
                     <div class="head">
-                        <p class="col-title">most commonly used</p>
-                        <p class="col-title">add</p>
+                        <p class="col-title  main-title">Most commonly used</p>
+                        <div class="col-title">
+                            <p>Given</p>
+                            <p>Add</p>
+                        </div>
                     </div>
                 </div>
                     <div class="common-cards">
                         <div class="card" card-data='t-shirt'>
                             <div class="item">
-                                <img src='./img/svg/category_shirt.svg'>
+                                <img src='./img/svg/category_shirt_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>t-shirt</h6>
                                     <p class='name'>Sleeveless t-shirt</p>
                                 </div>
-                                <div class="counter">2</div>
                             </div>
-                            <img src='./img/svg/add2.svg' class='add button'>
+                            <div class="buttons">
+                                <div class="counter red">5</div>
+                                <img src='./img/svg/add2.svg' class='add button'>
+                            </div> 
                         </div>
                         <div class="card" card-data='t-shirt'>
                             <div class="item">
-                                <img src='./img/svg/category_shirt.svg'>
+                                <img src='./img/svg/category_shirt_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>t-shirt</h6>
                                     <p class='name'>Short-sleeve polo</p>
                                 </div>
-                                <div class="counter">2</div>
                             </div>
-                            <img src='./img/svg/add2.svg' class='add button'>
+                            <div class="buttons">
+                                <div class="counter">5</div>
+                                <img src='./img/svg/add2.svg' class='add button'>
+                            </div> 
                         </div>
                         <div class="card" card-data='pants'>
                             <div class="item">
-                                <img src='./img/svg/category_pants.svg'>
+                                <img src='./img/svg/category_pants_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>pants</h6>
                                     <p class='name'>Jeans</p>
                                 </div>
                             </div>
-                            <img src='./img/svg/add2.svg' class='add button'>
+                            <div class="buttons">
+                                <div class="counter">5</div>
+                                <img src='./img/svg/add2.svg' class='add button'>
+                            </div> 
                         </div>
                         <div class="card" card-data='underwear bottom'>
                             <div class="item">
-                                <img src='./img/svg/category_underwear_bottom.svg'>
+                                <img src='./img/svg/category_underwear_bottom_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>underwear bottom</h6>
                                 </div>
                             </div>
-                            <img src='./img/svg/add2.svg' class='add button'>
+                            <div class="buttons">
+                                <div class="counter">5</div>
+                                <img src='./img/svg/add2.svg' class='add button'>
+                            </div> 
                         </div>
                         <div class="card" card-data='thermal bottom'>
                             <div class="item">
-                                <img src='./img/svg/category_thermal_bottom.svg'>
+                                <img src='./img/svg/category_thermal_bottom_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>thermal bottom</h6>
                                     <p class='name'>Heavy</p>
                                 </div>
                             </div>
-                            <img src='./img/svg/add2.svg' class='add button'>
+                            <div class="buttons">
+                                <div class="counter">5</div>
+                                <img src='./img/svg/add2.svg' class='add button'>
+                            </div> 
                         </div>
                         <div class="card" card-data='socks'>
                             <div class="item">
-                                <img src='./img/svg/category_socks.svg'>
+                                <img src='./img/svg/category_socks_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>socks</h6>
                                 </div>
                             </div>
-                            <img src='./img/svg/add2.svg' class='add button'>
+                            <div class="buttons">
+                                <div class="counter">5</div>
+                                <img src='./img/svg/add2.svg' class='add button'>
+                            </div> 
                         </div>
                         <div class="card" card-data='scarf'>
                             <div class="item">
-                                <img src='./img/svg/category_scarf﻿.svg'>
+                                <img src='./img/svg/category_scarf_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>scarf</h6>
                                 </div>
                             </div>
-                            <img src='./img/svg/add2.svg' class='add button'>
+                            <div class="buttons">
+                                <div class="counter">5</div>
+                                <img src='./img/svg/add2.svg' class='add button'>
+                            </div> 
                         </div>
                         <div class="card" card-data='razors'>
                             <div class="item">
-                                <img src='./img/svg/category_razors﻿.svg'>
+                                <img src='./img/svg/category_razors_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>razors</h6>
                                 </div>
                             </div>
-                            <img src='./img/svg/add2.svg' class='add button'>
+                            <div class="buttons">
+                                <div class="counter">5</div>
+                                <img src='./img/svg/add2.svg' class='add button'>
+                            </div> 
                         </div>
                 </div>
             </div>
             <div class="clothing_list">
                 <div class="wrapper border">
                     <div class="head">
-                        <p class="col-title">Full Clothing List</p>
+                        <p class="col-title  main-title">Full Clothing List</p>
                         <p class="col-title">add</p>
                     </div>
                 </div>
@@ -365,11 +418,13 @@
                         <div class="card tshirt" card-data='t-shirt'>
                             <div class="card-heading active">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_tshirt.svg'>
+                                    <img class='category-icon' src='./img/svg/category_tshirt_nobg.svg'>
                                     <h6 class="category-name">t-shirt</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -397,11 +452,13 @@
                         <div class="card shirt" card-data='shirt'>
                             <div class="card-heading active">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_shirt.svg'>
+                                    <img class='category-icon' src='./img/svg/category_shirt_nobg.svg'>
                                     <h6 class="category-name">shirt</h6>
-                                    <div class="counter active">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -409,7 +466,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -417,11 +474,13 @@
                         <div class="card thermal_top_light" card-data='thermal top/light'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_thermal_top_light.svg'>
+                                    <img class='category-icon' src='./img/svg/category_thermal_top_nobg.svg'>
                                     <h6 class="category-name">thermal top/light</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -429,7 +488,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -437,10 +496,13 @@
                         <div class="card thermal_top_heavy" card-data='thermal top/heavy'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_thermal_top_heavy﻿.svg'>
+                                    <img class='category-icon' src='./img/svg/category_thermal_top_nobg.svg'>
                                     <h6 class="category-name">thermal top/heavy</h6>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -448,7 +510,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -456,11 +518,13 @@
                         <div class="card pants" card-data='thermal top/light'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_pants.svg'>
+                                    <img class='category-icon' src='./img/svg/category_pants_nobg.svg'>
                                     <h6 class="category-name">thermal top/light</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -468,7 +532,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -476,11 +540,13 @@
                         <div class="card thermal_bottom" card-data='thermal bottom'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_thermal_bottom.svg'>
+                                    <img class='category-icon' src='./img/svg/category_thermal_bottom_nobg.svg'>
                                     <h6 class="category-name">thermal bottom</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -488,7 +554,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -496,21 +562,25 @@
                         <div class="card shorts" card-data='shorts'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_shorts﻿.svg'>
+                                    <img class='category-icon' src='./img/svg/category_shorts_nobg.svg'>
                                     <h6 class="category-name">shorts</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img src='./img/svg/add2.svg' class='add button'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img src='./img/svg/add2.svg' class='add button'>
+                                </div> 
                             </div>
                         </div>
                         <div class="card dress_skirt" card-data='dress/skirt'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_dress_skirt.svg'>
+                                    <img class='category-icon' src='./img/svg/category_skirt_nobg.svg'>
                                     <h6 class="category-name">dress/skirt</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -518,7 +588,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -526,11 +596,13 @@
                         <div class="card underwear_bottom" card-data='underwear bottom'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_underwear_bottom.svg'>
+                                    <img class='category-icon' src='./img/svg/category_underwear_bottom_nobg.svg'>
                                     <h6 class="category-name">underwear bottom</h6>
-                                    <div class="counter active">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -538,7 +610,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -546,11 +618,13 @@
                         <div class="card underwear_top" card-data='underwear top'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_underwear_top.svg'>
+                                    <img class='category-icon' src='./img/svg/category_underwear_top_nobg.svg'>
                                     <h6 class="category-name">underwear top</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -558,7 +632,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -566,11 +640,13 @@
                         <div class="card socks" card-data='socks'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_socks.svg'>
+                                    <img class='category-icon' src='./img/svg/category_socks_nobg.svg'>
                                     <h6 class="category-name">socks</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -578,7 +654,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -586,11 +662,13 @@
                         <div class="card suit_coat" card-data='suit coat'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_suit_coat.svg'>
+                                    <img class='category-icon' src='./img/svg/category_suit_coat_nobg.svg'>
                                     <h6 class="category-name">suit coat</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -598,7 +676,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -606,11 +684,13 @@
                         <div class="card outwear" card-data='outwear'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_outerwear.svg'>
+                                    <img class='category-icon' src='./img/svg/category_outerwear_nobg.svg'>
                                     <h6 class="category-name">outwear</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -618,7 +698,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -626,11 +706,13 @@
                         <div class="card shoes" card-data='shoes'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_shoes﻿.svg'>
+                                    <img class='category-icon' src='./img/svg/category_shoes_nobg.svg'>
                                     <h6 class="category-name">shoes</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -638,7 +720,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -646,11 +728,13 @@
                         <div class="card belts" card-data='belts'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_belts﻿.svg'>
+                                    <img class='category-icon' src='./img/svg/category_belts_nobg.svg'>
                                     <h6 class="category-name">belts</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -658,7 +742,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -666,11 +750,13 @@
                         <div class="card scarf" card-data='scarf'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_scarf﻿.svg'>
+                                    <img class='category-icon' src='./img/svg/category_scarf_nobg.svg'>
                                     <h6 class="category-name">scarf</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -678,7 +764,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -686,11 +772,13 @@
                         <div class="card gloves" card-data='gloves'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_gloves.svg'>
+                                    <img class='category-icon' src='./img/svg/category_gloves_nobg.svg'>
                                     <h6 class="category-name">gloves</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -698,7 +786,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -706,11 +794,13 @@
                         <div class="card razors" card-data='razors'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_razors﻿.svg'>
+                                    <img class='category-icon' src='./img/svg/category_razors_nobg.svg'>
                                     <h6 class="category-name">razors</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -718,7 +808,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
@@ -726,11 +816,13 @@
                         <div class="card one-off" card-data='one-off item'>
                             <div class="card-heading">
                                 <div class="card-title">
-                                    <img class='category-icon' src='./img/svg/category_one-off-item.svg'>
+                                    <img class='category-icon' src='./img/svg/category_temporaly_nobg.svg'>
                                     <h6 class="category-name">one-off item</h6>
-                                    <div class="counter">2</div>
                                 </div>
-                                <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                <div class="buttons">
+                                    <div class="counter">5</div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div> 
                             </div>
                             <div class="card-content">
                                 <div class="item">
@@ -738,7 +830,7 @@
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                                 <div class="item">
-                                    <p class='name'><span>1</span>Long-sleeve button-down shirt﻿</p>
+                                    <p class='name'><span>1</span>Long-sleeve button-down shirt</p>
                                     <img src='./img/svg/add2.svg' class='add button'>
                                 </div>
                             </div>
