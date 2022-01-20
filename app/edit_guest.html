@@ -21,7 +21,7 @@
             <div class="wrapper">
                 <div class="avatar_block">
                     <img class='avatar' src='./img/avatar_big.png' alt='avatar'>
-                    <a href='#'><img class='icon' src='./img/svg/photo_camera.svg'></a>
+                    <a href='#' class='file_upload'><img class='icon' src='./img/svg/photo_camera.svg'></a>
                 </div>
                 <form action='#'>
                     <div class="input-wrapper">
@@ -94,9 +94,25 @@
             <button class="done active">Done</button>
         </div>
     </div>
+    <div class="overlay photo">
+        <div class="uplod_zone">
+            <h5 class='title'>Upload photo</h5>
+            <form action='#'>
+                <label for='file_upload'>
+                    <img src='./img/svg/cloud_upload.svg'>
+                </label>
+                <input type='file' id='file_upload' accept='.jpg, .jpeg, .png'>
+            </form>
+        </div>
+        <div class="closeoverlay">
+            <button class="cancel">Cancel</button>
+            <button class="done active">Done</button>
+        </div>
+    </div>
     <script defer src="./js/edit_guest.js"></script>
     <script defer src="./js/guest_dropdown.js"></script>
     <script defer src="./js/input.js"></script>
+    <script defer src="./js/guest_fileupload.js"></script>
     <script defer src="./js/fixed_header.js"></script>
     <!-- <script src='https://unpkg.com/vue/dist/vue.js'></script>
     <script src='https://unpkg.com/v-calendar'></script> -->

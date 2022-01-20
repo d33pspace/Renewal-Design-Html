@@ -850,3 +850,66 @@ main .wrapper form .dropdown .list .option.disable {
 #datepicker .date-selector .highlight {
   font-size: 20px;
 }
+
+.overlay {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.overlay .uplod_zone {
+  background: #fff;
+  padding: 16px 24px;
+}
+.overlay .uplod_zone .title {
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.overlay .uplod_zone form {
+  display: flex;
+  justify-content: center;
+}
+.overlay .uplod_zone form label {
+  width: 312px;
+  height: 312px;
+  border: 1px dashed #C0C3CC;
+  box-sizing: border-box;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.overlay .uplod_zone form input {
+  display: none;
+}
+.overlay .closeoverlay {
+  background: #fff;
+  padding: 8px 24px 40px 24px;
+  display: flex;
+  justify-content: space-around;
+}
+.overlay .closeoverlay button {
+  padding: 10px 48px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #848790;
+  border: 1px solid #F1F2F4;
+  width: 151px;
+  box-sizing: border-box;
+  background: unset;
+  margin: 0 5px 0 0;
+}
+.overlay .closeoverlay button.active {
+  margin: 0 0 0 5px;
+  border-radius: 8px;
+  background: #CD455C;
+  box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
+  color: #fff;
+}
