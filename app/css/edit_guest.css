@@ -851,15 +851,15 @@ main .wrapper form .dropdown .list .option.disable {
   font-size: 20px;
 }
 
-.overlay {
+.overlay.photo {
   flex-direction: column;
   justify-content: flex-end;
 }
-.overlay .uplod_zone {
+.overlay.photo .uplod_zone {
   background: #fff;
   padding: 16px 24px;
 }
-.overlay .uplod_zone .title {
+.overlay.photo .uplod_zone .title {
   margin-bottom: 24px;
   font-weight: 500;
   font-size: 18px;
@@ -867,11 +867,11 @@ main .wrapper form .dropdown .list .option.disable {
   letter-spacing: 0.15px;
   color: #001730;
 }
-.overlay .uplod_zone form {
+.overlay.photo .uplod_zone form {
   display: flex;
   justify-content: center;
 }
-.overlay .uplod_zone form label {
+.overlay.photo .uplod_zone form label {
   width: 312px;
   height: 312px;
   border: 1px dashed #C0C3CC;
@@ -882,16 +882,16 @@ main .wrapper form .dropdown .list .option.disable {
   align-items: center;
   cursor: pointer;
 }
-.overlay .uplod_zone form input {
+.overlay.photo .uplod_zone form input {
   display: none;
 }
-.overlay .closeoverlay {
+.overlay.photo .closeoverlay {
   background: #fff;
   padding: 8px 24px 40px 24px;
   display: flex;
   justify-content: space-around;
 }
-.overlay .closeoverlay button {
+.overlay.photo .closeoverlay button {
   padding: 10px 48px;
   cursor: pointer;
   border-radius: 4px;
@@ -906,8 +906,62 @@ main .wrapper form .dropdown .list .option.disable {
   background: unset;
   margin: 0 5px 0 0;
 }
-.overlay .closeoverlay button.active {
+.overlay.photo .closeoverlay button.active {
   margin: 0 0 0 5px;
+  border-radius: 8px;
+  background: #CD455C;
+  box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
+  color: #fff;
+}
+
+.overlay.goback {
+  justify-content: center;
+  align-items: center;
+}
+.overlay.goback .wrap {
+  width: calc(100% - 32px);
+  box-sizing: border-box;
+  margin: 0 16px;
+  background: #fff;
+  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding: 24px;
+}
+.overlay.goback .wrap .title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #001730;
+  margin-bottom: 24px;
+}
+.overlay.goback .wrap .text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #848790;
+  margin-bottom: 24px;
+}
+.overlay.goback .wrap .closeoverlay {
+  padding: 0;
+}
+.overlay.goback .wrap .closeoverlay button {
+  padding: 10px 48px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #848790;
+  border: 1px solid #F1F2F4;
+  width: 136px;
+  box-sizing: border-box;
+  background: unset;
+  margin: 0 4px 0 0;
+}
+.overlay.goback .wrap .closeoverlay button.active {
+  margin: 0 0 0 4px;
   border-radius: 8px;
   background: #CD455C;
   box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);

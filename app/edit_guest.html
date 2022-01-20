@@ -75,7 +75,7 @@
             <img class='check' src='./img/svg/check.svg'>
         </a>
     </div>
-    <div class="overlay">
+    <div class="overlay datepicker-overlay">
         <div id='datepicker'>
             <!-- <v-calendar @dayclick="onDayClick" /> -->
             <p class='actual_date'>Birthdate</p>
@@ -109,11 +109,22 @@
             <button class="done active">Done</button>
         </div>
     </div>
+    <div class="overlay goback">
+        <div class="wrap">
+            <h5 class='title'>Go back?</h5>
+            <p class='text'>Are you sure you want to go back to the previous page without saving? All current data will be lost.</p>
+            <div class="closeoverlay">
+                <button class="cancel">Cancel</button>
+                <button class="done active">Delete</button>
+            </div>
+        </div>
+    </div>
     <script defer src="./js/edit_guest.js"></script>
     <script defer src="./js/guest_dropdown.js"></script>
     <script defer src="./js/input.js"></script>
     <script defer src="./js/guest_fileupload.js"></script>
     <script defer src="./js/fixed_header.js"></script>
+    <script defer src="./js/goback.js"></script>
     <!-- <script src='https://unpkg.com/vue/dist/vue.js'></script>
     <script src='https://unpkg.com/v-calendar'></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

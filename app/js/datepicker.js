@@ -1,21 +1,21 @@
 
 
 let datepickerButton = document.querySelector('.datepicker')
-let overlay = document.querySelector('.overlay')
+let overlayDatepicker = document.querySelector('.overlay.datepicker-overlay')
 
 datepickerButton.onclick = () => {
-	overlay.classList.add('active')
+	overlayDatepicker.classList.add('active')
 }
 
-document.querySelectorAll('.closeoverlay button').forEach(item => {
+document.querySelectorAll('.overlay.datepicker-overlay .closeoverlay button').forEach(item => {
 	item.onclick = () => {
-		overlay.classList.remove('active')
+		overlayDatepicker.classList.remove('active')
 	}
 })
 
-overlay.onclick = (e) => {
-	if (e.target == overlay) {
-		overlay.classList.remove('active')
+overlayDatepicker.onclick = (e) => {
+	if (e.target == overlayDatepicker) {
+		overlayDatepicker.classList.remove('active')
 	}
 }
 
@@ -527,7 +527,6 @@ const easing = {
 		  currentYear = selected.value; 
 		  daySource = getDays(currentYear, currentMonth); 
 		  daySelector.updateSource(daySource); 
-		  console.log(yearSelector.value, monthSelector.value, daySelector.value); 
 	  } 
   }); 
   monthSelector = new IosSelector({ 
@@ -539,7 +538,6 @@ const easing = {
 		  currentMonth = selected.value; 
 		  daySource = getDays(currentYear, currentMonth); 
 		  daySelector.updateSource(daySource); 
-		  console.log(yearSelector.value, monthSelector.value, daySelector.value); 
 	  } 
   }); 
   daySelector = new IosSelector({ 
@@ -549,7 +547,6 @@ const easing = {
 	  count: 20, 
 	  onChange: (selected) => { 
 		  currentDay = selected.value; 
-		  console.log(yearSelector.value, monthSelector.value, daySelector.value); 
 	  } 
   }); 
   let now = new Date(); 
@@ -593,7 +590,7 @@ const easing = {
 	  $( ".G-picker-all" ).addClass( "G-picker-all-show" );
 	});
 	
-	$( ".closeoverlay .done" ).click(function() {
+	$( ".overlay.datepicker-overlay .closeoverlay .done" ).click(function() {
 	  $( ".G-picker-all" ).removeClass( "G-picker-all-show" );
 	  pushValToInput();
 	});

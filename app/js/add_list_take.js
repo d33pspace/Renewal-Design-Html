@@ -16,8 +16,8 @@ add.forEach(item => {
 
         // flash
 
-        let rect = document.querySelector('.add_list').getBoundingClientRect();
-        if (rect.bottom < 0) {
+        // let rect = document.querySelector('.add_list').getBoundingClientRect();
+        // if (rect.bottom < 0) {
             if(item.closest('.item')) {
                 let flash = item.closest('.item')
                 flash.classList.add('flash')
@@ -27,7 +27,7 @@ add.forEach(item => {
                 flash.classList.add('flash')
                 setTimeout(() =>  flash.classList.remove('flash') , 1000)
             } 
-        }
+        // }
 
         // else if (item.closest('.card').querySelector('.card-title')) {
         //     let flash = item.closest('.card').querySelector('.card-title')

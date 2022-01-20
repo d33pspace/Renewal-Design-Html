@@ -343,15 +343,15 @@ main .wrapper form .dropdown .list .option {
   cursor: pointer;
 }
 
-.overlay {
+.overlay.photo {
   flex-direction: column;
   justify-content: flex-end;
 }
-.overlay .uplod_zone {
+.overlay.photo .uplod_zone {
   background: #fff;
   padding: 16px 24px;
 }
-.overlay .uplod_zone .title {
+.overlay.photo .uplod_zone .title {
   margin-bottom: 24px;
   font-weight: 500;
   font-size: 18px;
@@ -359,11 +359,11 @@ main .wrapper form .dropdown .list .option {
   letter-spacing: 0.15px;
   color: #001730;
 }
-.overlay .uplod_zone form {
+.overlay.photo .uplod_zone form {
   display: flex;
   justify-content: center;
 }
-.overlay .uplod_zone form label {
+.overlay.photo .uplod_zone form label {
   width: 312px;
   height: 312px;
   border: 1px dashed #C0C3CC;
@@ -374,16 +374,16 @@ main .wrapper form .dropdown .list .option {
   align-items: center;
   cursor: pointer;
 }
-.overlay .uplod_zone form input {
+.overlay.photo .uplod_zone form input {
   display: none;
 }
-.overlay .closeoverlay {
+.overlay.photo .closeoverlay {
   background: #fff;
   padding: 8px 24px 40px 24px;
   display: flex;
   justify-content: space-around;
 }
-.overlay .closeoverlay button {
+.overlay.photo .closeoverlay button {
   padding: 10px 48px;
   cursor: pointer;
   border-radius: 4px;
@@ -398,7 +398,7 @@ main .wrapper form .dropdown .list .option {
   background: unset;
   margin: 0 5px 0 0;
 }
-.overlay .closeoverlay button.active {
+.overlay.photo .closeoverlay button.active {
   margin: 0 0 0 5px;
   border-radius: 8px;
   background: #CD455C;
