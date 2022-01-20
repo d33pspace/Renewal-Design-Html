@@ -4,13 +4,16 @@ let add = document.querySelectorAll('.add')
 
 add.forEach(item => {
     item.onclick = () => {
-        document.querySelector('.add_list').classList.add('active')
+        // document.querySelector('.add_list').classList.add('active')
         let cardData = item.closest('.card').getAttribute('card-data')
         let card = document.querySelector('.add_list').querySelector('*[card-data="' + cardData + '"]')
         let newCard = card.cloneNode(true)
         newCard.classList.add('active')
         card.parentElement.appendChild(newCard)
         setTimeout(() =>  newCard.classList.add('animation') , 1)
+
+        newCard.parentElement.querySelector('.blank').classList.remove('animation')
+
         // flash
 
         let rect = document.querySelector('.add_list').getBoundingClientRect();
@@ -45,9 +48,8 @@ add.forEach(item => {
         rmv.forEach(i => {
             i.onclick = () => {
                 let card = i.closest('.card')
-                if( i.closest('.cards').querySelectorAll('.card.active').length == 1) {
-                    setTimeout(() =>  document.querySelector('.add_list').classList.remove('active') , 300)
-                    
+                if( i.closest('.cards').querySelectorAll('.card.animation').length == 1) {
+                    setTimeout(() =>  document.querySelector('.blank').classList.add('animation') , 300)
                 }
                 card.classList.remove('animation')
                 setTimeout(() =>  card.remove() , 300)

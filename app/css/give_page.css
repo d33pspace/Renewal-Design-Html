@@ -333,7 +333,6 @@ header .wrapper p {
   height: auto;
 }
 .card .card-heading .card-title {
-  padding: 16px 16px 16px 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -346,9 +345,8 @@ header .wrapper p {
 }
 .card .card-heading .card-title .category-name {
   font-weight: 500;
-  font-size: 12px;
-  line-height: 100%;
-  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
   color: #001730;
 }
 .card .card-heading .card-title .counter {
@@ -383,14 +381,13 @@ header .wrapper p {
   color: #848790;
 }
 .card .card-heading .add {
-  padding: 16px 16px 16px 16px;
-  margin-right: 14px;
+  padding: 12px 14px;
   cursor: pointer;
 }
 .card .card-heading .arrow {
   cursor: pointer;
-  margin-right: 15px;
-  padding: 16px 16px 16px 16px;
+  margin-right: 8px;
+  padding: 16px 14px 16px 14px;
   filter: brightness(0) saturate(100%) invert(94%) sepia(2%) saturate(2051%) hue-rotate(190deg) brightness(80%) contrast(89%);
   transition: 0.3s;
 }
@@ -399,35 +396,26 @@ header .wrapper p {
   transform-origin: top;
   transition: 0s;
   height: 0;
-  background: #FAFBFC;
   box-sizing: border-box;
 }
 .card .card-content .item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid transparent;
-  padding: 0 16px;
+  padding: 0 0 0 16px;
   position: relative;
-}
-.card .card-content .item::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: calc(100% - 32px);
-  left: 16px;
-  bottom: -1px;
-  background: #F1F2F4;
-  z-index: -1;
+  height: 40px;
+  margin: 2px 0;
 }
 .card .card-content .item.flash {
   animation: flash 0.5s;
 }
 .card .card-content .item .name {
-  padding: 12px 0 12px 8px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.005em;
-  color: #848790;
+  color: #53565E;
 }
 .card .card-content .item .name span {
   margin-right: 15px;
@@ -615,6 +603,10 @@ main .head .col-title p {
 .add_list .buttons-title .col-title:last-child {
   margin-left: 8px;
 }
+.add_list .cards {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #DDDFE4;
+}
 .add_list .card {
   display: none;
   border: unset;
@@ -622,9 +614,9 @@ main .head .col-title p {
   padding: 0 8px 0 16px;
 }
 .add_list .card.blank {
-  height: 44px !important;
   display: flex;
   align-items: center;
+  margin: 0 !important;
 }
 .add_list .card.blank .category-icon {
   margin-right: 11.5px;
@@ -646,7 +638,8 @@ main .head .col-title p {
   transition: 0.3s;
 }
 .add_list .card.active.animation {
-  height: 48px;
+  height: 44px;
+  margin: 2px 0;
   transform: scaleY(1);
 }
 .add_list .card .card-heading {
@@ -669,9 +662,15 @@ main .head .col-title p {
   filter: brightness(0) saturate(100%) invert(45%) sepia(73%) saturate(4042%) hue-rotate(330deg) brightness(101%) contrast(95%);
 }
 .add_list .card .buttons .rmv {
+  filter: brightness(0) saturate(100%) invert(37%) sepia(36%) saturate(2141%) hue-rotate(315deg) brightness(87%) contrast(84%);
   padding: 19px 15px;
 }
 
+.common .head .col-title p {
+  width: 40px;
+  margin: 0;
+  text-align: center;
+}
 .common .card {
   min-height: 48px;
   box-sizing: border-box;
@@ -692,6 +691,8 @@ main .head .col-title p {
 }
 .common .card .item img {
   margin-right: 8px;
+  width: 28px;
+  height: 28px;
   filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
 }
 .common .card .item .title {
@@ -710,29 +711,60 @@ main .head .col-title p {
   display: flex;
 }
 .common .card .button {
-  padding: 16px 16px 16px 16px;
-  margin-right: 14px;
+  padding: 14px;
+  margin-right: 8px;
   cursor: pointer;
 }
 .common .card .counter {
-  margin-left: 8px;
-  background: #F1F2F4;
-  border-radius: 4px;
-  height: 20px;
-  width: 20px;
   font-weight: bold;
   font-size: 12px;
-  color: #3A3C40;
+  line-height: 100%;
+  color: #001730;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.common .card .counter.active {
-  background: #F95557;
-  color: #fff;
+.common .card .counter.red {
+  color: #F95557;
 }
-.common .common-cards {
-  margin-top: 8px;
+
+.clothing_list .counter {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 100%;
+  color: #001730;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clothing_list .counter.red {
+  color: #F95557;
+}
+.clothing_list .add_title {
+  margin-right: 4px;
+}
+.clothing_list .add {
+  margin-right: 8px;
+}
+.clothing_list .card {
+  box-sizing: border-box;
+}
+.clothing_list .card-title {
+  margin-left: 12px;
+}
+.clothing_list .card-heading {
+  min-height: 44px;
+  box-sizing: border-box;
+  align-items: center;
+  border: unset;
+  height: 44px;
+}
+.clothing_list .buttons {
+  display: flex;
 }
 
 @keyframes flash {

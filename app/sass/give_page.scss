@@ -108,7 +108,6 @@ header {
             }
         }
         .card-title {
-            padding: 16px 16px 16px 16px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -120,9 +119,8 @@ header {
             }
             .category-name {
                 font-weight: 500;
-                font-size: 12px;
-                line-height: 100%;
-                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 20px;
                 color: #001730;
             }
             .counter {
@@ -159,14 +157,13 @@ header {
             
         }
         .add {
-            padding: 16px 16px 16px 16px;
-            margin-right: 14px;
+            padding: 12px 14px;
             cursor: pointer;
         }
         .arrow {
             cursor: pointer;
-            margin-right: 15px;
-            padding: 16px 16px 16px 16px;
+            margin-right: 8px;
+            padding: 16px 14px 16px 14px;
             filter: brightness(0) saturate(100%) invert(94%) sepia(2%) saturate(2051%) hue-rotate(190deg) brightness(80%) contrast(89%);
             transition: .3s;
         }
@@ -176,33 +173,34 @@ header {
         transform-origin: top;
         transition: 0s;
         height: 0;
-        background: #FAFBFC;
         box-sizing: border-box;
         .item {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid transparent;
-            padding: 0 16px;
+            padding: 0 0 0 16px;
             position: relative;
-            &::after {
-                content: '';
-                position: absolute;
-                height: 1px;
-                width: calc(100% - 32px);
-                left: 16px;
-                bottom: -1px;
-                background: #F1F2F4;
-                z-index: -1;
-            }
+            height: 40px;
+            margin: 2px 0;
+            // &::after {
+            //     content: '';
+            //     position: absolute;
+            //     height: 1px;
+            //     width: calc(100% - 32px);
+            //     left: 16px;
+            //     bottom: -1px;
+            //     background: #F1F2F4;
+            //     z-index: -1;
+            // }
             &.flash {
                 animation: flash .5s ;
             }
             .name {
-                padding: 12px 0 12px 8px;
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 20px;
                 letter-spacing: 0.005em;
-                color: #848790;
+                color: #53565E;
                 span {
                     margin-right: 15px;
                 }
@@ -402,15 +400,19 @@ main {
             margin-left: 8px;
         }
     }
+    .cards {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #DDDFE4;
+    }
     .card {
         display: none;
         border: unset;
         margin: unset;
         padding: 0 8px 0 16px;
         &.blank {
-            height: 44px !important;
             display: flex;
             align-items: center;
+            margin: 0 !important;
             .category-icon {
                 margin-right: 11.5px;
                 margin-left: 3.5px;
@@ -431,7 +433,8 @@ main {
             transform-origin: top;
             transition: .3s;
             &.animation {
-                height: 48px;
+                height: 44px;
+                margin: 2px 0;
                 transform: scaleY(1);
             }
         }
@@ -454,6 +457,7 @@ main {
                 filter: brightness(0) saturate(100%) invert(45%) sepia(73%) saturate(4042%) hue-rotate(330deg) brightness(101%) contrast(95%);
             }
             .rmv {
+                filter: brightness(0) saturate(100%) invert(37%) sepia(36%) saturate(2141%) hue-rotate(315deg) brightness(87%) contrast(84%);
                 padding: 19px 15px;
             }
         }
@@ -461,6 +465,11 @@ main {
 }
 
 .common {
+    .head .col-title p {
+        width: 40px;
+        margin: 0;
+        text-align: center;;
+    }
     .card {
         min-height: 48px;
         box-sizing: border-box;
@@ -479,6 +488,8 @@ main {
             align-items: center;
             img {
                 margin-right: 8px;
+                width: 28px;
+                height: 28px;
                 filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
             }
             .title {
@@ -498,31 +509,65 @@ main {
             display: flex;
         }
         .button {
-            padding: 16px 16px 16px 16px;
-            margin-right: 14px;
+            padding: 14px;
+            margin-right: 8px;
             cursor: pointer;
         }
         .counter {
-            margin-left: 8px;
-            background: #F1F2F4;
-            border-radius: 4px;
-            height: 20px;
-            width: 20px;
             font-weight: bold;
             font-size: 12px;
-            color: #3A3C40;
+            line-height: 100%;
+            color: #001730;
+            width: 40px;
+            height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            &.active {
-                background: #F95557;
-                color: #fff;
+            &.red {
+                color: #F95557;
             }
         }
     }
-.common-cards {
-    margin-top: 8px;
+}
+
+.clothing_list {
+    .counter {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 100%;
+        color: #001730;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.red {
+            color: #F95557;
+        }
     }
+    .add_title {
+        margin-right: 4px;
+    }
+    .add {
+        margin-right: 8px;
+    }
+    .card {
+        box-sizing: border-box;
+    }
+    .card-title {
+        margin-left: 12px;
+    }
+    .card-heading {
+        min-height: 44px;
+        box-sizing: border-box;
+        align-items: center;
+        border: unset;
+        height: 44px;
+    }
+    .buttons {
+        display: flex;
+    }
+
 }
 
 @keyframes flash {
