@@ -889,7 +889,7 @@ main .wrapper form .dropdown .list .option.disable {
   background: #fff;
   padding: 8px 24px 40px 24px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .overlay.photo .closeoverlay button {
   padding: 10px 48px;
