@@ -223,3 +223,42 @@ header .wrapper .sort {
   max-height: 168px;
   overflow-y: scroll;
 }
+
+.closeoverlay button {
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  width: 152px;
+  box-sizing: border-box;
+  border: unset;
+  transition: .3s;
+  &:first-child {
+    margin-right: 5px;
+  }
+  &:last-child {
+    margin-left: 5px;
+  }
+  &.primary {
+    color: #fff;
+    background: #CD455C;
+    &:hover {
+      background: #DE576D;
+    }
+  }
+  &.secondary {
+    color: #001730;
+    background: #DDDFE4;
+    &:hover {
+      background: #F1F2F4;
+    }
+  }
+  &.disabled {
+    color: #C0C3CC !important;
+    background: #F1F2F4 !important;
+  }
+}
+

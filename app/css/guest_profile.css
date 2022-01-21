@@ -228,6 +228,44 @@ header .wrapper .sort.active {
   overflow-y: scroll;
 }
 
+.closeoverlay button {
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  width: 152px;
+  box-sizing: border-box;
+  border: unset;
+  transition: 0.3s;
+}
+.closeoverlay button:first-child {
+  margin-right: 5px;
+}
+.closeoverlay button:last-child {
+  margin-left: 5px;
+}
+.closeoverlay button.primary {
+  color: #fff;
+  background: #CD455C;
+}
+.closeoverlay button.primary:hover {
+  background: #DE576D;
+}
+.closeoverlay button.secondary {
+  color: #001730;
+  background: #DDDFE4;
+}
+.closeoverlay button.secondary:hover {
+  background: #F1F2F4;
+}
+.closeoverlay button.disabled {
+  color: #C0C3CC !important;
+  background: #F1F2F4 !important;
+}
+
 header {
   padding: 0 28px 0 20px;
   background: #CD455C;

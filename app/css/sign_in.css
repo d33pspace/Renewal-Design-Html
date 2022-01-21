@@ -228,6 +228,44 @@ header .wrapper .sort.active {
   overflow-y: scroll;
 }
 
+.closeoverlay button {
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  width: 152px;
+  box-sizing: border-box;
+  border: unset;
+  transition: 0.3s;
+}
+.closeoverlay button:first-child {
+  margin-right: 5px;
+}
+.closeoverlay button:last-child {
+  margin-left: 5px;
+}
+.closeoverlay button.primary {
+  color: #fff;
+  background: #CD455C;
+}
+.closeoverlay button.primary:hover {
+  background: #DE576D;
+}
+.closeoverlay button.secondary {
+  color: #001730;
+  background: #DDDFE4;
+}
+.closeoverlay button.secondary:hover {
+  background: #F1F2F4;
+}
+.closeoverlay button.disabled {
+  color: #C0C3CC !important;
+  background: #F1F2F4 !important;
+}
+
 .content {
   height: 100vh;
   display: flex;
@@ -296,11 +334,11 @@ header .wrapper .sort.active {
   color: #ED2C5B;
 }
 .content .wrapper form button {
-  background: #D11241;
-  box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
+  background: #CD455C;
   border-radius: 8px;
   font-size: 14px;
   line-height: 20px;
+  font-weight: bold;
   color: #fff;
   font-family: "Noto Sans SC", sans-serif;
   padding: 10px 0;
@@ -314,13 +352,11 @@ header .wrapper .sort.active {
   transition: 0.3s;
 }
 .content .wrapper form button:hover {
-  background-color: #ED2C5B;
-}
-.content .wrapper form button:active {
-  background-color: #A40E33;
+  background: #DE576D;
 }
 .content .wrapper form button.disabled {
-  background-color: #F58AA4;
+  color: #C0C3CC !important;
+  background: #F1F2F4 !important;
 }
 @media (min-height: 570px) {
   .content .wrapper form button {
