@@ -307,16 +307,20 @@ main .profile .wrapper {
   align-items: center;
 }
 main .profile .avatar {
-  width: 148px;
-  height: 148px;
+  width: 96px;
+  height: 96px;
   border-radius: 32px;
+  border: 1px solid #C0C3CC;
+  box-sizing: border-box;
+  border-radius: 16px;
+  margin-bottom: 16px;
 }
 main .profile .tabs {
   padding: 3px;
   background: #F1F2F4;
   border-radius: 8px;
   display: flex;
-  margin: 24px 0;
+  margin: 8px 0 16px;
   width: 100%;
 }
 main .profile .tabs .tab {
@@ -338,31 +342,34 @@ main .profile .user_info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
 }
-main .profile .user_info .row {
+main .profile .row {
   font-size: 16px;
   line-height: 26px;
   color: #001730;
   margin-bottom: 8px;
+  display: flex;
 }
-main .profile .user_info .row:first-child {
+main .profile .row:first-child {
   font-weight: bold;
   font-size: 24px;
   line-height: 35px;
+  margin-bottom: 16px;
 }
-main .profile .user_info .row .separator {
-  margin: 0 8px;
+main .profile .row .separator {
+  margin: 0 6px;
 }
-main .profile .user_info .row.reviews-total {
+main .profile .row.reviews-total {
   display: flex;
+  height: 40px;
+  margin-bottom: 16px;
 }
-main .profile .user_info .row.reviews-total .review {
+main .profile .row.reviews-total .review {
   display: flex;
   align-items: center;
-  margin: 0 18px;
+  margin: 0 16px;
 }
-main .profile .user_info .row.reviews-total .review p {
+main .profile .row.reviews-total .review p {
   font-weight: bold;
   font-size: 20px;
   line-height: 28px;

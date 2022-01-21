@@ -4,28 +4,35 @@
 
 
 header {
-    background: #fff;
     padding: 0 20px;
+    background: #001730;
     .wrapper {
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
-        .back {
+        align-items: center;
+        height: 56px;
+        a {
             display: flex;
-            margin: 20px 0;
-        }
-        .title {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 35px;
-            color: #001730;
-            margin-bottom: 24px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.15px;
+            color: #FFFFFF;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            img {
+                padding-right: 16px;
+                width: 16px;
+                height: 16px;
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(103%) contrast(104%);
+            }
         }
     }
 }
 
 main {
-    margin-top: 116px;
+    margin-top: 72px;
     .wrapper {
         padding: 0 16px;
     }

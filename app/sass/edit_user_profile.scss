@@ -69,20 +69,35 @@ main {
         display: flex;
         flex-direction: column;
         margin-bottom: 40px;
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border: 1px solid #DDDFE4;
-            box-sizing: border-box;
-            border-radius: 32px;
+        .avatar_block {
+            position: relative;
+            width: fit-content;
+            display: flex;
             margin-bottom: 16px;
-        }
-        .upload_image {
-            margin-bottom: 16px;
-            text-decoration: none;
-            font-size: 16px;
-            line-height: 26px;
-            color: #27C4BC;
+            .avatar {
+                width: 96px;
+                height: 96px;
+                border-radius: 16px;
+                border: 1px solid #C0C3CC;
+                box-sizing: border-box;
+            }
+            a {
+                position: absolute;
+                bottom: -4px;
+                right: -4px;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #51B8B8;;
+                border-radius: 8px;
+                img {
+                    width: 13px;
+                    height: 12px;
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+                }
+            }
         }
         .input_block {
             display: flex;

@@ -42,18 +42,37 @@ main {
         padding: 0 16px;
     }
     .guest_block {
-        .title {
-            padding: 20px 16px 12px 16px;
-            font-weight: 500;
-            font-size: 10px;
-            line-height: 160%;
-            color: #848790;
-            text-transform: uppercase;
+        .title-block {
+            padding: 16px;
             border-bottom: 1px solid #F1F2F4;
+            display: flex;
+            justify-content: space-between;
+            .title {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: 0.15px;
+                color: #001730;
+            }
+            .rs {
+                display: flex;
+                align-items: center;
+                p {
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 160%;
+                    text-align: center;
+                    color: #001730;
+                    &:last-child {
+                        width: 40px;
+                    }
+                }
+            }
         }
         .card {
-            padding: 9px 16px;
+            padding: 0 8px 0 16px;
             display: flex;
+            height: 64px;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #F1F2F4;
@@ -62,7 +81,9 @@ main {
                 .avatar {
                     width: 44px;
                     height: 44px;
-                    border-radius: 12px;
+                    border: 1px solid #DDDFE4;
+                    box-sizing: border-box;
+                    border-radius: 8px;
                     margin-right: 16px;
                 }
                 .info_details {
@@ -93,10 +114,27 @@ main {
                     }
                 }
             }
-            .date {
-                color: #848790;
-                font-size: 12px;
-                line-height: 160%;
+            .order_date {
+                display: flex;
+                align-items: center;
+                .date {
+                    color: #848790;
+                    font-size: 12px;
+                    line-height: 160%;
+                    white-space: nowrap;
+                }
+                .link_to_order {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 8px;
+                    img {
+                        width: 7.5px;
+                        height: 12px;
+                    }
+                }
             }
         }
     }

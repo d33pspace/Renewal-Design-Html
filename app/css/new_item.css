@@ -268,26 +268,34 @@ header .wrapper .sort.active {
 
 header {
   padding: 0 20px;
-  background: #fff;
+  background: #001730;
 }
 header .wrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
 }
 header .wrapper a {
-  margin: 20px 0;
   display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-header .wrapper .title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
-  color: #001730;
-  margin-bottom: 24px;
+header .wrapper a img {
+  padding-right: 16px;
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(103%) contrast(104%);
 }
 
 main {
-  margin-top: 115px;
+  margin-top: 72px;
 }
 main .wrapper {
   padding: 0 16px;

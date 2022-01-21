@@ -18,8 +18,8 @@
             <div class='menu-wrapper'>
                 <img class='menu-nav' src='./img/svg/nav.svg'>
                 <div class='menu'>
-                    <a href='#'>Change password</a>
-                    <a href='#'>Delete my profile</a>
+                    <a href='#' id='password_change'>Change password</a>
+                    <a href='#' id='delete_profile'>Delete my profile</a>
                 </div>
             </div>
         </div>
@@ -27,8 +27,10 @@
     <main>
         <div class="wrapper">
             <form action='#' class='account_form'>
-                <img class='avatar' src='./img/user_avatar_main.png'>
-                <a class='upload_image' href='#'>Upload Image</a>
+                <div class="avatar_block">
+                    <img class='avatar' src='./img/user_avatar_main.png' alt='avatar'>
+                    <a href='#' class='file_upload'><img class='icon' src='./img/svg/photo_camera.svg'></a>
+                </div>
                 <div class="input_name input_block input-wrapper">
                     <label for='name'>Name</label>
                     <input id='name' type='text'>
@@ -70,13 +72,6 @@
                     <p class="error-message">Error</p>
                 </div>
             </form>
-            <div class="password_block">
-                <h4>Password</h4>
-                <a id='password_change' href='#'>Change</a>
-            </div>
-            <div class="delete_profile">
-                <a id='delete_profile' href='#'>Delete my profile</a>
-            </div>
         </div>
     </main>
     <section class="password_change overlay">

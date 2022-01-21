@@ -267,80 +267,50 @@ header .wrapper .sort.active {
 }
 
 header {
-  background: #fff;
   padding: 0 20px;
+  background: #001730;
 }
 header .wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 56px;
 }
-header .wrapper a {
+header .wrapper img {
+  filter: invert(94%) sepia(55%) saturate(2%) hue-rotate(125deg) brightness(102%) contrast(100%);
+}
+header .wrapper .back {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+}
+header .wrapper .back img {
+  padding-right: 16px;
+  width: 16px;
+  height: 16px;
+}
+header .wrapper .nav {
   display: flex;
+  align-items: center;
 }
-header .search_block {
-  padding-bottom: 16px;
-}
-header .search_block h1 {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
-  color: #001730;
-  padding-bottom: 24px;
-}
-header .search_block .search_form {
-  position: relative;
-}
-header .search_block .search_form:after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 9px);
-  left: 15px;
-  width: 18px;
-  height: 18px;
-  background: url("../img/svg/search.svg");
-}
-header .search_block .search_form input {
-  padding: 11px 12px 11px 44px;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.005em;
-  color: #848790;
-  position: relative;
-  border: 1px solid #F1F2F4;
-  border-radius: 8px;
-  box-sizing: border-box;
-  width: 100%;
-  background: #FAFBFC;
-}
-header .search_block .search_form input::placeholder {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.005em;
-  color: #848790;
+header .wrapper .nav .search {
+  margin-right: 25px;
 }
 
 main {
-  margin-top: 160px;
+  margin-top: 64px;
 }
 main .wrapper {
   padding: 0 16px;
 }
-main .guest_block .title {
-  padding: 20px 16px 12px 16px;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 160%;
-  color: #848790;
-  text-transform: uppercase;
-  border-bottom: 1px solid #F1F2F4;
-}
 main .guest_block .card {
-  padding: 9px 16px;
+  padding: 0 16px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #F1F2F4;
+  align-items: center;
+  height: 56px;
 }
 main .guest_block .card.disabled {
   opacity: 0.5;
@@ -352,55 +322,55 @@ main .guest_block .card a:first-child {
 }
 main .guest_block .card .user_info {
   display: flex;
+  align-items: center;
 }
 main .guest_block .card .user_info .avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  margin-right: 16px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #DDDFE4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-right: 9px;
 }
 main .guest_block .card .user_info .info_details {
   display: flex;
   flex-direction: column;
 }
-main .guest_block .card .user_info .info_details .name {
-  color: #1F1F2D;
+main .guest_block .card .user_info .info_details .name.hieroglyph {
   font-weight: bold;
   font-size: 16px;
   line-height: 160%;
+  color: #1F1F2D;
+}
+main .guest_block .card .user_info .info_details .name.transcription {
+  font-size: 12px;
+  line-height: 18px;
+  color: #848790;
+}
+main .guest_block .card .date_link {
   display: flex;
-}
-main .guest_block .card .user_info .info_details .name .hieroglyph {
-  margin-right: 4px;
-}
-main .guest_block .card .user_info .info_details .name .transcription {
-  margin-left: 4px;
-}
-main .guest_block .card .user_info .info_details .age_city {
-  font-size: 14px;
-  line-height: 20px;
-  color: #001730;
-  letter-spacing: 0.005em;
-  display: flex;
-}
-main .guest_block .card .user_info .info_details .age_city .coma {
-  margin-right: 3px;
 }
 main .guest_block .card .order_date {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 main .guest_block .card .order_date .date {
   color: #848790;
   font-size: 12px;
   line-height: 160%;
-  margin-bottom: 10px;
   white-space: nowrap;
 }
 main .guest_block .card .order_date .link_to_order {
-  margin-left: auto;
-  margin-right: 15px;
+  width: 40px;
+  height: 40px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+}
+main .guest_block .card .order_date .link_to_order img {
+  width: 7.5px;
+  height: 12px;
 }
 
 .add {

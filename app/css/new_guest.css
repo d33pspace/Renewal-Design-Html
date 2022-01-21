@@ -328,7 +328,7 @@ main .wrapper .avatar_block a img {
 main .wrapper form {
   display: flex;
   flex-direction: column;
-  margin: 16px 0 108px;
+  margin: 16px 0;
 }
 main .wrapper form .dropdown {
   position: relative;
@@ -419,27 +419,5 @@ main .wrapper form .dropdown .list .option {
   background: #fff;
   padding: 8px 24px 40px 24px;
   display: flex;
-  justify-content: space-around;
-}
-.overlay.photo .closeoverlay button {
-  padding: 10px 48px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-family: "Noto Sans SC", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
-  color: #848790;
-  border: 1px solid #F1F2F4;
-  width: 151px;
-  box-sizing: border-box;
-  background: unset;
-  margin: 0 5px 0 0;
-}
-.overlay.photo .closeoverlay button.active {
-  margin: 0 0 0 5px;
-  border-radius: 8px;
-  background: #CD455C;
-  box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
-  color: #fff;
+  justify-content: center;
 }

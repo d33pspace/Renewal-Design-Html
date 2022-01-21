@@ -5,43 +5,60 @@
 
 header {
     padding: 0 20px;
-    background: #fff;
+    background: #001730;
     .wrapper {
         display: flex;
-        flex-direction: column;
-        a {
-            margin: 20px 0;
-            display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 56px;
+        img {
+            filter: invert(94%) sepia(55%) saturate(2%) hue-rotate(125deg) brightness(102%) contrast(100%);
         }
-        .title {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 35px;
-            color: #001730;
-            margin-bottom: 24px;
+        .back {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.15px;
+            color: #FFFFFF;
+            img {
+                padding-right: 16px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            .search {
+                margin-right: 25px;
+            }
         }
     }
 }
 
 main {
-    margin-top: 115px;
-    padding-bottom: 35px;
+    margin-top: 56px;
+    background: #F0F2F5;
     .wrapper {
         padding: 0 16px;
     }
-    .head {
-        padding: 20px 16px 12px 16px;
-        box-sizing: border-box;
-        border-bottom: 1px solid #F1F2F4;
+    .title-block {
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        padding: 16px 56px 16px 16px;
         p {
             font-weight: 500;
             font-size: 10px;
             line-height: 160%;
             text-transform: uppercase;
-            color: #848790;
-            margin-right: 8px;
+            color: #001730;
+            &.title {
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: 0.15px;
+                text-transform: capitalize;
+            }
         }
     }
     .body {
@@ -61,13 +78,17 @@ main {
         }
         .card {
             cursor: pointer;
+            margin: 0 8px 4px 8px;
+            border: 1px solid #F1F2F4;
+            box-sizing: border-box;
+            border-radius: 8px;
+            background: #fff;
         }
         .card-title {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 16px 16px 16px;
-            border-bottom: 1px solid #F1F2F4;
+            padding: 8px 12px;
             position: relative;
             &.one-off .item p {
                 font-size: 16px;
@@ -77,13 +98,18 @@ main {
             .item {
                 display: flex;
                 align-items: center;
+                img {
+                    width: 28px;
+                    height: 28px;
+                    filter: brightness(0) saturate(100%) invert(97%) sepia(52%) saturate(5902%) hue-rotate(144deg) brightness(79%) contrast(76%);
+                }
                 p {
                     font-weight: 500;
-                    font-size: 12px;
-                    line-height: 100%;
-                    text-transform: uppercase;
-                    color: #3A3C40;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #001730;
                     margin-left: 8px;
+                    text-transform: capitalize;
                 }
                 .count {
                     font-weight: bold;
@@ -98,37 +124,40 @@ main {
                     border-radius: 4px;
                 }
             }
-            .policy {
-                font-size: 14px;
-                line-height: 100%;
-                letter-spacing: 0.005em;
-                color: #001730;
-                margin-right: 54px;
+            .date {
+                font-size: 12px;
+                line-height: 160%;
+                color: #848790;
+                margin-right: 36px;
             }
             .arrow {
                 position: absolute;
-                right: 31px;
-                top: calc(50% - 4px);
+                right: 24px;
+                width: 8px;
+                height: 5px;
+                top: calc(50% - 2.5px);
                 transition: .3s;
                 filter: brightness(0) saturate(100%) invert(84%) sepia(12%) saturate(193%) hue-rotate(186deg) brightness(89%) contrast(84%);
             }
         }
         .card-extend {
             flex-direction: column;
-            padding: 0 16px;
             display: none;
             background: #FAFBFC;
             .item {
-                padding: 12px 0 11px 7px;
-                border-bottom: 1px solid #F1F2F4;
+                padding: 12px 48px 12px 16px;
                 display: flex;
+                justify-content: space-between;
                 p {
-                    font-size: 12px;
+                    font-size: 14px;
                     line-height: 20px;
                     letter-spacing: 0.005em;
-                    color: #848790;
-                    &.count {
-                        margin-right: 14px;
+                    color: #53565E;
+                    &.date {
+                        font-size: 12px;
+                        line-height: 160%;
+                        color: #848790;
+                        
                     }
                 }
             }

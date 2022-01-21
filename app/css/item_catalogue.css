@@ -268,45 +268,62 @@ header .wrapper .sort.active {
 
 header {
   padding: 0 20px;
-  background: #fff;
+  background: #001730;
 }
 header .wrapper {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
 }
-header .wrapper a {
-  margin: 20px 0;
+header .wrapper img {
+  filter: invert(94%) sepia(55%) saturate(2%) hue-rotate(125deg) brightness(102%) contrast(100%);
+}
+header .wrapper .back {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+}
+header .wrapper .back img {
+  padding-right: 16px;
+  width: 16px;
+  height: 16px;
+}
+header .wrapper .nav {
   display: flex;
+  align-items: center;
 }
-header .wrapper .title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
-  color: #001730;
-  margin-bottom: 24px;
+header .wrapper .nav .search {
+  margin-right: 25px;
 }
 
 main {
-  margin-top: 115px;
-  padding-bottom: 35px;
+  margin-top: 56px;
+  background: #F0F2F5;
 }
 main .wrapper {
   padding: 0 16px;
 }
-main .head {
-  padding: 20px 16px 12px 16px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #F1F2F4;
+main .title-block {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 16px 56px 16px 16px;
 }
-main .head p {
+main .title-block p {
   font-weight: 500;
   font-size: 10px;
   line-height: 160%;
   text-transform: uppercase;
-  color: #848790;
-  margin-right: 8px;
+  color: #001730;
+}
+main .title-block p.title {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  text-transform: capitalize;
 }
 main .body .card.active .arrow {
   filter: unset;
@@ -320,13 +337,17 @@ main .body .card.no-extend .arrow {
 }
 main .body .card {
   cursor: pointer;
+  margin: 0 8px 4px 8px;
+  border: 1px solid #F1F2F4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #fff;
 }
 main .body .card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 16px 16px 16px;
-  border-bottom: 1px solid #F1F2F4;
+  padding: 8px 12px;
   position: relative;
 }
 main .body .card-title.one-off .item p {
@@ -338,13 +359,18 @@ main .body .card-title .item {
   display: flex;
   align-items: center;
 }
+main .body .card-title .item img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(52%) saturate(5902%) hue-rotate(144deg) brightness(79%) contrast(76%);
+}
 main .body .card-title .item p {
   font-weight: 500;
-  font-size: 12px;
-  line-height: 100%;
-  text-transform: uppercase;
-  color: #3A3C40;
+  font-size: 14px;
+  line-height: 20px;
+  color: #001730;
   margin-left: 8px;
+  text-transform: capitalize;
 }
 main .body .card-title .item .count {
   font-weight: bold;
@@ -358,39 +384,41 @@ main .body .card-title .item .count {
   background: #F1F2F4;
   border-radius: 4px;
 }
-main .body .card-title .policy {
-  font-size: 14px;
-  line-height: 100%;
-  letter-spacing: 0.005em;
-  color: #001730;
-  margin-right: 54px;
+main .body .card-title .date {
+  font-size: 12px;
+  line-height: 160%;
+  color: #848790;
+  margin-right: 36px;
 }
 main .body .card-title .arrow {
   position: absolute;
-  right: 31px;
-  top: calc(50% - 4px);
+  right: 24px;
+  width: 8px;
+  height: 5px;
+  top: calc(50% - 2.5px);
   transition: 0.3s;
   filter: brightness(0) saturate(100%) invert(84%) sepia(12%) saturate(193%) hue-rotate(186deg) brightness(89%) contrast(84%);
 }
 main .body .card-extend {
   flex-direction: column;
-  padding: 0 16px;
   display: none;
   background: #FAFBFC;
 }
 main .body .card-extend .item {
-  padding: 12px 0 11px 7px;
-  border-bottom: 1px solid #F1F2F4;
+  padding: 12px 48px 12px 16px;
   display: flex;
+  justify-content: space-between;
 }
 main .body .card-extend .item p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.005em;
-  color: #848790;
+  color: #53565E;
 }
-main .body .card-extend .item p.count {
-  margin-right: 14px;
+main .body .card-extend .item p.date {
+  font-size: 12px;
+  line-height: 160%;
+  color: #848790;
 }
 
 .add {
