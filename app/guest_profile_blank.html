@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guest Profile - Blank</title>
+    <link rel="stylesheet" href="./css/guest_profile_blank.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop-wrapper">
+    <header class='fixed_header'>
+        <div class="wrapper">
+            <a class='back' href='#'><img src='./img/svg/arrow_back.svg'>Guest Profile</a>
+            <img class='edit' src='./img/svg/edit.svg'>
+        </div>
+    </header>
+    <main>
+        <div class="profile">
+            <div class="wrapper">
+                <img class='avatar' src='./img/avatar_big.png' alt='avatar'>
+                <div class="user_info">
+                    <div class="row name">
+                        <span class='name_hanzi'>测试姓名</span>
+                        <span class='separator'>|</span>
+                        <span class='name'>Ce Shi Xing Ming</span>
+                    </div>
+                    <div class="row reviews-total">
+                        <div class="review">
+                            <img src='./img/svg/reviews_positive.svg'>
+                            <p>0</p>
+                        </div>
+                        <div class="review">
+                            <img src='./img/svg/reviews_negative.svg'>
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class='age blank'>Age</span>
+                        <span class='separator'>•</span>
+                        <span class='gender blank'>Sex</span>
+                        <span class='separator'>•</span>
+                        <span class='city blank'>Province</span>
+                    </div>
+                    <div class="row">
+                        <span class='phone blank'>Phone</span>
+                    </div>
+                    <div class="row"><span class='blank'>ID</span></div>
+                    <div class="tabs">
+                        <div class="tab">In-Service</div>
+                        <div class="tab">Waiting</div>
+                        <div class="tab">Finished</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="wrapper">
+                <div class="tab total_visits">
+                    <h4 class="title">total visits</h4>
+                    <p class="stat">150 times</p>
+                </div>
+                <div class="tab last">
+                    <h4 class="title">Last 12 mos</h4>
+                    <p class="stat">20 times</p>
+                </div>
+                <div class="tab waiting_time">
+                    <h4 class="title">waiting time</h4>
+                    <p class="stat">15 min</p>
+                </div>
+                <div class="tab service_time">
+                    <h4 class="title">In-Service time</h4>
+                    <p class="stat">35 min</p>
+                </div>
+            </div>
+        </div>
+        <div class="history-container">
+            <div class="wrapper">
+                <div class="buttons">
+                    <div class="tabs">
+                        <div class="tab reviews active" tab='reviews'>Reviews</div>
+                        <div class="tab history" tab='history'>history</div>
+                        <div class="tab lost" tab='lost'>Lost</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="tabs">
+                        <div class="tab reviews active"tab='reviews'>
+                            <h3 class="title">Rating review</h3>
+                            <div class="summary">
+                                <div class="positive sum">
+                                    <img src='./img/svg/reviews_positive.svg'>
+                                    <h4 class='count'>10</h4>
+                                </div>
+                                <div class="negative sum">
+                                    <img src='./img/svg/reviews_negative.svg'>
+                                    <h4 class='count'>2</h4>
+                                </div>
+                            </div>
+                             <div class="card">
+                                 <div class="heading">
+                                     <div class="profile-info">
+                                        <img class='avatar' src='./img/reviews-avatar.png'>
+                                        <div class="bio-info">
+                                            <p class='name'>Liao Yanyu</p>
+                                            <p class="date">2021-05-12</p>
+                                        </div>
+                                     </div>
+                                     <div class="review-type positive">
+                                        <p class='plus'>+</p>
+                                        <img src='./img/svg/reviews_positive.svg'>
+                                     </div>
+                                 </div>
+                                 <div class="body">
+                                     <p class='review-text'>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut  
+                                        <span class="dots">...</span> 
+                                        <span class="more">labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</span>
+                                        <a href='#' class='loadmore'>more</a>
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="card">
+                                <div class="heading">
+                                    <div class="profile-info">
+                                       <img class='avatar' src='./img/reviews-avatar.png'>
+                                       <div class="bio-info">
+                                           <p class='name'>Oswald Miller</p>
+                                           <p class="date">2021-05-12</p>
+                                       </div>
+                                    </div>
+                                    <div class="review-type positive">
+                                       <p class='plus'>+</p>
+                                       <img src='./img/svg/reviews_positive.svg'>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <p class='review-text'>
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="heading">
+                                    <div class="profile-info">
+                                       <img class='avatar' src='./img/reviews-avatar.png'>
+                                       <div class="bio-info">
+                                           <p class='name'>Amit Gaber</p>
+                                           <p class="date">2021-05-12</p>
+                                       </div>
+                                    </div>
+                                    <div class="review-type positive">
+                                       <p class='plus'>+</p>
+                                       <img src='./img/svg/reviews_positive.svg'>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <p class='review-text'>
+                                       -
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="heading">
+                                    <div class="profile-info">
+                                       <img class='avatar' src='./img/reviews-avatar.png'>
+                                       <div class="bio-info">
+                                           <p class='name'>Zhang Mingzhu</p>
+                                           <p class="date">2021-05-12</p>
+                                       </div>
+                                    </div>
+                                    <div class="review-type negative">
+                                       <p class='plus'>+</p>
+                                       <img src='./img/svg/reviews_negative.svg'>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <p class='review-text'>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut  
+                                        <span class="dots">...</span> 
+                                        <span class="more">labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</span>
+                                        <a href='#' class='loadmore'>more</a>
+                                     </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab history" tab='history'>
+                            <h3 class="title">Distribution history</h3>
+                            <div class="sorting">
+                                <p class='sort'>sort by name</p>
+                                <img src='./img/svg/sorting_name.svg'>
+                            </div>
+                            <div class="card tshirt">
+                                <div class="card-heading active">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_tshirt.svg'>
+                                        <h6 class="category-name">t-shirt</h6>
+                                    </div>
+                                    <img class='arrow active' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shirt">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_shirt.svg'>
+                                        <h6 class="category-name">shirt</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card thermal_top_light">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_thermal_top_light.svg'>
+                                        <h6 class="category-name">thermal top/light</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card thermal_top_heavy">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_thermal_top_heavy﻿.svg'>
+                                        <h6 class="category-name">thermal top/heavy</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card pants">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_pants.svg'>
+                                        <h6 class="category-name">pants</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card thermal_bottom">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_thermal_bottom.svg'>
+                                        <h6 class="category-name">thermal bottom</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shorts">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_shorts﻿.svg'>
+                                        <h6 class="category-name">shorts</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card dress_skirt">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_dress_skirt.svg'>
+                                        <h6 class="category-name">dress/skirt</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card underwear_bottom">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_underwear_bottom.svg'>
+                                        <h6 class="category-name">underwear bottom</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card underwear_top">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_underwear_top.svg'>
+                                        <h6 class="category-name">underwear top</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card socks">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_socks.svg'>
+                                        <h6 class="category-name">socks</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card suit_coat">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_suit_coat.svg'>
+                                        <h6 class="category-name">suit coat</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card outerwear">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_outerwear.svg'>
+                                        <h6 class="category-name">outerwear</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shoes">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_shoes﻿.svg'>
+                                        <h6 class="category-name">shoes</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab lost" tab='lost'>
+                            <h3 class="title">Items we lost</h3>
+                            <div class="sorting">
+                                <p class='sort'>sort by date</p>
+                                <img src='./img/svg/sorting_date.svg'>
+                            </div>
+                            <div class="card tshirt">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_tshirt.svg'>
+                                        <h6 class="category-name">t-shirt</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shirt">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_shirt.svg'>
+                                        <h6 class="category-name">shirt</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card thermal_top_light">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_thermal_top_light.svg'>
+                                        <h6 class="category-name">thermal top/light</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card thermal_top_heavy">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_thermal_top_heavy﻿.svg'>
+                                        <h6 class="category-name">thermal top/heavy</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card pants">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_pants.svg'>
+                                        <h6 class="category-name">pants</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card thermal_bottom">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_thermal_bottom.svg'>
+                                        <h6 class="category-name">thermal bottom</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shorts">
+                                <div class="card-heading">
+                                    <div class="card-title">
+                                        <img class='category-icon' src='./img/svg/category_shorts﻿.svg'>
+                                        <h6 class="category-name">shorts</h6>
+                                    </div>
+                                    <img class='arrow' src='./img/svg/down_arrow.svg'>
+                                </div>
+                                <div class="card-content">
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Sleeveless t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Short-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class='name'><span>-</span>Long-sleeve t-shirt</p>
+                                        <p class="date">2021-05-12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="options">
+            <div class="option w100 distribution_report">
+                <div class="icon">
+                    <img src='./img/svg/clothes.svg'>             
+                </div>
+                <h5 class="option-title">Distribution report</h5>
+            </div>
+            <div class="option w50 behavior_interview">
+                <div class="icon">
+                    <img src='./img/svg/faces.svg'>   
+                </div>
+                <h5 class="option-title">Behavior overview</h5>
+            </div>
+            <div class="option w50 items_we_lost">
+                <div class="icon">
+                    <img src='./img/svg/staff.svg'>                        
+                </div>
+                <h5 class="option-title">Items we lost</h5>
+            </div>
+            <div class="option w50 unfulfilled_requests">
+                <div class="icon">
+                    <img src='./img/svg/warning.svg'>                           
+                </div>
+                <h5 class="option-title">Unfulfilled requests</h5>
+            </div>
+            <div class="option w50 items_we_trashed">
+                <div class="icon">
+                    <img src='./img/svg/trash.svg'>                           
+                </div>
+                <h5 class="option-title">Items we trashed</h5>
+            </div>
+        </div>
+    </main>
+    <section class="daily_review overlay">
+        <div class="wrapper">
+            <a href='#' class='home'><img class='house_icon' src='./img/svg/house.svg'></a>
+            <h3 class="title">Daily Review</h3>
+            <p class="subtitle">Please rate this Guest today and leave a review to capture his/her behaviour.</p>
+            <div class="review-type">
+                <img class='positive active' src='./img/svg/reviews_positive.svg'>
+                <img class='negative' src='./img/svg/reviews_negative.svg'>
+            </div>
+            <form action='#' id='review_form'>
+                <div class="input_box">
+                    <textarea required id='review_input' class='review_input' type="text" placeholder='Your review'></textarea>
+                    <p class='required_message'>Explain the reason for the negative assessment </p>
+                </div>
+                
+                <button class='send_review' type='submit'>Send review</button>
+            </form>
+        </div>
+    </section>
+    <div class='make_review' id='make_review' href='#'><img src='./img/svg/make_review.svg'></div>
+</div>
+<script defer src="./js/make_review_toggle.js"></script>
+<script defer src="./js/loadmore.js"></script>
+<script defer src="./js/open_tab.js"></script>
+<script defer src="./js/buttons-tabs.js"></script>
+</body>
