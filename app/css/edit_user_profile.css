@@ -510,7 +510,7 @@ main .delete_profile a {
   margin-top: 16px;
 }
 
-.done {
+.fab {
   padding: 21px 19px;
   background-color: #D11241;
   box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
@@ -525,17 +525,58 @@ main .delete_profile a {
   z-index: -1;
 }
 @media (min-width: 768px) {
-  .done {
+  .fab {
     right: calc((100vw - 770px) / 2 + 24px);
   }
 }
-.done.active {
+.fab.active {
   animation-duration: 5s;
   animation-name: done;
 }
-.done img {
+.fab img {
   width: 18px;
   height: 14px;
+}
+
+.overlay.photo {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.overlay.photo .uplod_zone {
+  background: #fff;
+  padding: 16px 24px;
+}
+.overlay.photo .uplod_zone .title {
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.overlay.photo .uplod_zone form {
+  display: flex;
+  justify-content: center;
+}
+.overlay.photo .uplod_zone form label {
+  width: 312px;
+  height: 312px;
+  border: 1px dashed #C0C3CC;
+  box-sizing: border-box;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.overlay.photo .uplod_zone form input {
+  display: none;
+}
+.overlay.photo .closeoverlay {
+  background: #fff;
+  padding: 8px 24px 40px 24px;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes done {

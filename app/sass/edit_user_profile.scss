@@ -252,7 +252,7 @@ main {
     }
 }
 
-.done {
+.fab {
     padding: 21px 19px;
     background-color: #D11241;
     box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
@@ -276,6 +276,48 @@ main {
         width: 18px;
         height: 14px;
         
+    }
+}
+
+
+.overlay.photo {
+    flex-direction: column;
+    justify-content: flex-end;
+    .uplod_zone {
+        background: #fff;
+        padding: 16px 24px;
+        .title {
+            margin-bottom: 24px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.15px;
+            color: #001730;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            label {
+                width: 312px;
+                height: 312px;
+                border: 1px dashed #C0C3CC;
+                box-sizing: border-box;
+                border-radius: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+            input {
+                display: none;
+            }
+        }
+    }
+    .closeoverlay {
+        background: #fff;
+        padding: 8px 24px 40px 24px;
+        display: flex;
+        justify-content: center;
     }
 }
 
