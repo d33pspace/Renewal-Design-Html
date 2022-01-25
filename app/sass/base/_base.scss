@@ -140,6 +140,13 @@ header .wrapper .sort {
         box-sizing: border-box;
         border-bottom: 1px solid #F1F2F4;
         border-width: 0 0 1px 0;
+        border-radius: 2px;
+        &#pinyin {
+          background: #F1F2F4;
+          &.filled {
+            background: #DDF0EE;
+          }
+        }
     }
     .error-message {
       padding-left: 16px;
