@@ -68,6 +68,19 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transition: .2s;
+                &:hover {
+                    background: #DE576D;
+                    img {
+                        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
+                    }
+                }
+                &.active {
+                    background: #CD455C;
+                    img {
+                        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
+                    }
+                }
                 &.food img {
                     width: 15px;
                     height: 15px;
@@ -77,6 +90,7 @@ header {
                     height: 18px;
                 }
                 img {
+                    transition: .2s;
                     filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
                 }
             }
@@ -97,6 +111,11 @@ header {
         justify-content: space-between;
         border-bottom: 1px solid #F1F2F4;
         box-sizing: border-box;
+        background: #fff;
+        transition: .2s;
+        &:hover {
+            background: #DDF0EE;
+        }
         &.active {
             .arrow {
                 filter: unset;
@@ -165,7 +184,7 @@ header {
             margin-right: 8px;
             padding: 16px 14px 16px 14px;
             filter: brightness(0) saturate(100%) invert(94%) sepia(2%) saturate(2051%) hue-rotate(190deg) brightness(80%) contrast(89%);
-            transition: .3s;
+            transition: .2s;
         }
     }
     .card-content {
@@ -183,16 +202,11 @@ header {
             position: relative;
             height: 40px;
             margin: 2px 0;
-            // &::after {
-            //     content: '';
-            //     position: absolute;
-            //     height: 1px;
-            //     width: calc(100% - 32px);
-            //     left: 16px;
-            //     bottom: -1px;
-            //     background: #F1F2F4;
-            //     z-index: -1;
-            // }
+            background: #fff;
+            transition: .2s;
+            &:hover {
+                background: #DDF0EE;
+            }
             &.flash {
                 animation: flash .5s ;
             }
@@ -215,6 +229,7 @@ header {
 
 main {
     margin-top: 56px;
+    background: #F0F2F5;
     .wrapper {
         padding: 0 16px;
         &.border {
@@ -225,7 +240,7 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 16px 4px 16px 0;
+        padding: 16px 0;
         .col-title {
             display: flex;
             font-weight: 500;
@@ -267,6 +282,10 @@ main {
             border-radius: 16px;
             margin-top: 16px;
             opacity: 0;
+            transition: .2s;
+            &:hover {
+                background: #DDF0EE;
+            }
         }
     }
     &.distribution {
@@ -285,7 +304,7 @@ main {
             padding: 16px 0 36px 0;
             box-shadow: 0px -8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
             border-radius: 16px 16px 0px 0px;
-            transition: .3s;
+            transition: .2s;
             transform: translateY(100%);
             height: auo;
             overflow: auto;
@@ -345,18 +364,24 @@ main {
 
 .proceed {
     z-index: 9999;
-    padding: 21px 18px;
-    background-color: #D11241;
+    background: #001730;
     box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+    transition: .2s;
     border-radius: 24px;
     display: flex;
-    width: fit-content;
+    width: 56px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     right: 16px;
     bottom: 16px;
     opacity: 0;
     visibility: hidden;
     transition: .1s;
+    &:hover {
+        background: #123257;
+    }
     .close {
         display: none;
     }
@@ -394,11 +419,15 @@ main {
     &.active {
         display: block;
     }
-    .buttons-title {
-        display: flex;
-        .col-title:last-child {
-            margin-left: 8px;
+    .col-title:last-child {
+        p {
+            margin: 0;
+            &:last-child {
+                width: 40px;
+                text-align: center;
+            }
         }
+        
     }
     .cards {
         padding-bottom: 16px;
@@ -408,7 +437,7 @@ main {
         display: none;
         border: unset;
         margin: unset;
-        padding: 0 8px 0 16px;
+        padding: 0 16px;
         &.blank {
             display: flex;
             align-items: center;
@@ -431,7 +460,7 @@ main {
             height: 0px;
             transform: scaleY(0);
             transform-origin: top;
-            transition: .3s;
+            transition: .2s;
             &.animation {
                 height: 44px;
                 margin: 2px 0;
@@ -442,6 +471,7 @@ main {
             cursor: initial;
             padding: 0;
             border: unset;
+            background: unset !important;
             .card-title {
                 padding: 0;
             }
@@ -478,6 +508,11 @@ main {
         align-items: center;
         border-bottom: 1px solid #F1F2F4;
         height: 48px;
+        background: #fff;
+        transition: .2s;
+        &:hover {
+            background: #DDF0EE;
+        }
         &.flash {
             animation: flash .5s ;
         }

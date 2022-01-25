@@ -36,3 +36,11 @@ proceed.onclick = (e) => {
     proceed.classList.toggle('opened')
     document.querySelector('.overlay.menu').classList.toggle('active')
 }
+
+let action = document.querySelectorAll('.subheader .action')
+
+action.forEach((e) => {
+    e.onclick = () => {
+        e.classList.toggle('active')
+    }
+})

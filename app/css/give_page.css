@@ -334,6 +334,19 @@ header .wrapper p {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s;
+}
+.subheader .wrapper .actions .action:hover {
+  background: #DE576D;
+}
+.subheader .wrapper .actions .action:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
+}
+.subheader .wrapper .actions .action.active {
+  background: #CD455C;
+}
+.subheader .wrapper .actions .action.active img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
 }
 .subheader .wrapper .actions .action.food img {
   width: 15px;
@@ -344,6 +357,7 @@ header .wrapper p {
   height: 18px;
 }
 .subheader .wrapper .actions .action img {
+  transition: 0.2s;
   filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
 }
 
@@ -361,6 +375,11 @@ header .wrapper p {
   justify-content: space-between;
   border-bottom: 1px solid #F1F2F4;
   box-sizing: border-box;
+  background: #fff;
+  transition: 0.2s;
+}
+.card .card-heading:hover {
+  background: #DDF0EE;
 }
 .card .card-heading.active .arrow {
   filter: unset;
@@ -427,7 +446,7 @@ header .wrapper p {
   margin-right: 8px;
   padding: 16px 14px 16px 14px;
   filter: brightness(0) saturate(100%) invert(94%) sepia(2%) saturate(2051%) hue-rotate(190deg) brightness(80%) contrast(89%);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .card .card-content {
   transform: scaleY(0);
@@ -445,6 +464,11 @@ header .wrapper p {
   position: relative;
   height: 40px;
   margin: 2px 0;
+  background: #fff;
+  transition: 0.2s;
+}
+.card .card-content .item:hover {
+  background: #DDF0EE;
 }
 .card .card-content .item.flash {
   animation: flash 0.5s;
@@ -465,6 +489,7 @@ header .wrapper p {
 
 main {
   margin-top: 56px;
+  background: #F0F2F5;
 }
 main .wrapper {
   padding: 0 16px;
@@ -476,7 +501,7 @@ main .head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 4px 16px 0;
+  padding: 16px 0;
 }
 main .head .col-title {
   display: flex;
@@ -515,6 +540,10 @@ main .head .col-title p {
   border-radius: 16px;
   margin-top: 16px;
   opacity: 0;
+  transition: 0.2s;
+}
+.overlay .icons .menu-icon:hover {
+  background: #DDF0EE;
 }
 .overlay.distribution {
   display: flex;
@@ -533,7 +562,7 @@ main .head .col-title p {
   padding: 16px 0 36px 0;
   box-shadow: 0px -8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
   border-radius: 16px 16px 0px 0px;
-  transition: 0.3s;
+  transition: 0.2s;
   transform: translateY(100%);
   height: auo;
   overflow: auto;
@@ -587,18 +616,24 @@ main .head .col-title p {
 
 .proceed {
   z-index: 9999;
-  padding: 21px 18px;
-  background-color: #D11241;
+  background: #001730;
   box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  transition: 0.2s;
   border-radius: 24px;
   display: flex;
-  width: fit-content;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   right: 16px;
   bottom: 16px;
   opacity: 0;
   visibility: hidden;
   transition: 0.1s;
+}
+.proceed:hover {
+  background: #123257;
 }
 .proceed .close {
   display: none;
@@ -635,11 +670,12 @@ main .head .col-title p {
 .add_list.active {
   display: block;
 }
-.add_list .buttons-title {
-  display: flex;
+.add_list .col-title:last-child p {
+  margin: 0;
 }
-.add_list .buttons-title .col-title:last-child {
-  margin-left: 8px;
+.add_list .col-title:last-child p:last-child {
+  width: 40px;
+  text-align: center;
 }
 .add_list .cards {
   padding-bottom: 16px;
@@ -649,7 +685,7 @@ main .head .col-title p {
   display: none;
   border: unset;
   margin: unset;
-  padding: 0 8px 0 16px;
+  padding: 0 16px;
 }
 .add_list .card.blank {
   display: flex;
@@ -673,7 +709,7 @@ main .head .col-title p {
   height: 0px;
   transform: scaleY(0);
   transform-origin: top;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .add_list .card.active.animation {
   height: 44px;
@@ -684,6 +720,7 @@ main .head .col-title p {
   cursor: initial;
   padding: 0;
   border: unset;
+  background: unset !important;
 }
 .add_list .card .card-heading .card-title {
   padding: 0;
@@ -717,6 +754,11 @@ main .head .col-title p {
   align-items: center;
   border-bottom: 1px solid #F1F2F4;
   height: 48px;
+  background: #fff;
+  transition: 0.2s;
+}
+.common .card:hover {
+  background: #DDF0EE;
 }
 .common .card.flash {
   animation: flash 0.5s;
