@@ -377,6 +377,7 @@ header .wrapper p {
   animation: flash 0.5s;
 }
 .card .card-heading {
+  border-radius: 8px;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -387,6 +388,9 @@ header .wrapper p {
 }
 .card .card-heading:hover {
   background: #DDF0EE;
+}
+.card .card-heading.active {
+  border-radius: 8px 8px 0 0;
 }
 .card .card-heading.active .arrow {
   filter: unset;
@@ -480,6 +484,9 @@ header .wrapper p {
 .card .card-content .item.flash {
   animation: flash 0.5s;
 }
+.card .card-content .item:last-child {
+  border-radius: 0 0 8px 8px;
+}
 .card .card-content .item .name {
   font-size: 14px;
   line-height: 20px;
@@ -496,6 +503,7 @@ header .wrapper p {
 
 main {
   margin-top: 56px;
+  padding-bottom: 120px;
   background: #F0F2F5;
 }
 main .wrapper {
@@ -773,6 +781,7 @@ main .head .col-title p {
 .common .card .item {
   cursor: pointer;
   padding: 0 12px;
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -840,8 +849,12 @@ main .head .col-title p {
 .clothing_list .card {
   box-sizing: border-box;
 }
+.clothing_list .card.flash .card-heading {
+  animation: flash 0.5s;
+}
 .clothing_list .card-title {
-  margin-left: 12px;
+  padding: 0 12px;
+  height: 100%;
 }
 .clothing_list .card-heading {
   min-height: 44px;

@@ -106,6 +106,7 @@ header {
         animation: flash .5s ;
     }
     .card-heading {
+        border-radius: 8px;
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -117,6 +118,7 @@ header {
             background: #DDF0EE;
         }
         &.active {
+            border-radius: 8px 8px 0 0;
             .arrow {
                 filter: unset;
                 transform: rotateX(180deg);
@@ -210,6 +212,9 @@ header {
             &.flash {
                 animation: flash .5s ;
             }
+            &:last-child {
+                border-radius: 0 0 8px 8px;
+            }
             .name {
                 font-size: 14px;
                 line-height: 20px;
@@ -229,6 +234,7 @@ header {
 
 main {
     margin-top: 56px;
+    padding-bottom: 120px;
     background: #F0F2F5;
     .wrapper {
         padding: 0 16px;
@@ -519,6 +525,7 @@ main {
         .item {
             cursor: pointer;
             padding: 0 12px;
+            height: 100%;
             display: flex;
             align-items: center;
             img {
@@ -588,9 +595,13 @@ main {
     }
     .card {
         box-sizing: border-box;
+        &.flash .card-heading {
+            animation: flash .5s ;
+        }
     }
     .card-title {
-        margin-left: 12px;
+        padding: 0 12px;
+        height: 100%;
     }
     .card-heading {
         min-height: 44px;

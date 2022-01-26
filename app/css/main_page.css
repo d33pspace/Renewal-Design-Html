@@ -343,6 +343,7 @@ header .profile_section .serve_button:before {
 
 main {
   margin-top: 72px;
+  padding-bottom: 120px;
 }
 main .list.waiting_list .card.grey {
   background: #EEFBFA;
