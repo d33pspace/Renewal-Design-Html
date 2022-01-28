@@ -1,17 +1,4 @@
-// let item = document.querySelectorAll('.card-content .item')
 
-// item.forEach(e => {
-//     e.onclick = (i) => {
-//         if(i.target !== e.querySelector('.add')) {
-//             disOverlay.classList.add('active')
-//             disOverlay.firstElementChild.classList.add('active')
-//             if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
-//                 disOverlay.classList.add('scroll')
-//             }
-//         }
-        
-//     }
-// })
 
 let overlay = document.querySelectorAll('.overlay')
 

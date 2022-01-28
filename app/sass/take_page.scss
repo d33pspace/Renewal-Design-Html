@@ -254,6 +254,12 @@ main {
             font-size: 10px;
             line-height: 160%;
             color: #001730;
+            &:last-child {
+                p {
+                    text-align: center;
+                    width: 40px;
+                }
+            }
             .main-title, &.main-title {
                 font-size: 16px;
                 line-height: 23px;
@@ -298,6 +304,9 @@ main {
             margin-top: 16px;
             opacity: 0;
             transition: .2s;
+            img {
+                filter: brightness(0) saturate(100%) invert(59%) sepia(10%) saturate(260%) hue-rotate(187deg) brightness(88%) contrast(87%);
+            }
             &:hover {
                 background: #DDF0EE;
             }
@@ -433,13 +442,6 @@ main {
     background: #EBF8FF;
     &.active {
         display: block;
-    }
-    .col-title:last-child {
-        p {
-            text-align: center;
-            width: 40px;
-        }
-        
     }
     .cards {
         padding-bottom: 16px;
@@ -594,7 +596,9 @@ main {
         }
     }
     .add_title {
-        margin-right: 4px;
+        width: 40px;
+        text-align: center;
+        justify-content: center;
     }
     .add {
         margin-right: 8px;

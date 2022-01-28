@@ -526,6 +526,10 @@ main .head .col-title {
   line-height: 160%;
   color: #001730;
 }
+main .head .col-title:last-child p {
+  text-align: center;
+  width: 40px;
+}
 main .head .col-title .main-title, main .head .col-title.main-title {
   font-size: 16px;
   line-height: 23px;
@@ -565,6 +569,9 @@ main .head .col-title .edit {
   margin-top: 16px;
   opacity: 0;
   transition: 0.2s;
+}
+.overlay .icons .menu-icon img {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(10%) saturate(260%) hue-rotate(187deg) brightness(88%) contrast(87%);
 }
 .overlay .icons .menu-icon:hover {
   background: #DDF0EE;
@@ -693,10 +700,6 @@ main .head .col-title .edit {
 }
 .add_list.active {
   display: block;
-}
-.add_list .col-title:last-child p {
-  text-align: center;
-  width: 40px;
 }
 .add_list .cards {
   padding-bottom: 16px;
@@ -847,7 +850,9 @@ main .head .col-title .edit {
   color: #F95557;
 }
 .clothing_list .add_title {
-  margin-right: 4px;
+  width: 40px;
+  text-align: center;
+  justify-content: center;
 }
 .clothing_list .add {
   margin-right: 8px;

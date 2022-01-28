@@ -289,6 +289,9 @@ main {
             margin-top: 16px;
             opacity: 0;
             transition: .2s;
+            img {
+                filter: brightness(0) saturate(100%) invert(59%) sepia(10%) saturate(260%) hue-rotate(187deg) brightness(88%) contrast(87%);
+            }
             &:hover {
                 background: #DDF0EE;
             }

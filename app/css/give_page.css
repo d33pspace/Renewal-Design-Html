@@ -557,6 +557,9 @@ main .head .col-title p {
   opacity: 0;
   transition: 0.2s;
 }
+.overlay .icons .menu-icon img {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(10%) saturate(260%) hue-rotate(187deg) brightness(88%) contrast(87%);
+}
 .overlay .icons .menu-icon:hover {
   background: #DDF0EE;
 }
