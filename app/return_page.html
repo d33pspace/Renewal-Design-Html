@@ -14,163 +14,405 @@
     <div class="desktop-wrapper">
         <header class='fixed_header'>
             <div class="wrapper">
-                <img src='./img/svg/nav-return_page.svg'>
+                <img src='./img/svg/nav-give_page.svg'>
                 <p class='title'>Return Page</a>
             </div>
         </header>
         <main>
-            <div class="wrapper">
-                <div class="tag">
-                    <form action="#" id="tag_form">
-                        <label for='tag'>laundry tag</label>
-                        <input id='tag' value="336" tabindex="-1" maxlength="3">
-                        <img src='./img/svg/check_settings.svg' class='check'>
-                        <img src='./img/svg/edit.svg' class='edit active'>
-                        <p class='dies'>#</p>
-                    </form>
+            <div class='subheader'>
+                <div class="wrapper">
+                    <div class="user">
+                        <img class='avatar' src='./img/avatar-1.png'>
+                        <div class="user-info">
+                            <p class="name">张韦</p>
+                            <p class="subname">Zhang Wei </p>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="action food"><img src='./img/svg/serve2.svg'></div>
+                        <div class="action faces"><img src='./img/svg/faces.svg'></div>
+                    </div>
                 </div>
             </div>
-            <div class="laundry">
-                <div class="wrapper border">
+            <div class="add_list active">
+                <div class="wrapper">
                     <div class="head">
-                        <div class="choose-item">
-                            <div class="checkbox-all"></div>
-                            <div class="title">Laundry List</div>
+                        <div class="col-title">
+                            <p class="main-title">Laundry list <span class='divider'>|</span> <span class='id'>#336</span></p>
                         </div>
-                        <div class="buttons">
-                            <div class="trash">trash</div>
-                            <div class="lost">lost</div>
+                        <div class="col-title">
+                            <p>Trash</p>
+                            <p>Lost</p>
+                            <p>Return</p>
                         </div>
                     </div>
                 </div>
-                <div class="body">
-                    <div class="card">
-                        <div class="choose-item">
-                            <div class="checkbox check"></div>
-                            <div class="item">
-                                <img src='./img/svg/category_shirt.svg'>
+                <div class="cards">
+                    <div class="card tshirt active animation" card-data='t-shirt'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_tshirt_nobg.svg'>
                                 <div class="desc">
-                                    <h6 class='title'>shirt</h6>
-                                    <p class='name'>Button short-sleve</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="buttons">
-                            <div class="delete button check"><img src='./img/svg/delete.svg'></div>
-                            <div class="lost button check"><img src='./img/svg/lost.svg'></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="choose-item">
-                            <div class="checkbox check"></div>
-                            <div class="item">
-                                <img src='./img/svg/category_tshirt.svg'>
-                                <div class="desc">
-                                    <h6 class='title'>t-short</h6>
+                                    <h6 class='title'>t-shirt</h6>
                                     <p class='name'>Sleeveless t-shirt</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="buttons">
-                            <div class="delete button check"><img src='./img/svg/delete.svg'></div>
-                            <div class="lost button check"><img src='./img/svg/lost.svg'></div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="choose-item">
-                            <div class="checkbox check"></div>
-                            <div class="item">
-                                <img src='./img/svg/category_pants.svg'>
+                    <div class="card shirt active animation" card-data='shirt'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_shirt_nobg.svg'>
+                                <h6 class="category-name">shirt</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card thermal_top_light active animation" card-data='thermal top/light'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_thermal_top_nobg.svg'>
+                                <h6 class="category-name">thermal top/light</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card thermal_top_heavy active animation" card-data='thermal top/heavy'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_thermal_top_nobg.svg'>
+                                <h6 class="category-name">thermal top/heavy</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card pants active animation" card-data='pants'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_pants_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>pants</h6>
                                     <p class='name'>Jeans</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="buttons">
-                            <div class="delete button check"><img src='./img/svg/delete.svg'></div>
-                            <div class="lost button check"><img src='./img/svg/lost.svg'></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="choose-item">
-                            <div class="checkbox check"></div>
-                            <div class="item">
-                                <img src='./img/svg/category_shorts﻿.svg'>
-                                <div class="desc">
-                                    <h6 class='title'>shorts</h6>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="buttons">
-                            <div class="delete button check"><img src='./img/svg/delete.svg'></div>
-                            <div class="lost button check"><img src='./img/svg/lost.svg'></div>
-                        </div>
                     </div>
-                    <div class="card">
-                        <div class="choose-item">
-                            <div class="checkbox check"></div>
-                            <div class="item">
-                                <img src='./img/svg/category_underwear_bottom.svg'>
-                                <div class="desc">
-                                    <h6 class='title'>underwear bottom</h6>
+                    <div class="card thermal_bottom active animation" card-data='thermal bottom'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_thermal_bottom_nobg.svg'>
+                                <h6 class="category-name">thermal bottom</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="buttons">
-                            <div class="delete button check"><img src='./img/svg/delete.svg'></div>
-                            <div class="lost button check"><img src='./img/svg/lost.svg'></div>
-                        </div>
                     </div>
-                    <div class="card">
-                        <div class="choose-item">
-                            <div class="checkbox check"></div>
-                            <div class="item">
-                                <img src='./img/svg/category_thermal_bottom.svg'>
-                                <div class="desc">
-                                    <h6 class='title'>termal bottom</h6>
+                    <div class="card shorts active animation" card-data='shorts'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_shorts_nobg.svg'>
+                                <h6 class="category-name">shorts</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="buttons">
-                            <div class="delete button check"><img src='./img/svg/delete.svg'></div>
-                            <div class="lost button check"><img src='./img/svg/lost.svg'></div>
-                        </div>
                     </div>
-                    <div class="card">
-                        <div class="choose-item">
-                            <div class="checkbox check"></div>
-                            <div class="item">
-                                <img src='./img/svg/category_socks.svg'>
-                                <div class="desc">
-                                    <h6 class='title'>socks</h6>
+                    <div class="card dress_skirt active animation" card-data='dress/skirt'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_skirt_nobg.svg'>
+                                <h6 class="category-name">dress/skirt</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="buttons">
-                            <div class="delete button check"><img src='./img/svg/delete.svg'></div>
-                            <div class="lost button check"><img src='./img/svg/lost.svg'></div>
+                    </div>
+                    <div class="card underwear_bottom active animation" card-data='underwear bottom'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_underwear_bottom_nobg.svg'>
+                                <h6 class="category-name">underwear bottom</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card underwear_top active animation" card-data='underwear top'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_underwear_top_nobg.svg'>
+                                <h6 class="category-name">underwear top</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card socks active animation" card-data='socks'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_socks_nobg.svg'>
+                                <h6 class="category-name">socks</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card suit_coat active animation" card-data='suit coat'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_suit_coat_nobg.svg'>
+                                <h6 class="category-name">suit coat</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card outwear active animation" card-data='outwear'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_outerwear_nobg.svg'>
+                                <h6 class="category-name">outwear</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shoes active animation" card-data='shoes'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_shoes_nobg.svg'>
+                                <h6 class="category-name">shoes</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card belts active animation" card-data='belts'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_belts_nobg.svg'>
+                                <h6 class="category-name">belts</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card scarf active animation" card-data='scarf'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_scarf_nobg.svg'>
+                                <h6 class="category-name">scarf</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card gloves active animation" card-data='gloves'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_gloves_nobg.svg'>
+                                <h6 class="category-name">gloves</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card razors active animation" card-data='razors'>
+                        <div class="card-heading active">
+                            <div class="card-title">
+                                <img class='category-icon' src='./img/svg/category_razors_nobg.svg'>
+                                <h6 class="category-name">razors</h6>
+                            </div>
+                            <div class="buttons">
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg' class='trash toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/lost.svg' class='lost toggle'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <div class="checkbox check toggle"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-        <div class="overlay">
+        <div class="overlay menu">
             <div class="icons">
+                <a class='menu-icon' href='#'><img src='./img/svg/exit.svg'></a>
                 <a class='menu-icon' href='#'><img src='./img/svg/menu_shower.svg'></a>
-                <a class='menu-icon' href='#'><img src='./img/svg/menu_towel.svg'></a>
-                <a class='menu-icon' href='#'><img src='./img/svg/menu_shirt.svg'></a>
-                <a class='menu-icon' href='#'><img src='./img/svg/menu_block.svg'></a>
-                <a class='menu-icon' href='#'><img src='./img/svg/menu_account.svg'></a>
+                <a class='menu-icon' href='#'><img src='./img/svg/nav-give_page.svg'></a>
                 <a class='menu-icon' href='#'><img src='./img/svg/menu_home.svg'></a>
             </div>
         </div>
-        <a class='proceed' href='#'>
-            <img class='check' src='./img/svg/check.svg'>
+        <a class='proceed active' href='#'>
+            <img class='check' src='./img/svg/arrow_fab.svg'>
             <img class='close' src='./img/svg/close.svg'>
         </a>
     </div>
-<script defer src="./js/return_page.js"></script>
+<script defer src="./js/func_pages.js"></script>
 <script defer src="./js/fixed_header.js"></script>
-<script defer src="./js/tag.js"></script>
+<script defer src="./js/return_page.js"></script>
 </body>

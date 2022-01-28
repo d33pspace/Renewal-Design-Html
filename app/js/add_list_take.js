@@ -39,7 +39,7 @@ add.forEach(item => {
         // alert button
         let toggle = document.querySelectorAll('.toggle')
         toggle.forEach(i => {
-            i.onclick = () => {
+            i.closest('.button-wrapper').onclick = () => {
                 i.classList.toggle('active')
             }
         })
