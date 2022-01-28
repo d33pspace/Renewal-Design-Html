@@ -527,7 +527,7 @@ main .head .col-title {
 }
 main .head .col-title.main-title {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 23px;
   letter-spacing: 0.15px;
 }
 main .head .col-title p {
@@ -715,7 +715,7 @@ main .head .col-title p {
   height: 21px;
 }
 .add_list .card.blank .buttons {
-  padding-right: 65.5px;
+  padding-right: 49.5px;
 }
 .add_list .card.active {
   display: flex;
