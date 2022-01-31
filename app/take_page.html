@@ -38,8 +38,12 @@
                 <div class="wrapper">
                     <div class="head">
                         <div class="col-title">
-                            <p class="main-title">Laundry list <span class='divider'>|</span> <span class='id'>#336</span></p>
-                            <img class='edit' src='./img/svg/edit.svg'>
+                            <p class="main-title">Laundry list <span class='divider'>|</span></p>
+                            <div class="tag-wrapper">
+                                <input class='tag' maxlength="3" placeholder='336' readonly>
+                            </div>
+                            <img class='edit-button active' src='./img/svg/edit.svg'>
+                            <img class='edit-button check' src='./img/svg/check.svg'>
                         </div>
                         <div class="col-title">
                             <p>Trash</p>
@@ -53,11 +57,16 @@
                             <div class="card-title">
                                 <img class='category-icon' src='./img/svg/avatar_blank.svg'>
                                 <div class="desc">
-                                    <h6 class='title'>--</h6>
+                                    <h6 class='title'>none</h6>
                                 </div>
                             </div>
                             <div class="buttons">
-                                <p>-</p>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/trash2.svg'>
+                                </div>
+                                <div class="button-wrapper">
+                                    <img src='./img/svg/min.svg' class='rmv_blank'>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -302,25 +302,37 @@ header .wrapper .date {
   cursor: pointer;
 }
 
+.desktop-wrapper {
+  background: #F0F2F5;
+}
+
 main {
-  margin-top: 72px;
+  margin-top: 56px;
 }
 main .wrapper {
   padding: 0 16px;
 }
 main .cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 16px;
-  grid-row-gap: 32px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+main .cards .card-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: #FFFFFF;
+  border: 1px solid #F1F2F4;
+  box-sizing: border-box;
+  border-radius: 12px;
+  margin-bottom: 8px;
 }
 main .cards .title {
-  font-size: 10px;
-  line-height: 100%;
-  letter-spacing: 0.005em;
+  font-size: 12px;
+  line-height: 19px;
   text-transform: uppercase;
   color: #848790;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 main .cards .count {
   font-weight: bold;
@@ -328,7 +340,7 @@ main .cards .count {
   line-height: 28px;
   letter-spacing: 0.15px;
   color: #001730;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 main .cards .data {
   display: flex;
@@ -347,10 +359,113 @@ main .cards .data p.red {
   color: #D11241;
 }
 
+.datepicker-wrapper {
+  padding: 16px;
+  position: relative;
+}
+.datepicker-wrapper .title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.datepicker-wrapper .dates {
+  background: #FFFFFF;
+  border: 1px solid #F1F2F4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+}
+.datepicker-wrapper .dates .date {
+  height: 48px;
+  width: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #001730;
+  border-right: 1px solid #F1F2F4;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+}
+.datepicker-wrapper .dates .toggleButton {
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(549%) hue-rotate(187deg) brightness(88%) contrast(93%);
+}
+.datepicker-wrapper .dates .toggleButton.active {
+  transform: rotateX(180deg);
+  filter: unset;
+}
+.datepicker-wrapper .dates-popup {
+  transform: scaleY(0);
+  background: #FFFFFF;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 8px;
+  padding: 8px 0;
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  width: calc(100% - 32px);
+  margin-top: 8px;
+  left: 16px;
+}
+.datepicker-wrapper .dates-popup.active {
+  transform: scaleY(1);
+}
+.datepicker-wrapper .dates-popup .range:not(:last-child) {
+  border-bottom: 1px solid #DDDFE4;
+}
+.datepicker-wrapper .dates-popup .range.custom {
+  height: 56px;
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  cursor: pointer;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button .name {
+  font-size: 16px;
+  line-height: 160%;
+  color: #001730;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button .date {
+  font-size: 16px;
+  line-height: 160%;
+  color: #848790;
+}
+
+#datepicker {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  width: calc(100% - 32px);
+  margin-top: 8px;
+  left: 16px;
+}
+#datepicker.active {
+  transform: scaleY(1);
+}
 #datepicker .vc-container {
   width: 100%;
-  border: unset;
-  border-radius: 10px 10px 0px 0px !important;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 8px;
 }
 #datepicker .vc-container .vc-arrows-container {
   padding: 40px 16px 34px 16px;

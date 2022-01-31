@@ -438,7 +438,6 @@ header .wrapper p {
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
-  text-transform: uppercase;
   color: #3A3C40;
   margin-bottom: 4px;
 }
@@ -710,6 +709,12 @@ main .head .col-title p {
   align-items: center;
   margin: 0 !important;
 }
+.add_list .card.blank .title {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #C0C3CC;
+}
 .add_list .card.blank .category-icon {
   margin-right: 11.5px;
   margin-left: 3.5px;
@@ -717,8 +722,8 @@ main .head .col-title p {
   width: 21px;
   height: 21px;
 }
-.add_list .card.blank .buttons {
-  padding-right: 49.5px;
+.add_list .card.blank .rmv_blank {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(13%) saturate(322%) hue-rotate(178deg) brightness(90%) contrast(97%);
 }
 .add_list .card.active {
   display: flex;

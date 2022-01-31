@@ -165,7 +165,6 @@ header {
                 font-weight: 500;
                 font-size: 12px;
                 line-height: 100%;
-                text-transform: uppercase;
                 color: #3A3C40;
                 margin-bottom: 4px;
             }
@@ -451,6 +450,12 @@ main {
             display: flex;
             align-items: center;
             margin: 0 !important;
+            .title {
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.005em;
+                color: #C0C3CC;
+            }
             .category-icon {
                 margin-right: 11.5px;
                 margin-left: 3.5px;
@@ -458,8 +463,8 @@ main {
                 width: 21px;
                 height: 21px;
             }
-            .buttons {
-                padding-right: 49.5px;
+            .rmv_blank {
+                filter: brightness(0) saturate(100%) invert(97%) sepia(13%) saturate(322%) hue-rotate(178deg) brightness(90%) contrast(97%);
             }
         }
         &.active {

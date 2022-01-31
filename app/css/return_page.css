@@ -500,10 +500,14 @@ header .wrapper p {
   cursor: pointer;
 }
 
+.desktop-wrapper {
+  background: #E7FFF9;
+}
+
 main {
   margin-top: 56px;
   padding-bottom: 120px;
-  background: #F0F2F5;
+  background: #E7FFF9;
 }
 main .wrapper {
   padding: 0 16px;
@@ -695,7 +699,7 @@ main .head .col-title .edit {
 }
 .add_list {
   display: none;
-  background: #EBF8FF;
+  background: #E7FFF9;
 }
 .add_list.active {
   display: block;

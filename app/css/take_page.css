@@ -438,9 +438,7 @@ header .wrapper p {
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
-  text-transform: uppercase;
   color: #3A3C40;
-  margin-bottom: 4px;
 }
 .card .card-heading .card-title .name {
   font-size: 12px;
@@ -539,12 +537,54 @@ main .head .col-title .main-title, main .head .col-title.main-title {
 main .head .col-title .main-title .divider, main .head .col-title.main-title .divider {
   margin: 0 8px;
 }
-main .head .col-title .edit {
+main .head .col-title .edit-button {
+  display: none;
   margin-left: 14px;
   width: 12px;
   height: 12px;
   cursor: pointer;
   filter: brightness(0) saturate(100%) invert(70%) sepia(8%) saturate(2529%) hue-rotate(131deg) brightness(93%) contrast(82%);
+}
+main .head .col-title .edit-button.active {
+  display: flex;
+}
+main .head .col-title .edit-button.check {
+  height: 9px;
+}
+main .head .tag-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+main .head .tag-wrapper:before {
+  position: absolute;
+  content: "#";
+  left: 8px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+main .head .tag-wrapper input {
+  cursor: default;
+  background: transparent;
+  border: unset;
+  width: 56px;
+  box-sizing: border-box;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+  padding-left: 18px;
+}
+main .head .tag-wrapper input::placeholder {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
 }
 
 .overlay.active .icons .menu-icon {
@@ -716,6 +756,12 @@ main .head .col-title .edit {
   align-items: center;
   margin: 0 !important;
 }
+.add_list .card.blank .title {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #C0C3CC;
+}
 .add_list .card.blank .category-icon {
   margin-right: 11.5px;
   margin-left: 3.5px;
@@ -723,8 +769,8 @@ main .head .col-title .edit {
   width: 21px;
   height: 21px;
 }
-.add_list .card.blank .buttons {
-  padding-right: 49.5px;
+.add_list .card.blank .rmv_blank {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(13%) saturate(322%) hue-rotate(178deg) brightness(90%) contrast(97%);
 }
 .add_list .card.active {
   display: flex;

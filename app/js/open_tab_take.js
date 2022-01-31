@@ -37,3 +37,35 @@ cardItem.forEach((item) => {
         }
     }
 })
+
+let editTag = document.querySelectorAll('.head .edit-button') 
+let inputTag = document.querySelector('.tag-wrapper input') 
+let inputPlaceholder = 336
+
+editTag.forEach(item => {
+    item.onclick = () => {
+        if (inputTag.hasAttribute('readonly')) {
+            inputTag.removeAttribute('readonly')
+            inputTag.setAttribute('placeholder', '')
+            inputTag.focus()
+        } else {
+            inputTag.setAttribute('readonly', 'readonly')
+        }
+        editTag.forEach(e => { 
+            e.classList.toggle('active')
+        })
+        
+    }
+})
+
+
+
+inputTag.onblur = (e) => {
+    if (e.target.value == '' || e.target.value == null) {
+        e.target.setAttribute('placeholder', inputPlaceholder)
+    }
+}
+
+inputTag.oninput = (e) => {
+    e.target.value = e.target.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+}

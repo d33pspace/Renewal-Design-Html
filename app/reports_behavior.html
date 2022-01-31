@@ -22,15 +22,15 @@
             <div class="datepicker-wrapper">
                 <p class="title">Date range</p>
                 <div class="dates">
-                    <div class="startDate"></div>
-                    <div class="endDate"></div>
+                    <div class="startDate date"></div>
+                    <div class="endDate date"></div>
                     <div class="toggleButton">
                         <img src='./img/svg/down_arrow.svg'>
                     </div>
                 </div>
                 <div class="dates-popup">
-                    <div class="custom"></div>
-                    <div class="day-range">
+                    <div class="custom range"><div class="name">Custom</div></div>
+                    <div class="day-range range">
                         <div class="today datepicker-button">
                             <div class="name">Today</div>
                             <div class="date"></div>
@@ -40,8 +40,8 @@
                             <div class="date"></div>
                         </div>
                     </div>
-                    <div class="week-range datepicker-button">
-                        <div class="this_week">
+                    <div class="week-range range">
+                        <div class="this_week datepicker-button">
                             <div class="name">This week</div>
                             <div class="date"></div>
                         </div>
@@ -50,69 +50,75 @@
                             <div class="date"></div>
                         </div>
                     </div>
-                    <div class="month-range datepicker-button">
-                        <div class="this_month">
-                            <div class="name">This week</div>
+                    <div class="month-range range">
+                        <div class="this_month datepicker-button">
+                            <div class="name">This month</div>
                             <div class="date"></div>
                         </div>
                         <div class="last_month datepicker-button">
-                            <div class="name">Last week</div>
+                            <div class="name">Last month</div>
                             <div class="date"></div>
                         </div>
                     </div>
                 </div>
                 <div id='datepicker'>
-                    <v-date-picker @dayclick="onDayClick" v-model="range" is-range is-inline :min-date="new Date()"/>
+                    <v-date-picker @dayclick="onDayClick" title-position="left" v-model="range" is-range is-inline :min-date="new Date()"/>
                 </div>
             </div>
                 
             <div class="cards">
-                <div class="card">
-                    <p class="title">Tital visits</p>
-                    <h4 class="count">150 people</h4>
-                    <div class="data">
-                        <img src='./img/svg/trends_up.svg'>
-                        <p class='green'>+ 10 people</p>
+                <div class="card-row">
+                    <div class="card">
+                        <p class="title">Tital visits</p>
+                        <h4 class="count">150 people</h4>
+                        <div class="data">
+                            <img src='./img/svg/trends_up.svg'>
+                            <p class='green'>+ 10 people</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <p class="title">Avg Waiting time</p>
+                        <h4 class="count">30 min</h4>
+                        <div class="data">
+                            <img src='./img/svg/watch_red.svg'>
+                            <p class='red'>+ 2 min</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <p class="title">Avg Waiting time</p>
-                    <h4 class="count">30 min</h4>
-                    <div class="data">
-                        <img src='./img/svg/watch_red.svg'>
-                        <p class='red'>+ 2 min</p>
+                <div class="card-row">
+                    <div class="card">
+                        <p class="title">Meals served</p>
+                        <h4 class="count">60 meals</h4>
+                        <div class="data">
+                            <img src='./img/svg/trends_up.svg'>
+                            <p class='green'>+ 23 meals</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <p class="title">Avg Service time</p>
+                        <h4 class="count">45 min</h4>
+                        <div class="data">
+                            <img src='./img/svg/watch_green.svg'>
+                            <p class='green'>- 5min</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <p class="title">Meals served</p>
-                    <h4 class="count">60 meals</h4>
-                    <div class="data">
-                        <img src='./img/svg/trends_up.svg'>
-                        <p class='green'>+ 23 meals</p>
+                <div class="card-row">
+                    <div class="card">
+                        <p class="title">Item distributed</p>
+                        <h4 class="count">140 items</h4>
+                        <div class="data">
+                            <img src='./img/svg/trends_up.svg'>
+                            <p class='green'>+ 15 items</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <p class="title">Avg Service time</p>
-                    <h4 class="count">45 min</h4>
-                    <div class="data">
-                        <img src='./img/svg/watch_green.svg'>
-                        <p class='green'>- 5min</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <p class="title">Item distributed</p>
-                    <h4 class="count">140 items</h4>
-                    <div class="data">
-                        <img src='./img/svg/trends_up.svg'>
-                        <p class='green'>+ 15 items</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <p class="title">Laundry taken</p>
-                    <h4 class="count">230 items</h4>
-                    <div class="data">
-                        <img src='./img/svg/trends_up.svg'>
-                        <p class='red'>- 40 items</p>
+                    <div class="card">
+                        <p class="title">Laundry taken</p>
+                        <h4 class="count">230 items</h4>
+                        <div class="data">
+                            <img src='./img/svg/trends_up.svg'>
+                            <p class='red'>- 40 items</p>
+                        </div>
                     </div>
                 </div>
             </div>

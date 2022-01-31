@@ -30,23 +30,35 @@ header {
     }
 }
 
+.desktop-wrapper {
+    background: #F0F2F5;
+}
+
 main {
-    margin-top: 72px;
+    margin-top: 56px;
     .wrapper {
         padding: 0 16px;
     }
     .cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 16px;
-        grid-row-gap: 32px;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        .card-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 32px;
+            background: #FFFFFF;
+            border: 1px solid #F1F2F4;
+            box-sizing: border-box;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
         .title {
-            font-size: 10px;
-            line-height: 100%;
-            letter-spacing: 0.005em;
+            font-size: 12px;
+            line-height: 19px;
             text-transform: uppercase;
             color: #848790;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
         .count {
             font-weight: bold;
@@ -54,7 +66,7 @@ main {
             line-height: 28px;
             letter-spacing: 0.15px;
             color: #001730;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
         .data {
             display: flex;
@@ -75,12 +87,117 @@ main {
     }
 }
 
+.datepicker-wrapper {
+    padding: 16px;
+    position: relative;
+    .title {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        letter-spacing: 0.15px;
+        color: #001730;
+    }
+    .dates {
+        background: #FFFFFF;
+        border: 1px solid #F1F2F4;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: flex;
+        .date {
+            height: 48px;
+            width: 50%;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            color: #001730;
+            border-right: 1px solid #F1F2F4;
+            padding-left: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .toggleButton {
+            cursor: pointer;
+            height: 48px;
+            width: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s;
+            filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(549%) hue-rotate(187deg) brightness(88%) contrast(93%);
+            &.active {
+                transform: rotateX(180deg);
+                filter: unset;
+            }
+        }
+    }
+    .dates-popup {
+        transform: scaleY(0);
+        background: #FFFFFF;
+        box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+        border-radius: 8px;
+        padding: 8px 0;
+        transform-origin: top;
+        transition: .2s;
+        position: absolute;
+        width: calc(100% - 32px);
+        margin-top: 8px;
+        left: 16px;
+        &.active {
+            transform: scaleY(1); 
+        }
+        .range {
+            &:not(:last-child) {
+                border-bottom: 1px solid #DDDFE4;
+            }
+            &.custom {
+                height: 56px;
+                padding: 0 16px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+            .datepicker-button {
+                height: 56px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 16px;
+                cursor: pointer;
+                .name {
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #001730;
+                }
+                .date {
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #848790;
+                }
+            }
+        }
+    }
+}
+
+
+
 
 #datepicker {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .2s;
+    position: absolute;
+    width: calc(100% - 32px);
+    margin-top: 8px;
+    left: 16px;
+    &.active {
+        transform: scaleY(1); 
+    }
     .vc-container {
         width: 100%;
-        border: unset;
-        border-radius: 10px 10px 0px 0px !important;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+        border-radius: 8px;
         .vc-arrows-container {
             padding: 40px 16px 34px 16px;
             .vc-arrow {
