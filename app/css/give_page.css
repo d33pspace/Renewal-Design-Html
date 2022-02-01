@@ -469,11 +469,9 @@ header .wrapper p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid transparent;
   padding: 0 0 0 16px;
   position: relative;
-  height: 40px;
-  margin: 2px 0;
+  height: 44px;
   background: #fff;
   transition: 0.2s;
 }
