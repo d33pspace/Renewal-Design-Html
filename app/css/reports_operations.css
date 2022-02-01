@@ -274,77 +274,76 @@ header .wrapper .sort.active {
 }
 
 header {
-  background: #fff;
-  padding: 0 20px;
+  padding: 0 28px 0 20px;
+  background: #001730;
 }
 header .wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  flex-direction: column;
+  height: 56px;
+}
+header .wrapper img {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(55%) saturate(2%) hue-rotate(125deg) brightness(102%) contrast(100%);
 }
 header .wrapper .back {
-  display: flex;
-  margin: 20px 0;
-}
-header .wrapper .title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
-  color: #001730;
-}
-header .wrapper .filter {
-  font-size: 12px;
-  line-height: 160%;
-  color: #001730;
-  margin: 18.5px 0;
-}
-header .wrapper .filter span {
-  text-decoration-line: underline;
-  color: #13ADAD;
-  cursor: pointer;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+}
+header .wrapper .back img {
+  padding-right: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.desktop-wrapper {
+  background: #F0F2F5;
 }
 
 main {
-  margin-top: 140px;
+  margin-top: 56px;
 }
 main .wrapper {
   padding: 0 16px;
 }
 main .header {
-  padding: 16px 36px 16px 16px;
-  border-bottom: 1px solid #F1F2F4;
+  height: 56px;
+  padding: 0 16px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-@media (min-width: 720px) {
-  main .header {
-    padding-right: 56px;
-  }
-}
 main .header p {
   font-weight: 500;
-  font-size: 10px;
-  line-height: 160%;
-  text-transform: uppercase;
-  color: #848790;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
 }
 main .header .icons {
   display: flex;
   align-items: flex-end;
+  padding-right: 48px;
 }
-main .header .icons p {
+main .header .icons .icon-wrapper {
   width: 34px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media (min-width: 720px) {
-  main .header .icons p {
-    width: 48px;
-  }
+main .header .icons .icon-wrapper img {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(0%) hue-rotate(189deg) brightness(91%) contrast(92%);
+}
+main .cards {
+  padding: 0 16px;
 }
 main .cards .card {
   transition: 0.2s;
+  margin-bottom: 8px;
 }
 main .cards .card.active .expand {
   transform: rotateX(180deg);
@@ -355,48 +354,56 @@ main .cards .card.active .dropdown {
   max-height: 100%;
   transform: scaleY(1);
 }
+main .cards .card.active .body {
+  border-radius: 8px 8px 0 0;
+}
+main .cards .card.active .card-expand:last-child {
+  border-radius: 0 0 8px 8px;
+}
 main .cards .body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 15px 36px 16px 16px;
-  border-bottom: 1px solid #F1F2F4;
+  height: 48px;
   cursor: pointer;
-}
-@media (min-width: 720px) {
-  main .cards .body {
-    padding-right: 56px;
-  }
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0 8px 0 12px;
+  border-radius: 8px;
 }
 main .cards .body .item {
   display: flex;
   align-items: center;
 }
+main .cards .body .item img {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(22%) saturate(877%) hue-rotate(131deg) brightness(94%) contrast(89%);
+}
 main .cards .body .item .name {
   margin-left: 8px;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 100%;
-  text-transform: uppercase;
-  color: #3A3C40;
-  width: 105px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #001730;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .cards .body .expand {
+main .cards .body .expand-wrapper {
   position: absolute;
-  right: 21px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .cards .body .expand-wrapper .expand {
   width: 10px;
   cursor: pointer;
   transition: transform 0.2s;
   filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(6717%) hue-rotate(176deg) brightness(82%) contrast(91%);
-}
-@media (min-width: 720px) {
-  main .cards .body .expand {
-    right: 25px;
-  }
 }
 main .cards .dropdown {
   transform: scaleY(0);
@@ -408,46 +415,189 @@ main .cards .dropdown .card-expand {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 36px 15px 16px;
-  background: #FAFBFC;
-}
-@media (min-width: 720px) {
-  main .cards .dropdown .card-expand {
-    padding-right: 56px;
-  }
+  height: 44px;
+  padding: 0 8px 0 16px;
+  background: #fff;
 }
 main .cards .dropdown .card-expand .item {
   overflow: hidden;
 }
 main .cards .dropdown .card-expand .name {
-  color: #848790;
-  font-size: 12px;
-  height: 14px;
-  line-height: 100%;
+  color: #53565E;
+  font-size: 14px;
+  line-height: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 main .cards .dropdown .card-expand .values p {
-  letter-spacing: 0.005em;
-  color: #848790;
+  font-weight: 400;
 }
 main .cards .values {
   display: flex;
+  margin-right: 40px;
 }
 main .cards .values p {
   width: 34px;
+  font-weight: 700;
   text-align: center;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.005em;
+  font-size: 12px;
+  line-height: 100%;
   color: #3A3C40;
-}
-@media (min-width: 720px) {
-  main .cards .values p {
-    width: 48px;
-  }
 }
 main .cards .values p.alert {
   color: #F95557;
+}
+
+.datepicker-wrapper {
+  padding: 16px;
+  position: relative;
+  z-index: 9999;
+}
+.datepicker-wrapper .title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.datepicker-wrapper .dates {
+  background: #FFFFFF;
+  border: 1px solid #F1F2F4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+}
+.datepicker-wrapper .dates .date {
+  height: 48px;
+  width: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #001730;
+  border-right: 1px solid #F1F2F4;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+}
+.datepicker-wrapper .dates .toggleButton {
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(549%) hue-rotate(187deg) brightness(88%) contrast(93%);
+}
+.datepicker-wrapper .dates .toggleButton.active {
+  transform: rotateX(180deg);
+  filter: unset;
+}
+.datepicker-wrapper .dates-popup {
+  transform: scaleY(0);
+  background: #FFFFFF;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 8px;
+  padding: 8px 0;
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  width: calc(100% - 32px);
+  margin-top: 8px;
+  left: 16px;
+}
+.datepicker-wrapper .dates-popup.active {
+  transform: scaleY(1);
+}
+.datepicker-wrapper .dates-popup .range:not(:last-child) {
+  border-bottom: 1px solid #DDDFE4;
+}
+.datepicker-wrapper .dates-popup .range.custom {
+  height: 56px;
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  cursor: pointer;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button .name {
+  font-size: 16px;
+  line-height: 160%;
+  color: #001730;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button .date {
+  font-size: 16px;
+  line-height: 160%;
+  color: #848790;
+}
+
+#datepicker {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  width: calc(100% - 32px);
+  margin-top: 8px;
+  left: 16px;
+}
+#datepicker.active {
+  transform: scaleY(1);
+}
+#datepicker .vc-container {
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 8px;
+}
+#datepicker .vc-container .vc-arrows-container {
+  padding: 40px 16px 34px 16px;
+}
+#datepicker .vc-container .vc-arrows-container .vc-arrow {
+  border: unset;
+}
+#datepicker .vc-container .vc-arrows-container svg {
+  width: 24px;
+  height: 24px;
+}
+#datepicker .vc-container .vc-arrows-container path {
+  fill: #13ADAD;
+}
+#datepicker .vc-container .vc-header {
+  padding: 40px 16px 34px 16px;
+}
+#datepicker .vc-container .vc-header .vc-title {
+  height: 24px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #001730;
+  font-weight: bold;
+  font-family: "Noto Sans SC", sans-serif;
+}
+#datepicker .vc-container .vc-weeks {
+  font-family: "Noto Sans SC", sans-serif;
+  padding: 0 32px;
+}
+#datepicker .vc-container .vc-weeks .vc-weekday {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #13ADAD;
+  padding: 0 0 17px 0;
+}
+#datepicker .vc-container .vc-weeks .vc-day {
+  font-size: 16px;
+  line-height: 160%;
+}
+#datepicker .vc-container .vc-weeks .vc-highlight {
+  background-color: #13ADAD !important;
 }

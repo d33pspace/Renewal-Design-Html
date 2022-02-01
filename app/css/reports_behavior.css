@@ -362,6 +362,7 @@ main .cards .data p.red {
 .datepicker-wrapper {
   padding: 16px;
   position: relative;
+  z-index: 9999;
 }
 .datepicker-wrapper .title {
   margin-bottom: 8px;

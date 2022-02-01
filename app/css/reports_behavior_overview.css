@@ -274,49 +274,65 @@ header .wrapper .sort.active {
 }
 
 header {
-  background: #fff;
-  padding: 0 20px;
+  padding: 0 28px 0 20px;
+  background: #001730;
 }
 header .wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  flex-direction: column;
+  height: 56px;
+}
+header .wrapper img {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(55%) saturate(2%) hue-rotate(125deg) brightness(102%) contrast(100%);
 }
 header .wrapper .back {
-  display: flex;
-  margin: 20px 0;
-}
-header .wrapper .title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
-  color: #001730;
-}
-header .wrapper .filter {
-  font-size: 12px;
-  line-height: 160%;
-  color: #001730;
-  margin: 18.5px 0;
-}
-header .wrapper .filter span {
-  text-decoration-line: underline;
-  color: #13ADAD;
-  cursor: pointer;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+}
+header .wrapper .back img {
+  padding-right: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.desktop-wrapper {
+  background: #F0F2F5;
 }
 
 main {
-  margin-top: 140px;
+  margin-top: 56px;
 }
 main .wrapper {
   padding: 0 16px;
 }
+main .header {
+  height: 56px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .header p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
 main .cards {
+  background: #fff;
   padding: 8px 0;
 }
 main .cards .card {
-  transition: 0.2s;
+  padding: 0 16px 4px 16px;
+  margin-bottom: 4px;
   border-bottom: 1px solid #F1F2F4;
+  transition: 0.2s;
   position: relative;
 }
 main .cards .card.active .expand {
@@ -330,21 +346,23 @@ main .cards .card.active .dropdown {
   margin: 16px 16px 8px 16px;
 }
 main .cards .card .body {
+  height: 64px;
   display: flex;
   align-items: center;
-  padding: 16px 16px 8px 16px;
   cursor: pointer;
 }
 main .cards .card .body .avatar {
-  border: 1px solid #F1F2F4;
+  border: 1px solid #DDDFE4;
   box-sizing: border-box;
-  border-radius: 12px;
+  border-radius: 8px;
+  height: 48px;
+  width: 48px;
 }
 main .cards .card .body .info {
   margin-left: 8px;
 }
 main .cards .card .body .info .name {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -357,7 +375,7 @@ main .cards .card .body .info .reviews > div {
   display: flex;
   align-items: center;
   width: 48px;
-  margin-right: 18px;
+  margin-right: 16px;
   padding: 2px;
   box-sizing: border-box;
 }
@@ -372,9 +390,16 @@ main .cards .card .body .info .reviews .count {
   line-height: 100%;
   color: #3A3C40;
 }
-main .cards .card .body .expand {
+main .cards .card .body .expand-wrapper {
   position: absolute;
-  right: 24px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .cards .card .body .expand-wrapper .expand {
   width: 10px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -484,4 +509,157 @@ main .cards .card .dropdown .review .review-body p .extend_text {
 }
 main .cards .card .dropdown .review .review-body p .extend_text.active {
   display: inline;
+}
+
+.datepicker-wrapper {
+  padding: 16px;
+  position: relative;
+  z-index: 9999;
+}
+.datepicker-wrapper .title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.datepicker-wrapper .dates {
+  background: #FFFFFF;
+  border: 1px solid #F1F2F4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+}
+.datepicker-wrapper .dates .date {
+  height: 48px;
+  width: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #001730;
+  border-right: 1px solid #F1F2F4;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+}
+.datepicker-wrapper .dates .toggleButton {
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(549%) hue-rotate(187deg) brightness(88%) contrast(93%);
+}
+.datepicker-wrapper .dates .toggleButton.active {
+  transform: rotateX(180deg);
+  filter: unset;
+}
+.datepicker-wrapper .dates-popup {
+  transform: scaleY(0);
+  background: #FFFFFF;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 8px;
+  padding: 8px 0;
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  width: calc(100% - 32px);
+  margin-top: 8px;
+  left: 16px;
+}
+.datepicker-wrapper .dates-popup.active {
+  transform: scaleY(1);
+}
+.datepicker-wrapper .dates-popup .range:not(:last-child) {
+  border-bottom: 1px solid #DDDFE4;
+}
+.datepicker-wrapper .dates-popup .range.custom {
+  height: 56px;
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  cursor: pointer;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button .name {
+  font-size: 16px;
+  line-height: 160%;
+  color: #001730;
+}
+.datepicker-wrapper .dates-popup .range .datepicker-button .date {
+  font-size: 16px;
+  line-height: 160%;
+  color: #848790;
+}
+
+#datepicker {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  width: calc(100% - 32px);
+  margin-top: 8px;
+  left: 16px;
+}
+#datepicker.active {
+  transform: scaleY(1);
+}
+#datepicker .vc-container {
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+  border-radius: 8px;
+}
+#datepicker .vc-container .vc-arrows-container {
+  padding: 40px 16px 34px 16px;
+}
+#datepicker .vc-container .vc-arrows-container .vc-arrow {
+  border: unset;
+}
+#datepicker .vc-container .vc-arrows-container svg {
+  width: 24px;
+  height: 24px;
+}
+#datepicker .vc-container .vc-arrows-container path {
+  fill: #13ADAD;
+}
+#datepicker .vc-container .vc-header {
+  padding: 40px 16px 34px 16px;
+}
+#datepicker .vc-container .vc-header .vc-title {
+  height: 24px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #001730;
+  font-weight: bold;
+  font-family: "Noto Sans SC", sans-serif;
+}
+#datepicker .vc-container .vc-weeks {
+  font-family: "Noto Sans SC", sans-serif;
+  padding: 0 32px;
+}
+#datepicker .vc-container .vc-weeks .vc-weekday {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #13ADAD;
+  padding: 0 0 17px 0;
+}
+#datepicker .vc-container .vc-weeks .vc-day {
+  font-size: 16px;
+  line-height: 160%;
+}
+#datepicker .vc-container .vc-weeks .vc-highlight {
+  background-color: #13ADAD !important;
 }

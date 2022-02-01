@@ -14,12 +14,59 @@
     <div class="desktop-wrapper">
         <header class='fixed_header'>
             <div class="wrapper">
-                <a class='back' href='#'><img src='./img/svg/arrow_back.svg'></a>
-                <h3 class="title">Behavior overview </h3>
-                <p class="filter">Show: <span>2021-02-03  -  2021-06-07</span></p>
+                <a class='back' href='#'><img src='./img/svg/arrow_back.svg'>Behavior overview</a>
             </div>
         </header>
         <main>
+            <div class="datepicker-wrapper">
+                <p class="title">Date range</p>
+                <div class="dates">
+                    <div class="startDate date"></div>
+                    <div class="endDate date"></div>
+                    <div class="toggleButton">
+                        <img src='./img/svg/down_arrow.svg'>
+                    </div>
+                </div>
+                <div class="dates-popup">
+                    <div class="custom range"><div class="name">Custom</div></div>
+                    <div class="day-range range">
+                        <div class="today datepicker-button">
+                            <div class="name">Today</div>
+                            <div class="date"></div>
+                        </div>
+                        <div class="yesterday datepicker-button">
+                            <div class="name">Yesterday</div>
+                            <div class="date"></div>
+                        </div>
+                    </div>
+                    <div class="week-range range">
+                        <div class="this_week datepicker-button">
+                            <div class="name">This week</div>
+                            <div class="date"></div>
+                        </div>
+                        <div class="last_week datepicker-button">
+                            <div class="name">Last week</div>
+                            <div class="date"></div>
+                        </div>
+                    </div>
+                    <div class="month-range range">
+                        <div class="this_month datepicker-button">
+                            <div class="name">This month</div>
+                            <div class="date"></div>
+                        </div>
+                        <div class="last_month datepicker-button">
+                            <div class="name">Last month</div>
+                            <div class="date"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id='datepicker'>
+                    <v-date-picker @dayclick="onDayClick" title-position="left" v-model="range" is-range is-inline :min-date="new Date()"/>
+                </div>
+            </div>
+            <div class="header">
+                <p class="title">Item List</p>
+            </div>
             <div class="cards">
                 <div class="card">
                     <div class="body">
@@ -37,7 +84,9 @@
                                 </div>
                             </div>
                         </div>
-                        <img class='expand' src='./img/svg/down_arrow.svg'>
+                        <div class="expand-wrapper">
+                            <img class='expand' src='./img/svg/down_arrow.svg'>
+                        </div>
                     </div>
                     <div class="dropdown">
                         <div class="review">
@@ -118,7 +167,9 @@
                                 </div>
                             </div>
                         </div>
-                        <img class='expand' src='./img/svg/down_arrow.svg'>
+                        <div class="expand-wrapper">
+                            <img class='expand' src='./img/svg/down_arrow.svg'>
+                        </div>
                     </div>
                     <div class="dropdown">
                         <div class="review">
@@ -155,7 +206,9 @@
                                 </div>
                             </div>
                         </div>
-                        <img class='expand' src='./img/svg/down_arrow.svg'>
+                        <div class="expand-wrapper">
+                            <img class='expand' src='./img/svg/down_arrow.svg'>
+                        </div>
                     </div>
                     <div class="dropdown">
                         <div class="review">
@@ -192,7 +245,9 @@
                                 </div>
                             </div>
                         </div>
-                        <img class='expand' src='./img/svg/down_arrow.svg'>
+                        <div class="expand-wrapper">
+                            <img class='expand' src='./img/svg/down_arrow.svg'>
+                        </div>
                     </div>
                     <div class="dropdown">
                         <div class="review">
@@ -229,7 +284,9 @@
                                 </div>
                             </div>
                         </div>
-                        <img class='expand' src='./img/svg/down_arrow.svg'>
+                        <div class="expand-wrapper">
+                            <img class='expand' src='./img/svg/down_arrow.svg'>
+                        </div>
                     </div>
                     <div class="dropdown">
                         <div class="review">
@@ -253,6 +310,9 @@
             </div>
         </main>
     </div>
+    <script src='https://unpkg.com/vue/dist/vue.js'></script>
+    <script src='https://unpkg.com/v-calendar'></script>
+    <script type="module" defer src="./js/datepicker_reports.js"></script>
     <script defer src="./js/reports_toggle_tabs.js"></script>
     <script defer src="./js/reports_loadmore.js"></script>
     <script defer src="./js/fixed_header.js"></script>

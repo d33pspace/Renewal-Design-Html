@@ -4,89 +4,91 @@
 
 
 header {
-    background: #fff;
-    padding: 0 20px;
+    padding: 0 28px 0 20px;
+    background: #001730;
     .wrapper {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        flex-direction: column;
+        height: 56px;
+        img {
+            filter: brightness(0) saturate(100%) invert(94%) sepia(55%) saturate(2%) hue-rotate(125deg) brightness(102%) contrast(100%);
+        }
         .back {
-            display: flex;
-            margin: 20px 0;
-        }
-        .title {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 35px;
-            color: #001730;
-        }
-        .filter {
-            font-size: 12px;
-            line-height: 160%;
-            color: #001730;
-            margin: 18.5px 0;
-            span {
-                text-decoration-line: underline;
-                color: #13ADAD;
-                cursor: pointer;
-                font-weight: 500;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.15px;
+            color: #FFFFFF;
+            img {
+                padding-right: 16px;
+                width: 16px;
+                height: 16px;
             }
         }
     }
 }
 
+.desktop-wrapper {
+    background: #F0F2F5;
+}
+
 main {
-    margin-top: 140px;
+    margin-top: 56px;
     .wrapper {
         padding: 0 16px;
     }
     .header {
-        padding: 16px 16px 17px 16px;
+        height: 56px;
+        padding: 0 16px;
         box-sizing: border-box;
-        border-bottom: 1px solid #F1F2F4;
         display: flex;
         justify-content: space-between;
-        &>div {
+        align-items: center;
+        div {
             display: flex;
+            p {
+                text-align: end;
+                text-transform: capitalize;
+                width: 40px;
+                margin-left: 8px;
+                font-size: 10px;
+                line-height: 160%;
+            }
         }
         p {
             font-weight: 500;
-            font-size: 10px;
-            line-height: 160%;
-            text-transform: uppercase;
-            color: #848790;
-            &.guest {
-                margin-left: 8px;
-                text-align: right;
-                width: 48px;
-            }
-            &.date {
-                width: 72px;
-                text-align: center;
-            }
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.15px;
+            color: #001730;
         }
     }
     .body {
         .card {
-            padding: 16px 16px 17px 16px;
+            height: 62px;
+            padding: 0 16px;
             box-sizing: border-box;
-            border-bottom: 1px solid  #F1F2F4;
+            background: #fff;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #F1F2F4;;
             .icon {
                 width: 32px;
                 height: 32px;
                 margin-right: 8px;
+                filter: brightness(0) saturate(100%) invert(66%) sepia(22%) saturate(877%) hue-rotate(131deg) brightness(94%) contrast(89%);
             }
             .item {
                 display: flex;
                 align-items: center;
                 .title {
                     font-weight: 500;
-                    font-size: 12px;
-                    line-height: 100%;
-                    text-transform: uppercase;
-                    color: #3A3C40;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-transform: capitalize;
+                    color: #001730;
                     margin-bottom: 4px;
                 }
                 .name {
@@ -100,11 +102,10 @@ main {
                 display: flex;
                 align-items: center;
                 .date {
-                    width: 124px;
-                    text-align: center;
                     font-size: 12px;
                     line-height: 100%;
                     color: #848790;
+                    margin-right: 16px;
                 }
                 .avatar {
                     width: 32px;
@@ -113,6 +114,165 @@ main {
                     box-sizing: border-box;
                     border-radius: 8px;
                 }
+            }
+        }
+    }
+}
+
+
+.datepicker-wrapper {
+    padding: 16px;
+    position: relative;
+    z-index: 9999;
+    .title {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        letter-spacing: 0.15px;
+        color: #001730;
+    }
+    .dates {
+        background: #FFFFFF;
+        border: 1px solid #F1F2F4;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: flex;
+        .date {
+            height: 48px;
+            width: 50%;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            color: #001730;
+            border-right: 1px solid #F1F2F4;
+            padding-left: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .toggleButton {
+            cursor: pointer;
+            height: 48px;
+            width: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s;
+            filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(549%) hue-rotate(187deg) brightness(88%) contrast(93%);
+            &.active {
+                transform: rotateX(180deg);
+                filter: unset;
+            }
+        }
+    }
+    .dates-popup {
+        transform: scaleY(0);
+        background: #FFFFFF;
+        box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+        border-radius: 8px;
+        padding: 8px 0;
+        transform-origin: top;
+        transition: .2s;
+        position: absolute;
+        width: calc(100% - 32px);
+        margin-top: 8px;
+        left: 16px;
+        &.active {
+            transform: scaleY(1); 
+        }
+        .range {
+            &:not(:last-child) {
+                border-bottom: 1px solid #DDDFE4;
+            }
+            &.custom {
+                height: 56px;
+                padding: 0 16px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+            .datepicker-button {
+                height: 56px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 16px;
+                cursor: pointer;
+                .name {
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #001730;
+                }
+                .date {
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #848790;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+#datepicker {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .2s;
+    position: absolute;
+    width: calc(100% - 32px);
+    margin-top: 8px;
+    left: 16px;
+    &.active {
+        transform: scaleY(1); 
+    }
+    .vc-container {
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
+        border-radius: 8px;
+        .vc-arrows-container {
+            padding: 40px 16px 34px 16px;
+            .vc-arrow {
+                border: unset;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+            path {
+                fill: #13ADAD;
+            }
+        }
+        .vc-header {
+            padding: 40px 16px 34px 16px;
+            .vc-title {
+                height: 24px;
+                font-size: 18px;
+                line-height: 21px;
+                color: #001730;
+                font-weight: bold;
+                font-family: 'Noto Sans SC', sans-serif;
+            }
+        }
+        .vc-weeks {
+            font-family: 'Noto Sans SC', sans-serif;
+            padding: 0 32px;
+            .vc-weekday {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.15px;
+                color: #13ADAD;
+                padding: 0 0 17px 0;
+            }
+            .vc-day {
+                font-size: 16px;
+                line-height: 160%;
+            }
+            .vc-highlight {
+                background-color: #13ADAD !important;
             }
         }
     }
