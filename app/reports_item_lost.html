@@ -24,11 +24,13 @@
                     <div class="startDate date"></div>
                     <div class="endDate date"></div>
                     <div class="toggleButton">
-                        <img src='./img/svg/down_arrow.svg'>
+                        <img src='./img/svg/date_range.svg'>
                     </div>
                 </div>
                 <div class="dates-popup">
-                    <div class="custom range"><div class="name">Custom</div></div>
+                    <div class="range">
+                        <div class="custom datepicker-button"><div class="name">Custom</div></div>
+                    </div>
                     <div class="day-range range">
                         <div class="today datepicker-button">
                             <div class="name">Today</div>
@@ -61,7 +63,8 @@
                     </div>
                 </div>
                 <div id='datepicker'>
-                    <v-date-picker @dayclick="onDayClick" title-position="left" v-model="range" is-range is-inline :min-date="new Date()"/>
+                    <img src='./img/svg/arrow_back.svg' class='datepicker-close'>
+                    <v-date-picker @dayclick="onDayClick" title-position="left" v-model="range" is-range is-inline/>
                 </div>
             </div>
             <div class="header">

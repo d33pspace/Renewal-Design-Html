@@ -122,6 +122,9 @@ new Vue({
 				startDate.innerHTML = date.id
 				initial = true
 				toggleDatepicker()
+			} else if (!initial) {
+				initial = true
+				toggleDatepicker()
 			}
 		}
 	}
@@ -132,6 +135,11 @@ let toggleDatepickerButton = document.querySelector('.dates .toggleButton')
 let popupDatepicker = document.querySelector('.dates-popup')
 let datepickerCustom = document.querySelector('#datepicker')
 let datepickerCustomButton = document.querySelector('.datepicker-wrapper .custom')
+let datepickerCloseButton = document.querySelector('.datepicker-close')
+
+datepickerCloseButton.onclick = () => {
+	datepickerCustom.classList.remove('active')
+}
 
 toggleDatepickerButton.onclick = () => {
 	toggleDatepicker()
