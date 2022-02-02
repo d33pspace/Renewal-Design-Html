@@ -301,67 +301,133 @@ main {
         &.active {
             z-index: 99999;
         }
-        .wrapper {
-            padding: 0 16px;
-        }
         .content {
             margin-top: 115px;
             background: #fff;
-            padding: 16px 0 36px 0;
+            padding: 16px 0;
             box-shadow: 0px -8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
             border-radius: 16px 16px 0px 0px;
             transition: .2s;
             transform: translateY(100%);
-            height: auo;
+            height: auto;
             overflow: auto;
             &.active {
                 transform: translateY(0);
             }
-            h5 {
-                padding: 0 16px;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 28px;
-                letter-spacing: 0.15px;
-                color: #001730;
+            .head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 28px;
+                padding: 0 24px 0 16px;
                 margin-bottom: 8px;
-            }
-            .date {
-                padding: 0 16px;
-                font-size: 14px;
-                line-height: 20px;
-                letter-spacing: 0.005em;
-                color: #2F95EB;
-                padding-bottom: 8px;
-                border-bottom: 1px solid #F1F2F4;
-                box-sizing: border-box;
-            }
-            .cards  {
-                .wrapper {
-                    &.expired {
-                        background: rgba(249, 85, 87, 0.1);
-                        .item {
-                            border-color: #fff;
-                        }
+                .item {
+                    display: flex;
+                    align-items: center;
+                    .item-icon {
+                        height: 28px;
+                        width: 28px;
+                        margin-right: 8px;
+                        filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
                     }
-                    &.okay {
-                        background: #EEFBFA;
-                        .item {
-                            border-color: #fff;
-                        }
-                    }
-                    .item {
-                        display: flex;
-                        justify-content: space-between;
-                        padding: 12px 0;
-                        border-bottom: 1px solid #F1F2F4;
+                    .item-title {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 26px;
+                        letter-spacing: 0.15px;
+                        color: #001730;
+                        text-transform: capitalize;
                     }
                 }
-                p {
+                .items-count {
+                    font-weight: bold;
                     font-size: 12px;
-                    line-height: 20px;
-                    letter-spacing: 0.005em;
-                    color: #3A3C40;
+                    line-height: 100%;
+                    text-align: center;
+                    color: #F95557;
+                }
+            }
+            .cards {
+                padding: 0 0 16px 0;
+                .cards-head {
+                    display: flex;
+                    align-items: center;
+                    height: 56px;
+                    padding: 0 0 0 16px;
+                    p {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 23px;
+                        letter-spacing: 0.15px;
+                        color: #001730;
+                        &.period {
+                            font-weight: 900;
+                        }
+                        &.divider {
+                            margin: 0 8px;
+                        }
+                    }
+                    .edit {
+                        filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
+                        margin-left: 14px;
+                        width: 12px;
+                        height: 12px;
+                        cursor: pointer;
+                    }
+                }
+                .card {
+                    margin: 0;
+                    border: unset;
+                    border-radius: unset;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 26px 0 16px;
+                    height: 39px;
+                    &.blank {
+                        display: none;
+                        &.active {
+                            display: flex;
+                        }
+                    }
+                    &.warning {
+                        background: #FFF5F5;
+                    }
+                    .name {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            margin-right: 9px;
+                            &.alert {
+                                filter: brightness(0) saturate(100%) invert(52%) sepia(98%) saturate(3532%) hue-rotate(326deg) brightness(95%) contrast(105%);
+                            }
+                            &.check {
+                                filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
+                            }
+                            &.blank {
+                                width: 12px;
+                                height: 12px;
+                            }
+                        }
+                        .title {
+                            font-size: 14px;
+                            line-height: 20px;
+                            letter-spacing: 0.005em;
+                            color: #3A3C40;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            min-width: 170px;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .date {
+                        font-size: 12px;
+                        line-height: 160%;
+                        text-transform: uppercase;
+                        color: #848790;
+                        white-space: nowrap;
+                        margin-left: 8px;
+                    }
                 }
             }
         }

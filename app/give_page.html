@@ -388,7 +388,7 @@
                     <div class="common-cards">
                         <div class="card" card-data='t-shirt'>
                             <div class="item">
-                                <img src='./img/svg/category_shirt_nobg.svg'>
+                                <img class='category-icon' src='./img/svg/category_shirt_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>t-shirt</h6>
                                     <p class='name'>Sleeveless t-shirt</p>
@@ -401,7 +401,7 @@
                         </div>
                         <div class="card" card-data='t-shirt'>
                             <div class="item">
-                                <img src='./img/svg/category_shirt_nobg.svg'>
+                                <img class='category-icon' src='./img/svg/category_shirt_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>t-shirt</h6>
                                     <p class='name'>Short-sleeve polo</p>
@@ -414,7 +414,7 @@
                         </div>
                         <div class="card" card-data='pants'>
                             <div class="item">
-                                <img src='./img/svg/category_pants_nobg.svg'>
+                                <img class='category-icon' src='./img/svg/category_pants_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>pants</h6>
                                     <p class='name'>Jeans</p>
@@ -427,7 +427,7 @@
                         </div>
                         <div class="card" card-data='underwear bottom'>
                             <div class="item">
-                                <img src='./img/svg/category_underwear_bottom_nobg.svg'>
+                                <img class='category-icon' src='./img/svg/category_underwear_bottom_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>underwear bottom</h6>
                                 </div>
@@ -439,7 +439,7 @@
                         </div>
                         <div class="card" card-data='thermal bottom'>
                             <div class="item">
-                                <img src='./img/svg/category_thermal_bottom_nobg.svg'>
+                                <img class='category-icon' src='./img/svg/category_thermal_bottom_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>thermal bottom</h6>
                                     <p class='name'>Heavy</p>
@@ -452,7 +452,7 @@
                         </div>
                         <div class="card" card-data='socks'>
                             <div class="item">
-                                <img src='./img/svg/category_socks_nobg.svg'>
+                                <img class='category-icon' src='./img/svg/category_socks_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>socks</h6>
                                 </div>
@@ -464,7 +464,7 @@
                         </div>
                         <div class="card" card-data='scarf'>
                             <div class="item">
-                                <img src='./img/svg/category_scarf_nobg.svg'>
+                                <img class='category-icon' src='./img/svg/category_scarf_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>scarf</h6>
                                 </div>
@@ -476,7 +476,7 @@
                         </div>
                         <div class="card" card-data='razors'>
                             <div class="item">
-                                <img src='./img/svg/category_razors_nobg.svg'>
+                                <img class='category-icon' src='./img/svg/category_razors_nobg.svg'>
                                 <div class="desc">
                                     <h6 class='title'>razors</h6>
                                 </div>
@@ -929,73 +929,86 @@
         </div>
         <div class="overlay distribution">
             <div class="content">
-                <h5>All Distributions</h5>
-                <div class="cards">
-                    <div class="wrapper expired">
-                        <div class="item">
-                            <p class='name'>Short-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
-                        </div>
+                <div class="head">
+                    <div class="item">
+                        <img src='' class='item-icon'>
+                        <h5 class='item-title'></h5>
                     </div>
-                    <div class="wrapper expired">
-                        <div class="item">
-                            <p class='name'>Short-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
-                        </div>
+                    <p class='items-count'><span class='number'>2</span> items</p>
+                </div>
+                <div class="cards recent">
+                    <div class="cards-head">
+                        <p class="title">Recent distributions</p>
+                        <p class="divider">|</p>
+                        <p class="period">14 days</p>
+                        <img src='./img/svg/edit.svg' class='edit'>
                     </div>
-                    <div class="wrapper expired">
-                        <div class="item">
-                            <p class='name'>Short-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
+                    <div class="card blank">
+                        <div class="name">
+                            <img class='blank' src='./img/svg/avatar_blank.svg'>
                         </div>
+                        <p class="date">--</p>
                     </div>
-                    <div class="wrapper expired">
-                        <div class="item">
-                            <p class='name'>Short-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
+                    <div class="card warning">
+                        <div class="name">
+                            <img class='alert' src='./img/svg/alert.svg'>
+                            <p class="title">Short-sleeve button-down shirt</p>
                         </div>
+                        <p class="date">2021-05-07</p>
                     </div>
-                    <div class="wrapper okay">
-                        <div class="item">
-                            <p class='name'>Long-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
+                    <div class="card">
+                        <div class="name">
+                            <img class='check' src='./img/svg/check.svg'>
+                            <p class="title">Short-sleeve button-down shirt</p>
                         </div>
+                        <p class="date">2021-05-07</p>
                     </div>
-                    <div class="wrapper okay">
-                        <div class="item">
-                            <p class='name'>Long-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
-                        </div>
+                </div>
+                <div class="cards previous">
+                    <div class="cards-head">
+                        <p class="title">Previous distributions</p>
                     </div>
-                    <div class="wrapper okay">
-                        <div class="item">
-                            <p class='name'>Long-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
+                    <div class="card warning">
+                        <div class="name">
+                            <img class='alert' src='./img/svg/alert.svg'>
+                            <p class="title">Short-sleeve button-down shirt</p>
                         </div>
+                        <p class="date">2021-05-07</p>
                     </div>
-                    <div class="wrapper okay">
-                        <div class="item">
-                            <p class='name'>Long-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
+                    <div class="card">
+                        <div class="name">
+                            <img class='check' src='./img/svg/check.svg'>
+                            <p class="title">Short-sleeve button-down shirt</p>
                         </div>
+                        <p class="date">2021-05-07</p>
                     </div>
-                    <div class="wrapper">
-                        <div class="item">
-                            <p class='name'>Long-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
+                    <div class="card">
+                        <div class="name">
+                            <img class='check' src='./img/svg/check.svg'>
+                            <p class="title">Short-sleeve button-down shirt</p>
                         </div>
+                        <p class="date">2021-05-07</p>
                     </div>
-                    <div class="wrapper">
-                        <div class="item">
-                            <p class='name'>Long-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
+                    <div class="card">
+                        <div class="name">
+                            <img class='check' src='./img/svg/check.svg'>
+                            <p class="title">Short-sleeve button-down shirt</p>
                         </div>
+                        <p class="date">2021-05-07</p>
                     </div>
-                    <div class="wrapper">
-                        <div class="item">
-                            <p class='name'>Long-sleeve button-down shirt</p>
-                            <p>2021-05-12</p>
+                    <div class="card warning">
+                        <div class="name">
+                            <img class='alert' src='./img/svg/alert.svg'>
+                            <p class="title">Short-sleeve button-down shirt</p>
                         </div>
+                        <p class="date">2021-05-07</p>
+                    </div>
+                    <div class="card warning">
+                        <div class="name">
+                            <img class='alert' src='./img/svg/alert.svg'>
+                            <p class="title">Short-sleeve button-down shirt</p>
+                        </div>
+                        <p class="date">2021-05-07</p>
                     </div>
                 </div>
             </div>

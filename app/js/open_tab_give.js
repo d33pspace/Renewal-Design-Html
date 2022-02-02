@@ -9,6 +9,11 @@ cardHeading.forEach((item) => {
         if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
             disOverlay.classList.add('scroll')
         }
+        // Set popup image and title 
+        let imgSrc = item.querySelector('.category-icon').getAttribute('src')
+        disOverlay.querySelector('.item .item-icon').setAttribute('src', imgSrc)
+        let title = item.querySelector('.category-name').innerHTML
+        disOverlay.querySelector('.item .item-title').innerHTML = title
     }
 })
 
@@ -49,5 +54,10 @@ cardItem.forEach((item) => {
         if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
             disOverlay.classList.add('scroll')
         }
+        // Set popup image and title 
+        let imgSrc = item.querySelector('.category-icon').getAttribute('src')
+        disOverlay.querySelector('.item .item-icon').setAttribute('src', imgSrc)
+        let title = item.querySelector('.title').innerHTML
+        disOverlay.querySelector('.item .item-title').innerHTML = title
     }
 })

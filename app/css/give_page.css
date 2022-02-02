@@ -568,65 +568,135 @@ main .head .col-title p {
 .overlay.distribution.active {
   z-index: 99999;
 }
-.overlay.distribution .wrapper {
-  padding: 0 16px;
-}
 .overlay.distribution .content {
   margin-top: 115px;
   background: #fff;
-  padding: 16px 0 36px 0;
+  padding: 16px 0;
   box-shadow: 0px -8px 8px rgba(45, 43, 70, 0.12), 0px -2px 6px rgba(45, 43, 70, 0.08);
   border-radius: 16px 16px 0px 0px;
   transition: 0.2s;
   transform: translateY(100%);
-  height: auo;
+  height: auto;
   overflow: auto;
 }
 .overlay.distribution .content.active {
   transform: translateY(0);
 }
-.overlay.distribution .content h5 {
-  padding: 0 16px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 0.15px;
-  color: #001730;
+.overlay.distribution .content .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+  padding: 0 24px 0 16px;
   margin-bottom: 8px;
 }
-.overlay.distribution .content .date {
-  padding: 0 16px;
+.overlay.distribution .content .head .item {
+  display: flex;
+  align-items: center;
+}
+.overlay.distribution .content .head .item .item-icon {
+  height: 28px;
+  width: 28px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
+}
+.overlay.distribution .content .head .item .item-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.15px;
+  color: #001730;
+  text-transform: capitalize;
+}
+.overlay.distribution .content .head .items-count {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  color: #F95557;
+}
+.overlay.distribution .content .cards {
+  padding: 0 0 16px 0;
+}
+.overlay.distribution .content .cards .cards-head {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 0 0 16px;
+}
+.overlay.distribution .content .cards .cards-head p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.overlay.distribution .content .cards .cards-head p.period {
+  font-weight: 900;
+}
+.overlay.distribution .content .cards .cards-head p.divider {
+  margin: 0 8px;
+}
+.overlay.distribution .content .cards .cards-head .edit {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
+  margin-left: 14px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+.overlay.distribution .content .cards .card {
+  margin: 0;
+  border: unset;
+  border-radius: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 26px 0 16px;
+  height: 39px;
+}
+.overlay.distribution .content .cards .card.blank {
+  display: none;
+}
+.overlay.distribution .content .cards .card.blank.active {
+  display: flex;
+}
+.overlay.distribution .content .cards .card.warning {
+  background: #FFF5F5;
+}
+.overlay.distribution .content .cards .card .name {
+  display: flex;
+  align-items: center;
+}
+.overlay.distribution .content .cards .card .name img {
+  margin-right: 9px;
+}
+.overlay.distribution .content .cards .card .name img.alert {
+  filter: brightness(0) saturate(100%) invert(52%) sepia(98%) saturate(3532%) hue-rotate(326deg) brightness(95%) contrast(105%);
+}
+.overlay.distribution .content .cards .card .name img.check {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
+}
+.overlay.distribution .content .cards .card .name img.blank {
+  width: 12px;
+  height: 12px;
+}
+.overlay.distribution .content .cards .card .name .title {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.005em;
-  color: #2F95EB;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #F1F2F4;
-  box-sizing: border-box;
-}
-.overlay.distribution .content .cards .wrapper.expired {
-  background: rgba(249, 85, 87, 0.1);
-}
-.overlay.distribution .content .cards .wrapper.expired .item {
-  border-color: #fff;
-}
-.overlay.distribution .content .cards .wrapper.okay {
-  background: #EEFBFA;
-}
-.overlay.distribution .content .cards .wrapper.okay .item {
-  border-color: #fff;
-}
-.overlay.distribution .content .cards .wrapper .item {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid #F1F2F4;
-}
-.overlay.distribution .content .cards p {
-  font-size: 12px;
-  line-height: 20px;
-  letter-spacing: 0.005em;
   color: #3A3C40;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 170px;
+  text-overflow: ellipsis;
+}
+.overlay.distribution .content .cards .card .date {
+  font-size: 12px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: #848790;
+  white-space: nowrap;
+  margin-left: 8px;
 }
 
 .proceed {
