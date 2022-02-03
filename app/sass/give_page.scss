@@ -641,6 +641,7 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
             &.red {
                 color: #F95557;
             }
@@ -659,6 +660,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         &.red {
             color: #F95557;
         }

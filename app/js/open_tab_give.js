@@ -61,3 +61,16 @@ cardItem.forEach((item) => {
         disOverlay.querySelector('.item .item-title').innerHTML = title
     }
 })
+
+let counter = document.querySelectorAll('.card .counter')
+
+counter.forEach((item) => {
+    item.onclick = () => {
+        if (item.closest('.card').querySelector('.card-heading .card-title')) {
+            item.closest('.card').querySelector('.card-heading .card-title').click()
+        } else if (item.closest('.card').querySelector('.item')) {
+            item.closest('.card').querySelector('.item').click()
+        }
+        
+    }
+})

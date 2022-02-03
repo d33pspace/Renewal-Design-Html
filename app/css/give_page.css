@@ -901,6 +901,7 @@ main .head .col-title p {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .common .card .counter.red {
   color: #F95557;
@@ -916,6 +917,7 @@ main .head .col-title p {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .clothing_list .counter.red {
   color: #F95557;
