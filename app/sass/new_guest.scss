@@ -191,57 +191,6 @@ main {
     }
 }
 
-// #datepicker {
-//     .vc-container {
-//         width: 100%;
-//         border: unset;
-//         border-radius: 10px 10px 0px 0px !important;
-//         .vc-arrows-container {
-//             padding: 40px 16px 34px 16px;
-//             .vc-arrow {
-//                 border: unset;
-//             }
-//             svg {
-//                 width: 24px;
-//                 height: 24px;
-//             }
-//             path {
-//                 fill: #13ADAD;
-//             }
-//         }
-//         .vc-header {
-//             padding: 40px 16px 34px 16px;
-//             .vc-title {
-//                 height: 24px;
-//                 font-size: 18px;
-//                 line-height: 21px;
-//                 color: #001730;
-//                 font-weight: bold;
-//                 font-family: 'Noto Sans SC', sans-serif;
-//             }
-//         }
-//         .vc-weeks {
-//             font-family: 'Noto Sans SC', sans-serif;
-//             padding: 0 32px;
-//             .vc-weekday {
-//                 font-weight: 500;
-//                 font-size: 18px;
-//                 line-height: 28px;
-//                 letter-spacing: 0.15px;
-//                 color: #13ADAD;
-//                 padding: 0 0 17px 0;
-//             }
-//             .vc-day {
-//                 font-size: 16px;
-//                 line-height: 160%;
-//             }
-//             .vc-highlight {
-//                 background-color: #13ADAD !important;
-//             }
-//         }
-//     }
-// }
-
 #datepicker {
     background: #fff;
     padding: 16px 24px 0 24px;
@@ -263,9 +212,7 @@ main {
     }
     .select-wrap { 
         position: relative; 
-        // top: 200px; 
         height: 100%; 
-        // perspective: 1200px; 
         text-align: center; 
         overflow: hidden; 
         font-size: 20px; 
@@ -278,14 +225,6 @@ main {
           width: 100%; 
           height: 50%; 
         } 
-        // &:before { 
-        //   top: 0; 
-        //   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); 
-        // } 
-        // &:after { 
-        //   bottom: 0; 
-        //   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); 
-        // } 
         .select-options { 
           position: absolute; 
           top: 50%; 

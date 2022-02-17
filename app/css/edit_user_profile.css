@@ -681,6 +681,7 @@ main .delete_profile a {
   right: 22px;
   top: 22px;
   transition: 0.3s;
+  pointer-events: none;
 }
 .dropdown .title {
   position: absolute;

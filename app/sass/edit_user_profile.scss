@@ -420,6 +420,7 @@ main {
         right: 22px;
         top: 22px;
         transition: .3s;
+        pointer-events: none;
     }
     .title {
         position: absolute;
