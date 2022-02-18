@@ -15,6 +15,7 @@
         <header class='fixed_header'>
             <div class="wrapper">
                 <a class='back' href='#'><img src='./img/svg/arrow_back.svg'>Edit Guest</a>
+                <img class='delete_button' src='./img/svg/delete2.svg'>
             </div>
         </header>
         <main>
@@ -119,12 +120,22 @@
             </div>
         </div>
     </div>
+    <section class="delete_profile overlay">
+        <div class="wrapper">
+            <h4 class="title">Delete?</h4>
+            <p class='text'>Are you sure you want to delete this guest? It will be deleted without the possibility of recovery.</p>
+            <div class="delete_block button_block">
+                <button class='cancel'>Cancel</button>
+                <button class='delete' type='submit'>Delete</button>
+            </div>
+        </div>
+    </section>
     <script defer src="./js/edit_guest.js"></script>
     <script defer src="./js/guest_dropdown.js"></script>
     <script defer src="./js/input.js"></script>
     <script defer src="./js/guest_fileupload.js"></script>
     <script defer src="./js/fixed_header.js"></script>
-    <script defer src="./js/goback.js"></script>
+    <script defer src="./js/goback_delete.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" defer src="./js/datepicker.js"></script>
 </body>
