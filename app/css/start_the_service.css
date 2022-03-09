@@ -324,9 +324,7 @@ main .guest_block .card.disabled {
   opacity: 0.5;
 }
 main .guest_block .card a:first-child {
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 100%;
 }
 main .guest_block .card .user_info {
   display: flex;

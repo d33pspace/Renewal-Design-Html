@@ -693,31 +693,3 @@ main .delete_profile a {
   font-weight: 400;
   padding: 0;
 }
-
-.button_block {
-  display: flex;
-  justify-content: space-between;
-}
-.button_block button {
-  width: calc(50% - 5px);
-  padding: 8px 0;
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 20px;
-  outline: unset;
-  cursor: pointer;
-}
-.button_block button.cancel {
-  border: 1px solid #F1F2F4;
-  border-radius: 4px;
-  font-weight: bold;
-  color: #848790;
-  background: transparent;
-}
-.button_block button.proceed {
-  background: #D11241;
-  box-shadow: 2px 2px 2px rgba(14, 65, 103, 0.1);
-  border-radius: 8px;
-  color: #fff;
-  border: unset;
-}

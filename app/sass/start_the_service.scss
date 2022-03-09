@@ -53,9 +53,7 @@ main {
                 opacity: .5;
             }
             a:first-child {
-                width: -webkit-fill-available;
-                width: -moz-available;
-                width: fill-available;
+                width: 100%;
             }
             .user_info {
                 display: flex;
