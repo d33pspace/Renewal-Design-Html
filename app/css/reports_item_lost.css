@@ -390,7 +390,7 @@ main .body .card .rs .avatar {
 .datepicker-wrapper {
   padding: 16px;
   position: relative;
-  z-index: 9999;
+  z-index: 99;
 }
 .datepicker-wrapper .title {
   margin-bottom: 8px;
