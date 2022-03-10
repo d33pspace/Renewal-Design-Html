@@ -128,8 +128,10 @@ main {
             img {
                 filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(549%) hue-rotate(187deg) brightness(88%) contrast(93%);
             }
-            &:hover {
-                background: #DDF0EE;
+            @media(min-width: 769px) {
+                &:hover {
+                    background: #DDF0EE;
+                }
             }
             &.active img {
                 filter: brightness(0) saturate(100%) invert(68%) sepia(6%) saturate(3063%) hue-rotate(131deg) brightness(94%) contrast(91%);
@@ -164,8 +166,10 @@ main {
                 padding: 0 16px;
                 cursor: pointer;
                 transition: .2s;
-                &:hover {
-                    background: #DDF0EE;
+                @media(min-width: 769px) {
+                    &:hover {
+                        background: #DDF0EE;
+                    }
                 }
                 .name {
                     font-size: 16px;

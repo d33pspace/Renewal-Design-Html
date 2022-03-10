@@ -49,8 +49,10 @@ header {
             position: relative;
             letter-spacing: 0.005em;
             transition: .3s;
-            &:hover {
-                background: #DE576D;
+            @media(min-width: 769px) {
+                &:hover {
+                    background: #DE576D;
+                }
             }
             &.disabled {
                 color: #C0C3CC !important;

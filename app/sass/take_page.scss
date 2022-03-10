@@ -116,8 +116,10 @@ header {
         box-sizing: border-box;
         background: #fff;
         transition: .2s;
-        &:hover {
-            background: #DDF0EE;
+        @media(min-width: 769px) {
+            &:hover {
+                background: #DDF0EE;
+            }
         }
         &.active {
             border-radius: 8px 8px 0 0;
@@ -204,8 +206,10 @@ header {
             height: 44px;
             background: #fff;
             transition: .2s;
-            &:hover {
-                background: #DDF0EE;
+            @media(min-width: 769px) {
+                &:hover {
+                    background: #DDF0EE;
+                }
             }
             &.flash {
                 animation: flash .5s ;
@@ -347,8 +351,10 @@ main {
             img {
                 filter: brightness(0) saturate(100%) invert(59%) sepia(10%) saturate(260%) hue-rotate(187deg) brightness(88%) contrast(87%);
             }
-            &:hover {
-                background: #DDF0EE;
+            @media(min-width: 769px) {
+                &:hover {
+                    background: #DDF0EE;
+                }
             }
         }
     }
@@ -443,8 +449,10 @@ main {
     opacity: 0;
     visibility: hidden;
     transition: .1s;
-    &:hover {
-        background: #123257;
+    @media(min-width: 769px) {
+        &:hover {
+            background: #123257;
+        }
     }
     .close {
         display: none;
@@ -574,8 +582,10 @@ main {
         height: 48px;
         background: #fff;
         transition: .2s;
-        &:hover {
-            background: #DDF0EE;
+        @media(min-width: 769px) {
+            &:hover {
+                background: #DDF0EE;
+            }
         }
         &.flash {
             animation: flash .5s ;

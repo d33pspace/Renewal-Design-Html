@@ -403,8 +403,10 @@ main .cards .data p.red {
 .datepicker-wrapper .dates .toggleButton img {
   filter: brightness(0) saturate(100%) invert(60%) sepia(4%) saturate(549%) hue-rotate(187deg) brightness(88%) contrast(93%);
 }
-.datepicker-wrapper .dates .toggleButton:hover {
-  background: #DDF0EE;
+@media (min-width: 769px) {
+  .datepicker-wrapper .dates .toggleButton:hover {
+    background: #DDF0EE;
+  }
 }
 .datepicker-wrapper .dates .toggleButton.active img {
   filter: brightness(0) saturate(100%) invert(68%) sepia(6%) saturate(3063%) hue-rotate(131deg) brightness(94%) contrast(91%);
@@ -440,8 +442,10 @@ main .cards .data p.red {
   cursor: pointer;
   transition: 0.2s;
 }
-.datepicker-wrapper .dates-popup .range .datepicker-button:hover {
-  background: #DDF0EE;
+@media (min-width: 769px) {
+  .datepicker-wrapper .dates-popup .range .datepicker-button:hover {
+    background: #DDF0EE;
+  }
 }
 .datepicker-wrapper .dates-popup .range .datepicker-button .name {
   font-size: 16px;

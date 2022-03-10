@@ -337,8 +337,10 @@ header .wrapper .sort.active {
   width: fit-content;
   transition: 0.3s;
 }
-.content .wrapper form .forgot_password:hover {
-  color: #ED2C5B;
+@media (min-width: 769px) {
+  .content .wrapper form .forgot_password:hover {
+    color: #ED2C5B;
+  }
 }
 .content .wrapper form button {
   background: #CD455C;
@@ -358,8 +360,10 @@ header .wrapper .sort.active {
   width: calc(100% - 64px);
   transition: 0.3s;
 }
-.content .wrapper form button:hover {
-  background: #DE576D;
+@media (min-width: 769px) {
+  .content .wrapper form button:hover {
+    background: #DE576D;
+  }
 }
 .content .wrapper form button.disabled {
   color: #C0C3CC !important;

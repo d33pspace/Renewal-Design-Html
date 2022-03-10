@@ -30,9 +30,12 @@
             img {
                 margin-right: 12px;
                 cursor: pointer;
-                &:hover {
-                    filter: brightness(0) saturate(100%) invert(16%) sepia(98%) saturate(4187%) hue-rotate(337deg) brightness(83%) contrast(96%);
+                @media(min-width: 769px) {
+                    &:hover {
+                        filter: brightness(0) saturate(100%) invert(16%) sepia(98%) saturate(4187%) hue-rotate(337deg) brightness(83%) contrast(96%);
+                    }
                 }
+                
             }
             h1 {
                 font-family: 'Noto Sans SC', sans-serif;
@@ -67,8 +70,10 @@
             width: calc(100% - 64px);
             transition: .3s;
             text-align: center;
-            &:hover {
-                background: #DE576D;
+            @media(min-width: 769px) {
+                &:hover {
+                    background: #DE576D;
+                }
             }
             &.disabled {
                 color: #C0C3CC !important;

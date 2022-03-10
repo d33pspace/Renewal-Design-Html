@@ -61,8 +61,10 @@
                 text-decoration: underline;
                 width: fit-content;
                 transition: .3s;
-                &:hover {
-                    color: #ED2C5B;
+                @media(min-width: 769px) {
+                    &:hover {
+                        color: #ED2C5B;
+                    }
                 }
             }
             button {
@@ -82,8 +84,10 @@
                 bottom: 16px;
                 width: calc(100% - 64px);
                 transition: .3s;
-                &:hover {
-                    background: #DE576D;
+                @media(min-width: 769px) {
+                    &:hover {
+                        background: #DE576D;
+                    }
                 }
                 &.disabled {
                     color: #C0C3CC !important;

@@ -306,8 +306,10 @@ header .wrapper .sort.active {
   margin-right: 12px;
   cursor: pointer;
 }
-.content .wrapper .title-block img:hover {
-  filter: brightness(0) saturate(100%) invert(16%) sepia(98%) saturate(4187%) hue-rotate(337deg) brightness(83%) contrast(96%);
+@media (min-width: 769px) {
+  .content .wrapper .title-block img:hover {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(98%) saturate(4187%) hue-rotate(337deg) brightness(83%) contrast(96%);
+  }
 }
 .content .wrapper .title-block h1 {
   font-family: "Noto Sans SC", sans-serif;
@@ -341,8 +343,10 @@ header .wrapper .sort.active {
   transition: 0.3s;
   text-align: center;
 }
-.content .wrapper .back:hover {
-  background: #DE576D;
+@media (min-width: 769px) {
+  .content .wrapper .back:hover {
+    background: #DE576D;
+  }
 }
 .content .wrapper .back.disabled {
   color: #C0C3CC !important;

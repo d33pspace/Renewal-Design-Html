@@ -323,8 +323,10 @@ header .profile_section .serve_button {
   letter-spacing: 0.005em;
   transition: 0.3s;
 }
-header .profile_section .serve_button:hover {
-  background: #DE576D;
+@media (min-width: 769px) {
+  header .profile_section .serve_button:hover {
+    background: #DE576D;
+  }
 }
 header .profile_section .serve_button.disabled {
   color: #C0C3CC !important;
