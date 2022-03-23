@@ -661,7 +661,6 @@ main .cards .card .dropdown .review .review-body p .extend_text.active {
   font-size: 18px;
   line-height: 21px;
   color: #001730;
-  text-transform: capitalize;
   font-family: "Noto Sans SC", sans-serif;
 }
 #datepicker .vc-container .vc-weeks {

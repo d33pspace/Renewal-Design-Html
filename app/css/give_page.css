@@ -344,11 +344,17 @@ header .wrapper p {
   transition: 0.2s;
 }
 @media (min-width: 769px) {
-  .subheader .wrapper .actions .action:hover {
+  .subheader .wrapper .actions .action:hover.faces {
     background: #DE576D;
   }
-  .subheader .wrapper .actions .action:hover img {
+  .subheader .wrapper .actions .action:hover.faces img {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
+  }
+  .subheader .wrapper .actions .action:hover.food {
+    background: #FFEBEE;
+  }
+  .subheader .wrapper .actions .action:hover.food img {
+    filter: brightness(0) saturate(100%) invert(57%) sepia(92%) saturate(5578%) hue-rotate(328deg) brightness(88%) contrast(79%);
   }
 }
 .subheader .wrapper .actions .action.active {
@@ -614,7 +620,6 @@ main .head .col-title p {
   line-height: 26px;
   letter-spacing: 0.15px;
   color: #001730;
-  text-transform: capitalize;
 }
 .overlay.distribution .content .head .items-count {
   font-weight: bold;
@@ -681,8 +686,11 @@ main .head .col-title p {
 .overlay.distribution .content .cards .card .name img.alert {
   filter: brightness(0) saturate(100%) invert(52%) sepia(98%) saturate(3532%) hue-rotate(326deg) brightness(95%) contrast(105%);
 }
-.overlay.distribution .content .cards .card .name img.check {
+.overlay.distribution .content .cards .card .name img.clothes {
   filter: brightness(0) saturate(100%) invert(76%) sepia(44%) saturate(528%) hue-rotate(127deg) brightness(82%) contrast(79%);
+}
+.overlay.distribution .content .cards .card .name img.lost {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(86%) saturate(1692%) hue-rotate(319deg) brightness(94%) contrast(96%);
 }
 .overlay.distribution .content .cards .card .name img.blank {
   width: 12px;
@@ -887,7 +895,6 @@ main .head .col-title p {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  text-transform: capitalize;
   color: #001730;
 }
 .common .card .item .name {

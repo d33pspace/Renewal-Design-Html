@@ -49,7 +49,6 @@ main {
             display: flex;
             p {
                 text-align: end;
-                text-transform: capitalize;
                 width: 40px;
                 margin-left: 8px;
                 font-size: 10px;
@@ -87,7 +86,6 @@ main {
                     font-weight: 500;
                     font-size: 14px;
                     line-height: 20px;
-                    text-transform: capitalize;
                     color: #001730;
                     margin-bottom: 4px;
                 }
@@ -271,7 +269,6 @@ main {
                 font-size: 18px;
                 line-height: 21px;
                 color: #001730;
-                text-transform: capitalize;
                 font-family: 'Noto Sans SC', sans-serif;
             }
         }

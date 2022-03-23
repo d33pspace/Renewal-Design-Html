@@ -344,11 +344,17 @@ header .wrapper p {
   transition: 0.2s;
 }
 @media (min-width: 769px) {
-  .subheader .wrapper .actions .action:hover {
+  .subheader .wrapper .actions .action:hover.faces {
     background: #DE576D;
   }
-  .subheader .wrapper .actions .action:hover img {
+  .subheader .wrapper .actions .action:hover.faces img {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
+  }
+  .subheader .wrapper .actions .action:hover.food {
+    background: #FFEBEE;
+  }
+  .subheader .wrapper .actions .action:hover.food img {
+    filter: brightness(0) saturate(100%) invert(57%) sepia(92%) saturate(5578%) hue-rotate(328deg) brightness(88%) contrast(79%);
   }
 }
 .subheader .wrapper .actions .action.active {
@@ -864,7 +870,6 @@ main .head .tag-wrapper input::placeholder {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  text-transform: capitalize;
   color: #001730;
 }
 .common .card .item .name {

@@ -2,7 +2,7 @@ let serve_icon = document.querySelectorAll('.time')
 
 serve_icon.forEach((item => {
     item.onclick = () => {
-        item.querySelector('.serve_icon').classList.toggle('active')
+        item.querySelector('.img_wrapper_serve').classList.toggle('active')
     }
 }))
 

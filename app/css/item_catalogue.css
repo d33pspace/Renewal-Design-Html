@@ -331,7 +331,6 @@ main .title-block p.title {
   font-size: 16px;
   line-height: 23px;
   letter-spacing: 0.15px;
-  text-transform: capitalize;
 }
 main .body .card.active .arrow {
   filter: unset;
@@ -378,7 +377,6 @@ main .body .card-title .item p {
   line-height: 20px;
   color: #001730;
   margin-left: 8px;
-  text-transform: capitalize;
 }
 main .body .card-title .item .count {
   font-weight: bold;

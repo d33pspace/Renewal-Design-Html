@@ -71,9 +71,17 @@ header {
                 transition: .2s;
                 @media(min-width: 769px) {
                     &:hover {
-                        background: #DE576D;
-                        img {
-                            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
+                        &.faces {
+                            background: #DE576D;
+                            img {
+                                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
+                            }
+                        }
+                        &.food {
+                            background: #FFEBEE;
+                            img {
+                                filter: brightness(0) saturate(100%) invert(57%) sepia(92%) saturate(5578%) hue-rotate(328deg) brightness(88%) contrast(79%);
+                            }
                         }
                     }
                 }
@@ -606,7 +614,6 @@ main {
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 20px;
-                text-transform: capitalize;
                 color: #001730;
             }
             .name {
