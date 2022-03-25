@@ -83,6 +83,17 @@ main {
             box-sizing: border-box;
             border-radius: 8px;
             background: #fff;
+            &.inactive {
+                .card-title .item img {
+                    filter: brightness(0) saturate(100%) invert(92%) sepia(10%) saturate(183%) hue-rotate(187deg) brightness(88%) contrast(83%);
+                }
+                .card-title .item p {
+                    color: #848790;
+                }
+                .card-title .wash p {
+                    color: #848790;
+                }
+            }
         }
         .card-title {
             display: flex;
@@ -123,6 +134,19 @@ main {
                     border-radius: 4px;
                 }
             }
+            .wash {
+                display: flex;
+                align-items: center;
+                margin-right: 36px;
+                img {
+                    margin-right: 8px;
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 160%;
+                    color: #001730;
+                }
+            }
             .date {
                 font-size: 12px;
                 line-height: 160%;
@@ -131,7 +155,7 @@ main {
             }
             .arrow {
                 position: absolute;
-                right: 24px;
+                right: 16px;
                 width: 8px;
                 height: 5px;
                 top: calc(50% - 2.5px);
@@ -143,7 +167,7 @@ main {
             flex-direction: column;
             display: none;
             .item {
-                padding: 12px 48px 12px 16px;
+                padding: 12px 12px 12px 16px;
                 display: flex;
                 justify-content: space-between;
                 p {

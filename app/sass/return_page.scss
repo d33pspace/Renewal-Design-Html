@@ -299,12 +299,6 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .trash.active {
-                    filter: brightness(0) saturate(100%) invert(45%) sepia(73%) saturate(4042%) hue-rotate(330deg) brightness(101%) contrast(95%);
-                }
-                .lost.active {
-                    filter: brightness(0) saturate(100%) invert(77%) sepia(23%) saturate(1152%) hue-rotate(353deg) brightness(95%) contrast(93%);
-                }
                 .checkbox {
                     box-sizing: border-box;
                     height: 15px;

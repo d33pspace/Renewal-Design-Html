@@ -3,6 +3,7 @@ let card = document.querySelectorAll('.card')
 card.forEach((item => {
     if (!item.querySelector('.card-extend').hasChildNodes()) {
         item.classList.add('no-extend')
+        item.closest('.card').classList.add('inactive')
         item.onclick = () => {
             location.href='./edit_item.html'
         }
