@@ -437,12 +437,6 @@ main .list .card .time .img_wrapper_serve {
 main .list .card .time .img_wrapper_serve.active {
   background: #FFC2CB;
 }
-main .list .card .time .img_wrapper_serve.active:hover {
-  background: #F0F2F5;
-}
-main .list .card .time .img_wrapper_serve.active:hover .serve_icon {
-  filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
-}
 main .list .card .time .img_wrapper_serve.active .serve_icon {
   filter: brightness(0) saturate(100%) invert(42%) sepia(25%) saturate(2273%) hue-rotate(308deg) brightness(83%) contrast(92%);
 }

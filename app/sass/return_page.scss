@@ -71,17 +71,9 @@ header {
                 transition: .2s;
                 @media(min-width: 769px) {
                     &:hover {
-                        &.faces {
-                            background: #F0F2F5;
-                            img {
-                                filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
-                            }
-                        }
-                        &.food {
-                            background: #F0F2F5;
-                            img {
-                                filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
-                            }
+                        background: #F0F2F5;
+                        img {
+                            filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
                         }
                     }
                 }

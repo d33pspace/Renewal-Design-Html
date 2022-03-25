@@ -344,16 +344,10 @@ header .wrapper p {
   transition: 0.2s;
 }
 @media (min-width: 769px) {
-  .subheader .wrapper .actions .action:hover.faces {
+  .subheader .wrapper .actions .action:hover {
     background: #F0F2F5;
   }
-  .subheader .wrapper .actions .action:hover.faces img {
-    filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
-  }
-  .subheader .wrapper .actions .action:hover.food {
-    background: #F0F2F5;
-  }
-  .subheader .wrapper .actions .action:hover.food img {
+  .subheader .wrapper .actions .action:hover img {
     filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
   }
 }
