@@ -415,8 +415,8 @@ main .list .card .time .remain_time {
   width: 39px;
 }
 main .list .card .time .img_wrapper_serve {
-  background: #FAFBFC;
-  border: 1px solid #F1F2F4;
+  background: #FFFFFF;
+  border: 1px solid #DDDFE4;
   box-sizing: border-box;
   border-radius: 8px;
   width: 40px;
@@ -428,23 +428,23 @@ main .list .card .time .img_wrapper_serve {
 }
 @media (min-width: 769px) {
   main .list .card .time .img_wrapper_serve:hover {
-    background: #FFEBEE;
+    background: #F0F2F5;
   }
   main .list .card .time .img_wrapper_serve:hover .serve_icon {
-    filter: brightness(0) saturate(100%) invert(57%) sepia(92%) saturate(5578%) hue-rotate(328deg) brightness(88%) contrast(79%);
+    filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
   }
 }
 main .list .card .time .img_wrapper_serve.active {
-  background: #CD455C;
+  background: #FFC2CB;
 }
 main .list .card .time .img_wrapper_serve.active:hover {
-  background: #FFEBEE;
+  background: #F0F2F5;
 }
 main .list .card .time .img_wrapper_serve.active:hover .serve_icon {
-  filter: brightness(0) saturate(100%) invert(57%) sepia(92%) saturate(5578%) hue-rotate(328deg) brightness(88%) contrast(79%);
+  filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
 }
 main .list .card .time .img_wrapper_serve.active .serve_icon {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(319deg) brightness(106%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(42%) sepia(25%) saturate(2273%) hue-rotate(308deg) brightness(83%) contrast(92%);
 }
 main .list .card .time .shower_icon {
   width: 14px;
