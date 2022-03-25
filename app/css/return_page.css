@@ -560,6 +560,33 @@ main .head .col-title .edit {
   cursor: pointer;
   filter: brightness(0) saturate(100%) invert(70%) sepia(8%) saturate(2529%) hue-rotate(131deg) brightness(93%) contrast(82%);
 }
+main .head .col-title .button-wrapper {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .head .col-title .button-wrapper .trash.active {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(73%) saturate(4042%) hue-rotate(330deg) brightness(101%) contrast(95%);
+}
+main .head .col-title .button-wrapper .lost.active {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(23%) saturate(1152%) hue-rotate(353deg) brightness(95%) contrast(93%);
+}
+main .head .col-title .button-wrapper .checkbox {
+  box-sizing: border-box;
+  height: 15px;
+  width: 15px;
+  border: 2px solid #DADADA;
+  border-radius: 2px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+main .head .col-title .button-wrapper .checkbox.active {
+  border: unset;
+  background-image: url(../img/svg/yes.svg);
+}
 
 .overlay.active .icons .menu-icon {
   opacity: 1;

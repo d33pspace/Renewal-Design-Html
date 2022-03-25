@@ -2,6 +2,7 @@ let toggle = document.querySelectorAll('.toggle')
 let fab = document.querySelector('.proceed')
 let buttons = document.querySelectorAll('.buttons')
 let fabCheck
+let checkAll = document.querySelector('.check_all')
 
 toggle.forEach(i => {
     i.closest('.button-wrapper').onclick = () => {
@@ -16,8 +17,23 @@ toggle.forEach(i => {
                 fabCheck++
             }
         })
-        if (fabCheck == buttons.length) {
-            fab.classList.add('active')
+        console.log(fabCheck)
+        if (i == checkAll) {
+            toggle.forEach(e => { 
+                e.classList.remove('active')
+                if (e.classList.contains('check')) {
+                    e.classList.add('active')
+                    e.closest('.buttons').classList.add('active')
+                }
+            })
+            fabCheck = buttons.length
         }
+
+        if (fabCheck == buttons.length || fabCheck == buttons.length - 1) {
+            fab.classList.add('active')
+        } else {
+            fab.classList.remove('active')
+        }
+
     }
 })
