@@ -4,6 +4,10 @@ card.forEach((item => {
     if (!item.querySelector('.card-extend').hasChildNodes()) {
         item.classList.add('no-extend')
         item.closest('.card').classList.add('inactive')
+        let div = document.createElement('div')
+        div.className = 'favorite'
+        div.innerHTML = '<img src="./img/svg/favorite.svg">'
+        item.querySelector('.card-title').append(div)
         item.onclick = () => {
             location.href='./edit_item.html'
         }

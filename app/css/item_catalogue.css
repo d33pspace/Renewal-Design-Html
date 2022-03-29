@@ -411,6 +411,7 @@ main .body .card-title .wash p {
   font-size: 12px;
   line-height: 160%;
   color: #001730;
+  width: 45px;
 }
 main .body .card-title .date {
   font-size: 12px;
@@ -427,6 +428,11 @@ main .body .card-title .arrow {
   transition: 0.3s;
   filter: brightness(0) saturate(100%) invert(84%) sepia(12%) saturate(193%) hue-rotate(186deg) brightness(89%) contrast(84%);
 }
+main .body .card-title .favorite {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 12px;
+}
 main .body .card-extend {
   flex-direction: column;
   display: none;
@@ -435,6 +441,26 @@ main .body .card-extend .item {
   padding: 12px 12px 12px 16px;
   display: flex;
   justify-content: space-between;
+}
+main .body .card-extend .item.inactive p, main .body .card-extend .item.inactive .favorite .wash p {
+  color: #848790;
+}
+main .body .card-extend .item .favorite {
+  display: flex;
+}
+main .body .card-extend .item .favorite .wash {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+main .body .card-extend .item .favorite .wash img {
+  margin-right: 8px;
+}
+main .body .card-extend .item .favorite .wash p {
+  font-size: 12px;
+  line-height: 160%;
+  color: #001730;
+  width: 45px;
 }
 main .body .card-extend .item p {
   font-size: 14px;
