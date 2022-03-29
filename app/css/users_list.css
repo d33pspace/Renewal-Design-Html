@@ -313,6 +313,32 @@ main {
 main .wrapper {
   padding: 0 16px;
 }
+main .search-block {
+  background: #f0f2f5;
+  padding: 12px 16px;
+  display: flex;
+}
+main .search-block input {
+  width: 100%;
+  padding: 12.5px 52px;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDFE4;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #848790;
+  background-image: url("../img/svg/search.svg");
+  background-repeat: no-repeat;
+  background-position: 19px 50%;
+}
+main .search-block input::placeholder {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #848790;
+}
 main .users_block .title-block {
   display: flex;
   align-items: center;
