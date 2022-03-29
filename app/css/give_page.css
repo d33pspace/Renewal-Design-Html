@@ -661,9 +661,6 @@ main .head .col-title p {
   padding: 0 26px 0 16px;
   height: 39px;
 }
-.overlay.distribution .content .cards .card.blank {
-  display: none;
-}
 .overlay.distribution .content .cards .card.blank.active {
   display: flex;
 }
@@ -675,7 +672,9 @@ main .head .col-title p {
   align-items: center;
 }
 .overlay.distribution .content .cards .card .name img {
-  margin-right: 9px;
+  margin-right: 8px;
+  width: 14px;
+  height: 14px;
 }
 .overlay.distribution .content .cards .card .name img.alert {
   filter: brightness(0) saturate(100%) invert(52%) sepia(98%) saturate(3532%) hue-rotate(326deg) brightness(95%) contrast(105%);
