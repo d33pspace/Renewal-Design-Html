@@ -316,6 +316,7 @@ main .search-block {
   background: #f0f2f5;
   padding: 12px 16px;
   display: flex;
+  position: relative;
 }
 main .search-block input {
   width: 100%;
@@ -327,16 +328,27 @@ main .search-block input {
   font-size: 16px;
   line-height: 23px;
   letter-spacing: 0.15px;
-  color: #848790;
+  color: #001730;
   background-image: url("../img/svg/search.svg");
   background-repeat: no-repeat;
   background-position: 19px 50%;
+  box-shadow: 0px 2px 2px rgba(58, 60, 64, 0.08);
 }
 main .search-block input::placeholder {
   font-size: 16px;
   line-height: 23px;
   letter-spacing: 0.15px;
   color: #848790;
+}
+main .search-block .close_search {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 34px;
+  cursor: pointer;
+  display: none;
+}
+main .search-block .close_search.active {
+  display: block;
 }
 main .guest_block .title-block {
   padding: 16px;
