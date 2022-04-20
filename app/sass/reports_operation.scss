@@ -70,17 +70,40 @@ main {
         }
         .data {
             display: flex;
+            align-items: center;
             p {
                 margin-left: 5px;
                 font-weight: 500;
                 font-size: 12px;
                 line-height: 20px;
                 letter-spacing: 0.005em;
-                &.green {
-                    color: #13ADAD;
+            }
+            img {
+                width: 16px;
+                height: 16px;
+            }
+            &.green {
+                p {
+                    color: #46C05A
                 }
-                &.red {
-                    color: #D11241;
+                img {
+                    filter: brightness(0) saturate(100%) invert(60%) sepia(81%) saturate(339%) hue-rotate(78deg) brightness(89%) contrast(95%);
+                }
+            }
+            &.red {
+                p {
+                    color: #D11241; 
+                }
+                img {
+                    filter: brightness(0) saturate(100%) invert(38%) sepia(50%) saturate(2148%) hue-rotate(329deg) brightness(109%) contrast(106%);
+                }
+            }
+            &.yellow {
+                p {
+                    color: #EBA41C; 
+                }
+                img {
+                    filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(3271%) hue-rotate(355deg) brightness(107%) contrast(84%);
                 }
             }
         }

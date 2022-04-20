@@ -344,6 +344,7 @@ main .cards .count {
 }
 main .cards .data {
   display: flex;
+  align-items: center;
 }
 main .cards .data p {
   margin-left: 5px;
@@ -352,11 +353,27 @@ main .cards .data p {
   line-height: 20px;
   letter-spacing: 0.005em;
 }
-main .cards .data p.green {
-  color: #13ADAD;
+main .cards .data img {
+  width: 16px;
+  height: 16px;
 }
-main .cards .data p.red {
+main .cards .data.green p {
+  color: #46C05A;
+}
+main .cards .data.green img {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(81%) saturate(339%) hue-rotate(78deg) brightness(89%) contrast(95%);
+}
+main .cards .data.red p {
   color: #D11241;
+}
+main .cards .data.red img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(50%) saturate(2148%) hue-rotate(329deg) brightness(109%) contrast(106%);
+}
+main .cards .data.yellow p {
+  color: #EBA41C;
+}
+main .cards .data.yellow img {
+  filter: brightness(0) saturate(100%) invert(74%) sepia(66%) saturate(3271%) hue-rotate(355deg) brightness(107%) contrast(84%);
 }
 
 .datepicker-wrapper {

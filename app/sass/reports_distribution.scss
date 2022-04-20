@@ -62,7 +62,9 @@ main {
                 align-items: center;
                 justify-content: center;
                 img {
-                    filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(0%) hue-rotate(189deg) brightness(91%) contrast(92%);
+                    width: 16px;
+                    height: 16px;
+                    filter: brightness(0) saturate(100%) invert(72%) sepia(9%) saturate(193%) hue-rotate(186deg) brightness(95%) contrast(88%);
                 }
             }
         }
