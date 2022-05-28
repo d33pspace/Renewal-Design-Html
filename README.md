@@ -1,1 +1,2 @@
-https://d33pspace.github.io/RenewalMgtApp-Html/app/index.html
+Operation APP github-pages:
+https://d33pspace.github.io/Renewal-Design-Html/app/index.html
