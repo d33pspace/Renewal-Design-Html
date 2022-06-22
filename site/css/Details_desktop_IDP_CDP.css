@@ -368,12 +368,172 @@ footer .wrapper .credits {
   }
 }
 
-.links {
-  padding: 16px;
+main .wrapper {
+  padding: 50px 0 70px;
+}
+@media (max-width: 769px) {
+  main .wrapper {
+    padding: 20px 15px 60px 15px;
+  }
+}
+main .wrapper .col {
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  main .wrapper .col {
+    width: 100%;
+  }
+}
+main .wrapper .col .title {
+  padding: 13px 78px 13px 28px;
+  border: 2px solid var(--red);
+  border-radius: 5px;
+}
+@media (max-width: 769px) {
+  main .wrapper .col .title {
+    padding: 15px 20px;
+  }
+}
+main .wrapper .col .donate-form {
   display: flex;
   flex-direction: column;
 }
-.links a {
-  margin-bottom: 22px;
-  font-size: 18px;
+main .wrapper .col .donate-form .form-title {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+}
+@media (max-width: 769px) {
+  main .wrapper .col .donate-form .form-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+main .wrapper .col .donate-form .form-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+@media (max-width: 769px) {
+  main .wrapper .col .donate-form .form-subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+main .wrapper .col .donate-form .input-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+@media (max-width: 769px) {
+  main .wrapper .col .donate-form .input-wrap {
+    margin-bottom: 15px;
+  }
+}
+main .wrapper .col .donate-form .input-wrap.before-checkbox {
+  margin-bottom: 10px;
+}
+main .wrapper .col .donate-form .input-wrap label {
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: var(--dark-grey);
+  left: 20px;
+  top: calc(50% - 10px);
+  padding: 0 10px;
+  background: #fff;
+  transition: 0.2s;
+  cursor: text;
+}
+@media (max-width: 769px) {
+  main .wrapper .col .donate-form .input-wrap label {
+    font-size: 14px;
+    line-height: 17px;
+    top: calc(50% - 8.5px);
+    left: 10px;
+  }
+}
+main .wrapper .col .donate-form .input-wrap input {
+  position: relative;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  height: 50px;
+  padding-left: 30px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+}
+@media (max-width: 769px) {
+  main .wrapper .col .donate-form .input-wrap input {
+    padding-left: 20px;
+  }
+}
+main .wrapper .col .donate-form .input-wrap input.active + label {
+  font-size: 14px;
+  left: 30px;
+  top: -10px;
+  cursor: default;
+}
+@media (max-width: 769px) {
+  main .wrapper .col .donate-form .input-wrap input.active + label {
+    top: -8.5px;
+    left: 20px;
+  }
+}
+main .wrapper .col .donate-form .checkbox-wrap.horizontal {
+  display: flex;
+}
+main .wrapper .col .donate-form .checkbox-wrap.horizontal .checkbox {
+  margin-right: 20px;
+}
+main .wrapper .col .donate-form .checkbox.with-options {
+  display: flex;
+  flex-direction: column;
+}
+main .wrapper .col .donate-form .checkbox.with-options.active .options {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .wrapper .col .donate-form .checkbox.with-options .options {
+  display: none;
+  padding: 10px 0 5px;
+}
+main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox {
+  margin-bottom: unset;
+  margin-right: 20px;
+}
+@media (max-width: 769px) {
+  main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox {
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+}
+main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox p {
+  font-size: 14px;
+  line-height: 20px;
+}
+main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox p::after {
+  width: 20px;
+  height: 20px;
+  border: unset;
+  background: #DEDEDE;
+}
+main .wrapper .col .donate-form .checkbox.with-options::after {
+  top: 0;
+}
+main .wrapper .col .donate-form .submit {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
 }

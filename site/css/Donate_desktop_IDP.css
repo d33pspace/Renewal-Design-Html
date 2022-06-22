@@ -368,12 +368,114 @@ footer .wrapper .credits {
   }
 }
 
-.links {
-  padding: 16px;
+main .wrapper {
+  display: flex;
+  column-gap: 30px;
+  padding: 50px 0 70px;
+}
+@media (max-width: 1024px) {
+  main .wrapper {
+    flex-direction: column;
+  }
+}
+@media (max-width: 769px) {
+  main .wrapper {
+    padding: 20px 0 40px;
+  }
+}
+main .wrapper .col {
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  main .wrapper .col {
+    width: 100%;
+  }
+}
+@media (max-width: 769px) {
+  main .wrapper .col:last-child {
+    padding: 0 15px;
+  }
+}
+main .wrapper .col .image {
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  main .wrapper .col .image {
+    height: 400px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 769px) {
+  main .wrapper .col .image {
+    height: 278px;
+  }
+}
+main .wrapper .col .subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #737373;
+  margin-top: 15px;
+}
+@media (max-width: 1024px) {
+  main .wrapper .col .subtitle {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 769px) {
+  main .wrapper .col .subtitle {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}
+main .wrapper .col .text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 30px;
+}
+@media (max-width: 769px) {
+  main .wrapper .col .text {
+    font-size: 14px;
+  }
+}
+main .wrapper .col .donate-form {
   display: flex;
   flex-direction: column;
 }
-.links a {
-  margin-bottom: 22px;
-  font-size: 18px;
+main .wrapper .col .donate-form .input-checkbox {
+  margin: 15px 0;
+}
+main .wrapper .col .donate-form .submit {
+  margin: 0 0 15px 0;
+}
+@media (max-width: 600px) {
+  main .wrapper .col .donate-form .submit {
+    padding: 10px 15px;
+  }
+  main .wrapper .col .donate-form .submit p::after {
+    display: none;
+  }
+}
+main .wrapper .col .donate-form .form-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+main .wrapper .col .donate-form .card {
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--red);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  width: fit-content;
 }

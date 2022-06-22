@@ -4,17 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Donate_desktop_IDP_CDP</title>
-    <link rel="stylesheet" href="./css/Donate_desktop_IDP_CDP.css">
+    <title>Donate_desktop_IDP</title>
+    <link rel="stylesheet" href="./css/Donate_desktop_IDP.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="wrapper">
             <img alt="Logo" src="./img/svg/logo.svg" class="logo">
             <div class="nav">
+                <div class="menu-wrap">
+                    <div class="hamburger">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div> 
+                    <div class="menu">
+                        <div class="links">
+                            <a href="#">Home</a>
+                            <a href="#">Services</a>
+                            <a href="#">News</a>
+                            <a href="#">Donate</a>
+                        </div>
+                        <div class="account">
+                            <a href="mailto:jimmy20220602a@renewal365.org" class="mail">jimmy20220602a@renewal365.org</a>
+                            <a href="#">Log Out</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="lang">中文</div>
             </div>
         </div>
@@ -36,8 +55,12 @@
                         <div class="checkbox"><span>$83.10</span> to provide a hot meal and urgent support for 6 people</div>
                         <div class="checkbox"><span>$</span><input type='text'>to help as many people as I can</div>
                     </div>
-                    <button type="submit" class="submit"><p>CONFIRM GIFT</p></button>
-                    <a class="card" href="#">Donate using credit or debit card</a>
+                    <label class="input-checkbox" for="subscribe">
+                        <input id="subscribe" type="checkbox"> 
+                        <p>I want to my gift to repeat automatically every month</p>
+                    </label>
+                    <button type="submit" class="submit"><p>Donate with credit card or debit card now</p></button>
+                    <a class="card" href="#">Donate using WeChat or Alipay</a>
                 </form>
             </div>
         </div>
@@ -48,4 +71,5 @@
         </div>
     </footer>
     <script defer src="./js/checkbox.js"></script>
+    <script defer src="./js/menu.js"></script>
 </body>

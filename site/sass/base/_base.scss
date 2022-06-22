@@ -51,7 +51,6 @@ body {
   color: #1F1F2D;
   line-height: 1;
   overflow-y: hidden;
-  box-sizing: border-box;
 }
 
 html.no-scroll {
@@ -72,4 +71,8 @@ textarea:focus {
 
 a {
 	text-decoration: unset;
+}
+
+* {
+	box-sizing: border-box;
 }

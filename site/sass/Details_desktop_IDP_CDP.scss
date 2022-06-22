@@ -1,0 +1,155 @@
+/*---BASE---*/
+@import './base/_base.scss';
+@import './base/_style.scss';
+
+main {
+    .wrapper {
+        padding: 50px 0 70px;
+        @media(max-width: 769px) {
+            padding: 20px 15px 60px 15px;
+        }
+        .col {
+            width: 50%;
+            @media(max-width: 1024px) {
+                width: 100%;
+            }
+             .title {
+                padding: 13px 78px 13px 28px;
+                border: 2px solid var(--red);
+                border-radius: 5px;
+                @media(max-width: 769px) {
+                    padding: 15px 20px;
+                }
+            }
+            .donate-form {
+                display: flex;
+                flex-direction: column;
+                .form-title {
+                    margin-bottom: 25px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 120%;
+                    letter-spacing: 0.01em;
+                    color: var(--black);
+                    @media(max-width: 769px) {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                    }
+                }
+                .form-subtitle {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 120%;
+                    letter-spacing: 0.01em;
+                    color: var(--black);
+                    margin-bottom: 20px;
+                    @media(max-width: 769px) {
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                    }
+                }
+                .input-wrap {
+                    position: relative;
+                    margin-bottom: 20px;
+                    @media(max-width: 769px) {
+                        margin-bottom: 15px;
+                    }
+                    &.before-checkbox {
+                        margin-bottom: 10px;
+                    }
+                    label {
+                        position: absolute;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: 0.01em;
+                        color: var(--dark-grey);
+                        left: 20px;
+                        top: calc(50% - 10px);
+                        padding: 0 10px;
+                        background: #fff;
+                        transition: .2s;
+                        cursor: text;
+                        @media(max-width: 769px) {
+                            font-size: 14px;
+                            line-height: 17px;
+                            top: calc(50% - 8.5px);
+                            left: 10px;
+                        }
+                    }
+                    input {
+                        position: relative;
+                        border: 1px solid #D9D9D9;
+                        border-radius: 5px;
+                        height: 50px;
+                        padding-left: 30px;
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 120%;
+                        letter-spacing: 0.01em;
+                        color: var(--black);
+                        @media(max-width: 769px) {
+                            padding-left: 20px;
+                        }
+                        &.active+label {
+                            font-size: 14px;
+                            left: 30px;
+                            top: -10px;
+                            cursor: default;
+                            @media(max-width: 769px) {
+                                top: -8.5px;
+                                left: 20px;
+                            }
+                        }
+                    }
+                }
+                .checkbox-wrap.horizontal {
+                    display: flex;
+                    .checkbox {
+                        margin-right: 20px;
+                    }
+                }
+                .checkbox.with-options {
+                    display: flex;
+                    flex-direction: column;
+                    &.active .options {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    .options {
+                        display: none;
+                        padding: 10px 0 5px;
+                        .input-checkbox {
+                            margin-bottom: unset;
+                            margin-right: 20px;
+                            @media(max-width: 769px) {
+                                margin-bottom: 15px;
+                                margin-right: 10px;
+                            }
+                            p {
+                                font-size: 14px;
+                                line-height: 20px;
+                                &::after {
+                                    width: 20px;
+                                    height: 20px;
+                                    border: unset;
+                                    background: #DEDEDE;
+                                }
+                            }
+                        }
+                    }
+                    &::after {
+                        top: 0;
+                    }
+                }
+                .submit {
+                    width: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
