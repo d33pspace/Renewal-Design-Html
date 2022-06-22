@@ -1,0 +1,13 @@
+/*---BASE---*/
+@import './base/_base.scss';
+@import './base/_style.scss';
+
+.links {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    a {
+        margin-bottom: 22px;
+        font-size: 18px;
+    }
+}

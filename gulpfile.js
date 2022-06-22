@@ -29,6 +29,30 @@ gulp.task('watch', gulp.series('browser-sync', 'sass', function(done) {
     done()
 }));
 
+gulp.task('sass2', function(){ 
+    return gulp.src('site/sass/**/*.scss') 
+        .pipe(sass()) 
+        .pipe(gulp.dest('site/css')) 
+        .pipe(browserSync.reload({stream: true})) 
+});
+
+gulp.task('browser-sync2', function(done) { 
+    browserSync({ 
+        server: { 
+            baseDir: 'site' 
+        },
+        notify: false 
+    });
+    done()
+});
+
+gulp.task('watch2', gulp.series('browser-sync2', 'sass2', function(done) {
+    gulp.watch('site/sass/**/*.scss', gulp.series('sass2')); 
+    gulp.watch('site/*.html').on('change', browserSync.reload);
+    gulp.watch('site/js/*.js').on('change', browserSync.reload); 
+    done()
+}));
+
 gulp.task('mincss', function() {
     return gulp.src('app/css/main.css')
         .pipe(mincss())

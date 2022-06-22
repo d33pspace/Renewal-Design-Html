@@ -1,0 +1,254 @@
+/*---BASE---*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  color: #1F1F2D;
+  line-height: 1;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+html.no-scroll {
+  overflow-y: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+input:focus {
+  outline: 0 none;
+}
+
+textarea:focus {
+  outline: 0 none;
+}
+
+a {
+  text-decoration: unset;
+}
+
+body {
+  --black: #1F1F1F;
+  --dart-grey: #8C8C8C;
+  --red: #CE0538;
+}
+
+.wrapper {
+  max-width: 1146px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--black);
+  padding-left: 34px;
+  position: relative;
+  margin-bottom: 15px;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.checkbox::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: #DEDEDE;
+  border-radius: 50%;
+}
+.checkbox.active::after {
+  width: 12px;
+  height: 12px;
+  background: var(--red);
+  border: 5px solid #fff;
+  outline: 1px solid var(--red);
+}
+.checkbox span {
+  font-weight: 700;
+  margin-right: 5px;
+}
+.checkbox input {
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  margin: 0 10px 0 5px;
+  max-width: 70px;
+  height: 36px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #CE0538;
+}
+header .nav .lang {
+  padding: 6px 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  background: #CE0538;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+footer .wrapper {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #CE0538;
+}
+footer .wrapper .credits {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+  color: var(--dart-grey);
+}
+
+main .wrapper {
+  display: flex;
+  column-gap: 30px;
+  padding: 50px 0 70px;
+}
+main .wrapper .col {
+  width: 50%;
+}
+main .wrapper .col .subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #737373;
+}
+main .wrapper .col .text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 30px;
+}
+main .wrapper .col .donate-form {
+  display: flex;
+  flex-direction: column;
+}
+main .wrapper .col .donate-form .form-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+main .wrapper .col .donate-form .submit {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  margin: 15px 0;
+  padding: 15.5px 55px 15.5px 40px;
+  background: var(--red);
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  border: unset;
+  position: relative;
+}
+main .wrapper .col .donate-form .submit:hover::after {
+  right: 37px;
+}
+main .wrapper .col .donate-form .submit::after {
+  content: "";
+  width: 8px;
+  height: 14px;
+  position: absolute;
+  top: calc(50% - 7px);
+  right: 40px;
+  background: url("../img/svg/arrow.svg");
+  transition: 0.3s;
+}
+main .wrapper .col .donate-form .card {
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--red);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  width: fit-content;
+}
