@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Details_desktop_IDP_CDP</title>
-    <link rel="stylesheet" href="./css/Details_desktop_IDP_CDP.css">
+    <link rel="stylesheet" href="./css/Details_desktop_IDP.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,31 +26,41 @@
                 <h1 class="title">Your one time gift of $13.85</h1>
                 <form class="donate-form">
                     <p class="form-title">Please enter your details below:</p>
-                    <p class="form-subtitle">Required details</p>
+                    <p class="form-subtitle">Your Name as you’d like it to appear in our records (required)</p>
                     <div class="input-wrap">
                         <input id="name" type="text" required>
                         <label for="name">Name</label>
                     </div>
+                    <p class="form-subtitle">The address at which you’d like to recieve Renewal communications (optional, not related with card verification)</p>
                     <div class="input-wrap">
-                        <input id="phone" type="tel" required>
-                        <label for="phone">Phone</label>
-                    </div>
-                    <p class="form-subtitle">Optional details:</p>
-                    <div class="input-wrap before-checkbox">
-                        <input id="wechat" type="text">
-                        <label for="wechat">WeChat ID/Linked phone nuber</label>
-                    </div>
-                    <label class="input-checkbox" for="sameAsPhone">
-                        <input id="sameAsPhone" type="checkbox"> 
-                        <p>Same as Phone</p>
-                    </label>
-                    <div class="input-wrap">
-                        <input id="email" type="email">
-                        <label for="email">Email</label>
+                        <input id="address1" type="text">
+                        <label for="address1">Address Line 1</label>
                     </div>
                     <div class="input-wrap">
-                        <input id="address" type="text">
-                        <label for="address">Address</label>
+                        <input id="address2" type="text">
+                        <label for="address2">Address Line 2</label>
+                    </div>
+                    <div class="input-wrap half">
+                        <input id="city" type="text">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="input-wrap half">
+                        <input id="state" type="text">
+                        <label for="state">State/Province</label>
+                    </div>
+                    <div class="input-wrap half">
+                        <input id="zip" type="text">
+                        <label for="zip">Zip/Postal Code</label>
+                    </div>
+                    <div class="input-wrap half dropdown">
+                        <div class="custom-select">
+                            <select>
+                              <option value="0">Dropdown</option>
+                              <option value="1">option1</option>
+                              <option value="2">option2</option>
+                              <option value="3">option3</option>
+                            </select>
+                          </div>
                     </div>
                     <p class="form-subtitle">May we add your WeChat to send you a giving receipt?</p>
                     <div class="checkbox-wrap horizontal">
@@ -92,6 +102,6 @@
             <p class="credits">© Renewal 365 Inc, 2022</p>
         </div>
     </footer>
-    <script defer src="./js/checkbox.js"></script>
+    <script defer src="./js/dropdown.js"></script>
     <script defer src="./js/inputs.js"></script>
 </body>
