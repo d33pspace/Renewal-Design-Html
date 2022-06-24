@@ -116,6 +116,10 @@ main {
             border-bottom: 1px solid #F1F2F4;
             .user_info {
                 display: flex;
+                align-items: center;
+                .avatar-wrap {
+                    position: relative;
+                }
                 .avatar {
                     width: 44px;
                     height: 44px;
@@ -123,6 +127,12 @@ main {
                     box-sizing: border-box;
                     border-radius: 8px;
                     margin-right: 16px;
+                }
+                .warning {
+                    position: absolute;
+                    bottom: 0;
+                    left: 28px;
+                    z-index: 999;
                 }
                 .info_details {
                     display: flex;

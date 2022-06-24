@@ -387,6 +387,10 @@ main .guest_block .card {
 }
 main .guest_block .card .user_info {
   display: flex;
+  align-items: center;
+}
+main .guest_block .card .user_info .avatar-wrap {
+  position: relative;
 }
 main .guest_block .card .user_info .avatar {
   width: 44px;
@@ -395,6 +399,12 @@ main .guest_block .card .user_info .avatar {
   box-sizing: border-box;
   border-radius: 8px;
   margin-right: 16px;
+}
+main .guest_block .card .user_info .warning {
+  position: absolute;
+  bottom: 0;
+  left: 28px;
+  z-index: 999;
 }
 main .guest_block .card .user_info .info_details {
   display: flex;

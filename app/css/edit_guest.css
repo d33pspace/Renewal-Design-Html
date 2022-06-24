@@ -318,6 +318,13 @@ main .wrapper .avatar_block .avatar {
   height: 96px;
   border-radius: 16px;
 }
+main .wrapper .avatar_block .warning {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: -4px;
+  bottom: 32px;
+}
 main .wrapper .avatar_block a {
   position: absolute;
   bottom: -4px;

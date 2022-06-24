@@ -209,6 +209,58 @@ main {
     }
 }
 
+.temp {
+    .header {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        .title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.15px;
+            color: #001730;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+    }
+    .users {
+        padding: 0;
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E6E8EB;
+            .avatar-wrap {
+                display: flex;
+                align-items: center;
+                .avatar {
+                    border: 1px solid #DDDFE4;
+                    border-radius: 8px;
+                    height: 44px;
+                    width: 44px;
+                    margin-right: 14px;
+                }
+                .name {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 100%;
+                    color: #001730;
+                }
+            }
+            .user-temp {
+                margin: 0 8px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 100%;
+                color: #001730;
+            }
+        }
+    }
+}
 
 
 

@@ -475,6 +475,57 @@ main .cards .data.yellow img {
   color: #848790;
 }
 
+.temp .header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.temp .header .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.temp .header .icon {
+  margin-right: 8px;
+}
+.temp .users {
+  padding: 0;
+}
+.temp .users .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E6E8EB;
+}
+.temp .users .card .avatar-wrap {
+  display: flex;
+  align-items: center;
+}
+.temp .users .card .avatar-wrap .avatar {
+  border: 1px solid #DDDFE4;
+  border-radius: 8px;
+  height: 44px;
+  width: 44px;
+  margin-right: 14px;
+}
+.temp .users .card .avatar-wrap .name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #001730;
+}
+.temp .users .card .user-temp {
+  margin: 0 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #001730;
+}
+
 #datepicker {
   transform: scaleY(0);
   transform-origin: top;
