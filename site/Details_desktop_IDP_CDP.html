@@ -28,28 +28,28 @@
                     <p class="form-title">Please enter your details below:</p>
                     <p class="form-subtitle">Required details</p>
                     <div class="input-wrap">
-                        <input id="name" type="text" required>
+                        <input class="input" id="name" type="text" required>
                         <label for="name">Name</label>
                     </div>
                     <div class="input-wrap">
-                        <input id="phone" type="tel" required>
+                        <input class="input" id="phone" type="tel" required>
                         <label for="phone">Phone</label>
                     </div>
                     <p class="form-subtitle">Optional details:</p>
-                    <div class="input-wrap before-checkbox">
-                        <input id="wechat" type="text">
+                    <div class="input-wrap">
+                        <input class="input" id="wechat" type="text">
                         <label for="wechat">WeChat ID/Linked phone nuber</label>
                     </div>
-                    <label class="input-checkbox" for="sameAsPhone">
+                    <!-- <label class="input-checkbox" for="sameAsPhone">
                         <input id="sameAsPhone" type="checkbox"> 
                         <p>Same as Phone</p>
-                    </label>
+                    </label> -->
                     <div class="input-wrap">
-                        <input id="email" type="email">
+                        <input class="input" id="email" type="email">
                         <label for="email">Email</label>
                     </div>
                     <div class="input-wrap">
-                        <input id="address" type="text">
+                        <textarea rows="1" class="input" id="address"></textarea>
                         <label for="address">Address</label>
                     </div>
                     <p class="form-subtitle">May we add your WeChat to send you a giving receipt?</p>
@@ -63,11 +63,11 @@
                             <p>Yes (select all that apply)</p>
                             <div class="options">
                                 <label class="input-checkbox" for="wechatcheckbox">
-                                    <input id="wechatcheckbox" type="checkbox"> 
+                                    <input id="wechatcheckbox" type="checkbox" checked> 
                                     <p>WeChat</p>
                                 </label>
                                 <label class="input-checkbox" for="emailcheckbox">
-                                    <input id="emailcheckbox" type="checkbox"> 
+                                    <input id="emailcheckbox" type="checkbox" disabled> 
                                     <p>Email</p>
                                 </label>
                                 <label class="input-checkbox" for="smscheckbox">
@@ -75,7 +75,7 @@
                                     <p>SMS</p>
                                 </label>
                                 <label class="input-checkbox" for="pmailcheckbox">
-                                    <input id="pmailcheckbox" type="checkbox"> 
+                                    <input id="pmailcheckbox" type="checkbox" disabled> 
                                     <p>Postal mail</p>
                                 </label>
                             </div>
