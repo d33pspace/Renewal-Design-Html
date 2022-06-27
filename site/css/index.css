@@ -135,7 +135,6 @@ header, footer, main {
 }
 @media (max-width: 769px) {
   .checkbox {
-    font-size: 14px;
     line-height: 120%;
     margin-bottom: 20px;
   }

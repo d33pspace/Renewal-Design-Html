@@ -44,7 +44,6 @@ main {
                     color: var(--black);
                     margin-bottom: 20px;
                     @media(max-width: 769px) {
-                        font-size: 14px;
                         margin-bottom: 15px;
                     }
                 }
@@ -86,6 +85,7 @@ main {
                         }
                     }
                     input, textarea {
+                        font-family: 'Roboto Slab', serif;
                         position: relative;
                         border: 1px solid #D9D9D9;
                         border-radius: 5px;
@@ -141,6 +141,13 @@ main {
                         .input-checkbox {
                             margin-bottom: unset;
                             margin-right: 20px;
+                            input+p::after {
+                                // border: 5px solid #DEDEDE;
+                                border-radius: 4px;
+                            }
+                            // input:checked+p::after {
+                            //     border: 5px solid  var(--red);
+                            // }
                             @media(max-width: 769px) {
                                 margin-bottom: 0;
                                 margin-right: 10px;

@@ -135,7 +135,6 @@ header, footer, main {
 }
 @media (max-width: 769px) {
   .checkbox {
-    font-size: 14px;
     line-height: 120%;
     margin-bottom: 20px;
   }
@@ -456,7 +455,6 @@ main .wrapper .col .donate-form .form-subtitle {
 }
 @media (max-width: 769px) {
   main .wrapper .col .donate-form .form-subtitle {
-    font-size: 14px;
     margin-bottom: 15px;
   }
 }
@@ -503,6 +501,7 @@ main .wrapper .col .donate-form .input-wrap textarea.filled {
   max-height: 150px;
 }
 main .wrapper .col .donate-form .input-wrap input, main .wrapper .col .donate-form .input-wrap textarea {
+  font-family: "Roboto Slab", serif;
   position: relative;
   border: 1px solid #D9D9D9;
   border-radius: 5px;
@@ -563,6 +562,9 @@ main .wrapper .col .donate-form .checkbox.with-options .options {
 main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox {
   margin-bottom: unset;
   margin-right: 20px;
+}
+main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox input + p::after {
+  border-radius: 4px;
 }
 @media (max-width: 769px) {
   main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox {

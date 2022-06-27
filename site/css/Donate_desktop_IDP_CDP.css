@@ -135,7 +135,6 @@ header, footer, main {
 }
 @media (max-width: 769px) {
   .checkbox {
-    font-size: 14px;
     line-height: 120%;
     margin-bottom: 20px;
   }
@@ -471,11 +470,6 @@ main .wrapper .col .text {
   letter-spacing: 0.01em;
   color: var(--black);
   margin-bottom: 30px;
-}
-@media (max-width: 769px) {
-  main .wrapper .col .text {
-    font-size: 14px;
-  }
 }
 main .wrapper .col .donate-form {
   display: flex;
