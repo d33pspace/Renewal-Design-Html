@@ -245,18 +245,55 @@ main {
                     margin-right: 14px;
                 }
                 .name {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #001730;
+                }
+                .name-en {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #848790;
+                }
+            }
+            .temp-wrap {
+                display: flex;
+                align-items: center;
+                .date {
+                    margin: 0 8px;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 160%;
+                    color: #848790;
+                }
+                .user-temp {
+                    margin: 0 8px;
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 100%;
                     color: #001730;
                 }
             }
-            .user-temp {
-                margin: 0 8px;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 100%;
-                color: #001730;
+        }
+        .card-empty {
+            display: none;
+            align-items: center;
+            background: #fff;
+            padding: 20px 16px;
+            &.active {
+                display: flex;
+            }
+            img {
+                width: 28px;
+                height: 28px;
+            }
+            p {
+                margin-left: 8px;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.005em;
+                color: #A8ABB3;
             }
         }
     }

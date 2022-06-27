@@ -513,17 +513,54 @@ main .cards .data.yellow img {
   margin-right: 14px;
 }
 .temp .users .card .avatar-wrap .name {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 160%;
   color: #001730;
 }
-.temp .users .card .user-temp {
+.temp .users .card .avatar-wrap .name-en {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #848790;
+}
+.temp .users .card .temp-wrap {
+  display: flex;
+  align-items: center;
+}
+.temp .users .card .temp-wrap .date {
+  margin: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #848790;
+}
+.temp .users .card .temp-wrap .user-temp {
   margin: 0 8px;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   color: #001730;
+}
+.temp .users .card-empty {
+  display: none;
+  align-items: center;
+  background: #fff;
+  padding: 20px 16px;
+}
+.temp .users .card-empty.active {
+  display: flex;
+}
+.temp .users .card-empty img {
+  width: 28px;
+  height: 28px;
+}
+.temp .users .card-empty p {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #A8ABB3;
 }
 
 #datepicker {
