@@ -536,6 +536,8 @@ main .cards .data.yellow img {
   color: #848790;
 }
 .temp .users .card .temp-wrap .user-temp {
+  width: 39px;
+  text-align: right;
   margin: 0 8px;
   font-weight: 500;
   font-size: 16px;
