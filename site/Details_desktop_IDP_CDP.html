@@ -24,35 +24,33 @@
         <div class="wrapper">
             <div class="col">
                 <h1 class="title">Your one time gift of $13.85</h1>
-                <form class="donate-form">
+                <form class="donate-form" id="donate-form">
                     <p class="form-title">Please enter your details below:</p>
-                    <p class="form-subtitle">Required details</p>
                     <div class="input-wrap">
                         <input class="input" id="name" type="text" required>
-                        <label for="name">Name</label>
+                        <label for="name">Full Name</label>
                     </div>
                     <div class="input-wrap">
                         <input class="input" id="phone" type="tel" required>
                         <label for="phone">Phone</label>
                     </div>
-                    <p class="form-subtitle">Optional details:</p>
+                    <label class="input-checkbox" for="useWeChat">
+                        <input id="useWeChat" type="checkbox"> 
+                        <p>Use as WeChat linked phone</p>
+                    </label>
                     <div class="input-wrap">
                         <input class="input" id="wechat" type="text">
-                        <label for="wechat">WeChat ID/Linked phone nuber</label>
+                        <label for="wechat">WeChat ID/linked phone (optional)</label>
                     </div>
-                    <!-- <label class="input-checkbox" for="sameAsPhone">
-                        <input id="sameAsPhone" type="checkbox"> 
-                        <p>Same as Phone</p>
-                    </label> -->
                     <div class="input-wrap">
                         <input class="input" id="email" type="email">
-                        <label for="email">Email</label>
+                        <label for="email">Email (optional)</label>
                     </div>
                     <div class="input-wrap">
                         <textarea rows="1" class="input" id="address"></textarea>
-                        <label for="address">Address</label>
+                        <label for="address">Postal address (optional)</label>
                     </div>
-                    <p class="form-subtitle">May we add your WeChat to send you a giving receipt?</p>
+                    <p class="form-subtitle">May one of our directors add your WeChat to stay in touch?</p>
                     <div class="checkbox-wrap horizontal">
                         <div class="checkbox active">Yes</div>
                         <div class="checkbox">No</div>
@@ -63,7 +61,7 @@
                             <p>Yes (select all that apply)</p>
                             <div class="options">
                                 <label class="input-checkbox" for="wechatcheckbox">
-                                    <input id="wechatcheckbox" type="checkbox" checked> 
+                                    <input id="wechatcheckbox" type="checkbox"> 
                                     <p>WeChat</p>
                                 </label>
                                 <label class="input-checkbox" for="emailcheckbox">
@@ -71,8 +69,8 @@
                                     <p>Email</p>
                                 </label>
                                 <label class="input-checkbox" for="smscheckbox">
-                                    <input id="smscheckbox" type="checkbox"> 
-                                    <p>SMS</p>
+                                    <input id="smscheckbox" type="checkbox" checked> 
+                                    <p>Text message</p>
                                 </label>
                                 <label class="input-checkbox" for="pmailcheckbox">
                                     <input id="pmailcheckbox" type="checkbox"> 
@@ -92,6 +90,14 @@
             <p class="credits">© Renewal 365 Inc, 2022</p>
         </div>
     </footer>
+    <div class="overlay">
+        <div class="message">
+            <p class="error"></p>
+            <div class="close">Return</div>
+        </div>
+    </div>
     <script defer src="./js/checkbox.js"></script>
     <script defer src="./js/inputs.js"></script>
+    <script defer src="./js/weChat_checkbox.js"></script>
+    <script defer src="./js/form_validation.js"></script>
 </body>
