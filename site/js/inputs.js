@@ -11,8 +11,11 @@ let textarea = document.querySelector('.input-wrap textarea')
 input.forEach(item => {
     item.onfocus = () => {
         item.classList.add('active')
-        if (item == textarea) {
+        if (item.classList.contains('textarea')) {
             item.classList.add('filled')
+            if (item.classList.contains('desc')) {
+                item.setAttribute('placeholder', 'This will appear in the description of the gift on your receipt exactly as you enter it.')
+            }
         }
     }
     // item.onblur = () => {
@@ -35,8 +38,9 @@ input.forEach(item => {
     //     }
     // }
     item.onblur = () => {
-         if (item == address) {
+         if (item.classList.contains('textarea')) {
             item.classList.remove('filled')
+            item.removeAttribute('placeholder')
         }
         if (item.value == '') {
             item.classList.remove('active')

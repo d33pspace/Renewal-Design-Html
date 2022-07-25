@@ -511,7 +511,7 @@ main .wrapper .col .donate-form .input-wrap input, main .wrapper .col .donate-fo
   width: 100%;
   font-weight: 400;
   font-size: 16px;
-  line-height: 17px;
+  line-height: 26px;
   letter-spacing: 0.01em;
   color: var(--black);
   overflow: hidden;
@@ -620,10 +620,15 @@ main .wrapper .col .donate-form .submit {
 }
 .overlay .close {
   padding: 10px 20px;
+  text-transform: uppercase;
+  border: unset;
   background: var(--red);
   color: #fff;
-  font-size: 1.2em;
-  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+  border-radius: 5px;
   cursor: pointer;
   margin: 0 auto;
   width: fit-content;
