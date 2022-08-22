@@ -431,6 +431,16 @@ main .wrapper .col .donate-form {
   display: flex;
   flex-direction: column;
 }
+main .wrapper .col .donate-form .input-checkbox {
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+@media (max-width: 769px) {
+  main .wrapper .col .donate-form .input-checkbox {
+    margin-bottom: 20px;
+    margin-top: -5px;
+  }
+}
 main .wrapper .col .donate-form .form-title {
   margin-bottom: 25px;
   font-weight: 400;

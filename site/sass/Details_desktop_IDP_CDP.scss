@@ -24,6 +24,14 @@ main {
             .donate-form {
                 display: flex;
                 flex-direction: column;
+                .input-checkbox {
+                    margin-bottom: 30px;
+                    margin-top: -10px;
+                    @media(max-width: 769px) {
+                        margin-bottom: 20px;
+                        margin-top: -5px;
+                    }
+                }
                 .form-title {
                     margin-bottom: 25px;
                     font-weight: 400;
