@@ -24,7 +24,7 @@ main {
             .donate-form {
                 display: flex;
                 flex-direction: column;
-                .input-checkbox {
+                &>.input-checkbox {
                     margin-bottom: 30px;
                     margin-top: -10px;
                     @media(max-width: 769px) {
@@ -147,7 +147,7 @@ main {
                         display: none;
                         padding: 10px 0 5px;
                         .input-checkbox {
-                            margin-bottom: unset;
+                            margin-bottom: 5px;
                             margin-right: 20px;
                             input+p::after {
                                 // border: 5px solid #DEDEDE;

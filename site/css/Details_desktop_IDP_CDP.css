@@ -431,12 +431,12 @@ main .wrapper .col .donate-form {
   display: flex;
   flex-direction: column;
 }
-main .wrapper .col .donate-form .input-checkbox {
+main .wrapper .col .donate-form > .input-checkbox {
   margin-bottom: 30px;
   margin-top: -10px;
 }
 @media (max-width: 769px) {
-  main .wrapper .col .donate-form .input-checkbox {
+  main .wrapper .col .donate-form > .input-checkbox {
     margin-bottom: 20px;
     margin-top: -5px;
   }
@@ -570,7 +570,7 @@ main .wrapper .col .donate-form .checkbox.with-options .options {
   padding: 10px 0 5px;
 }
 main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox {
-  margin-bottom: unset;
+  margin-bottom: 5px;
   margin-right: 20px;
 }
 main .wrapper .col .donate-form .checkbox.with-options .options .input-checkbox input + p::after {
