@@ -68,8 +68,8 @@ header, footer, main {
     input {
         border: 1px solid #D9D9D9;
         border-radius: 5px;
-        margin: 0 10px;
-        max-width: 70px;
+        margin-right: 10px;
+        max-width: 100px;
         height: 36px;
         padding: 5px 10px;
     }
@@ -126,8 +126,16 @@ header, footer, main {
     text-transform: uppercase;
     display: flex;
     justify-content: center;
-    &:hover p::after {
-        transform: translateX(5px);
+    border: 2px solid var(--red);
+    transition: .2s;
+    &:hover {
+        background: #fff;
+        p {
+            color: var(--red);
+            &:after {
+                filter: brightness(0) saturate(100%) invert(12%) sepia(96%) saturate(5703%) hue-rotate(340deg) brightness(81%) contrast(100%);
+            }
+        }
     }
     p {
         position: relative;
@@ -137,6 +145,7 @@ header, footer, main {
         letter-spacing: 0.01em;
         color: #FFFFFF;
         width: fit-content;
+        transition: .2s;
         &::after {
             content: '';
             width: 8px;
@@ -145,7 +154,7 @@ header, footer, main {
             top: calc(50% - 8px);
             right: -18px;
             background: url('../img/svg/arrow.svg');
-            transition: .3s;
+            transition: .2s;
         }
     }
     @media (max-width: 769px) {

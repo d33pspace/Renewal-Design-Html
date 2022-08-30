@@ -27,54 +27,60 @@
                 <form class="donate-form" id="donate-form">
                     <p class="form-title">Please enter your details below:</p>
                     <div class="input-wrap">
-                        <input class="input" id="name" type="text" required>
+                        <input class="input" id="name" type="text" maxlength="250" required>
                         <label for="name">Full Name</label>
                     </div>
                     <div class="input-wrap">
-                        <input class="input" id="phone" type="tel" required>
+                        <input class="input" id="email" type="email" maxlength="250" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-wrap">
+                        <input class="input" id="phone" type="tel" maxlength="11" required>
                         <label for="phone">Phone</label>
                     </div>
                     <label class="input-checkbox" for="useWeChat">
                         <input id="useWeChat" type="checkbox"> 
-                        <p>Use as WeChat linked phone</p>
+                        <p>This is my WeChat linked phone number.</p>
                     </label>
                     <div class="input-wrap">
                         <input class="input" id="wechat" type="text">
                         <label for="wechat">WeChat ID/linked phone (optional)</label>
                     </div>
                     <div class="input-wrap">
-                        <input class="input" id="email" type="email">
-                        <label for="email">Email (optional)</label>
-                    </div>
-                    <div class="input-wrap">
-                        <textarea rows="1" class="input textarea" id="address"></textarea>
+                        <textarea rows="1" class="input textarea" id="address" maxlength="1000"></textarea>
                         <label for="address">Postal address (optional)</label>
                     </div>
                     <div class="input-wrap">
-                        <textarea rows="1" class="input textarea desc" id="description"></textarea>
+                        <textarea rows="1" class="input textarea desc" id="description" maxlength="250"></textarea>
                         <label for="description">Gift description/honoree (optional)</label>
                     </div>
                     <p class="form-subtitle">May one of our directors add your WeChat to stay in touch?</p>
                     <div class="checkbox-wrap horizontal">
-                        <div class="checkbox active">Yes</div>
-                        <div class="checkbox">No</div>
+                        <label class="input-checkbox" for="weChatContactYes">
+                            <input name="weChatContact" id="weChatContactYes" type="radio" checked> 
+                            <p>Yes</p>
+                        </label>
+                        <label class="input-checkbox" for="weChatContactNo">
+                            <input name="weChatContact" id="weChatContactNo" type="radio"> 
+                            <p>No</p>
+                        </label>
                     </div>
                     <p class="form-subtitle">May we send you stories about the impact of your giving and update you occasionally with our needs (never more than once a week)?</p>
                     <div class="checkbox-wrap">
                         <div class="checkbox active with-options">
                             <p>Yes (select all that apply)</p>
                             <div class="options">
-                                <label class="input-checkbox" for="wechatcheckbox">
-                                    <input id="wechatcheckbox" type="checkbox"> 
-                                    <p>WeChat</p>
-                                </label>
                                 <label class="input-checkbox" for="emailcheckbox">
-                                    <input id="emailcheckbox" type="checkbox"> 
+                                    <input id="emailcheckbox" type="checkbox" checked> 
                                     <p>Email</p>
                                 </label>
                                 <label class="input-checkbox" for="smscheckbox">
                                     <input id="smscheckbox" type="checkbox" checked> 
                                     <p>Text message</p>
+                                </label>
+                                <label class="input-checkbox" for="wechatcheckbox">
+                                    <input id="wechatcheckbox" type="checkbox"> 
+                                    <p>WeChat</p>
                                 </label>
                                 <label class="input-checkbox" for="pmailcheckbox">
                                     <input id="pmailcheckbox" type="checkbox"> 
@@ -97,7 +103,7 @@
     <div class="overlay">
         <div class="message">
             <p class="error"></p>
-            <div class="close">Return</div>
+            <div class="close submit"><p>Return</p></div>
         </div>
     </div>
     <script defer src="./js/checkbox.js"></script>

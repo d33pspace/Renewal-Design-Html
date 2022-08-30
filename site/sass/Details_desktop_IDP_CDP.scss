@@ -124,7 +124,7 @@ main {
                 }
                 .checkbox-wrap.horizontal {
                     display: flex;
-                    .checkbox {
+                    .input-checkbox {
                         margin-right: 20px;
                     }
                 }
@@ -208,23 +208,11 @@ main {
         background: #fff;
         border-radius: 8px;
         padding: 20px 30px;
-        p {
+        .error {
             margin-bottom: 20px;
         }
     }
     .close {
-        padding: 10px 20px;
-        text-transform: uppercase;
-        border: unset;
-        background: var(--red);
-        color: #fff;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 160%;
-        letter-spacing: 0.01em;
-        border-radius: 5px;
-        cursor: pointer;
         margin: 0 auto;
-        width: fit-content;
     }
 }
