@@ -128,6 +128,7 @@ header, footer, main {
     justify-content: center;
     border: 2px solid var(--red);
     transition: .2s;
+    font-family: 'Roboto Slab', serif;
     &:hover {
         background: #fff;
         p {

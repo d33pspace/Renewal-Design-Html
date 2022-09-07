@@ -227,6 +227,7 @@ header, footer, main {
   justify-content: center;
   border: 2px solid var(--red);
   transition: 0.2s;
+  font-family: "Roboto Slab", serif;
 }
 .submit:hover {
   background: #fff;
