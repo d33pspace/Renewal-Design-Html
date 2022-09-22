@@ -906,19 +906,12 @@ main .head .col-title p {
   cursor: pointer;
 }
 .common .card .counter {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 100%;
-  color: #001730;
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-.common .card .counter.red {
-  color: #F95557;
 }
 
 .clothing_list .counter {
@@ -961,6 +954,52 @@ main .head .col-title p {
 }
 .clothing_list .buttons {
   display: flex;
+}
+
+.overlay.forbidden {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.forbidden .wrapper {
+  padding: 24px;
+  margin: 0 16px;
+  background: #fff;
+  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+.overlay.forbidden .wrapper .title {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.overlay.forbidden .wrapper .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.overlay.forbidden .wrapper .buttons .button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  border-radius: 8px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.overlay.forbidden .wrapper .buttons .button:not(.close) {
+  color: #848790;
+  border: 1px solid #E6E8EB;
+}
+.overlay.forbidden .wrapper .buttons .button.close {
+  color: #FFFFFF;
+  background: #CD455C;
 }
 
 @keyframes flash {

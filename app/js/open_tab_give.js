@@ -1,19 +1,25 @@
 let cardHeading = document.querySelectorAll('.card-heading .card-title')
 let disOverlay = document.querySelector('.overlay.distribution')
 
+function detailsOverlay(item) {
+    disOverlay.classList.add('active')
+    disOverlay.firstElementChild.classList.add('active')
+    document.documentElement.classList.add('no-scroll')
+    if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
+        disOverlay.classList.add('scroll')
+    }
+    // Set popup image and title 
+    let imgSrc = item.querySelector('.category-icon').getAttribute('src')
+    disOverlay.querySelector('.item .item-icon').setAttribute('src', imgSrc)
+    let title = item.querySelector('.category-name').innerHTML
+    disOverlay.querySelector('.item .item-title').innerHTML = title
+}
+
 cardHeading.forEach((item) => {
     item.onclick = (e) => {
-        disOverlay.classList.add('active')
-        disOverlay.firstElementChild.classList.add('active')
-        document.documentElement.classList.add('no-scroll')
-        if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
-            disOverlay.classList.add('scroll')
+        if (!item.closest('.card').classList.contains('forbidden')) {
+            detailsOverlay(item)
         }
-        // Set popup image and title 
-        let imgSrc = item.querySelector('.category-icon').getAttribute('src')
-        disOverlay.querySelector('.item .item-icon').setAttribute('src', imgSrc)
-        let title = item.querySelector('.category-name').innerHTML
-        disOverlay.querySelector('.item .item-title').innerHTML = title
     }
 })
 
@@ -49,28 +55,21 @@ let cardItem = document.querySelectorAll('.card>.item')
 
 cardItem.forEach((item) => {
     item.onclick = (e) => {
-        disOverlay.classList.add('active')
-        disOverlay.firstElementChild.classList.add('active')
-        if (document.body.scrollHeight !== document.documentElement.offsetHeight) {
-            disOverlay.classList.add('scroll')
+        if (!item.closest('.card').classList.contains('forbidden')) {
+            detailsOverlay(item)
         }
-        // Set popup image and title 
-        let imgSrc = item.querySelector('.category-icon').getAttribute('src')
-        disOverlay.querySelector('.item .item-icon').setAttribute('src', imgSrc)
-        let title = item.querySelector('.title').innerHTML
-        disOverlay.querySelector('.item .item-title').innerHTML = title
     }
 })
 
-let counter = document.querySelectorAll('.card .counter')
+let counter = document.querySelectorAll('.card .counter.done')
 
 counter.forEach((item) => {
     item.onclick = () => {
         if (item.closest('.card').querySelector('.card-heading .card-title')) {
-            item.closest('.card').querySelector('.card-heading .card-title').click()
+            detailsOverlay(item.closest('.card').querySelector('.card-heading .card-title'))
         } else if (item.closest('.card').querySelector('.item')) {
-            item.closest('.card').querySelector('.item').click()
+            detailsOverlay(item.closest('.card').querySelector('.item'))
         }
-        
+
     }
 })

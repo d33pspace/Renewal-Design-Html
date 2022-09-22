@@ -14,7 +14,7 @@
     <div class="desktop-wrapper">
         <header class='fixed_header'>
             <div class="wrapper">
-                <img src='./img/svg/nav-give_page.svg'>
+                <img src='./img/svg/nav-take_page.svg'>
                 <p class='title'>Take Page</a>
             </div>
         </header>
@@ -39,11 +39,7 @@
                     <div class="head">
                         <div class="col-title">
                             <p class="main-title">Laundry list <span class='divider'>|</span></p>
-                            <div class="tag-wrapper">
-                                <input class='tag' maxlength="3" placeholder='336' readonly>
-                            </div>
-                            <img class='edit-button active' src='./img/svg/edit.svg'>
-                            <img class='edit-button check' src='./img/svg/check.svg'>
+                            <p class="tag">#336</p>
                         </div>
                         <div class="col-title">
                             <p>Trash</p>
@@ -910,6 +906,26 @@
             <img class='check' src='./img/svg/arrow_fab.svg'>
             <img class='close' src='./img/svg/close.svg'>
         </a>
+        <div class="overlay tag-confirm active">
+            <div class="wrapper">
+                <p class="title">Confirm clothing tag number?</p>
+                <div class="tag-change">
+                    <div class="tag-wrapper">
+                        <input class='tag' maxlength="3" placeholder='336' readonly>
+                    </div>
+                    <div class="edit-button active">
+                        <img src='./img/svg/edit.svg'>
+                    </div>
+                    <div class="edit-button check">
+                        <img src='./img/svg/check.svg'>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="back button">Go Back</a>
+                    <a href="#" class="close button">Confirm</a>
+                </div>
+            </div>
+        </div>
     </div>
 <script defer src="./js/open_tab_take.js"></script>
 <script defer src="./js/func_pages.js"></script>

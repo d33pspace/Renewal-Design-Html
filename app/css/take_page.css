@@ -534,63 +534,17 @@ main .head .col-title:last-child p {
   text-align: center;
   width: 40px;
 }
-main .head .col-title .main-title, main .head .col-title.main-title {
+main .head .col-title .main-title, main .head .col-title.main-title, main .head .col-title .tag {
   font-size: 16px;
   line-height: 23px;
   letter-spacing: 0.15px;
   display: flex;
 }
-main .head .col-title .main-title .divider, main .head .col-title.main-title .divider {
+main .head .col-title .main-title .divider, main .head .col-title.main-title .divider, main .head .col-title .tag .divider {
   margin: 0 8px;
 }
-main .head .col-title .edit-button {
-  display: none;
-  margin-left: 14px;
-  width: 12px;
-  height: 12px;
-  cursor: pointer;
-  filter: brightness(0) saturate(100%) invert(70%) sepia(8%) saturate(2529%) hue-rotate(131deg) brightness(93%) contrast(82%);
-}
-main .head .col-title .edit-button.active {
-  display: flex;
-}
-main .head .col-title .edit-button.check {
-  height: 9px;
-}
-main .head .tag-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-main .head .tag-wrapper:before {
-  position: absolute;
-  content: "#";
-  left: 8px;
+main .head .col-title .tag {
   font-weight: 900;
-  font-size: 16px;
-  line-height: 23px;
-  letter-spacing: 0.15px;
-  color: #001730;
-}
-main .head .tag-wrapper input {
-  cursor: default;
-  background: transparent;
-  border: unset;
-  width: 56px;
-  box-sizing: border-box;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 23px;
-  letter-spacing: 0.15px;
-  color: #001730;
-  padding-left: 18px;
-}
-main .head .tag-wrapper input::placeholder {
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 23px;
-  letter-spacing: 0.15px;
-  color: #001730;
 }
 
 .overlay.active .icons .menu-icon {
@@ -617,6 +571,8 @@ main .head .tag-wrapper input::placeholder {
   transition: 0.2s;
 }
 .overlay .icons .menu-icon img {
+  height: 24px;
+  width: 24px;
   filter: brightness(0) saturate(100%) invert(59%) sepia(10%) saturate(260%) hue-rotate(187deg) brightness(88%) contrast(87%);
 }
 @media (min-width: 769px) {
@@ -937,6 +893,104 @@ main .head .tag-wrapper input::placeholder {
 }
 .clothing_list .buttons {
   display: flex;
+}
+
+.overlay.tag-confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.tag-confirm .wrapper {
+  padding: 24px;
+  margin: 0 16px;
+  background: #fff;
+  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+.overlay.tag-confirm .wrapper .title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #001730;
+  margin-bottom: 16px;
+}
+.overlay.tag-confirm .wrapper .tag-change {
+  display: flex;
+  margin-bottom: 16px;
+}
+.overlay.tag-confirm .wrapper .tag-change .tag-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.overlay.tag-confirm .wrapper .tag-change .tag-wrapper:before {
+  position: absolute;
+  content: "#";
+  left: 0;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+  color: #001730;
+}
+.overlay.tag-confirm .wrapper .tag-change .tag-wrapper input {
+  cursor: default;
+  background: transparent;
+  border: unset;
+  width: 57px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  color: #001730;
+  padding-left: 10px;
+}
+.overlay.tag-confirm .wrapper .tag-change .tag-wrapper input::placeholder {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  color: #001730;
+}
+.overlay.tag-confirm .wrapper .tag-change .edit-button {
+  display: none;
+  margin-left: 4px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(70%) sepia(8%) saturate(2529%) hue-rotate(131deg) brightness(93%) contrast(82%);
+}
+.overlay.tag-confirm .wrapper .tag-change .edit-button.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.tag-confirm .wrapper .tag-change .edit-button img {
+  width: 18px;
+  height: 18px;
+}
+.overlay.tag-confirm .wrapper .buttons {
+  display: flex;
+  gap: 8px;
+}
+.overlay.tag-confirm .wrapper .buttons .button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  border-radius: 8px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.tag-confirm .wrapper .buttons .button.back {
+  color: #848790;
+  border: 1px solid #E6E8EB;
+}
+.overlay.tag-confirm .wrapper .buttons .button.close {
+  color: #FFFFFF;
+  background: #CD455C;
 }
 
 @keyframes flash {

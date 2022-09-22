@@ -38,7 +38,7 @@ cardItem.forEach((item) => {
     }
 })
 
-let editTag = document.querySelectorAll('.head .edit-button') 
+let editTag = document.querySelectorAll('.edit-button') 
 let inputTag = document.querySelector('.tag-wrapper input') 
 let inputPlaceholder = 336
 

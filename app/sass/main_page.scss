@@ -134,14 +134,14 @@ main {
                     opacity: .5;
                 }
                 .remain_time {
-                    margin-left: 8px;
+                    margin-left: 4px;
                     font-weight: 500;
                     font-size: 12px;
                     line-height: 150%;
                     color: #13ADAD;
                     width: 39px;
                 }
-                .img_wrapper_serve {
+                .img_wrapper {
                     background: #FFFFFF;
                     border: 1px solid #DDDFE4;
                     box-sizing: border-box;
@@ -152,31 +152,77 @@ main {
                     align-items: center;
                     justify-content: center;
                     transition: .2s;
+                    margin: 0 4px;
+                }
+                .img_wrapper_serve {
                     @media(min-width: 769px) {
                         &:hover {
-                            background: #F0F2F5;
+                            background: #FFEFC9;
+                            border: 1px solid #F4E7C7;
                             .serve_icon {
-                                filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
+                                filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(1693%) hue-rotate(339deg) brightness(101%) contrast(92%);
                             }
                         }
                     } 
                     &.active {
-                        background: #FFC2CB;
+                        background: #FFEFC9;
+                        border: 1px solid #F4E7C7;
                         .serve_icon {
-                            filter: brightness(0) saturate(100%) invert(42%) sepia(25%) saturate(2273%) hue-rotate(308deg) brightness(83%) contrast(92%);
+                            filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(1693%) hue-rotate(339deg) brightness(101%) contrast(92%);
+                        }
+                    }
+                }
+                .img_wrapper_take {
+                    @media(min-width: 769px) {
+                        &:hover {
+                            background: #EBF8FF;
+                            border: 1px solid #E1F0F8;
+                            .take_icon {
+                                filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
+                            }
+                        }
+                    } 
+                    @media(max-width: 420px) {
+                        display: none;
+                    }
+                    &.active {
+                        background: #EBF8FF;
+                        border: 1px solid #E1F0F8;
+                        .take_icon {
+                            filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
+                        }
+                    }
+                }
+                .img_wrapper_give {
+                    @media(min-width: 769px) {
+                        &:hover {
+                            background: #FFD8DE;
+                            border: 1px solid #F4CDD3;
+                            .give_icon {
+                                filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
+                            }
+                        }
+                    } 
+                    @media(max-width: 420px) {
+                        display: none;
+                    }
+                    &.active {
+                        background: #FFD8DE;
+                        border: 1px solid #F4CDD3;
+                        .give_icon {
+                            filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
                         }
                     }
                 }
                 .shower_icon {
                     width: 14px;
                     height: 14px;
-                    margin-right: 8px;
+                    margin-right: 4px;
                 }
-                .serve_icon {
-                    width: 16px;
-                    height: 16px;
+                .icon {
+                    width: 20px;
+                    height: 20px;
                     cursor: pointer;
-                    filter: brightness(0) saturate(100%) invert(58%) sepia(13%) saturate(186%) hue-rotate(187deg) brightness(89%) contrast(96%);
                 }
             }
         }

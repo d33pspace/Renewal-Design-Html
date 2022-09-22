@@ -7,6 +7,9 @@ overlay.forEach(e => {
         if (i.target == e) {
             e.classList.remove('active')
         }
+        if (i.target.classList.contains('close')) {
+            e.classList.remove('active')
+        }
         if (i.target == disOverlay) {
             disOverlay.firstElementChild.classList.remove('active')
             document.documentElement.classList.remove('no-scroll')

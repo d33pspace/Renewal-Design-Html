@@ -405,14 +405,14 @@ main .list .card .time.unactive {
   opacity: 0.5;
 }
 main .list .card .time .remain_time {
-  margin-left: 8px;
+  margin-left: 4px;
   font-weight: 500;
   font-size: 12px;
   line-height: 150%;
   color: #13ADAD;
   width: 39px;
 }
-main .list .card .time .img_wrapper_serve {
+main .list .card .time .img_wrapper {
   background: #FFFFFF;
   border: 1px solid #DDDFE4;
   box-sizing: border-box;
@@ -423,31 +423,75 @@ main .list .card .time .img_wrapper_serve {
   align-items: center;
   justify-content: center;
   transition: 0.2s;
+  margin: 0 4px;
 }
 @media (min-width: 769px) {
   main .list .card .time .img_wrapper_serve:hover {
-    background: #F0F2F5;
+    background: #FFEFC9;
+    border: 1px solid #F4E7C7;
   }
   main .list .card .time .img_wrapper_serve:hover .serve_icon {
-    filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(347%) hue-rotate(188deg) brightness(90%) contrast(84%);
+    filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(1693%) hue-rotate(339deg) brightness(101%) contrast(92%);
   }
 }
 main .list .card .time .img_wrapper_serve.active {
-  background: #FFC2CB;
+  background: #FFEFC9;
+  border: 1px solid #F4E7C7;
 }
 main .list .card .time .img_wrapper_serve.active .serve_icon {
-  filter: brightness(0) saturate(100%) invert(42%) sepia(25%) saturate(2273%) hue-rotate(308deg) brightness(83%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(1693%) hue-rotate(339deg) brightness(101%) contrast(92%);
+}
+@media (min-width: 769px) {
+  main .list .card .time .img_wrapper_take:hover {
+    background: #EBF8FF;
+    border: 1px solid #E1F0F8;
+  }
+  main .list .card .time .img_wrapper_take:hover .take_icon {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
+  }
+}
+@media (max-width: 420px) {
+  main .list .card .time .img_wrapper_take {
+    display: none;
+  }
+}
+main .list .card .time .img_wrapper_take.active {
+  background: #EBF8FF;
+  border: 1px solid #E1F0F8;
+}
+main .list .card .time .img_wrapper_take.active .take_icon {
+  filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
+}
+@media (min-width: 769px) {
+  main .list .card .time .img_wrapper_give:hover {
+    background: #FFD8DE;
+    border: 1px solid #F4CDD3;
+  }
+  main .list .card .time .img_wrapper_give:hover .give_icon {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
+  }
+}
+@media (max-width: 420px) {
+  main .list .card .time .img_wrapper_give {
+    display: none;
+  }
+}
+main .list .card .time .img_wrapper_give.active {
+  background: #FFD8DE;
+  border: 1px solid #F4CDD3;
+}
+main .list .card .time .img_wrapper_give.active .give_icon {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
 }
 main .list .card .time .shower_icon {
   width: 14px;
   height: 14px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
-main .list .card .time .serve_icon {
-  width: 16px;
-  height: 16px;
+main .list .card .time .icon {
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  filter: brightness(0) saturate(100%) invert(58%) sepia(13%) saturate(186%) hue-rotate(187deg) brightness(89%) contrast(96%);
 }
 
 .chat {
