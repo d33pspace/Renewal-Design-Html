@@ -154,89 +154,29 @@ main {
                     transition: .2s;
                     margin: 0 4px;
                 }
-                .img_wrapper_serve {
-                    @media(min-width: 769px) {
-                        &:hover {
-                            background: #FFEFC9;
-                            border: 1px solid #F4E7C7;
-                            .serve_icon {
-                                filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(1693%) hue-rotate(339deg) brightness(101%) contrast(92%);
-                            }
-                        }
-                    } 
-                    &.active {
-                        background: #FFEFC9;
-                        border: 1px solid #F4E7C7;
-                        .serve_icon {
-                            filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(1693%) hue-rotate(339deg) brightness(101%) contrast(92%);
-                        }
-                    }
-                }
                 .img_wrapper_take {
-                    @media(min-width: 769px) {
-                        &:hover {
-                            background: #EBF8FF;
-                            border: 1px solid #E1F0F8;
-                            .take_icon {
-                                filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
-                            }
-                        }
-                    } 
+                    background: #EBF8FF;
+                    border: 1px solid #E1F0F8;
+                    .take_icon {
+                        filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
+                    }
                     @media(max-width: 420px) {
                         display: none;
-                    }
-                    &.active {
-                        background: #EBF8FF;
-                        border: 1px solid #E1F0F8;
-                        .take_icon {
-                            filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
-                        }
                     }
                 }
                 .img_wrapper_give {
-                    @media(min-width: 769px) {
-                        &:hover {
-                            background: #FFD8DE;
-                            border: 1px solid #F4CDD3;
-                            .give_icon {
-                                filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
-                            }
-                        }
-                    } 
+                    background: #FFD8DE;
+                    border: 1px solid #F4CDD3;
+                    .give_icon {
+                        filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
+                    }
                     @media(max-width: 420px) {
                         display: none;
-                    }
-                    &.active {
-                        background: #FFD8DE;
-                        border: 1px solid #F4CDD3;
-                        .give_icon {
-                            filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
-                        }
                     }
                 }
                 .img_wrapper_return {
-                    .return_icon {
-                        filter: brightness(0) saturate(100%) invert(56%) sepia(4%) saturate(730%) hue-rotate(188deg) brightness(94%) contrast(85%);
-                    }
-                    @media(min-width: 769px) {
-                        &:hover {
-                            background: #DDF0EE;
-                            border: 1px solid #CEE6E3;
-                            .return_icon {
-                                filter: none;
-                            }
-                        }
-                    } 
-                    @media(max-width: 420px) {
-                        display: none;
-                    }
-                    &.active {
-                        background: #DDF0EE;
-                        border: 1px solid #CEE6E3;
-                        .return_icon {
-                            filter: none;
-                        }
-                    }
+                    background: #DDF0EE;
+                    border: 1px solid #CEE6E3;
                 }
                 .shower_icon {
                     width: 14px;
