@@ -63,6 +63,9 @@ editTag.forEach(item => {
 inputTag.onblur = (e) => {
     if (e.target.value == '' || e.target.value == null) {
         e.target.setAttribute('placeholder', inputPlaceholder)
+        document.querySelector('.add_list .tag').innerHTML = '#' + inputPlaceholder
+    } else {
+        document.querySelector('.add_list .tag').innerHTML = '#' + e.target.value
     }
 }
 

@@ -214,6 +214,30 @@ main {
                         }
                     }
                 }
+                .img_wrapper_return {
+                    .return_icon {
+                        filter: brightness(0) saturate(100%) invert(56%) sepia(4%) saturate(730%) hue-rotate(188deg) brightness(94%) contrast(85%);
+                    }
+                    @media(min-width: 769px) {
+                        &:hover {
+                            background: #DDF0EE;
+                            border: 1px solid #CEE6E3;
+                            .return_icon {
+                                filter: none;
+                            }
+                        }
+                    } 
+                    @media(max-width: 420px) {
+                        display: none;
+                    }
+                    &.active {
+                        background: #DDF0EE;
+                        border: 1px solid #CEE6E3;
+                        .return_icon {
+                            filter: none;
+                        }
+                    }
+                }
                 .shower_icon {
                     width: 14px;
                     height: 14px;

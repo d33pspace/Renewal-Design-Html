@@ -483,6 +483,30 @@ main .list .card .time .img_wrapper_give.active {
 main .list .card .time .img_wrapper_give.active .give_icon {
   filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
 }
+main .list .card .time .img_wrapper_return .return_icon {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(4%) saturate(730%) hue-rotate(188deg) brightness(94%) contrast(85%);
+}
+@media (min-width: 769px) {
+  main .list .card .time .img_wrapper_return:hover {
+    background: #DDF0EE;
+    border: 1px solid #CEE6E3;
+  }
+  main .list .card .time .img_wrapper_return:hover .return_icon {
+    filter: none;
+  }
+}
+@media (max-width: 420px) {
+  main .list .card .time .img_wrapper_return {
+    display: none;
+  }
+}
+main .list .card .time .img_wrapper_return.active {
+  background: #DDF0EE;
+  border: 1px solid #CEE6E3;
+}
+main .list .card .time .img_wrapper_return.active .return_icon {
+  filter: none;
+}
 main .list .card .time .shower_icon {
   width: 14px;
   height: 14px;
