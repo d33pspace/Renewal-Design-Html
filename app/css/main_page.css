@@ -449,6 +449,22 @@ main .list .card .time .img_wrapper_give .give_icon {
     display: none;
   }
 }
+@media (min-width: 769px) {
+  main .list .card .time .img_wrapper_serve:hover {
+    background: #FFEFC9;
+    border: 1px solid #F4E7C7;
+  }
+  main .list .card .time .img_wrapper_serve:hover .icon {
+    filter: brightness(0) saturate(100%) invert(87%) sepia(14%) saturate(7450%) hue-rotate(337deg) brightness(111%) contrast(92%);
+  }
+}
+main .list .card .time .img_wrapper_serve.active {
+  background: #FFEFC9;
+  border: 1px solid #F4E7C7;
+}
+main .list .card .time .img_wrapper_serve.active .icon {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(14%) saturate(7450%) hue-rotate(337deg) brightness(111%) contrast(92%);
+}
 main .list .card .time .img_wrapper_return {
   background: #DDF0EE;
   border: 1px solid #CEE6E3;
