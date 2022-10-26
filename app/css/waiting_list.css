@@ -358,3 +358,15 @@ main .list .card .user_info .info_details .name_english {
   line-height: 18px;
   color: #848790;
 }
+main .list .card .time {
+  padding: 9px 16px;
+  display: flex;
+  align-items: center;
+}
+main .list .card .time .remain_time {
+  margin-left: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #13ADAD;
+}

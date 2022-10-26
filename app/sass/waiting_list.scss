@@ -87,6 +87,18 @@ main {
                     }
                 }
             }
+            .time {
+                padding: 9px 16px;
+                display: flex;
+                align-items: center;
+                .remain_time {
+                    margin-left: 4px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #13ADAD;
+                }
+            }
         }
     }
 }
