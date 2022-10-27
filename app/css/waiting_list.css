@@ -315,7 +315,7 @@ main .lastCards::after {
   position: absolute;
   width: 100%;
   height: 50px;
-  top: -50px;
+  top: -49px;
   background: linear-gradient(180deg, transparent 0%, #fff 70%);
 }
 main .list .title, main .lastCards .title {
