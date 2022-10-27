@@ -303,67 +303,73 @@ main {
   position: relative;
   height: calc(100vh - 72px);
 }
-main:after {
-  content: "";
-  width: 100%;
-  height: 100%;
+main .lastCards {
   position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(180deg, transparent 80%, #fff 90%);
+  width: 100%;
+  bottom: 0;
+  background: #fff;
+  z-index: 999;
 }
-main .list .title {
+main .lastCards::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  background: linear-gradient(180deg, transparent 0%, #fff 70%);
+}
+main .list .title, main .lastCards .title {
   padding: 23px 16px 15px 16px;
   font-weight: 500;
   font-size: 24px;
   line-height: 26px;
   color: #001730;
 }
-main .list .card {
+main .list .card, main .lastCards .card {
   border-bottom: 1px solid #F1F2F4;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
 }
-main .list .card.empty .coma, main .list .card.empty .city, main .list .card.empty .serve_icon {
+main .list .card.empty .coma, main .list .card.empty .city, main .list .card.empty .serve_icon, main .lastCards .card.empty .coma, main .lastCards .card.empty .city, main .lastCards .card.empty .serve_icon {
   display: none;
 }
-main .list .card .user_info {
+main .list .card .user_info, main .lastCards .card .user_info {
   padding: 9px 16px;
   display: flex;
   align-items: center;
 }
-main .list .card .user_info.unactive {
+main .list .card .user_info.unactive, main .lastCards .card .user_info.unactive {
   opacity: 0.5;
 }
-main .list .card .user_info .avatar {
+main .list .card .user_info .avatar, main .lastCards .card .user_info .avatar {
   width: 44px;
   height: 44px;
   border-radius: 8px;
   margin-right: 8px;
   border: 1px solid #DDDFE4;
 }
-main .list .card .user_info .info_details {
+main .list .card .user_info .info_details, main .lastCards .card .user_info .info_details {
   display: flex;
   flex-direction: column;
 }
-main .list .card .user_info .info_details .name_hanzi {
+main .list .card .user_info .info_details .name_hanzi, main .lastCards .card .user_info .info_details .name_hanzi {
   color: #001730;
   font-weight: bold;
   font-size: 20px;
   line-height: 160%;
 }
-main .list .card .user_info .info_details .name_english {
+main .list .card .user_info .info_details .name_english, main .lastCards .card .user_info .info_details .name_english {
   font-size: 16px;
   line-height: 18px;
   color: #848790;
 }
-main .list .card .time {
+main .list .card .time, main .lastCards .card .time {
   padding: 9px 16px;
   display: flex;
   align-items: center;
 }
-main .list .card .time .remain_time {
+main .list .card .time .remain_time, main .lastCards .card .time .remain_time {
   margin-left: 4px;
   font-weight: 500;
   font-size: 16px;
