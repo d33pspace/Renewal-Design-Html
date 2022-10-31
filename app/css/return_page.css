@@ -581,6 +581,9 @@ main .head .col-title .button-wrapper .checkbox.active {
 .overlay.active .icons .menu-icon {
   opacity: 1;
 }
+.overlay.active .icons .menu-icon:not(.active) {
+  display: none;
+}
 .overlay .icons {
   display: flex;
   flex-direction: column;

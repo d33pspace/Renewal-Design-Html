@@ -315,6 +315,9 @@ main {
     &.active {
         .icons .menu-icon {
             opacity: 1;
+            &:not(.active) {
+                display: none;
+            }
         }
     }
     .icons {

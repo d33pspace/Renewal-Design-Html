@@ -1,6 +1,6 @@
 let screenHeight = screen.height - 72
 let cardsHeight = document.querySelector('.service_list').clientHeight
-console.log(screenHeight, cardsHeight)
+
 if (cardsHeight > screenHeight) {
     createLastCards()
 }

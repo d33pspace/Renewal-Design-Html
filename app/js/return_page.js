@@ -30,10 +30,10 @@ toggle.forEach(i => {
         }
 
         if (fabCheck == buttons.length || fabCheck == buttons.length - 1) {
-            fab.classList.add('active')
-        } else {
-            fab.classList.remove('active')
-        }
+            document.querySelectorAll('.menu-icon').forEach(i => {
+                i.classList.add('active')
+            })
+        } 
 
     }
 })
