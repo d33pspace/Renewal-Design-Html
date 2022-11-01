@@ -17,7 +17,6 @@ toggle.forEach(i => {
                 fabCheck++
             }
         })
-        console.log(fabCheck)
         if (i == checkAll) {
             toggle.forEach(e => { 
                 e.classList.remove('active')

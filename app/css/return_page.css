@@ -581,9 +581,6 @@ main .head .col-title .button-wrapper .checkbox.active {
 .overlay.active .icons .menu-icon {
   opacity: 1;
 }
-.overlay.active .icons .menu-icon:not(.active) {
-  display: none;
-}
 .overlay .icons {
   display: flex;
   flex-direction: column;
@@ -604,7 +601,12 @@ main .head .col-title .button-wrapper .checkbox.active {
   opacity: 0;
   transition: 0.2s;
 }
+.overlay .icons .menu-icon:not(.active) {
+  display: none;
+}
 .overlay .icons .menu-icon img {
+  height: 24px;
+  width: 24px;
   filter: brightness(0) saturate(100%) invert(59%) sepia(10%) saturate(260%) hue-rotate(187deg) brightness(88%) contrast(87%);
 }
 @media (min-width: 769px) {

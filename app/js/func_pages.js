@@ -4,15 +4,19 @@ let overlay = document.querySelectorAll('.overlay')
 
 overlay.forEach(e => {
     e.onclick = (i) => {
+        console.log(i)
         if (i.target == e) {
             e.classList.remove('active')
+            document.querySelector('.proceed').classList.remove('opened')
         }
         if (i.target.classList.contains('close')) {
             e.classList.remove('active')
         }
-        if (i.target == disOverlay) {
-            disOverlay.firstElementChild.classList.remove('active')
-            document.documentElement.classList.remove('no-scroll')
+        if (disOverlay) {
+            if (i.target == disOverlay) {
+                disOverlay.firstElementChild.classList.remove('active')
+                document.documentElement.classList.remove('no-scroll')
+            }
         }
     }
 })

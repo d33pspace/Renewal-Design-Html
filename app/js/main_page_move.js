@@ -10,7 +10,6 @@ let serviceCards = document.querySelectorAll('.service_list .card')
 
 serviceCards.forEach((item => {
     item.onclick = (e) => {
-        console.log(e.target == item.querySelector('.avatar'))
         if (e.target == item.querySelector('.name_english') || e.target == item.querySelector('.name_english') || e.target == item.querySelector('.avatar') || e.target == item) {
             location.href='./return_page.html'
         }
@@ -35,10 +34,16 @@ waitingCards.forEach((item => {
         if (e.target == item.querySelector('.name_english') || e.target == item.querySelector('.name_english') || e.target == item.querySelector('.avatar') || e.target == item) {
             let newCard = item.cloneNode(true)
             newCard.onclick = (i) => {
-                if (i.target == item.querySelector('.name_english') || i.target == item.querySelector('.name_english') || i.target == item.querySelector('.avatar') || i.target == item) {
+                console.log(i.target)
+                if (i.target == newCard.querySelector('.name_english') || i.target == newCard.querySelector('.name_english') || i.target == newCard.querySelector('.avatar') || i.target == newCard) {
                     location.href='./return_page.html'
                 }
             }
+            newCard.querySelectorAll('.img_wrapper').forEach((item => {
+                item.onclick = () => {
+                    item.classList.toggle('active')
+                }
+            }))
             document.querySelector('.service_list').appendChild(newCard)
             item.remove()
         }

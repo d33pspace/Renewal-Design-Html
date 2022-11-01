@@ -315,9 +315,6 @@ main {
     &.active {
         .icons .menu-icon {
             opacity: 1;
-            &:not(.active) {
-                display: none;
-            }
         }
     }
     .icons {
@@ -338,7 +335,12 @@ main {
             margin-top: 16px;
             opacity: 0;
             transition: .2s;
+            &:not(.active) {
+                display: none;
+            }
             img {
+                height: 24px;
+                width: 24px;
                 filter: brightness(0) saturate(100%) invert(59%) sepia(10%) saturate(260%) hue-rotate(187deg) brightness(88%) contrast(87%);
             }
             @media(min-width: 769px) {

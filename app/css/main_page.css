@@ -466,8 +466,8 @@ main .list .card .time .img_wrapper_serve.active .icon {
   filter: brightness(0) saturate(100%) invert(87%) sepia(14%) saturate(7450%) hue-rotate(337deg) brightness(111%) contrast(92%);
 }
 main .list .card .time .img_wrapper_return {
-  background: #DDF0EE;
-  border: 1px solid #CEE6E3;
+  background: #DDFFF7;
+  border: 1px solid #BCEBE0;
 }
 main .list .card .time .shower_icon {
   width: 14px;
