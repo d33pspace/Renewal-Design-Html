@@ -140,6 +140,9 @@ main {
                     line-height: 150%;
                     color: #13ADAD;
                     width: 39px;
+                    @media(max-width: 420px) {
+                        display: none;
+                    }
                 }
                 .img_wrapper {
                     background: #FFFFFF;
@@ -160,18 +163,12 @@ main {
                     .take_icon {
                         filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
                     }
-                    @media(max-width: 420px) {
-                        display: none;
-                    }
                 }
                 .img_wrapper_give {
                     background: #FFD8DE;
                     border: 1px solid #F4CDD3;
                     .give_icon {
                         filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
-                    }
-                    @media(max-width: 420px) {
-                        display: none;
                     }
                 }
                 .img_wrapper_serve {
@@ -183,6 +180,9 @@ main {
                                 filter: brightness(0) saturate(100%) invert(87%) sepia(14%) saturate(7450%) hue-rotate(337deg) brightness(111%) contrast(92%);
                             }
                         }
+                    }
+                    @media(max-width: 420px) {
+                        display: none;
                     }
                     &.active {
                         background: #FFEFC9;
@@ -200,6 +200,9 @@ main {
                     width: 14px;
                     height: 14px;
                     margin-right: 4px;
+                    @media(max-width: 420px) {
+                        display: none;
+                    }
                 }
                 .icon {
                     width: 20px;

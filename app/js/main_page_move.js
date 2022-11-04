@@ -34,7 +34,6 @@ waitingCards.forEach((item => {
         if (e.target == item.querySelector('.name_english') || e.target == item.querySelector('.name_english') || e.target == item.querySelector('.avatar') || e.target == item) {
             let newCard = item.cloneNode(true)
             newCard.onclick = (i) => {
-                console.log(i.target)
                 if (i.target == newCard.querySelector('.name_english') || i.target == newCard.querySelector('.name_english') || i.target == newCard.querySelector('.avatar') || i.target == newCard) {
                     location.href='./return_page.html'
                 }

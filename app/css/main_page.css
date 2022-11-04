@@ -412,6 +412,11 @@ main .list .card .time .remain_time {
   color: #13ADAD;
   width: 39px;
 }
+@media (max-width: 420px) {
+  main .list .card .time .remain_time {
+    display: none;
+  }
+}
 main .list .card .time .img_wrapper {
   background: #FFFFFF;
   border: 1px solid #DDDFE4;
@@ -432,22 +437,12 @@ main .list .card .time .img_wrapper_take {
 main .list .card .time .img_wrapper_take .take_icon {
   filter: brightness(0) saturate(100%) invert(62%) sepia(22%) saturate(1297%) hue-rotate(160deg) brightness(84%) contrast(91%);
 }
-@media (max-width: 420px) {
-  main .list .card .time .img_wrapper_take {
-    display: none;
-  }
-}
 main .list .card .time .img_wrapper_give {
   background: #FFD8DE;
   border: 1px solid #F4CDD3;
 }
 main .list .card .time .img_wrapper_give .give_icon {
   filter: brightness(0) saturate(100%) invert(29%) sepia(19%) saturate(5828%) hue-rotate(323deg) brightness(102%) contrast(76%);
-}
-@media (max-width: 420px) {
-  main .list .card .time .img_wrapper_give {
-    display: none;
-  }
 }
 @media (min-width: 769px) {
   main .list .card .time .img_wrapper_serve:hover {
@@ -456,6 +451,11 @@ main .list .card .time .img_wrapper_give .give_icon {
   }
   main .list .card .time .img_wrapper_serve:hover .icon {
     filter: brightness(0) saturate(100%) invert(87%) sepia(14%) saturate(7450%) hue-rotate(337deg) brightness(111%) contrast(92%);
+  }
+}
+@media (max-width: 420px) {
+  main .list .card .time .img_wrapper_serve {
+    display: none;
   }
 }
 main .list .card .time .img_wrapper_serve.active {
@@ -473,6 +473,11 @@ main .list .card .time .shower_icon {
   width: 14px;
   height: 14px;
   margin-right: 4px;
+}
+@media (max-width: 420px) {
+  main .list .card .time .shower_icon {
+    display: none;
+  }
 }
 main .list .card .time .icon {
   width: 20px;
