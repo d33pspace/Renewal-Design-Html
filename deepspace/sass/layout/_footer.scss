@@ -1,0 +1,94 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    padding: 22.5px 0;
+    gap: 45px;
+}
+
+footer .footer-content>* {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    text-decoration: unset;
+    position: relative;
+}
+
+footer .footer-content a {
+    transition: .2s;
+}
+
+footer .footer-content a:hover {
+    color: #82DBE8;
+}
+
+footer .footer-content .translate-button {
+    color: #82DBE8;
+    cursor: pointer;
+}
+
+footer .footer-content>*:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -22px;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+footer .footer-content .reg {
+    padding-left: 25px;
+}
+
+footer .footer-content .reg::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url('../img/gongan.png');
+}
+
+@media(max-width: 940px) { 
+    footer .footer-content {
+        gap: 21px;
+    }
+    footer .footer-content>*:not(:last-child)::after {
+        right: -10px;
+    }
+}
+
+@media(max-width: 769px) { 
+    footer {
+        background: #000;
+    }
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 0;
+    }
+    footer .footer-content > * {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    footer .footer-content .reg::before {
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+    }
+    footer .footer-content .reg {
+        padding-left: 21px;
+    }
+    footer .footer-content>*:not(:last-child)::after {
+        display: none;
+    }
+}

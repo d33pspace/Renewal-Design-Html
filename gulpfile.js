@@ -53,6 +53,30 @@ gulp.task('watch2', gulp.series('browser-sync2', 'sass2', function(done) {
     done()
 }));
 
+gulp.task('sass3', function(){ 
+    return gulp.src('deepspace/sass/**/*.scss') 
+        .pipe(sass()) 
+        .pipe(gulp.dest('deepspace/css')) 
+        .pipe(browserSync.reload({stream: true})) 
+});
+
+gulp.task('browser-sync3', function(done) { 
+    browserSync({ 
+        server: { 
+            baseDir: 'deepspace' 
+        },
+        notify: false 
+    });
+    done()
+});
+
+gulp.task('watch3', gulp.series('browser-sync3', 'sass3', function(done) {
+    gulp.watch('deepspace/sass/**/*.scss', gulp.series('sass3')); 
+    gulp.watch('deepspace/*.html').on('change', browserSync.reload);
+    gulp.watch('deepspace/js/*.js').on('change', browserSync.reload); 
+    done()
+}));
+
 gulp.task('mincss', function() {
     return gulp.src('app/css/main.css')
         .pipe(mincss())
