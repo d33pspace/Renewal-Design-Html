@@ -1,0 +1,16 @@
+main {
+    background: url('../img/contact.png');
+    background-size: cover;
+}
+
+main .content>p {
+    margin-bottom: 48px;
+}
+
+main .content form {
+    gap: 24px;
+}
+
+main .content form button[type='submit'] {
+    margin-top: 12px;
+}

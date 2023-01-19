@@ -1,0 +1,57 @@
+main {
+    background: url('../img/services.png');
+    background-size: cover;
+}
+
+main .title {
+    margin-bottom: 40px;
+}
+
+main .list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+main .list .item .title-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    margin-bottom: 16px;
+}
+
+main .list .item .title-block .list-title {
+    padding-left: 24px;
+    border-left: 2px solid #82DBE8;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+main .list .item .title-block img {
+    width: 144px;
+    height: 144px;
+}
+
+main .list .item>p {
+    font-size: 16px;
+}
+
+@media(max-width: 769px) {
+    main .list .item .title-block {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 12px;
+    }
+    main .list .item .title-block .list-title {
+        padding-left: 8px;
+        font-size: 16px;
+    }
+    main .list .item > p {
+        font-size: 14px;
+    }
+}

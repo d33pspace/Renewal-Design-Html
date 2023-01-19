@@ -1,0 +1,41 @@
+/*---MODULES---*/
+main {
+  background: url("../img/about.png");
+  background-size: cover;
+}
+
+main .side .content {
+  width: 686px;
+}
+
+main .side .content .title {
+  margin-bottom: 60px;
+}
+
+main .side .icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 64px;
+}
+
+main .side .icons-grid img {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 769px) {
+  main .side .content .title {
+    margin-bottom: 12px;
+  }
+
+  main .side .icons-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+
+  main .side .icons-grid img {
+    margin-bottom: 4px;
+    width: 50px;
+    height: 50px;
+  }
+}

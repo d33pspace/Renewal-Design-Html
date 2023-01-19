@@ -98,11 +98,11 @@ main .side {
   backdrop-filter: blur(30px);
   display: flex;
   align-items: center;
-  padding: 164px 0 164px 64px;
+  padding: 164px 0 100px 64px;
 }
 
 main .side .content {
-  max-width: 551px;
+  width: 551px;
   display: flex;
   flex-direction: column;
 }
@@ -121,7 +121,8 @@ main .side .content .title {
   color: #FFFFFF;
 }
 
-main .side .content .main-title span {
+main .side .content .main-title span,
+main .side .content .title span {
   color: #82DBE8;
 }
 
@@ -131,6 +132,64 @@ main .side .content p {
   line-height: 170%;
   letter-spacing: 0.01em;
   color: #CFD7DA;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+form button {
+  padding: 18.5px 58px;
+  background: #82DBE8;
+  border: 2px solid #82DBE8;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #0F1517;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.form-row label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #CFD7DA;
+}
+
+.form-row input,
+.form-row textarea {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #5D696D;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  padding: 18.5px 28px;
+  width: 100%;
+  background: transparent;
+  outline: unset;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #5D696D;
 }
 
 @media (max-width: 1280px) {
@@ -149,12 +208,36 @@ main .side .content p {
     padding: 148px 15px 190px 15px;
   }
 
-  main .side .content .main-title {
+  main .side .content .main-title,
+main .side .content .title {
     font-size: 24px;
   }
 
   main .side .content p {
     font-size: 14px;
+  }
+
+  form {
+    gap: 16px;
+  }
+
+  form button {
+    padding: 13.5px 58px;
+    width: 100%;
+  }
+
+  .form-row {
+    gap: 8x;
+  }
+
+  .form-row label {
+    font-size: 14px;
+  }
+
+  .form-row input,
+.form-row textarea {
+    font-size: 14px;
+    padding: 14.5px 28px;
   }
 }
 @media (max-width: 480px) {

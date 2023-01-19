@@ -1,4 +1,3 @@
-/*---BASE---*/
 /*---MODULES---*/
 main {
   background: url("../img/home.png");
@@ -8,6 +7,3 @@ main {
 main .side .content .main-title {
   margin-bottom: 30px;
 }
-
-/*---FOOTER---*/
-/*---OTHER_PAGES---*/
