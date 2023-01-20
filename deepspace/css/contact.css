@@ -15,3 +15,9 @@ main .content form {
 main .content form button[type=submit] {
   margin-top: 12px;
 }
+
+@media (max-width: 769px) {
+  main .content > p {
+    margin-bottom: 24px;
+  }
+}

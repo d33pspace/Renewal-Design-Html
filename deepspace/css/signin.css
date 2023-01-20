@@ -1,0 +1,48 @@
+/*---MODULES---*/
+main {
+  background: url("../img/home.png");
+  background-size: cover;
+}
+
+main .side {
+  align-items: flex-start;
+}
+
+main .side .title {
+  margin-bottom: 36px;
+}
+
+main .side .buttons {
+  flex-direction: row;
+  gap: 16px;
+}
+
+main .side .buttons button[type=submit] {
+  display: none;
+}
+
+form .step.active + .buttons button:not([type=submit]) {
+  display: none;
+}
+
+form .step.active + .buttons button[type=submit] {
+  display: block;
+}
+
+@media (max-width: 769px) {
+  main .side .title {
+    margin-bottom: 20px;
+  }
+
+  form .form-row label {
+    font-size: 16px;
+  }
+
+  form .form-row {
+    gap: 12px;
+  }
+
+  form {
+    gap: 20px;
+  }
+}

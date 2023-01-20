@@ -103,6 +103,54 @@ const translateStrings = [
         en: `Send`,
         zh: `发送`
     },
+    {
+        en: `Enter your phone number to get started`,
+        zh: `Enter your phone number to get started`
+    },
+    {
+        en: `Start Over`,
+        zh: `Start Over`
+    },
+    {
+        en: `Next`,
+        zh: `Next`
+    },
+    {
+        en: `Invalid phone number. Please try again.`,
+        zh: `Invalid phone number. Please try again.`
+    },
+    {
+        en: `Enter the code sent to your phone`,
+        zh: `Enter the code sent to your phone`
+    },
+    {
+        en: `Remember me on this device`,
+        zh: `Remember me on this device`
+    },
+    {
+        en: `Invalid verification code. Try again or start over.`,
+        zh: `Invalid verification code. Try again or start over.`
+    },
+    {
+        en: `Enter your full name`,
+        zh: `Enter your full name`
+    },
+    {
+        en: `May one of our directors stay in touch with you by WeChat?`,
+        zh: `May one of our directors stay in touch with you by WeChat?`
+    },
+    {
+        en: `Yes, if we're not already friends, add me using my phone number, XXXXXXXXXXX`,
+        zh: `Yes, if we're not already friends, add me using my phone number, XXXXXXXXXXX`
+    },
+    {
+        en: `Yes, but I'd like to provide another number or WeChat ID.`,
+        zh: `Yes, but I'd like to provide another number or WeChat ID.`
+    },
+    {
+        en: `No thanks`,
+        zh: `No thanks`
+    },
 ]
 
 export {translateStrings}

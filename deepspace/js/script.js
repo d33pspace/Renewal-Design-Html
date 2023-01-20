@@ -16,12 +16,11 @@ nav.forEach(item => {
 let translateButton = document.querySelector('.translate-button')
 let strings = document.querySelectorAll('.trsl')
 
-window.onload = () => {
-    let userLang = navigator.language || navigator.userLanguage
-    if (userLang == 'zh' || userLang == 'zh-hk' || userLang == 'zh-cn' || userLang == 'zh-sg' || userLang == 'zh-tw'){
-        changeLang()
-    }
+let userLang = window.localStorage.getItem('ds-lang') || navigator.language || navigator.userLanguage
+if (userLang == 'zh' || userLang == 'zh-HK' || userLang == 'zh-CN' || userLang == 'zh-SG' || userLang == 'zh-TW'){
+    changeLang()
 }
+
 
 translateButton.onclick = () => changeLang()
 
@@ -31,9 +30,11 @@ function changeLang() {
         let obj = translateStrings.find(o => o[lang] === item.innerHTML);
         if (lang == 'en') {
             document.documentElement.setAttribute('lang', 'zh')
+            window.localStorage.setItem('ds-lang', 'zh')
             item.innerHTML = obj.zh
         } else {
             document.documentElement.setAttribute('lang', 'en')
+            window.localStorage.setItem('ds-lang', 'en')
             item.innerHTML = obj.en
         }
     })
@@ -48,31 +49,3 @@ menuButton.onclick = () => {
     document.body.classList.toggle('noScroll')
 }
 
-// Contact Form Handler
-
-let submit = document.querySelector('#contact-form button')
-let data = document.querySelectorAll('.form-row input')
-let form = document.querySelector('#contact-form')
-let dataForm = new Array(4)
-	data.forEach((item, id) => { 
-        item.onchange = function (e) {
-            dataForm[id] = e.target.value
-        }
-    })
-
-form.addEventListener('submit', function(evt) {
-    evt.preventDefault();
-    console.log(dataForm)
-    
-    let request = new XMLHttpRequest();
-    
-    request.addEventListener('load', function() {
-        console.log(request.response);
-        alert('Your message has been send!');
-        form.reset();
-    });
-    
-    request.open('POST', '/mail.php', true);
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    request.send('name=' + encodeURIComponent(dataForm[0]) + '&phone=' + encodeURIComponent(dataForm[1]) + '&email=' + encodeURIComponent(dataForm[2]) + '&userMessage=' + encodeURIComponent(dataForm[3]));
-    });

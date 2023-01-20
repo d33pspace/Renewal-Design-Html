@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/signin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body attr-lang="en">
+    <div class="app">
+        <header>
+            <div class="wrapper">
+                <div class="logo-wrap">
+                    <a href="/">
+                        <img src="./img/svg/logo.svg" alt="logo" class="logo" />
+                    </a>
+                </div>
+                <div class="menu">
+                    <div class="button"></div>
+                    <nav class="items">
+                        <a class="trsl" href="/">Home</a>
+                        <a class="trsl" href="/about.html">About</a>
+                        <a class="trsl" href="/services.html">Services</a>
+                        <a class="trsl" href="/contact.html">Contact</a>
+                        <a class="trsl mob" href="/signin.html">Sign In</a>
+                        <a class="desc" href="/signin.html"><img src='./img/svg/account.svg' alt='account'></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="side">
+                <div class="content">
+                    <h1 class="title"><span class="trsl">Sign In</span></h1>
+                    <form id="signin_form">
+                        <div class="step active">
+                            <div class="form-row">
+                                <label for="phone" class="trsl">Enter your phone number to get started</label>
+                                <input id="phone" type="tel" placeholder="+86" />
+                                <div class="error">
+                                    <img alt="error" src="./img/svg/error.svg" />
+                                    <p class="trsl">Invalid phone number. Please try again.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="form-row">
+                                <label class="trsl">Enter the code sent to your phone</label>
+                                <input type="text" placeholder="Verification code" />
+                                <div class="error">
+                                    <img alt="error" src="./img/svg/error.svg" />
+                                    <p class="trsl">Invalid verification code. Try again or start over.</p>
+                                </div>
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" id="code_checkbox" />
+                                    <label class="trsl" for="code_checkbox">Remember me on this device</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="form-row">
+                                <label class="trsl">Enter your full name</label>
+                                <input type="text" placeholder="Full name" />
+                            </div>
+                            <div class="form-row radio-container">
+                                <p class="trsl radio-label">May one of our directors stay in touch with you by WeChat?</p>
+                                <div class="radio-wrap">
+                                    <input type="radio" name="chat" id="use_phone" checked>
+                                    <label for="use_phone" class="trsl">Yes, if we're not already friends, add me using my phone number, XXXXXXXXXXX</label>
+                                </div>
+                                <div class="radio-wrap">
+                                    <input type="radio" name="chat" id="use_wechat">
+                                    <label for="use_wechat" class="trsl">Yes, but I'd like to provide another number or WeChat ID.</label>
+                                </div>
+                                <div class="radio-wrap">
+                                    <input type="radio" name="chat" id="use_nothing">
+                                    <label for="use_nothing" class="trsl">No thanks</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row buttons">
+                            <button class="trsl secondary" type="button">Start Over</button>
+                            <button class="trsl primary next-step" type="button">Next</button>
+                            <button class="trsl primary" type="submit">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="footer-content">
+                    <p>深空企业管理咨询（上海）有限公司 </p>
+                    <a href="https://beian.miit.gov.cn/"> 沪ICP备2022021252号-1</a>
+                    <a class="reg" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202014406">沪公网安备 31011202014406号 </a>
+                    <p class="translate-button trsl">中文</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script defer type="module" src="./js/script.js"></script>
+    <script defer type="module" src="./js/signin.js"></script>
+</body>

@@ -69,14 +69,137 @@ form {
 
 form button {
     padding: 18.5px 58px;
-    background: #82DBE8;
     border: 2px solid #82DBE8;
     border-radius: 5px;
     font-weight: 600;
     font-size: 16px;
     line-height: 120%;
     letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+form .step {
+    width: 100%;
+}
+
+form .step:not(.active) {
+    display: none;
+}
+
+form .form-row input[type='checkbox'] {
+    display: none;
+}
+
+form .step .form-row.radio-container {
+    margin-top: 24px;
+}
+
+form .step .form-row .radio-label {
+    font-size: 16px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+form .step .form-row .radio-wrap input {
+    display: none;
+}
+
+form .step .form-row .radio-wrap label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #CFD7DA;
+    display: flex;
+    width: fit-content;
+}
+
+form .step .form-row .radio-wrap label::before {
+    content: '';
+    min-width: 22px;
+    width: 22px;
+    height: 22px;
+    outline: 1px solid #5D696D;
+    border: 5px solid transparent;
+    background: transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+form .step .form-row .radio-wrap input:checked+label::before {
+    outline: 1px solid #82DBE8;
+    background: #82DBE8;
+    border: 5px solid #131719;
+}
+
+form .form-row .checkbox-wrap label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #CFD7DA;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+form .form-row .checkbox-wrap label::before {
+    content: '';
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-color: #82DBE8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+form .form-row .checkbox-wrap input:checked+label::before {
+    background-image: url('../img/svg/check.svg');
+    background-repeat: no-repeat;
+}
+
+form .form-row .error {
+    margin: -4px 0;
+    align-items: center;
+    display: none;
+}
+
+form .form-row.error .error {
+    display: flex;
+}
+
+form .form-row .error p {
+    margin-left: 4px;
+    color: #EB5757;
+    line-height: 120%;
+}
+
+form button.primary,
+form button.secondary:hover {
+    background: #82DBE8;
     color: #0F1517;
+}
+
+form button.secondary,
+form button.primary:hover {
+    background: transparent;
+    color: #82DBE8;
+}
+
+form button.disabled,
+form button.disabled:hover {
+    background: transparent;
+    color: #5D696D;
+    border-color: #5D696D;
+    cursor: not-allowed;
 }
 
 .form-row {
@@ -149,7 +272,7 @@ form button {
         width: 100%;
     }
     .form-row {
-        gap: 8x;
+        gap: 8px;
     }
     .form-row label {
         font-size: 14px;
@@ -159,6 +282,15 @@ form button {
     .form-row textarea {
         font-size: 14px;
         padding: 14.5px 28px;
+    }
+    form .step .form-row.radio-container {
+        margin-top: 20px;
+    }
+    form .step .form-row .radio-label {
+        margin-bottom: 12px;
+    }
+    form .form-row .error {
+        align-items: flex-start;
     }
 }
 
