@@ -17,9 +17,12 @@ form.addEventListener('submit', function(evt) {
     let request = new XMLHttpRequest();
     
     request.addEventListener('load', function() {
-        console.log(request.response);
-        alert('Your message has been send!');
-        form.reset();
+        let lang = document.documentElement.getAttribute('lang')
+        lang == 'en' ? 
+        alert(`Thanks for contacting us! You'll be hearing from us soon.`) : 
+        alert(`谢谢联系我们！我们很快就回复您！`)
+        document.location.href = '/'
+        // form.reset()
     });
     
     request.open('POST', '/mail.php', true);

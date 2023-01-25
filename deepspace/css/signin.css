@@ -17,7 +17,8 @@ main .side .buttons {
   gap: 16px;
 }
 
-main .side .buttons button[type=submit] {
+main .side .buttons button[type=submit],
+main .side .buttons .start-over {
   display: none;
 }
 
@@ -25,8 +26,13 @@ form .step.active + .buttons button:not([type=submit]) {
   display: none;
 }
 
-form .step.active + .buttons button[type=submit] {
+form .step.active + .buttons button[type=submit],
+main .step.active + .step:not(.active) + .buttons .start-over {
   display: block;
+}
+
+.phone-filled {
+  display: contents;
 }
 
 @media (max-width: 769px) {

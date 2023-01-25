@@ -151,6 +151,22 @@ const translateStrings = [
         en: `No thanks`,
         zh: `No thanks`
     },
+    {
+        en: `Enter Your Name`,
+        zh: `输入您的姓名`
+    },
+    {
+        en: `Enter phone number`,
+        zh: `输入您的电话号码`
+    },
+    {
+        en: `Enter your email`,
+        zh: `输入您的电子邮件`
+    },
+    {
+        en: `Enter your message`,
+        zh: `输入您的消息`
+    },
 ]
 
 export {translateStrings}

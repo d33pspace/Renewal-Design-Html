@@ -67,8 +67,12 @@ img {
   max-width: 100%;
 }
 
-body {
+body, body button {
   font-family: "Roboto Slab", serif;
+}
+
+body.zh, body.zh button {
+  font-family: "Noto Sans SC", sans-serif;
 }
 
 /*---LAYOUTS---*/
@@ -262,6 +266,13 @@ form button.secondary:hover {
   color: #0F1517;
 }
 
+form button[disabled] {
+  color: #5D696D !important;
+  border-color: #5D696D !important;
+  background: transparent !important;
+  cursor: default !important;
+}
+
 form button.secondary,
 form button.primary:hover {
   background: transparent;
@@ -297,7 +308,7 @@ form button.disabled:hover {
   font-size: 16px;
   line-height: 120%;
   letter-spacing: 0.01em;
-  color: #5D696D;
+  color: #a5a5a5;
   border: 2px solid rgba(255, 255, 255, 0.05);
   border-radius: 5px;
   padding: 18.5px 28px;
@@ -312,7 +323,7 @@ form button.disabled:hover {
   font-size: 16px;
   line-height: 120%;
   letter-spacing: 0.01em;
-  color: #5D696D;
+  color: #a5a5a5;
 }
 
 @media (max-width: 1280px) {
