@@ -1,0 +1,20 @@
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #CE0538;
+}
+
+header .header-menu .logo {
+    width: 95px;
+    height: 70px;
+    margin-right: 16px;
+}
+
+header .header-menu {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
