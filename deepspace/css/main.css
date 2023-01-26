@@ -587,6 +587,7 @@ footer .footer-content > * {
   color: #FFFFFF;
   text-decoration: unset;
   position: relative;
+  font-family: "Noto Sans SC", sans-serif;
 }
 
 footer .footer-content a {
@@ -600,6 +601,10 @@ footer .footer-content a:hover {
 footer .footer-content .translate-button {
   color: #82DBE8;
   cursor: pointer;
+}
+
+body.zh footer .footer-content .translate-button {
+  font-family: "Roboto Slab", serif;
 }
 
 footer .footer-content > *:not(:last-child)::after {
