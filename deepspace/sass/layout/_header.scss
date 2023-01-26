@@ -55,6 +55,10 @@ header .wrapper nav a {
     transition: .2s;
 }
 
+body.zh header .wrapper nav a {
+    font-weight: 700;
+}
+
 header .wrapper nav a.mob {
     display: none;
 }
