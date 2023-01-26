@@ -179,6 +179,11 @@ form .step .form-row .radio-label {
   margin-bottom: 20px;
 }
 
+form .step .form-row .radio-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 form .step .form-row .radio-wrap input {
   display: none;
 }

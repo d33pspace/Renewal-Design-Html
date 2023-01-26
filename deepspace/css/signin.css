@@ -35,6 +35,14 @@ main .step.active + .step:not(.active) + .buttons .start-over {
   display: contents;
 }
 
+.radio-wrap input[type=radio] + label + input {
+  margin-top: 12px;
+}
+
+.radio-wrap input[type=radio]:checked + label + input {
+  display: block;
+}
+
 @media (max-width: 769px) {
   main .side .title {
     margin-bottom: 20px;
