@@ -21,7 +21,7 @@ const translateStrings = [
     },
     {
         en: 'Sign In',
-        zh: '?'
+        zh: 'Sign In'
     },
     {
         en: `<span>Empower</span><br> your employees<br> for a better tomorrow`,
@@ -167,6 +167,18 @@ const translateStrings = [
         en: `Enter your message`,
         zh: `输入您的消息`
     },
+    {
+        en: `Thank You`,
+        zh: `Thank You`
+    },
+    {
+        en: `For contacting us. We'll be in touch soon.`,
+        zh: `For contacting us. We'll be in touch soon.`
+    },
+    {
+        en: `Back Home`,
+        zh: `Back Home`
+    }
 ]
 
 export {translateStrings}

@@ -56,7 +56,7 @@ function changeLang() {
 
 // mobile menu 
 
-let menuButton = document.querySelector('header .menu .button')
+let menuButton = document.querySelector('header .menu .button-nav')
 
 menuButton.onclick = () => {
     menuButton.classList.toggle('active')

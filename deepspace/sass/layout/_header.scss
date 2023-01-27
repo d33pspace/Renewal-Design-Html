@@ -68,7 +68,7 @@ header .wrapper nav a:hover {
     color: #82DBE8;
 }
 
-header .button {
+header .button-nav {
     display: none;
 }
 
@@ -104,7 +104,7 @@ header .button {
         padding: unset;
     }
 
-    header .button {
+    header .button-nav {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -117,17 +117,17 @@ header .button {
         cursor: pointer;
     }
 
-    header .button::after {
+    header .button-nav::after {
         content: '';
         width: 28px;
         height: 28px;
         background: url('../img/svg/menu.svg');
     }
-    header .button.active {
+    header .button-nav.active {
         border: 1px solid rgba(255, 255, 255, 0.05);
         background: transparent;
     }
-    header .button.active::after {
+    header .button-nav.active::after {
         background: url('../img/svg/close.svg');
     }
     header .menu .items {
@@ -142,7 +142,7 @@ header .button {
         flex-direction: column;
         visibility: hidden;
     }
-    header .menu .button.active+.items {
+    header .menu .button-nav.active+.items {
         visibility: visible;
     }
     header .wrapper nav a.mob {

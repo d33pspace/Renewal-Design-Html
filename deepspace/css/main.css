@@ -67,11 +67,11 @@ img {
   max-width: 100%;
 }
 
-body, body button {
+body, body button, body input {
   font-family: "Roboto Slab", serif;
 }
 
-body.zh, body.zh button {
+body.zh, body.zh button, body.zh input {
   font-family: "Noto Sans SC", sans-serif;
 }
 
@@ -145,7 +145,8 @@ form {
   gap: 36px;
 }
 
-form button {
+.button {
+  text-decoration: unset;
   padding: 18.5px 58px;
   border: 2px solid #82DBE8;
   border-radius: 5px;
@@ -265,8 +266,8 @@ form .form-row .error p {
   line-height: 120%;
 }
 
-form button.primary,
-form button.secondary:hover {
+.button.primary,
+.button.secondary:hover {
   background: #82DBE8;
   color: #0F1517;
 }
@@ -278,14 +279,14 @@ form button[disabled] {
   cursor: default !important;
 }
 
-form button.secondary,
-form button.primary:hover {
+.button.secondary,
+.button.primary:hover {
   background: transparent;
   color: #82DBE8;
 }
 
-form button.disabled,
-form button.disabled:hover {
+.button.disabled,
+.button.disabled:hover {
   background: transparent;
   color: #5D696D;
   border-color: #5D696D;
@@ -467,7 +468,7 @@ header .wrapper nav a:hover {
   color: #82DBE8;
 }
 
-header .button {
+header .button-nav {
   display: none;
 }
 
@@ -504,7 +505,7 @@ header .button {
     padding: unset;
   }
 
-  header .button {
+  header .button-nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -517,19 +518,19 @@ header .button {
     cursor: pointer;
   }
 
-  header .button::after {
+  header .button-nav::after {
     content: "";
     width: 28px;
     height: 28px;
     background: url("../img/svg/menu.svg");
   }
 
-  header .button.active {
+  header .button-nav.active {
     border: 1px solid rgba(255, 255, 255, 0.05);
     background: transparent;
   }
 
-  header .button.active::after {
+  header .button-nav.active::after {
     background: url("../img/svg/close.svg");
   }
 
@@ -546,7 +547,7 @@ header .button {
     visibility: hidden;
   }
 
-  header .menu .button.active + .items {
+  header .menu .button-nav.active + .items {
     visibility: visible;
   }
 

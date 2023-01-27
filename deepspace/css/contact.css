@@ -4,6 +4,10 @@ main {
   background-size: cover;
 }
 
+main .side {
+  align-items: flex-start;
+}
+
 main .content > p {
   margin-bottom: 48px;
 }
@@ -14,6 +18,26 @@ main .content form {
 
 main .content form button[type=submit] {
   margin-top: 12px;
+}
+
+main .thank-message {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+main .thank-message img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 36px;
+}
+
+main .thank-message .title {
+  margin-bottom: 16px;
+}
+
+main .thank-message .button {
+  margin-top: 36px;
 }
 
 @media (max-width: 769px) {

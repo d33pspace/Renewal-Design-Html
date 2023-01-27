@@ -46,6 +46,6 @@ function openNextStep() {
 let phone = document.querySelector('#phone')
 
 phone.oninput = (e) => {
-    e.target.value.length < 3 ? e.target.value = '+86' : ''
+    e.target.value.length < 4 ? e.target.value = '+86 ' : ''
     document.querySelector('.phone-filled').innerHTML = e.target.value
 }

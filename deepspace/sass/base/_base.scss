@@ -61,10 +61,10 @@ img {
   max-width: 100%;
 }
 
-body, body button {
+body, body button, body input {
 	font-family: 'Roboto Slab', serif;
 }
 
-body.zh, body.zh button {
+body.zh, body.zh button, body.zh input {
 	font-family: 'Noto Sans SC', sans-serif;
 }

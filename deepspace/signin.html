@@ -36,7 +36,7 @@
                     </a>
                 </div>
                 <div class="menu">
-                    <div class="button"></div>
+                    <div class="button-nav"></div>
                     <nav class="items">
                         <a class="trsl" href="/">Home</a>
                         <a class="trsl" href="about.html">About</a>
@@ -56,7 +56,7 @@
                         <div class="step active">
                             <div class="form-row">
                                 <label for="phone" class="trsl">Enter your phone number to get started</label>
-                                <input id="phone" type="tel" maxlength="14" value="+86" />
+                                <input id="phone" type="tel" maxlength="15" value="+86 " />
                                 <div class="error">
                                     <img alt="error" src="./img/svg/error.svg" />
                                     <p class="trsl">Invalid phone number. Please try again.</p>
@@ -66,7 +66,7 @@
                         <div class="step">
                             <div class="form-row">
                                 <label for="verification" class="trsl">Enter the code sent to your phone</label>
-                                <input id="verification" type="text" placeholder="Verification code" />
+                                <input id="verification" maxlength="6" type="text" placeholder="Verification code" />
                                 <div class="error">
                                     <img alt="error" src="./img/svg/error.svg" />
                                     <p class="trsl">Invalid verification code. Try again or start over.</p>
@@ -100,9 +100,9 @@
                             </div>
                         </div>
                         <div class="form-row buttons">
-                            <button class="secondary start-over" type="button" disabled><span class="trsl">Start Over </span><span class='timer'>(30s)</span></button>
-                            <button class="trsl primary next-step" type="button">Next</button>
-                            <button class="trsl primary" type="submit">Sign In</button>
+                            <button class="button secondary start-over" type="button" disabled><span class="trsl">Start Over </span><span class='timer'>(30s)</span></button>
+                            <button class="button trsl primary next-step" type="button">Next</button>
+                            <button class="button trsl primary" type="submit">Sign In</button>
                         </div>
                     </form>
                 </div>

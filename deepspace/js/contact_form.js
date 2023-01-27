@@ -17,12 +17,14 @@ form.addEventListener('submit', function(evt) {
     let request = new XMLHttpRequest();
     
     request.addEventListener('load', function() {
-        let lang = document.documentElement.getAttribute('lang')
-        lang == 'en' ? 
-        alert(`Thanks for contacting us! You'll be hearing from us soon.`) : 
-        alert(`谢谢联系我们！我们很快就回复您！`)
-        document.location.href = '/'
+        // let lang = document.documentElement.getAttribute('lang')
+        // lang == 'en' ? 
+        // alert(`Thanks for contacting us! You'll be hearing from us soon.`) : 
+        // alert(`谢谢联系我们！我们很快就回复您！`)
+        // document.location.href = '/'
         // form.reset()
+        document.querySelector('.contact-block').style.display = 'none'
+        document.querySelector('.thank-message').style.display = 'flex'
     });
     
     request.open('POST', '/mail.php', true);

@@ -67,7 +67,8 @@ form {
     gap: 36px;
 }
 
-form button {
+.button {
+    text-decoration: unset;
     padding: 18.5px 58px;
     border: 2px solid #82DBE8;
     border-radius: 5px;
@@ -187,8 +188,8 @@ form .form-row .error p {
     line-height: 120%;
 }
 
-form button.primary,
-form button.secondary:hover {
+.button.primary,
+.button.secondary:hover {
     background: #82DBE8;
     color: #0F1517;
 }
@@ -200,14 +201,14 @@ form button[disabled] {
     cursor: default !important;
 }
 
-form button.secondary,
-form button.primary:hover {
+.button.secondary,
+.button.primary:hover {
     background: transparent;
     color: #82DBE8;
 }
 
-form button.disabled,
-form button.disabled:hover {
+.button.disabled,
+.button.disabled:hover {
     background: transparent;
     color: #5D696D;
     border-color: #5D696D;
