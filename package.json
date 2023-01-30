@@ -5,6 +5,7 @@
   "dependencies": {
     "@popperjs/core": "^2.4.0",
     "gulp-clean-css": "^4.1.11",
+    "gulp-file-include": "^2.3.0",
     "gulp-rename": "^1.4.0",
     "sass": "^1.39.2",
     "v-calendar": "^2.3.2",

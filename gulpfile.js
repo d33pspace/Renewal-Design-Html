@@ -77,6 +77,30 @@ gulp.task('watch3', gulp.series('browser-sync3', 'sass3', function(done) {
     done()
 }));
 
+gulp.task('sass4', function(){ 
+    return gulp.src('site_new/sass/**/*.scss') 
+        .pipe(sass()) 
+        .pipe(gulp.dest('site_new/css')) 
+        .pipe(browserSync.reload({stream: true})) 
+});
+
+gulp.task('browser-sync4', function(done) { 
+    browserSync({ 
+        server: { 
+            baseDir: 'site_new' 
+        },
+        notify: false 
+    });
+    done()
+});
+
+gulp.task('watch4', gulp.series('browser-sync4', 'sass4', function(done) {
+    gulp.watch('site_new/sass/**/*.scss', gulp.series('sass4')); 
+    gulp.watch('site_new/*.html').on('change', browserSync.reload);
+    gulp.watch('site_new/js/*.js').on('change', browserSync.reload); 
+    done()
+}));
+
 gulp.task('mincss', function() {
     return gulp.src('app/css/main.css')
         .pipe(mincss())
@@ -114,5 +138,7 @@ gulp.task('copy-docs', function() {
     return gulp.src('app/docs/*.*')
         .pipe(gulp.dest('dist/docs'))
 });
+
+
 
 gulp.task('mincopyall', gulp.series('mincss', 'minhtml', 'minjs', 'copy-img', 'copy-svg', 'copy-fonts', 'copy-docs'));
