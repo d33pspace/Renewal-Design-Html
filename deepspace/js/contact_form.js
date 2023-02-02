@@ -16,6 +16,8 @@ textarea.onfocus = () => textarea.classList.add('active')
 textarea.onblur = () => textarea.classList.remove('active')
 
 
+
+
 form.addEventListener('submit', function(evt) {
     evt.preventDefault();
     console.log(dataForm)

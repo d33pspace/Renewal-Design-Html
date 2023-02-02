@@ -1,21 +1,27 @@
+let nextStep = document.querySelector('.next-step')
+let verification = document.querySelector('#verification')
+let phone = document.querySelector('#phone')
 openNextStep()
 
 function openNextStep() {
     let steps = document.querySelectorAll('.step')
-    let nextStep = document.querySelector('.next-step')
     steps.forEach((item, i )=> {
         if (item.classList.contains('active')) {
             nextStep.onclick = () => {
-                if( i == 0 ) {
-                    document.querySelector('#phone').setAttribute('disabled', '')
-                    document.querySelector('.start-over').setAttribute('disabled', '')
-                    timer()
-                } else if (i == 1) {
-                    document.querySelector('#verification').setAttribute('disabled', '')
-                    document.querySelector('#code_checkbox').setAttribute('disabled', '')
+                if (!nextStep.hasAttribute('disabled')) {
+                    if( i == 0 ) {
+                        document.querySelector('#phone').setAttribute('disabled', '')
+                        document.querySelector('.start-over').setAttribute('disabled', '')
+                        nextStep.classList.remove('active')
+                        timer()
+                    } else if (i == 1) {
+                        verification.setAttribute('disabled', '')
+                        document.querySelector('#code_checkbox').setAttribute('disabled', '')
+                    }
+                    item.nextElementSibling.classList.add('active')
+                    nextStep.setAttribute('disabled', '')
+                    openNextStep()
                 }
-                item.nextElementSibling.classList.add('active')
-                openNextStep()
             }
         }
     })
@@ -32,20 +38,28 @@ function openNextStep() {
                 document.querySelector('.timer').innerHTML = ''
                 let steps = document.querySelectorAll('.step.active')
                 document.querySelector('.start-over').onclick = () => {
-                    document.querySelector('#phone').removeAttribute('disabled')
+                    phone.removeAttribute('disabled')
                     steps[steps.length - 1].classList.remove('active')
                     openNextStep()
+                    phone.value.length == 15 ? nextStep.removeAttribute('disabled') : ''
                 }
             }
         }, 1000)
     }
 }
 
+verification.oninput = (e) => e.target.value.length == 6 ? nextStep.removeAttribute('disabled') : nextStep.setAttribute('disabled', '')
 
-
-let phone = document.querySelector('#phone')
 
 phone.oninput = (e) => {
     e.target.value.length < 4 ? e.target.value = '+86 ' : ''
     document.querySelector('.phone-filled').innerHTML = e.target.value
+    if (!validate(e.target.value.slice(4))) {
+        e.target.value = e.target.value.slice(0, e.target.value.length - 1)
+    }
+    e.target.value.length == 15 ? nextStep.removeAttribute('disabled') : nextStep.setAttribute('disabled', '')
+}
+
+function validate(value) {
+    return /^-?\d*$/.test(value) 
 }
