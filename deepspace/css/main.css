@@ -67,11 +67,11 @@ img {
   max-width: 100%;
 }
 
-body, body button, body input {
+body, body button, body input, body textarea {
   font-family: "Roboto Slab", serif;
 }
 
-body.zh, body.zh button, body.zh input {
+body.zh, body.zh button, body.zh input, body.zh textarea {
   font-family: "Noto Sans SC", sans-serif;
 }
 
@@ -330,6 +330,18 @@ form button[disabled] {
   line-height: 120%;
   letter-spacing: 0.01em;
   color: #a5a5a5;
+}
+
+.form-row textarea {
+  resize: none;
+  height: 60px;
+  min-height: 60px;
+  transition: 0.3s;
+}
+
+.form-row textarea.active {
+  height: 160px;
+  min-height: 160px;
 }
 
 @media (max-width: 1280px) {

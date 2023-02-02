@@ -1,7 +1,7 @@
 // Contact Form Handler
 
 let submit = document.querySelector('#contact-form button')
-let data = document.querySelectorAll('.form-row input')
+let data = document.querySelectorAll('.form-row .input')
 let form = document.querySelector('#contact-form')
 let dataForm = new Array(4)
 	data.forEach((item, id) => { 
@@ -9,6 +9,12 @@ let dataForm = new Array(4)
             dataForm[id] = e.target.value
         }
     })
+
+let textarea = document.querySelector('.form-row textarea')
+
+textarea.onfocus = () => textarea.classList.add('active')
+textarea.onblur = () => textarea.classList.remove('active')
+
 
 form.addEventListener('submit', function(evt) {
     evt.preventDefault();
