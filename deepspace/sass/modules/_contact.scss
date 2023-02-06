@@ -17,10 +17,15 @@ main .content>p {
 
 main .content form {
     gap: 24px;
+    margin-top: 12px;
 }
 
 main .content form button[type='submit'] {
     margin-top: 12px;
+}
+
+main .contact-block {
+    height: 705px;
 }
 
 main .thank-message {
@@ -46,5 +51,8 @@ main .thank-message .button {
 @media(max-width: 769px) {
     main .content>p {
         margin-bottom: 24px;
+    }
+    main .contact-block {
+        height: 615px;
     }
 }
