@@ -1,1 +1,24 @@
 /*---MODULES---*/
+main h1 {
+  margin-bottom: 25px;
+}
+
+main .caption {
+  color: var(--dark-grey);
+  text-align: center;
+  margin: 15px 10px 0 10px;
+}
+
+.subscription {
+  padding: 50px 0;
+  margin-top: 20px;
+  border-top: 2px solid var(--main-red);
+}
+
+.subscription h2 {
+  margin-bottom: 30px;
+}
+
+#subscription_form {
+  width: 100%;
+}

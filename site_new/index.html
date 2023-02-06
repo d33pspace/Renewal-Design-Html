@@ -17,7 +17,7 @@
         <div class="wrapper">
             <div class="header-menu">
                 <nav>
-                    <a href="/">
+                    <a href="/" class="logo">
                         <img alt="logo" src="./img/svg/logo.svg" />
                     </a>
                     <a href=".">What We Do</a>
@@ -27,9 +27,54 @@
             </div>
             <div class="sub-menu">
                 <a href="/">Sign In</a>
-                <a class="donate" href="/">Donate Now</a>
+                <a class="button small" href="/">Donate Now</a>
             </div>
         </div>
     </header>
+    <main>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-50">
+                    <img alt="hero" src="./img/home.png" />
+                    <p class="caption">When temperatures drop, people urgently need warm clothes, coats and hats.</p>
+                </div>
+                <div class="col-50">
+                    <h1>When temperatures drop, people urgently need warm clothes, coats and hats.</h1>
+                    <p>Renewal’s drop-in center is offering warm clothes, food and kindness to lonely homeless people who will be struggling to survive on the cold streets at night. We are urgently requesting gifts from supporters – because the cost of food is rising and the first people want when they come to us is a good, hot meal.</p>
+                    <a href="" class="link">Read the story here</a>
+                    <p>Our autumn newsletter also tells the survival story of Jiang Yuanyan, who found his way to the Renewal Center during lockdown, despite the drop-in center being closed for most of the last seven months. It was wonderful to see Jiang Yuanyan start a new job – and to know that it would have been impossible without the training provided here, and the kind gifts of generous supporters like you.</p>
+                    <a href="" class="link">Read the story here</a>
+                    <a class="button" href="/">SEND A GIFT</a>
+                </div>
+            </div>
+            <div class="row subscription">
+                <div class="col-50">
+                    <h2>Sign up for our email communications:</h2>
+                    <form id="subscription_form">
+                        <div class="input-wrap">
+                            <input class="input" id="name" type="text"required>
+                            <label for="name">Name</label>
+                            <div class="error">Invalid name, please try again.</div>
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input" id="email" type="email"required>
+                            <label for="email">Email</label>
+                            <div class="error">Invalid email address, please try again.</div>
+                        </div>
+                        <button type="submit" class="button">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="nav">
+                <a href="/">Contact Us</a>
+                <a href="/">中文</a>
+            </div>
+            <p class="copyright trsl">© Renewal 365 Inc, 2022</p>
+        </div>
+    </footer>
     <script defer type="module" src="./js/script.js"></script>
 </body>

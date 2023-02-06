@@ -4,7 +4,7 @@ header .wrapper {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #CE0538;
+    border-bottom: 2px solid var(--main-red)
 }
 
 header .header-menu .logo {
@@ -13,8 +13,25 @@ header .header-menu .logo {
     margin-right: 16px;
 }
 
-header .header-menu {
+header .header-menu nav {
     display: flex;
     gap: 48px;
+    align-items: center;
+}
+
+header .logo {
+    margin-right: 16px;
+}
+
+header .header-menu nav a, header .sub-menu a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main-red);
+}
+
+header .sub-menu {
+    display: flex;
+    gap: 25px;
     align-items: center;
 }

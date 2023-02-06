@@ -1,0 +1,30 @@
+footer .wrapper {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid var(--main-red);
+}
+
+footer .nav {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 52px;
+}
+
+footer .nav>* {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: var(--main-red);
+}
+
+footer .copyright {
+    color: var(--dark-grey);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+}
