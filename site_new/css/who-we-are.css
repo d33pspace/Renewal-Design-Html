@@ -1,0 +1,48 @@
+/*---MODULES---*/
+main h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+main .cards {
+  display: flex;
+  gap: 30px;
+}
+main .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .cards .card h2 {
+  text-align: center;
+}
+main .cards .card img {
+  width: 166px;
+  height: 166px;
+  margin-bottom: 25px;
+}
+main .cards .card .position {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--main-red);
+  margin: 10px 0 20px;
+}
+main .cards .card p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  main h1 {
+    margin-bottom: 20px;
+  }
+
+  main .cards {
+    flex-direction: column;
+  }
+  main .cards .card img {
+    margin-bottom: 15px;
+  }
+}

@@ -65,6 +65,7 @@ body {
 
 img {
   max-width: 100%;
+  width: 100%;
 }
 
 body, body button {
@@ -83,11 +84,12 @@ body.noScroll {
 body {
   --main-red: #CE0538;
   --light-grey: #D9D9D9;
+  --light-grey-bg: #F2F2F2;
   --dark-grey: #8C8C8C;
   --black: #1F1F1F;
 }
 
-h1 {
+h1, p.title {
   font-weight: 700;
   font-size: 34px;
   line-height: 120%;
@@ -152,11 +154,16 @@ p {
 .button.small {
   font-size: 16px;
   line-height: 120%;
-  padding: 10px 20px 11px 20px;
+  padding: 10px 20px 10px 20px;
   text-transform: capitalize;
 }
-.button.small ::after {
+.button.small::after {
   display: none;
+}
+@media (max-width: 768px) {
+  .button.small {
+    font-size: 20px;
+  }
 }
 
 .wrapper {
@@ -169,6 +176,9 @@ p {
   display: flex;
   justify-content: center;
   gap: 30px;
+  padding: 50px 0 0 0;
+}
+.row:last-child {
   padding: 50px 0;
 }
 .row > * {
@@ -188,7 +198,7 @@ p {
   width: 100%;
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 .input-wrap input {
   width: 100%;
@@ -203,28 +213,200 @@ p {
   outline: unset;
   border-radius: 5px;
 }
+.input-wrap input.error {
+  border-color: var(--main-red);
+}
+.input-wrap input.error + label + .error-message {
+  display: block;
+}
+.input-wrap input.active + label {
+  font-size: 14px;
+  top: -10px;
+  left: 30px;
+}
 .input-wrap label {
   position: absolute;
   font-weight: 400;
   font-size: 16px;
-  line-height: 120%;
+  line-height: 20px;
   letter-spacing: 0.01em;
   color: var(--dark-grey);
-  left: 30px;
+  left: 20px;
+  top: 15px;
   cursor: text;
+  background: #fff;
+  padding: 0 10px;
+  transition: 0.2s;
 }
-.input-wrap .error {
+.input-wrap .error-message {
   display: none;
+  margin-top: 8px;
+  padding-left: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--main-red);
+  position: relative;
+}
+.input-wrap .error-message:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  background: url("../img/svg/error.svg");
 }
 
+.subscription {
+  padding: 50px 0;
+  margin-top: 70px;
+  border-top: 2px solid var(--main-red);
+}
+
+.subscription h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subscription-form, #subscription_form {
+  width: 100%;
+}
+
+#subscription_form button {
+  margin: 0 auto;
+}
+
+.subscription-message {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subscription-message.active {
+  display: flex;
+}
+.subscription-message img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+.subscription-message .title {
+  margin-bottom: 15px;
+}
+.subscription-message .subtitle {
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--dark-grey);
+}
+
+.banner {
+  width: 100%;
+  background: var(--light-grey-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 15px;
+}
+.banner .banner-title {
+  max-width: 754px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .mob-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .row {
+    flex-direction: column;
+    padding: 30px 0 0 0;
+  }
+  .row:last-child {
+    padding: 30px 0;
+  }
+  .row .col-50 {
+    width: 100%;
+  }
+
+  h1, p.title {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .link {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .input-wrap {
+    margin-bottom: 15px;
+  }
+
+  .subscription {
+    margin-top: 50px;
+  }
+
+  .subscription h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .banner {
+    padding: 30px 15px;
+  }
+  .banner .banner-title {
+    font-size: 24px;
+    line-height: 120%;
+  }
+  .banner .button {
+    width: fit-content;
+  }
+}
+@media (max-width: 480px) {
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
 /*---HEADER---*/
+header {
+  padding: 0 25px;
+  max-width: 1146px;
+  margin: 0 auto;
+}
+
 header .wrapper {
+  padding: 20px 0;
+  border-bottom: 2px solid var(--main-red);
+}
+
+header .menu-desc {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--main-red);
 }
 
 header .header-menu .logo {
@@ -256,6 +438,85 @@ header .sub-menu {
   align-items: center;
 }
 
+header .menu-mob {
+  display: none;
+}
+header .menu-mob .menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .menu-mob .menu .logo {
+  width: 82px;
+  height: 60px;
+}
+header .menu-mob .menu .menu-button {
+  display: flex;
+  align-items: center;
+}
+header .menu-mob .menu .menu-button > a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: var(--main-red);
+  margin-right: 15px;
+}
+header .menu-mob .menu .menu-toggle {
+  width: 40px;
+  height: 40px;
+  background: url("../img/svg/menu.svg");
+  cursor: pointer;
+}
+header .menu-mob .menu .menu-toggle.active {
+  background: url("../img/svg/menu-close.svg");
+}
+header .menu-mob .menu .menu-toggle.active + nav {
+  left: 0;
+}
+header .menu-mob .menu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  z-index: 9999;
+  background: #fff;
+  width: 100%;
+  height: calc(100vh - 92px);
+  left: -100%;
+  top: 92px;
+  transition: 0.3s;
+}
+header .menu-mob .menu nav a {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: var(--main-red);
+}
+header .menu-mob .menu nav .button {
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  header .wrapper .menu-desc {
+    display: none;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  header .wrapper {
+    padding: 15px;
+  }
+
+  header .menu-mob {
+    display: flex;
+  }
+}
 /*---MODULES---*/
 /*---FOOTER---*/
 footer .wrapper {
@@ -289,4 +550,9 @@ footer .copyright {
   letter-spacing: 0.01em;
 }
 
+@media (max-width: 768px) {
+  footer .nav {
+    margin-bottom: 20px;
+  }
+}
 /*---OTHER_PAGES---*/

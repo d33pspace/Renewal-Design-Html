@@ -28,3 +28,9 @@ footer .copyright {
     line-height: 160%;
     letter-spacing: 0.01em;
 }
+
+@media(max-width: 768px) {
+    footer .nav {
+        margin-bottom: 20px;
+    }    
+}

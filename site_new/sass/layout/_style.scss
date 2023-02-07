@@ -5,11 +5,12 @@ body.noScroll {
 body {
     --main-red: #CE0538;
     --light-grey: #D9D9D9;
+    --light-grey-bg: #F2F2F2;
     --dark-grey: #8C8C8C;
     --black: #1F1F1F;
 }
 
-h1 {
+h1, p.title {
     font-weight: 700;
     font-size: 34px;
     line-height: 120%;
@@ -73,10 +74,13 @@ p {
     &.small {
         font-size: 16px;
         line-height: 120%;
-        padding: 10px 20px 11px 20px;
+        padding: 10px 20px 10px 20px;
         text-transform: capitalize;
-        ::after {
+        &::after {
             display: none;
+        }
+        @media(max-width: 768px) {
+            font-size: 20px;
         }
     }
 }
@@ -87,12 +91,14 @@ p {
     margin: 0 auto;
 }
 
-
 .row {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
+    &:last-child {
+        padding: 50px 0;
+    }
     &>* {
         display: flex;
         flex-direction: column;
@@ -111,7 +117,7 @@ p {
     width: 100%;
     margin-bottom: 20px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     input {
         width: 100%;
         height: 50px;
@@ -124,18 +130,174 @@ p {
         border: 1px solid var(--light-grey);
         outline: unset;
         border-radius: 5px;
+        &.error {
+            border-color: var(--main-red);
+            &+label+.error-message {
+                display: block;
+            }
+        }
+        &.active+label {
+            font-size: 14px;
+            top: -10px;
+            left: 30px;
+        }
     }
     label {
         position: absolute;
         font-weight: 400;
         font-size: 16px;
-        line-height: 120%;
+        line-height: 20px;
         letter-spacing: 0.01em;
         color: var(--dark-grey);
-        left: 30px;
+        left: 20px;
+        top: 15px;
         cursor: text;
+        background: #fff;
+        padding: 0 10px;
+        transition: .2s;
     }
-    .error {
+    .error-message {
         display: none;
+        margin-top: 8px;
+        padding-left: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: var(--main-red);
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            background: url('../img/svg/error.svg');
+        }
+    }
+}
+
+.subscription {
+    padding: 50px 0;
+    margin-top: 70px;
+    border-top: 2px solid var(--main-red);
+}
+
+.subscription h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.subscription-form, #subscription_form {
+    width: 100%;
+}
+
+#subscription_form button {
+    margin: 0 auto;
+}
+
+.subscription-message {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &.active {
+        display: flex;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    .title {
+        margin-bottom: 15px;
+    }
+    .subtitle {
+        margin-bottom: 0;
+        font-size: 20px;
+        line-height: 120%;
+        color: var(--dark-grey);
+    }
+}
+
+.banner {
+    width: 100%;
+    background: var(--light-grey-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 15px;
+    .banner-title {
+        max-width: 754px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: var(--black);
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width: 768px) {
+    .mob-padding {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .wrapper {
+        padding: 0;
+    }
+    .row {
+        flex-direction: column;
+        padding: 30px 0 0 0;
+        &:last-child {
+            padding: 30px 0;
+        }
+        .col-50 {
+            width: 100%;
+        }
+    }
+    h1, p.title {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .link {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .input-wrap { 
+        margin-bottom: 15px;
+    }
+    .subscription {
+        margin-top: 50px;
+    }
+    .subscription h2 {
+        margin-bottom: 25px;
+        text-align: center;
+        width: 100%;
+    }
+    .banner {
+        padding: 30px 15px;
+        .banner-title {
+            font-size: 24px;
+            line-height: 120%;
+        }
+        .button {
+            width: fit-content;
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .button {
+        width: 100%;
+        justify-content: center;
     }
 }
