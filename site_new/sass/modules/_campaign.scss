@@ -2,18 +2,7 @@ main h1 {
     margin-bottom: 25px;
 }
 
-main .caption {
-    color: var(--dark-grey);
-    text-align: center;
-    margin: 15px 10px 0 10px;
-}
-
-
-
 @media(max-width: 768px) {
-    main .caption {
-        width: 100%;
-    }
     main h1 {
         margin-bottom: 20px;
     }
