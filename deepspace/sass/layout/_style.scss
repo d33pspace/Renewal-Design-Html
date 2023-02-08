@@ -259,6 +259,7 @@ form button[disabled] {
     height: 60px;
     min-height: 60px;
     transition: .3s;
+    overflow: hidden;
 }
 
 .form-row textarea.active {

@@ -49,10 +49,10 @@ function openNextStep() {
 }
 
 verification.oninput = (e) => {
-    e.target.value.length == 6 ? nextStep.removeAttribute('disabled') : nextStep.setAttribute('disabled', '')
     if (!validate(e.target.value)) {
         e.target.value = e.target.value.slice(0, e.target.value.length - 1)
     }
+    e.target.value.length == 6 ? nextStep.removeAttribute('disabled') : nextStep.setAttribute('disabled', '')
 }
 
 
