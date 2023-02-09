@@ -1,0 +1,103 @@
+.account-tabs-row {
+    .account-title {
+        font-size: 48px;
+        margin-bottom: 50px;
+    }
+    .account-tabs {
+        display: flex;
+        width: 100%;
+        padding-bottom: 0;
+        gap: 30px;
+        position: relative;
+        p {
+            margin: 0;
+            font-size: 20px;
+            line-height: 120%;
+            cursor: pointer;
+            position: relative;
+            padding: 0 10px 13px 10px;
+            &.active {
+                color: var(--main-red);
+                font-weight: 700;
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    z-index: 9999;
+                    background: var(--main-red);
+                    border-radius: 4px 4px 0px 0px;
+                }
+            }
+        }
+        &::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: var(--light-grey-bg);
+            border-radius: 4px 4px 0px 0px;
+        }
+    }
+}
+
+.account-row {
+    justify-content: flex-start;
+    .title {
+        margin-bottom: 30px;
+    }
+}
+
+.buttons-row {
+    display: flex;
+    gap: 15px;
+}
+
+.no-card, .no-gift {
+    display: none;
+}
+
+#gift_edit {
+    display: none;
+}
+
+.monthly-gift {
+    margin: 0;
+    span {
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 768px) {
+    .account-tabs-row {
+        .account-title {
+            font-size: 24px;
+            margin:0 15px 20px 15px;
+        }
+        .account-tabs {
+            gap: 10px;
+            p {
+                font-size: 18px;
+                line-height: 120%;
+                
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .account-tabs-row {
+        .account-tabs {
+            justify-content: space-between;
+            gap: 0;
+            p {
+                padding: 0 5px 8px 5px;
+                font-size: 14px;
+            }
+        }
+    }
+}

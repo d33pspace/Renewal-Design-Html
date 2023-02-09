@@ -57,12 +57,16 @@ body {
   line-height: 1;
 }
 
+form {
+	width: 100%;
+}
+
 img {
   max-width: 100%;
   width: 100%;
 }
 
-body, body button {
+body, button, input, textarea {
 	font-family: 'Roboto Slab', serif;
 }
 

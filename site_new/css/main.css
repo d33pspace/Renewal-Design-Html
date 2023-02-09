@@ -63,12 +63,16 @@ body {
   line-height: 1;
 }
 
+form {
+  width: 100%;
+}
+
 img {
   max-width: 100%;
   width: 100%;
 }
 
-body, body button {
+body, button, input, textarea {
   font-family: "Roboto Slab", serif;
 }
 
@@ -87,6 +91,14 @@ body {
   --light-grey-bg: #F2F2F2;
   --dark-grey: #8C8C8C;
   --black: #1F1F1F;
+  --success: #219653;
+}
+
+a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--main-red);
 }
 
 h1, p.title {
@@ -134,8 +146,9 @@ p {
 }
 
 .button {
-  padding: 15.5px 40px 15.5px 40px;
+  padding: 13.5px 38px 13.5px 38px;
   border-radius: 5px;
+  border: 2px solid var(--main-red) !important;
   background: var(--main-red);
   color: #FFFFFF !important;
   font-weight: 600;
@@ -148,8 +161,8 @@ p {
   text-transform: uppercase;
   outline: none;
   box-shadow: none;
-  border: none;
   cursor: pointer;
+  transition: 0.3s;
 }
 .button::after {
   content: "";
@@ -158,6 +171,14 @@ p {
   height: 13px;
   margin-left: 10px;
   background: url("../img/svg/button-arrow.svg");
+  transition: 0.3s;
+}
+.button:hover {
+  color: var(--main-red) !important;
+  background: transparent;
+}
+.button:hover:after {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(76%) saturate(4371%) hue-rotate(334deg) brightness(82%) contrast(109%);
 }
 .button.small {
   font-size: 16px;
@@ -172,6 +193,18 @@ p {
   .button.small {
     font-size: 20px;
   }
+}
+.button.secondary {
+  color: var(--main-red) !important;
+  border: 2px solid var(--main-red);
+  background: transparent;
+}
+.button.secondary:hover {
+  color: #fff !important;
+  background: var(--main-red);
+}
+.button.no-arrow::after {
+  display: none;
 }
 
 .wrapper {
@@ -201,14 +234,57 @@ p {
   width: 100%;
 }
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 15px;
+}
+@media (max-width: 768px) {
+  form {
+    row-gap: 15px;
+  }
+}
+
 .input-wrap {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
-.input-wrap input {
+.input-wrap.error input {
+  border-color: var(--main-red);
+}
+.input-wrap.error .error-message {
+  display: block;
+}
+.input-wrap.success input {
+  border-color: var(--success);
+}
+.input-wrap.success .success-message {
+  display: block;
+}
+.input-wrap.half {
+  width: calc(50% - 10px);
+}
+@media (max-width: 768px) {
+  .input-wrap.half {
+    width: 100%;
+  }
+}
+.input-wrap.card::after {
+  content: "";
+  width: 44px;
+  height: 33px;
+  background: url("../../img/svg/ae.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+}
+.input-wrap input, .input-wrap textarea, .input-wrap select {
+  resize: none;
   width: 100%;
   height: 50px;
   padding: 10px 30px;
@@ -220,17 +296,31 @@ p {
   border: 1px solid var(--light-grey);
   outline: unset;
   border-radius: 5px;
+  transition: 0.3s;
+  overflow: hidden;
 }
-.input-wrap input.error {
-  border-color: var(--main-red);
+.input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
+  height: 141px;
 }
-.input-wrap input.error + label + .error-message {
-  display: block;
+@media (max-width: 768px) {
+  .input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
+    height: 251px;
+  }
 }
-.input-wrap input.active + label {
+.input-wrap input.active + label, .input-wrap textarea.active + label, .input-wrap select.active + label {
   font-size: 14px;
   top: -10px;
   left: 30px;
+}
+.input-wrap select {
+  color: var(--dark-grey);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("../../img/svg/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: calc(100% - 30px);
 }
 .input-wrap label {
   position: absolute;
@@ -246,7 +336,7 @@ p {
   padding: 0 10px;
   transition: 0.2s;
 }
-.input-wrap .error-message {
+.input-wrap .input-message {
   display: none;
   margin-top: 8px;
   padding-left: 24px;
@@ -254,16 +344,40 @@ p {
   font-size: 16px;
   line-height: 120%;
   letter-spacing: 0.01em;
-  color: var(--main-red);
   position: relative;
 }
-.input-wrap .error-message:after {
+.input-wrap .input-message.error-message {
+  color: var(--main-red);
+}
+.input-wrap .input-message.error-message:after {
+  background: url("../img/svg/error.svg");
+}
+.input-wrap .input-message.success-message {
+  color: var(--success);
+}
+.input-wrap .input-message.success-message:after {
+  background: url("../img/svg/success.svg");
+}
+.input-wrap .input-message:after {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
   left: 0;
-  background: url("../img/svg/error.svg");
+  top: calc(50% - 8px);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .input-wrap .input-message {
+    margin-top: 5px;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+  .input-wrap .input-message::after {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .subscription {
@@ -277,37 +391,50 @@ p {
   text-align: center;
 }
 
-.subscription-form, #subscription_form {
+.subscription-form {
   width: 100%;
+}
+
+.subscription-form.disabled, .contact-col.disabled {
+  display: none;
+}
+
+.subscription-form.disabled + .thank-message, .contact-col.disabled + .thank-message {
+  display: flex;
 }
 
 #subscription_form button {
   margin: 0 auto;
 }
 
-.subscription-message {
+.thank-message {
   display: none;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.subscription-message.active {
-  display: flex;
-}
-.subscription-message img {
+.thank-message img {
   width: 80px;
   height: 80px;
   margin-bottom: 15px;
 }
-.subscription-message .title {
+.thank-message .title {
   margin-bottom: 15px;
 }
-.subscription-message .subtitle {
+.thank-message .subtitle {
   margin-bottom: 0;
   font-size: 20px;
   line-height: 120%;
   color: var(--dark-grey);
+}
+.thank-message a {
+  margin-top: 25px;
+}
+@media (max-width: 768px) {
+  .thank-message a {
+    margin-top: 30px;
+  }
 }
 
 .banner {
@@ -496,7 +623,7 @@ header .menu-mob .menu nav {
   align-items: center;
   gap: 30px;
   position: absolute;
-  z-index: 9999;
+  z-index: 99999;
   background: #fff;
   width: 100%;
   height: calc(100vh - 92px);

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Renewal</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/account.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body attr-lang="en">
+    <header>
+        <div class="wrapper">
+            <div class="menu-desc">
+                <div class="header-menu">
+                    <nav>
+                        <a href="/" class="logo">
+                            <img alt="logo" src="./img/svg/logo.svg" />
+                        </a>
+                        <a href=".">What We Do</a>
+                        <a href=".">Who We Are</a>
+                        <a href=".">Your Impact</a>
+                    </nav>
+                </div>
+                <div class="sub-menu">
+                    <a href="/">Sign In</a>
+                    <a class="button small" href="/">Donate Now</a>
+                </div>
+            </div>
+            <div class="menu-mob">
+                <div class="menu">
+                    <a href="/" class="logo">
+                        <img alt="logo" src="./img/svg/logo.svg" />
+                    </a>
+                    <div class="menu-button">
+                        <a href="/">Sign In</a>
+                        <div class="menu-toggle"></div>
+                        <nav>
+                            <a href=".">What We Do</a>
+                            <a href=".">Who We Are</a>
+                            <a href=".">Your Impact</a>
+                            <a class="button small" href="/">Donate Now</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="row account-tabs-row">
+                <div class="col-full">
+                    <h1 class="account-title">Your account</h1>
+                    <div class="account-tabs">
+                        <p class="tab active">Details</p>
+                        <p class="tab">Card</p>
+                        <p class="tab">Recurring gifts</p>
+                        <p class="tab">Giving record</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row account-row">
+                <div class="col-50 mob-padding">
+                    <p class="title">Change your contact information</p>
+                    <form id="account_details">
+                        <div class="input-wrap">
+                            <input class="input" id="name" type="text" required>
+                            <label for="name">Full Name</label>
+                            <div class="error-message input-message">Invalid name, please try again.</div>
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input" id="address1" type="text" required>
+                            <label for="address1">Address Line 1</label>
+                            <div class="error-message input-message">Invalid address, please try again.</div>
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input" id="address2" type="text">
+                            <label for="address2">Address Line 2</label>
+                            <div class="error-message input-message">Invalid address, please try again.</div>
+                        </div>
+                        <div class="input-wrap half">
+                            <input class="input" id="city" type="text">
+                            <label for="city">City</label>
+                            <div class="error-message input-message">Invalid city, please try again.</div>
+                        </div>
+                        <div class="input-wrap half">
+                            <input class="input" id="state" type="text">
+                            <label for="state">State/Province</label>
+                            <div class="error-message input-message">Invalid state, please try again.</div>
+                        </div>
+                        <div class="input-wrap half">
+                            <input class="input" id="zip" type="text">
+                            <label for="zip">Zip/Postal Code</label>
+                            <div class="error-message input-message">Invalid code, please try again.</div>
+                        </div>
+                        <div class="input-wrap half">
+                            <select id="country" autofocus="true" class="input">
+                                <option value="Country1">Country</option>
+                                <option value="Country2">Country2</option>
+                                <option value="Country3">Country3</option>
+                                <option value="Country4">Country4</option>
+                            </select>
+                            <!-- <label for="country">Country</label> -->
+                            <div class="error-message input-message">Invalid country, please try again.</div>
+                        </div>
+                        <button type="submit" class="button">save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper mob-padding">
+            <div class="nav">
+                <a href="/">Contact Us</a>
+                <a href="/">中文</a>
+            </div>
+            <p class="copyright">© Renewal 365 Inc, 2022</p>
+        </div>
+    </footer>
+    <script defer type="module" src="./js/inputs.js"></script>
+    <script defer type="module" src="./js/menu.js"></script>
+</body>

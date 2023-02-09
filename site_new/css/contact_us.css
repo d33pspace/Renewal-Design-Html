@@ -1,0 +1,37 @@
+/*---MODULES---*/
+.contact-row {
+  min-height: 660px;
+  justify-content: flex-start;
+}
+.contact-row .contact-col h1 {
+  margin-bottom: 15px;
+}
+.contact-row .contact-col p {
+  margin-bottom: 20px;
+}
+.contact-row .thank-message {
+  justify-content: flex-start;
+}
+.contact-row .thank-message .title {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact-row {
+    min-height: 370px;
+    padding: 30px 0 50px;
+  }
+  .contact-row .contact-col h1 {
+    margin-bottom: 10px;
+  }
+  .contact-row .contact-col p {
+    margin-bottom: 15px;
+  }
+  .contact-row .thank-message img {
+    width: 70px;
+    height: 70px;
+  }
+  .contact-row .thank-message p {
+    text-align: center;
+  }
+}

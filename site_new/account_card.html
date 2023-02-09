@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Renewal</title>
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/account.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,42 +52,37 @@
     </header>
     <main>
         <div class="wrapper">
-            <div class="row">
-                <div class="col-50">
-                    <img alt="hero" src="./img/home.png" />
-                    <p class="caption mob-padding">When temperatures drop, people urgently need warm clothes, coats and hats.</p>
-                </div>
-                <div class="col-50 mob-padding">
-                    <h1>When temperatures drop, people urgently need warm clothes, coats and hats.</h1>
-                    <p>Renewal’s drop-in center is offering warm clothes, food and kindness to lonely homeless people who will be struggling to survive on the cold streets at night. We are urgently requesting gifts from supporters – because the cost of food is rising and the first people want when they come to us is a good, hot meal.</p>
-                    <a href="" class="link">Read the story here</a>
-                    <p>Our autumn newsletter also tells the survival story of Jiang Yuanyan, who found his way to the Renewal Center during lockdown, despite the drop-in center being closed for most of the last seven months. It was wonderful to see Jiang Yuanyan start a new job – and to know that it would have been impossible without the training provided here, and the kind gifts of generous supporters like you.</p>
-                    <a href="" class="link">Read the story here</a>
-                    <a class="button" href="/">SEND A GIFT</a>
+            <div class="row account-tabs-row">
+                <div class="col-full">
+                    <h1 class="account-title">Your account</h1>
+                    <div class="account-tabs">
+                        <p class="tab">Details</p>
+                        <p class="tab active">Card</p>
+                        <p class="tab">Recurring gifts</p>
+                        <p class="tab">Giving record</p>
+                    </div>
                 </div>
             </div>
-            <div class="row subscription">
+            <div class="row account-row">
                 <div class="col-50 mob-padding">
-                    <div class="subscription-form">
-                        <h2>Sign up for our email communications:</h2>
-                        <form id="subscription_form">
-                            <div class="input-wrap">
-                                <input class="input" id="name" type="text"required>
-                                <label for="name">Name</label>
-                                <div class="error-message input-message">Invalid name, please try again.</div>
-                            </div>
-                            <div class="input-wrap">
-                                <input class="input" id="email" type="email"required>
-                                <label for="email">Email</label>
-                                <div class="error-message input-message">Invalid email address, please try again.</div>
-                            </div>
-                            <button type="submit" class="button">Sign Up</button>
-                        </form>
-                    </div>
-                    <div class="thank-message">
-                        <img src="./img/svg/subscription-thank.svg" alt="thank you" />
-                        <p class="title">Thank You</p>
-                        <p class="subtitle">For Signing Up</p>
+                    <p class="title">Change your card details</p>
+                    <form id="account_card">
+                        <div class="input-wrap card">
+                            <input class="input" id="card" type="text" required>
+                            <label for="card">Card Number</label>
+                            <div class="error-message input-message">Your card is expired. Please try another</div>
+                            <div class="success-message input-message">Card confirmed. Thank you!</div>
+                        </div>
+                        <div class="buttons-row">
+                            <button type="button" class="button secondary no-arrow">Edit</button>
+                            <button type="button" class="button no-arrow">Delete</button>
+                        </div>
+                        <p>For your security, Renewal does not store credit card details. Stripe is our secure payment provider</p>
+                        <button type="submit" class="button">make a GIFT now</button>
+                    </form>
+                    <div class="no-card">
+                        <p>You have no card on file.</p>
+                        <a href="#" class="button">make a GIFT now</a>
                     </div>
                 </div>
             </div>
