@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Renewal</title>
+    <link type="image/x-icon" rel="shortcut icon" href="./img/favicon/favicon.ico">
+    <link type="image/png" sizes="16x16" rel="icon" href="./img/favicon/16x16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="./img/favicon/32x32.png">
+    <link type="image/png" sizes="180x180" rel="icon" href="./img/favicon/180x180.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="./img/favicon/192x192.png">
+    <link type="image/png" sizes="512x512" rel="icon" href="./img/favicon/512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/180x180.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileImage" content="./img/favicon/mstile-150x150.png">
+    <meta name="application-name" content="Deep Space">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/account.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,14 +81,169 @@
                 <div class="col-full mob-padding">
                     <p class="title">Your giving record </p>
                     <p>Gifts made by credit or debit card usually appear here within one hour, other donation methods take longer. If your gift doesn't appear here within five business days, please contact us at <a href="mailto:connect@renewal.org.cn">connect@renewal.org.cn</a>.</p>
-                    <div class="table-wrap">
+                    <div class="table-wrap desc">
                         <div class="range">
-                            <p>Date range:</p>
+                            <p class="desc">Date range:</p>
                             <div class="dates active">Jan 1 - Dec 31 2023</div>
                             <div class="dates">Jan 1 - Dec 31 2022</div>
                             <div class="dates">All giving history</div>
                         </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Reference</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Currency</th>
+                                    <th>XR</th>
+                                    <th>USD</th>
+                                    <th>Method</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1/10/2020</td>
+                                    <td>RWL-2392</td>
+                                    <td>For most urgent needs</td>
+                                    <td>7,000</td>
+                                    <td>CNY</td>
+                                    <td>6.9212</td>
+                                    <td>1,011.39</td>
+                                    <td>Alipay</td>
+                                </tr>
+                                <tr>
+                                    <td>1/10/2020</td>
+                                    <td>RWL-2392</td>
+                                    <td>For most urgent needs</td>
+                                    <td>7,000</td>
+                                    <td>CNY</td>
+                                    <td>6.9212</td>
+                                    <td>1,011.39</td>
+                                    <td>Alipay</td>
+                                </tr>
+                                <tr>
+                                    <td>1/10/2020</td>
+                                    <td>RWL-2392</td>
+                                    <td>For most urgent needs</td>
+                                    <td>7,000</td>
+                                    <td>CNY</td>
+                                    <td>6.9212</td>
+                                    <td>1,011.39</td>
+                                    <td>Alipay</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>21,000</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3,034.17</td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <a href="#" class="button no-arrow">PRINT</a>
                     </div>
+                    <div class="table-wrap mob">
+                        <div class="input-wrap">
+                            <select id="date" autofocus="true" class="input">
+                                <option value="Jan 1 - Dec 31 2023">Jan 1 - Dec 31 2023</option>
+                                <option value="Jan 1 - Dec 31 2023">Jan 1 - Dec 31 2023</option>
+                                <option value="Jan 1 - Dec 31 2023">Jan 1 - Dec 31 2023</option>
+                                <option value="Jan 1 - Dec 31 2023">Jan 1 - Dec 31 2023</option>
+                            </select>
+                            <label for="date">Country</label>
+                        </div>
+                        <div class="table">
+                            <div class="items">
+                                <div class="item">
+                                    <div class="col">
+                                        <div class="title">Date</div>
+                                        <div class="data">1/10/2020</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Reference</div>
+                                        <div class="data">RWL-2392</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Description</div>
+                                        <div class="data">For most urgent needs</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Amount</div>
+                                        <div class="data">7,000</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Currency</div>
+                                        <div class="data">CNY</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">XR</div>
+                                        <div class="data">6.9212</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">USD</div>
+                                        <div class="data">1,011.39</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Method</div>
+                                        <div class="data">Alipay</div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col">
+                                        <div class="title">Date</div>
+                                        <div class="data">1/10/2020</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Reference</div>
+                                        <div class="data">RWL-2392</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Description</div>
+                                        <div class="data">For most urgent needs</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Amount</div>
+                                        <div class="data">7,000</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Currency</div>
+                                        <div class="data">CNY</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">XR</div>
+                                        <div class="data">6.9212</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">USD</div>
+                                        <div class="data">1,011.39</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="title">Method</div>
+                                        <div class="data">Alipay</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <div class="col">
+                                    <div class="title">Amount</div>
+                                    <div class="data">21,000</div>
+                                </div>
+                                <div class="col">
+                                    <div class="title">USD</div>
+                                    <div class="data">3,034.17</div>
+                                </div>
+                            </div>
+                            <a href="#" class="button no-arrow">PRINT</a>
+                        </div>
+                    </div>
+                    <div class="empty-message empty-range">You have no giving history in the date range selected. <a href="#" class="link">Make a gift</a> now.</div>
+                    <div class="empty-message empty-history">You have no giving history. <a href="#" class="link">Make a gift</a> now.</div>
                 </div>
             </div>
         </div>

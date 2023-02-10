@@ -124,7 +124,7 @@ p {
 
 .wrapper {
     padding: 0 25px;
-    max-width: 1146px;
+    max-width: 1196px;
     margin: 0 auto;
 }
 
@@ -233,7 +233,11 @@ form {
         background-repeat: no-repeat;
         background-position-y: center;
         background-position-x: calc(100% - 30px);
-        
+        &+label {
+            font-size: 14px;
+            top: -10px;
+            left: 30px;
+        }
     }
     label {
         position: absolute;

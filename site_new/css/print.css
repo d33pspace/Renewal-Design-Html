@@ -1,0 +1,65 @@
+/*---MODULES---*/
+body {
+  height: 595px;
+  width: 842px;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 40px;
+  font-family: "Roboto Slab", serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header .title-col h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #1F1F1F;
+}
+header .title-col p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #1F1F1F;
+}
+
+.table-wrap {
+  width: 100%;
+}
+.table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-wrap table thead {
+  background: #F2F2F2;
+  border-radius: 5px;
+}
+.table-wrap table tr td, .table-wrap table tr th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+  color: #1F1F1F;
+  text-align: left;
+  box-sizing: content-box;
+  width: 60px;
+}
+.table-wrap table tr td:last-child, .table-wrap table tr th:last-child {
+  padding-right: 20px;
+}
+.table-wrap table tr td:nth-child(3), .table-wrap table tr th:nth-child(3) {
+  width: calc(100% - 420px);
+}
+.table-wrap table tr th {
+  font-weight: 700;
+}
+.table-wrap table tfoot td {
+  font-weight: 700;
+}
