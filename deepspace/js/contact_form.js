@@ -10,10 +10,10 @@ let dataForm = new Array(4)
         }
     })
 
-let textarea = document.querySelector('.form-row textarea')
+// let textarea = document.querySelector('.form-row textarea')
 
-textarea.onfocus = () => textarea.classList.add('active')
-textarea.onblur = () => textarea.classList.remove('active')
+// textarea.onfocus = () => textarea.classList.add('active')
+// textarea.onblur = () => textarea.classList.remove('active')
 
 
 
