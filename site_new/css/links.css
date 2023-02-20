@@ -1,0 +1,9 @@
+.links {
+  padding: 50px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  border: 2px solid var(--dark-grey);
+}
