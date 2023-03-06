@@ -98,6 +98,8 @@
             &.active {
                 color: var(--black);
                 border-color: var(--black);
+                background: var(--light-grey-bg);
+                font-weight: 600;
             }
         }
     }

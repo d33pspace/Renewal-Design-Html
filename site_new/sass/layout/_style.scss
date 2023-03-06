@@ -101,9 +101,6 @@ p {
         line-height: 120%;
         padding: 10px 20px 10px 20px;
         text-transform: capitalize;
-        &::after {
-            display: none;
-        }
         @media(max-width: 768px) {
             font-size: 20px;
         }
