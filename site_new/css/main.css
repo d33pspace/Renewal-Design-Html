@@ -140,9 +140,24 @@ p {
   line-height: 120%;
   letter-spacing: 0.01em;
   color: var(--black);
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--main-red);
-  margin-bottom: 25px;
+  margin-bottom: 35px;
+  width: fit-content;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--main-red);
+  transition: 0.2s;
+}
+
+.link:hover::after {
+  width: 0%;
 }
 
 .button {
@@ -297,7 +312,7 @@ form {
   overflow: hidden;
 }
 .input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
-  height: 141px;
+  height: 161px;
 }
 @media (max-width: 768px) {
   .input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
@@ -310,7 +325,8 @@ form {
   left: 30px;
 }
 .input-wrap select {
-  color: var(--dark-grey);
+  color: var(--black);
+  font-weight: 700;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
