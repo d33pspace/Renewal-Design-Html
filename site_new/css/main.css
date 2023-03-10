@@ -173,19 +173,10 @@ p {
   position: relative;
   display: flex;
   align-items: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   outline: none;
   box-shadow: none;
   cursor: pointer;
-  transition: 0.3s;
-}
-.button::after {
-  content: "";
-  display: block;
-  width: 7.35px;
-  height: 13px;
-  margin-left: 10px;
-  background: url("../img/svg/button-arrow.svg");
   transition: 0.3s;
 }
 .button:hover {
@@ -312,17 +303,20 @@ form {
   overflow: hidden;
 }
 .input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
-  height: 161px;
+  height: 158px;
 }
 @media (max-width: 768px) {
   .input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
-    height: 251px;
+    height: 164px;
   }
 }
 .input-wrap input.active + label, .input-wrap textarea.active + label, .input-wrap select.active + label {
   font-size: 14px;
   top: -10px;
   left: 30px;
+}
+.input-wrap textarea {
+  padding-top: 6px;
 }
 .input-wrap select {
   color: var(--black);

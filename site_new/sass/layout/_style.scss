@@ -90,20 +90,20 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     outline: none;
     box-shadow: none;
     cursor: pointer;
     transition: .3s;
-    &::after {
-        content: '';
-        display: block;
-        width: 7.35px;
-        height: 13px;
-        margin-left: 10px;
-        background: url('../img/svg/button-arrow.svg');
-        transition: .3s;
-    }
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     width: 7.35px;
+    //     height: 13px;
+    //     margin-left: 10px;
+    //     background: url('../img/svg/button-arrow.svg');
+    //     transition: .3s;
+    // }
     &:hover {
         color: var(--main-red) !important;
         background: transparent;
@@ -225,9 +225,9 @@ form {
         transition: .3s;
         overflow: hidden;
         &.filled {
-            height: 161px;
+            height: 158px;
             @media(max-width: 768px) {
-                height: 251px;
+                height: 164px;
             }
         }
         &.active+label {
@@ -235,6 +235,9 @@ form {
             top: -10px;
             left: 30px;
         }
+    }
+    textarea {
+        padding-top: 6px;
     }
     select {
         color: var(--black);
