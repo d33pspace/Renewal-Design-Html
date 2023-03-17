@@ -81,22 +81,27 @@
                 <div class="col-50 mob-padding">
                     <p class="title">Change your card details</p>
                     <form id="account_card">
-                        <div class="input-wrap card">
-                            <input class="input active" id="card" type="text" disabled value="****1001" required>
-                            <label for="card">Card Number</label>
+                        <div class="input-wrap card input-card">
+                            <div class="input-card-wrap">
+                                <label for="card">Card Info</label>
+                                <input class="input" id="card" type="text" disabled value="2212 4565 5645 6765" maxlength="19" required>
+                                <input class="input" id="card-date" type="text" disabled  value="06/24" maxlength="5" required>
+                                <input class="input" id="card-cvv" type="text" disabled value="345" maxlength="3" required>
+                            </div>
                             <div class="error-message input-message">Your card is expired. Please try another</div>
                             <div class="success-message input-message">Card confirmed. Thank you!</div>
                         </div>
                         <div class="buttons-row">
-                            <button type="button" class="button secondary no-arrow">Edit</button>
-                            <button type="button" class="button no-arrow">Delete</button>
+                            <button type="button" class="button no-arrow edit">Edit</button>
+                            <button type="button" class="button secondary no-arrow delete">Delete</button>
+                            <button type="button" style="display: none;" class="button secondary no-arrow cancel">Cancel</button>
                         </div>
-                        <p>For your security, Renewal does not store credit card details. Stripe is our secure payment provider.</p>
-                        <button type="submit" class="button">make a GIFT now</button>
+                        <p class="card-message">For your security, Renewal does not store credit card details. Stripe is our secure payment provider.</p>
+                        <button type="submit" class="button">make a Gift now</button>
                     </form>
                     <div class="no-card">
                         <p>You have no card on file.</p>
-                        <a href="#" class="button">make a GIFT now</a>
+                        <a href="#" class="button">make a Gift now</a>
                     </div>
                 </div>
             </div>
@@ -111,6 +116,8 @@
             <p class="copyright">© Renewal 365 Inc, 2022</p>
         </div>
     </footer>
+
+    <script src="./js/account-card.js"></script>
     <script defer type="module" src="./js/inputs.js"></script>
     <script defer type="module" src="./js/menu.js"></script>
 </body>

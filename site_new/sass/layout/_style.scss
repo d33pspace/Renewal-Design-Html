@@ -198,17 +198,6 @@ form {
             width: 100%;
         }
     }
-    &.card::after {
-        content: '';
-        width: 44px;
-        height: 33px;
-        background: url('../../img/svg/ae.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 8px;
-        right: 12px;
-    }
     input, textarea, select {
         resize: none;
         width: 100%;

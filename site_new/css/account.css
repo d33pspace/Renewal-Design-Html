@@ -64,11 +64,26 @@
   display: none;
 }
 
-.monthly-gift {
+.input-wrap {
   margin: 0;
+}
+
+.monthly-gift {
+  margin-bottom: 5px;
 }
 .monthly-gift span {
   font-weight: 600;
+}
+
+.cancel-gift {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.cancel-gift.error {
+  background: var(--light-grey);
+  color: #fff !important;
+  border: var(--light-grey) !important;
+  cursor: default;
 }
 
 .table-wrap.desc {
@@ -204,6 +219,44 @@
   width: 100%;
 }
 
+.input-card-wrap {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  margin-top: 20px;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+.input-card-wrap label {
+  left: -10px;
+  top: -30px;
+  color: var(--black);
+}
+.input-card-wrap.active label {
+  top: -10px;
+  left: 30px;
+  color: var(--dark-grey);
+}
+.input-card-wrap input {
+  border: none;
+  padding: 0;
+  height: auto;
+}
+.input-card-wrap input#card-date {
+  width: 65px;
+}
+.input-card-wrap input#card-cvv {
+  width: 35px;
+}
+.input-card-wrap input#card {
+  width: calc(100% - 100px);
+}
+
+.card-message {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .empty-message {
     font-size: 14px;
@@ -228,6 +281,10 @@
     font-size: 18px;
     line-height: 120%;
   }
+
+  .cancel-gift {
+    padding: 15px 20px;
+  }
 }
 @media (max-width: 480px) {
   .account-tabs-row .account-tabs {
@@ -236,6 +293,21 @@
   }
   .account-tabs-row .account-tabs p {
     padding: 0 5px 8px 5px;
+    font-size: 14px;
+  }
+
+  .buttons-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .buttons-row button {
+    width: 100%;
+  }
+
+  .input-card-wrap {
+    padding: 15px 20px;
+  }
+  .input-card-wrap input {
     font-size: 14px;
   }
 }

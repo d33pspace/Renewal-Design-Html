@@ -4,6 +4,8 @@
   "main": "index.js",
   "dependencies": {
     "@popperjs/core": "^2.4.0",
+    "card-validator": "^8.1.1",
+    "creditcard.js": "^3.0.30",
     "gulp-clean-css": "^4.1.11",
     "gulp-file-include": "^2.3.0",
     "gulp-rename": "^1.4.0",
