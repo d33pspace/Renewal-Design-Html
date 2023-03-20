@@ -1,0 +1,50 @@
+/*---MODULES---*/
+.title {
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-bottom: 30px;
+}
+
+.donate-form {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.donate-form .form-title {
+  font-weight: 600;
+  margin: 0;
+}
+.donate-form .checkbox-wrap .checkbox:last-child {
+  margin-bottom: 5px;
+}
+.donate-form .input-checkbox {
+  margin-bottom: 10px;
+}
+.donate-form .location {
+  width: 100%;
+}
+.donate-form .location p, .donate-form .location a {
+  margin: 0;
+}
+.donate-form .location .loc-wrap {
+  display: flex;
+  align-items: center;
+}
+.donate-form .location .loc-wrap p {
+  font-weight: 600;
+}
+.donate-form .location .loc-wrap img {
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  object-fit: contain;
+}
+.donate-form .location .loc-wrap img.mes {
+  width: 37px;
+}
+.donate-form .location .loc-wrap a {
+  margin-left: 15px;
+  margin-bottom: 5px;
+  color: var(--main-red);
+}
