@@ -18,6 +18,14 @@ a {
     color: var(--main-red);
 }
 
+.title.border {
+    padding: 15px 0px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid var(--main-red);
+    border-radius: 5px;
+}
+
 h1, p.title {
     font-weight: 700;
     font-size: 34px;
@@ -129,6 +137,16 @@ p {
             background: var(--main-red);
         }
     }
+    &.inactive {
+        background: var(--light-grey);
+        border-color: var(--light-grey) !important;
+        color: #fff !important;
+        cursor: default;
+        &.secondary {
+            background: transparent;
+            color: var(--light-grey) !important;
+        }
+    }
     &.no-arrow::after {
         display: none;
     }
@@ -213,10 +231,30 @@ form {
         border-radius: 5px;
         transition: .3s;
         overflow: hidden;
+        @media(max-width: 768px) {
+            padding: 10px 20px;
+        }
         &.filled {
             height: 158px;
             @media(max-width: 768px) {
                 height: 164px;
+            }
+        }
+        &+label {
+            position: absolute;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            color: var(--dark-grey);
+            left: 20px;
+            top: 15px;
+            cursor: text;
+            background: #fff;
+            padding: 0 10px;
+            transition: .2s;
+            @media(max-width: 768px) {
+                font-size: 14px;
             }
         }
         &.active+label {
@@ -243,20 +281,6 @@ form {
             top: -10px;
             left: 30px;
         }
-    }
-    label {
-        position: absolute;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing: 0.01em;
-        color: var(--dark-grey);
-        left: 20px;
-        top: 15px;
-        cursor: text;
-        background: #fff;
-        padding: 0 10px;
-        transition: .2s;
     }
     .input-message {
         display: none;
@@ -349,7 +373,7 @@ form {
     margin-bottom: 15px;
     @media(max-width: 769px) {
         line-height: 120%;
-        margin-bottom: 20px;
+        font-size: 14px;
     }
     &::after {
         content: '';
@@ -372,16 +396,27 @@ form {
         border: 5px solid #fff;
         outline: 1px solid var(--main-red);
     }
+    &.with-options {
+        display: flex;
+        flex-direction: column;
+        &::after {
+            top: 2px;
+        }
+        &.active {
+            margin-bottom: 0;
+            .options {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        .options {
+            display: none;
+            padding: 10px 0 5px;
+        }
+    }
     span {
         font-weight: 700;
-    }
-    input {
-        border: 1px solid #D9D9D9;
-        border-radius: 5px;
-        margin-right: 10px;
-        max-width: 100px;
-        height: 36px;
-        padding: 5px 10px;
     }
 }
 
@@ -389,6 +424,7 @@ form {
     position: relative;
     margin-bottom: 20px;
     padding-left: 34px;
+    display: flex;
     @media(max-width: 769px) {
         margin-bottom: 10px;
     }

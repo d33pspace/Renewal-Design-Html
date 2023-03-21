@@ -3,6 +3,18 @@
   margin-bottom: 20px;
 }
 
+.subtitle {
+  font-size: 20px;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  line-height: 120%;
+}
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
 .text {
   margin-bottom: 30px;
 }
@@ -21,30 +33,109 @@
 .donate-form .input-checkbox {
   margin-bottom: 10px;
 }
-.donate-form .location {
+
+.location {
   width: 100%;
 }
-.donate-form .location p, .donate-form .location a {
+.location p, .location a {
   margin: 0;
 }
-.donate-form .location .loc-wrap {
+.location .loc-wrap {
   display: flex;
   align-items: center;
 }
-.donate-form .location .loc-wrap p {
+@media (max-width: 480px) {
+  .location .loc-wrap {
+    flex-wrap: wrap;
+  }
+  .location .loc-wrap .link-wrap {
+    margin: 0 !important;
+    width: 100%;
+  }
+}
+.location .loc-wrap p {
   font-weight: 600;
 }
-.donate-form .location .loc-wrap img {
+.location .loc-wrap img {
   width: 32px;
   height: 32px;
   margin-left: 5px;
   object-fit: contain;
 }
-.donate-form .location .loc-wrap img.mes {
+.location .loc-wrap img.mes {
   width: 37px;
 }
-.donate-form .location .loc-wrap a {
+.location .loc-wrap .link-wrap {
   margin-left: 15px;
   margin-bottom: 5px;
+}
+.location .loc-wrap .link-wrap a {
   color: var(--main-red);
+}
+
+.donate-form-detail {
+  gap: 30px;
+}
+.donate-form-detail > p:first-child {
+  margin: 0;
+}
+.donate-form-detail.low-gap {
+  gap: 20px;
+}
+.donate-form-detail.low-gap .input-wrap {
+  margin: 0;
+}
+.donate-form-detail .input-row {
+  width: 100%;
+}
+.donate-form-detail .input-row .input-wrap:last-child {
+  margin: 0;
+}
+.donate-form-detail .input-title {
+  font-size: 20px;
+  line-height: 120%;
+}
+@media (max-width: 768px) {
+  .donate-form-detail .input-title {
+    font-size: 18px;
+  }
+}
+.donate-form-detail .input-title.small {
+  font-size: 16px;
+  margin-top: -15px;
+}
+@media (max-width: 768px) {
+  .donate-form-detail .input-title.small {
+    font-size: 14px;
+  }
+}
+.donate-form-detail .input-subtitle {
+  line-height: 120%;
+  color: var(--dark-grey);
+  margin: 10px 0 0 0;
+}
+@media (max-width: 768px) {
+  .donate-form-detail .input-subtitle {
+    margin: 5px 0 0 0;
+  }
+}
+.donate-form-detail .input-checkbox {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.donate-form-detail .buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.donate-form-detail .buttons .message {
+  margin: 0;
+  display: none;
+}
+.donate-form-detail .gift-desc {
+  font-size: 20px;
+  margin: 0;
+}
+.donate-form-detail .gift-desc b {
+  font-weight: 700;
 }

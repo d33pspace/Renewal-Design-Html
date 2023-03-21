@@ -2,6 +2,16 @@
     margin-bottom: 20px;
 }
 
+.subtitle {
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    line-height: 120%;
+    @media(max-width: 768px) {
+        font-size: 16px;
+    }
+}
+
 .text {
     margin-bottom: 30px;
 }
@@ -19,31 +29,102 @@
     .input-checkbox {
         margin-bottom: 10px;
     }
-    .location {
-        width: 100%;
-        p, a {
-            margin: 0;
+}
+
+.location {
+    width: 100%;
+    p, a {
+        margin: 0;
+    }
+    .loc-wrap {
+        display: flex;
+        align-items: center;
+        @media(max-width: 480px) {
+            flex-wrap: wrap;
+            .link-wrap {
+                margin: 0 !important;
+                width: 100%;
+            }
         }
-        .loc-wrap {
-            display: flex;
-            align-items: center;
-            p {
-                font-weight: 600;
+        p {
+            font-weight: 600;
+        }
+        img {
+            width: 32px;
+            height: 32px;
+            margin-left: 5px;
+            object-fit: contain;
+            &.mes {
+                width: 37px;
             }
-            img {
-                width: 32px;
-                height: 32px;
-                margin-left: 5px;
-                object-fit: contain;
-                &.mes {
-                    width: 37px;
-                }
-            }
+        }
+        .link-wrap {
+            margin-left: 15px;
+            margin-bottom: 5px;
             a {
-                margin-left: 15px;
-                margin-bottom: 5px;
                 color: var(--main-red);
             }
+        }
+    }
+}
+
+.donate-form-detail {
+    &>p:first-child {
+        margin: 0;
+    }
+    &.low-gap {
+        gap: 20px;
+        .input-wrap {
+            margin: 0;
+        }
+    }
+    gap: 30px;
+    .input-row {
+        width: 100%;
+        .input-wrap:last-child {
+            margin: 0;
+        }
+    }
+    .input-title {
+        font-size: 20px;
+        line-height: 120%;
+        @media(max-width: 768px) {
+            font-size: 18px;
+        }
+        &.small {
+            font-size: 16px;
+            margin-top: -15px;
+            @media(max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+    .input-subtitle {
+        line-height: 120%;
+        color: var(--dark-grey);
+        margin: 10px 0 0 0;
+        @media(max-width: 768px) {
+            margin: 5px 0 0 0;
+        }
+    }
+    .input-checkbox {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .buttons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        .message {
+            margin: 0;
+            display: none;
+        }
+    }
+    .gift-desc {
+        font-size: 20px;
+        margin: 0;
+        b {
+            font-weight: 700;
         }
     }
 }

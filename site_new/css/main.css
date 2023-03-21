@@ -101,6 +101,14 @@ a {
   color: var(--main-red);
 }
 
+.title.border {
+  padding: 15px 0px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid var(--main-red);
+  border-radius: 5px;
+}
+
 h1, p.title {
   font-weight: 700;
   font-size: 34px;
@@ -206,6 +214,16 @@ p {
   color: #fff !important;
   background: var(--main-red);
 }
+.button.inactive {
+  background: var(--light-grey);
+  border-color: var(--light-grey) !important;
+  color: #fff !important;
+  cursor: default;
+}
+.button.inactive.secondary {
+  background: transparent;
+  color: var(--light-grey) !important;
+}
 .button.no-arrow::after {
   display: none;
 }
@@ -291,12 +309,36 @@ form {
   transition: 0.3s;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .input-wrap input, .input-wrap textarea, .input-wrap select {
+    padding: 10px 20px;
+  }
+}
 .input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
   height: 158px;
 }
 @media (max-width: 768px) {
   .input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
     height: 164px;
+  }
+}
+.input-wrap input + label, .input-wrap textarea + label, .input-wrap select + label {
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: var(--dark-grey);
+  left: 20px;
+  top: 15px;
+  cursor: text;
+  background: #fff;
+  padding: 0 10px;
+  transition: 0.2s;
+}
+@media (max-width: 768px) {
+  .input-wrap input + label, .input-wrap textarea + label, .input-wrap select + label {
+    font-size: 14px;
   }
 }
 .input-wrap input.active + label, .input-wrap textarea.active + label, .input-wrap select.active + label {
@@ -322,20 +364,6 @@ form {
   font-size: 14px;
   top: -10px;
   left: 30px;
-}
-.input-wrap label {
-  position: absolute;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.01em;
-  color: var(--dark-grey);
-  left: 20px;
-  top: 15px;
-  cursor: text;
-  background: #fff;
-  padding: 0 10px;
-  transition: 0.2s;
 }
 .input-wrap .input-message {
   display: none;
@@ -429,7 +457,7 @@ form {
 @media (max-width: 769px) {
   .checkbox {
     line-height: 120%;
-    margin-bottom: 20px;
+    font-size: 14px;
   }
 }
 .checkbox::after {
@@ -453,22 +481,34 @@ form {
   border: 5px solid #fff;
   outline: 1px solid var(--main-red);
 }
+.checkbox.with-options {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox.with-options::after {
+  top: 2px;
+}
+.checkbox.with-options.active {
+  margin-bottom: 0;
+}
+.checkbox.with-options.active .options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.checkbox.with-options .options {
+  display: none;
+  padding: 10px 0 5px;
+}
 .checkbox span {
   font-weight: 700;
-}
-.checkbox input {
-  border: 1px solid #D9D9D9;
-  border-radius: 5px;
-  margin-right: 10px;
-  max-width: 100px;
-  height: 36px;
-  padding: 5px 10px;
 }
 
 .input-checkbox {
   position: relative;
   margin-bottom: 20px;
   padding-left: 34px;
+  display: flex;
 }
 @media (max-width: 769px) {
   .input-checkbox {
@@ -792,7 +832,14 @@ header .menu-mob .menu nav .button {
 }
 /*---MODULES---*/
 /*---FOOTER---*/
+footer {
+  padding: 0 25px;
+  max-width: 1196px;
+  margin: 0 auto;
+}
+
 footer .wrapper {
+  max-width: unset;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -826,6 +873,10 @@ footer .copyright {
 @media (max-width: 768px) {
   footer .nav {
     margin-bottom: 20px;
+  }
+
+  footer {
+    padding: 0;
   }
 }
 /*---OTHER_PAGES---*/
