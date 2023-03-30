@@ -344,7 +344,7 @@ form {
 .input-wrap input.active + label, .input-wrap textarea.active + label, .input-wrap select.active + label {
   font-size: 14px;
   top: -10px;
-  left: 30px;
+  left: 20px;
 }
 .input-wrap textarea {
   padding-top: 6px;
@@ -453,6 +453,8 @@ form {
   padding-left: 34px;
   position: relative;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 769px) {
   .checkbox {
@@ -484,6 +486,7 @@ form {
 .checkbox.with-options {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 .checkbox.with-options::after {
   top: 2px;
@@ -499,9 +502,16 @@ form {
 .checkbox.with-options .options {
   display: none;
   padding: 10px 0 5px;
+  width: 100%;
 }
 .checkbox span {
   font-weight: 700;
+  margin-right: 5px;
+}
+.checkbox > .input-wrap .input {
+  height: 36px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .input-checkbox {
@@ -549,6 +559,38 @@ form {
   border-radius: 50%;
   transition: 0.2s;
   cursor: pointer;
+}
+
+.input-card {
+  display: flex;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .input-card {
+    flex-wrap: wrap;
+  }
+}
+.input-card .input-wrap {
+  width: auto;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .input-card .input-wrap {
+    width: calc(50% - 4px);
+  }
+}
+.input-card .input-wrap:first-child {
+  width: 100%;
+  position: relative;
+}
+.input-card .input-wrap:first-child::after {
+  content: "";
+  width: 44px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 15px);
+  background: url("../img/svg/card.svg");
 }
 
 .subscription {

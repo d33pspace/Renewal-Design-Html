@@ -219,38 +219,32 @@
   width: 100%;
 }
 
-.input-card-wrap {
-  display: flex;
-  gap: 10px;
-  position: relative;
-  margin-top: 20px;
-  border: 1px solid #D9D9D9;
-  border-radius: 5px;
-  padding: 15px 30px;
+.input-card-exist {
+  width: 100%;
 }
-.input-card-wrap label {
-  left: -10px;
-  top: -30px;
+.input-card-exist .inputs {
+  display: flex;
+  gap: 8px;
+}
+.input-card-exist .inputs .input-wrap {
+  min-width: 120px;
+  width: 120px;
+}
+.input-card-exist .inputs .input-wrap input::placeholder {
   color: var(--black);
 }
-.input-card-wrap.active label {
-  top: -10px;
-  left: 30px;
-  color: var(--dark-grey);
+.input-card-exist .inputs .card {
+  width: 100%;
+  position: relative;
 }
-.input-card-wrap input {
-  border: none;
-  padding: 0;
-  height: auto;
-}
-.input-card-wrap input#card-date {
-  width: 65px;
-}
-.input-card-wrap input#card-cvv {
-  width: 35px;
-}
-.input-card-wrap input#card {
-  width: calc(100% - 100px);
+.input-card-exist .inputs .card::after {
+  content: "";
+  width: 44px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 15px);
+  background: url("../img/svg/ae.svg");
 }
 
 .card-message {

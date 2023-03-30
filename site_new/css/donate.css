@@ -33,6 +33,10 @@
 .donate-form .input-checkbox {
   margin-bottom: 10px;
 }
+.donate-form .checkbox .input-wrap {
+  width: 70px;
+  margin-right: 10px;
+}
 
 .location {
   width: 100%;
@@ -55,6 +59,10 @@
 }
 .location .loc-wrap p {
   font-weight: 600;
+}
+.location .loc-wrap p:not(.loc) {
+  font-weight: 700;
+  font-size: 20px;
 }
 .location .loc-wrap img {
   width: 32px;
@@ -138,4 +146,45 @@
 }
 .donate-form-detail .gift-desc b {
   font-weight: 700;
+}
+.donate-form-detail .submit {
+  width: 100%;
+  justify-content: center;
+}
+.donate-form-detail .input-wrap.company {
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .donate-form-detail .input-wrap.company {
+    flex-direction: column;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+}
+.donate-form-detail .input-wrap.company .input {
+  border-radius: 5px 0 0 5px;
+}
+.donate-form-detail .input-wrap.company .add_company {
+  cursor: pointer;
+  height: 50px;
+  padding: 0 20px;
+  border-style: solid;
+  border-color: var(--light-grey);
+  border-width: 1px 1px 1px 0;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  color: var(--main-red);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .donate-form-detail .input-wrap.company .add_company {
+    border: unset;
+    height: 25px;
+    padding: 0 10px;
+    width: fit-content;
+    margin-top: 10px;
+  }
 }

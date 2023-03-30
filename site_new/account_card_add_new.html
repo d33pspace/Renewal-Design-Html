@@ -82,19 +82,26 @@
                     <p class="title">Change your card details</p>
                     <form id="account_card">
                         <div class="input-wrap card input-card">
-                            <div class="input-card-wrap">
-                                <label for="card">Card Info</label>
-                                <input class="input" id="card" type="text" disabled value="2212 4565 5645 6765" maxlength="19" required>
-                                <input class="input" id="card-date" type="text" disabled  value="06/24" maxlength="5" required>
-                                <input class="input" id="card-cvv" type="text" disabled value="345" maxlength="3" required>
+                            <div class="input-card">
+                                <div class="input-wrap ">
+                                    <input class="input" id="card" type="text" maxlength="19" required>
+                                    <label for='card'>Card number</label>
+                                </div>
+                                <div class="input-wrap ">
+                                    <input class="input" id="card-date" type="text" maxlength="5" required>
+                                    <label for='card-date'>MM/YY</label>
+                                </div>
+                                <div class="input-wrap ">
+                                    <input class="input" id="card-cvv" type="text" maxlength="3" required>
+                                    <label for='card-cvv'>CVV</label>
+                                </div>
                             </div>
                             <div class="error-message input-message">Your card is expired. Please try another</div>
                             <div class="success-message input-message">Card confirmed. Thank you!</div>
                         </div>
                         <div class="buttons-row">
-                            <button type="button" class="button no-arrow edit">Edit</button>
-                            <button type="button" class="button secondary no-arrow delete">Delete</button>
-                            <button type="button" style="display: none;" class="button secondary no-arrow cancel">Cancel</button>
+                            <a href="./account_card_exist.html" class="button no-arrow">Save</a>
+                            <a href="./account_card_exist.html" class="button secondary no-arrow">Cancel</a>
                         </div>
                         <p class="card-message">For your security, Renewal does not store credit card details. Stripe is our secure payment provider.</p>
                         <button type="submit" class="button">make a Gift now</button>

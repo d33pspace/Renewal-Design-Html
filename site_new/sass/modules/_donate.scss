@@ -29,6 +29,10 @@
     .input-checkbox {
         margin-bottom: 10px;
     }
+    .checkbox .input-wrap {
+        width: 70px;
+        margin-right: 10px;
+    }
 }
 
 .location {
@@ -48,6 +52,10 @@
         }
         p {
             font-weight: 600;
+        }
+        p:not(.loc) {
+            font-weight: 700;
+            font-size: 20px;
         }
         img {
             width: 32px;
@@ -125,6 +133,43 @@
         margin: 0;
         b {
             font-weight: 700;
+        }
+    }
+    .submit {
+        width: 100%;
+        justify-content: center;
+    }
+    .input-wrap.company {
+        flex-direction: row;
+        margin-bottom: 20px;
+        @media(max-width: 768px) {
+            flex-direction: column;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .input {
+            border-radius: 5px 0 0 5px;
+        }
+        .add_company {
+            cursor: pointer;
+            height: 50px;
+            padding: 0 20px;
+            border-style: solid;
+            border-color: var(--light-grey);
+            border-width: 1px 1px 1px 0;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            color: var(--main-red);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            @media(max-width: 768px) {
+                border: unset;
+                height: 25px;
+                padding: 0 10px;
+                width: fit-content;
+                margin-top: 10px;
+            }
         }
     }
 }
