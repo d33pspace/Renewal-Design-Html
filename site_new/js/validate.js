@@ -3,7 +3,6 @@ function validate(value) {
 }
 
 let phone = document.querySelector('#phone')
-console.log(phone)
 if (phone) {
     phone.addEventListener('input', function(e) {
         e.target.value.length < 4 ? e.target.value = '+86 ' : ''
