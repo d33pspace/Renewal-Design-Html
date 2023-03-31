@@ -55,6 +55,13 @@
 .buttons-row {
     display: flex;
     gap: 15px;
+    &.long {
+        width: 100%;
+        .button {
+            width: calc(50% - 7.5px);
+            justify-content: center;
+        }
+    }
 }
 
 .no-card, .no-gift {
@@ -251,6 +258,15 @@
             }
         }
     }
+    
+}
+
+.donate-form-detail h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    margin-bottom: 15px;
 }
 
 .card-message {
@@ -300,7 +316,7 @@
     .buttons-row {
         flex-direction: column;
         width: 100%;
-        button {
+        .button {
             width: 100%;
         }
     }

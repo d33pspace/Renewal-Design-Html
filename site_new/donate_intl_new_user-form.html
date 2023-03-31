@@ -93,8 +93,8 @@
                         <div class="input-row">
                             <p class="input-title">Enter the code sent to your email</p>
                             <div class="input-wrap">
-                                <input class="input" id="code" type="text" required>
-                                <label for='code'>Verification code</label>
+                                <input class="input" id="verification" type="text" required maxlength="6" type="text">
+                                <label for='verification'>Verification code</label>
                             </div>
                             <label class="input-checkbox square" for="remember-me">
                                 <input id="remember-me" type="checkbox"> 
@@ -106,7 +106,7 @@
                             <p class="input-text">Your name as you'd like it to appear in our records. Examples, 'Chris Green', 'Chris and Pam Green', 'Yang Wenyin'</p>
                             <div class="input-wrap company">
                                 <input class="input" id="name" type="text" required>
-                                <label for='name'>Verification code</label>
+                                <label for='name'>Full name</label>
                                 <div class="add_company">+ Add company/org</div>
                             </div>
                             <p class="input-text">Debit/Credit Card Info</p>
@@ -141,7 +141,8 @@
             <p class="copyright">© Renewal 365 Inc, 2022</p>
         </div>
     </footer>
-    <script defer type="module" src="./js/inputs.js"></script>
+    <script defer src="./js/inputs.js"></script>
+    <script defer src="./js/validate.js"></script>
     <script defer src="./js/checkbox.js"></script>
     <script defer src="./js/dropdown.js"></script>
 </body>

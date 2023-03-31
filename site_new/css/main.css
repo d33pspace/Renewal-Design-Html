@@ -456,6 +456,9 @@ form {
   display: flex;
   align-items: center;
 }
+.checkbox.checkbox-phone {
+  display: block;
+}
 @media (max-width: 769px) {
   .checkbox {
     line-height: 120%;

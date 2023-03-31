@@ -20,6 +20,7 @@
     <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/donate.css">
+    <link rel="stylesheet" href="./css/account.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -69,55 +70,25 @@
                 <div class="col-50 mob-padding">
                     <h1 class="title border">Your gift of 13.85 RMB</h1>
                     <form class="donate-form-detail"> 
-                        <div class="location"> 
-                            <p>Your location:</p>
-                            <div class="loc-wrap"> 
-                                <p>Mainland China (RMB).</p>
-                                <img alt="location" class="mes" src="./img/svg/loc1.svg" />
-                                <img alt="location" src="./img/svg/loc2.svg" />
-                                <div class="link-wrap"><a class="link" href="/">Change</a></div>
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <p class="input-title">Enter your phone number to get started</p>
-                            <div class="input-wrap">
-                                <input class="input" id="phone" type="tel" maxlength="15" value="+86 " required>
-                            </div>
-                            <p class="input-subtitle">Your phone number is for our record keeping purposes only.</p>
-                        </div>
-                        <div class="input-row">
-                            <p class="input-title">Enter the code sent to your phone</p>
-                            <div class="input-wrap">
-                                <input class="input" id="verification" type="text" required maxlength="6" type="text">
-                                <label for='verification'>Verification code</label>
-                            </div>
-                            <label class="input-checkbox square" for="remeber">
-                                <input id="remeber" type="checkbox"> 
-                                <p>Remember me on this device</p>
-                            </label>
-                        </div>
-                        <div class="input-row">
-                            <p class="input-title">Enter your full name</p>
-                            <div class="input-wrap">
-                                <input class="input" id="name" type="text" required>
-                                <label for='name'>Full name</label>
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <p class="input-title small">May one of our directors stay in touch with you by WeChat?</p>
-                            <div class="checkbox-wrap">
-                                <div class="checkbox active checkbox-phone">Yes, if we're not already friends, add me using my phone number, <span class="phone-filled">XXXX XXXX XXXXX</span></div>
-                                <div class="checkbox with-options">
-                                    Yes, but I'd like to provide another number or WeChat ID.
-                                    <div class="options">
-                                        <div class="input-wrap">
-                                            <input class="input" id="wechat" type="text">
-                                            <label for='wechat'>WeChat ID or linked number</label>
-                                        </div>
-                                    </div>
+                        <div class="input-wrap card input-card">
+                            <h2>Charge my card on file.</h2>
+                            <p>Debit/Credit Card Info</p>
+                            <div class="input-card">
+                                <div class="input-wrap ">
+                                    <input class="input" id="card" type="text" maxlength="19" required>
+                                    <label for='card'>Card number</label>
                                 </div>
-                                <div class="checkbox">No thanks</div>
+                                <div class="input-wrap ">
+                                    <input class="input" id="card-date" type="text" maxlength="5" required>
+                                    <label for='card-date'>MM/YY</label>
+                                </div>
+                                <div class="input-wrap ">
+                                    <input class="input" id="card-cvv" type="text" maxlength="3" required>
+                                    <label for='card-cvv'>CVV</label>
+                                </div>
                             </div>
+                            <div class="error-message input-message">Your card is expired. Please try another</div>
+                            <div class="success-message input-message">Card confirmed. Thank you!</div>
                         </div>
                         <button type="submit" class="button submit">Submit Payment</button>
                     </form>
@@ -135,8 +106,5 @@
             <p class="copyright">© Renewal 365 Inc, 2022</p>
         </div>
     </footer>
-    <script defer src="./js/inputs.js"></script>
-    <script defer src="./js/validate.js"></script>
-    <script defer src="./js/checkbox.js"></script>
-    <script defer src="./js/dropdown.js"></script>
+    <script src="./js/account-card.js"></script>
 </body>

@@ -67,59 +67,45 @@
         <div class="wrapper">
             <div class="row">
                 <div class="col-50 mob-padding">
-                    <h1 class="title border">Your gift of 13.85 RMB</h1>
-                    <form class="donate-form-detail"> 
-                        <div class="location"> 
-                            <p>Your location:</p>
-                            <div class="loc-wrap"> 
-                                <p>Mainland China (RMB).</p>
-                                <img alt="location" class="mes" src="./img/svg/loc1.svg" />
-                                <img alt="location" src="./img/svg/loc2.svg" />
-                                <div class="link-wrap"><a class="link" href="/">Change</a></div>
-                            </div>
+                    <h1 class="title">Jimmy, thank you for your gift!</h1>
+                    <p class="subtitle">Your giving record is below.</p>
+                    <form class="donate-form-detail low-gap another_number"> 
+                        <p>Your communication details.</p>
+                        <div class="input-wrap">
+                            <input class="input" id="name" type="text" required>
+                            <label for='name'>Full name</label>
                         </div>
-                        <div class="input-row">
-                            <p class="input-title">Enter your phone number to get started</p>
-                            <div class="input-wrap">
-                                <input class="input" id="phone" type="tel" maxlength="15" value="+86 " required>
-                            </div>
-                            <p class="input-subtitle">Your phone number is for our record keeping purposes only.</p>
+                        <div class="input-wrap">
+                            <input class="input" id="address" type="text" required>
+                            <label for='address'>How we address you</label>
                         </div>
-                        <div class="input-row">
-                            <p class="input-title">Enter the code sent to your phone</p>
-                            <div class="input-wrap">
-                                <input class="input" id="verification" type="text" required maxlength="6" type="text">
-                                <label for='verification'>Verification code</label>
-                            </div>
-                            <label class="input-checkbox square" for="remeber">
-                                <input id="remeber" type="checkbox"> 
-                                <p>Remember me on this device</p>
+                        <div class="input-wrap">
+                            <input class="input" id="phone" type="tel" maxlength="15" value="+86 " required>
+                            <label for='phone'>Phone</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input" id="email-another" type="text">
+                            <label for='email-another'>Email</label>
+                            <label class="input-checkbox square" for="send_notification">
+                                <input id="send_notification" type="checkbox" disabled> 
+                                <p>Send me email communications</p>
                             </label>
                         </div>
-                        <div class="input-row">
-                            <p class="input-title">Enter your full name</p>
-                            <div class="input-wrap">
-                                <input class="input" id="name" type="text" required>
-                                <label for='name'>Full name</label>
-                            </div>
+                        <div class="input-wrap">
+                            <input class="input" id="postal" type="text">
+                            <label for='postal'>Postal address</label>
+                            <label class="input-checkbox square" for="remeber">
+                                <input id="remeber" type="checkbox" disabled> 
+                                <p>Send me post mail communications</p>
+                            </label>
                         </div>
-                        <div class="input-row">
-                            <p class="input-title small">May one of our directors stay in touch with you by WeChat?</p>
-                            <div class="checkbox-wrap">
-                                <div class="checkbox active checkbox-phone">Yes, if we're not already friends, add me using my phone number, <span class="phone-filled">XXXX XXXX XXXXX</span></div>
-                                <div class="checkbox with-options">
-                                    Yes, but I'd like to provide another number or WeChat ID.
-                                    <div class="options">
-                                        <div class="input-wrap">
-                                            <input class="input" id="wechat" type="text">
-                                            <label for='wechat'>WeChat ID or linked number</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checkbox">No thanks</div>
-                            </div>
+                        <div class="buttons">
+                            <div class="button save inactive">Save</div>
+                            <div class="button secondary cancel inactive">Cancel</div>
+                            <p class="buttons-message">You've changed X property.</p>
                         </div>
-                        <button type="submit" class="button submit">Submit Payment</button>
+                        <p class="gift-desc">Your gift of <b>13.85 RMB</b> was received on <span class="phone-filled">20XX-XX-XX</span> via Alipay/WeChat. Reference number XXXX/pending.</p>
+                        <button type="submit" class="button">Print</button>
                     </form>
                 </div>
                 <div class="col-50"></div>
@@ -137,6 +123,7 @@
     </footer>
     <script defer src="./js/inputs.js"></script>
     <script defer src="./js/validate.js"></script>
+    <script defer src="./js/another_number.js"></script>
     <script defer src="./js/checkbox.js"></script>
     <script defer src="./js/dropdown.js"></script>
 </body>

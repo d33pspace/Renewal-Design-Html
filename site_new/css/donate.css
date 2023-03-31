@@ -136,9 +136,12 @@
   gap: 15px;
   align-items: center;
 }
-.donate-form-detail .buttons .message {
+.donate-form-detail .buttons .buttons-message {
   margin: 0;
   display: none;
+}
+.donate-form-detail .buttons .buttons-message.active {
+  display: inline;
 }
 .donate-form-detail .gift-desc {
   font-size: 20px;

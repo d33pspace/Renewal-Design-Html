@@ -80,14 +80,14 @@
                             <label for='address'>How we address you</label>
                         </div>
                         <div class="input-wrap">
-                            <input class="input" id="phone" type="tel" required>
+                            <input class="input" id="phone" type="tel" maxlength="15" value="+86 " required>
                             <label for='phone'>Phone</label>
                         </div>
                         <div class="checkbox-wrap">
-                            <div class="checkbox active">Send me WeChat communications to the account linked to XXXXXXXXXXX</div>
+                            <div class="checkbox active checkbox-phone">Send me WeChat communications to the account linked to <span class="phone-filled">XXXX XXXX XXXXX</span></div>
                             <div class="checkbox with-options">
                                 Yes, but I'd like to provide another number or WeChat ID.
-                                <div class="options">
+                                <div class="options another_number">
                                     <div class="input-wrap">
                                         <input class="input" id="wechat" type="text">
                                         <label for='wechat'>WeChat ID or linked number</label>
@@ -96,7 +96,7 @@
                                         <input class="input" id="email-another" type="text">
                                         <label for='email-another'>Email</label>
                                         <label class="input-checkbox square" for="send_notification">
-                                            <input id="send_notification" type="checkbox"> 
+                                            <input id="send_notification" type="checkbox" disabled> 
                                             <p>Send me email communications</p>
                                         </label>
                                     </div>
@@ -104,19 +104,19 @@
                                         <input class="input" id="postal" type="text">
                                         <label for='postal'>Postal address</label>
                                         <label class="input-checkbox square" for="remeber">
-                                            <input id="remeber" type="checkbox"> 
+                                            <input id="remeber" type="checkbox" disabled> 
                                             <p>Send me post mail communications</p>
                                         </label>
                                     </div>
                                     <div class="buttons">
                                         <div class="button save inactive">Save</div>
                                         <div class="button secondary cancel inactive">Cancel</div>
-                                        <p class="message">You've changed X property.</p>
+                                        <p class="buttons-message">You've changed X property.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="gift-desc">Your gift of <b>13.85 RMB</b> was received on <b>20XX-XX-XX</b> via Alipay/WeChat. Reference number XXXX/pending.</p>
+                        <p class="gift-desc">Your gift of <b>13.85 RMB</b> was received on <span class="phone-filled">20XX-XX-XX</span> via Alipay/WeChat. Reference number XXXX/pending.</p>
                         <button type="submit" class="button">Print</button>
                     </form>
                 </div>
@@ -133,7 +133,9 @@
             <p class="copyright">© Renewal 365 Inc, 2022</p>
         </div>
     </footer>
-    <script defer type="module" src="./js/inputs.js"></script>
+    <script defer src="./js/inputs.js"></script>
+    <script defer src="./js/validate.js"></script>
+    <script defer src="./js/another_number.js"></script>
     <script defer src="./js/checkbox.js"></script>
     <script defer src="./js/dropdown.js"></script>
 </body>

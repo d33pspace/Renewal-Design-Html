@@ -55,6 +55,13 @@
   display: flex;
   gap: 15px;
 }
+.buttons-row.long {
+  width: 100%;
+}
+.buttons-row.long .button {
+  width: calc(50% - 7.5px);
+  justify-content: center;
+}
 
 .no-card, .no-gift {
   display: none;
@@ -247,6 +254,14 @@
   background: url("../img/svg/ae.svg");
 }
 
+.donate-form-detail h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  margin-bottom: 15px;
+}
+
 .card-message {
   width: 100%;
 }
@@ -294,7 +309,7 @@
     flex-direction: column;
     width: 100%;
   }
-  .buttons-row button {
+  .buttons-row .button {
     width: 100%;
   }
 

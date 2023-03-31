@@ -123,9 +123,12 @@
         display: flex;
         gap: 15px;
         align-items: center;
-        .message {
+        .buttons-message {
             margin: 0;
             display: none;
+            &.active {
+                display: inline;
+            }
         }
     }
     .gift-desc {
