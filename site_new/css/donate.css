@@ -52,8 +52,7 @@
   .location .loc-wrap {
     flex-wrap: wrap;
   }
-  .location .loc-wrap .link-wrap {
-    margin: 0 !important;
+  .location .loc-wrap p {
     width: 100%;
   }
 }

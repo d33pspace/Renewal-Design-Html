@@ -55,11 +55,18 @@
 .buttons-row {
     display: flex;
     gap: 15px;
+    @media(max-width: 480px) {
+        flex-direction: column-reverse !important;
+        &.long .button {
+            width: 100% !important;
+        }
+    }
     &.long {
         width: 100%;
         .button {
             width: calc(50% - 7.5px);
             justify-content: center;
+
         }
     }
 }
@@ -237,6 +244,13 @@
     .inputs {
         display: flex;
         gap: 8px;
+        @media(max-width: 480px) {
+            flex-wrap: wrap;
+            gap: 10px;
+            .input-wrap {
+                width: 100% !important;
+            }
+        }
         .input-wrap {
             min-width: 120px;
             width: 120px;

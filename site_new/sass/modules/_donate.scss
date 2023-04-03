@@ -45,8 +45,7 @@
         align-items: center;
         @media(max-width: 480px) {
             flex-wrap: wrap;
-            .link-wrap {
-                margin: 0 !important;
+            p {
                 width: 100%;
             }
         }

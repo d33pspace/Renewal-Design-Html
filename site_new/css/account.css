@@ -55,6 +55,14 @@
   display: flex;
   gap: 15px;
 }
+@media (max-width: 480px) {
+  .buttons-row {
+    flex-direction: column-reverse !important;
+  }
+  .buttons-row.long .button {
+    width: 100% !important;
+  }
+}
 .buttons-row.long {
   width: 100%;
 }
@@ -232,6 +240,15 @@
 .input-card-exist .inputs {
   display: flex;
   gap: 8px;
+}
+@media (max-width: 480px) {
+  .input-card-exist .inputs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .input-card-exist .inputs .input-wrap {
+    width: 100% !important;
+  }
 }
 .input-card-exist .inputs .input-wrap {
   min-width: 120px;
