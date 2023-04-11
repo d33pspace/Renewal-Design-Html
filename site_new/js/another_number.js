@@ -6,10 +6,8 @@ options.forEach(item => {
         console.log(fieldValid(options))
         if (fieldValid(options)) {
             buttons.forEach(i => i.classList.remove('inactive'))
-            document.querySelector('.buttons-message').classList.add('active')
         } else {
             buttons.forEach(i => i.classList.add('inactive'))
-            document.querySelector('.buttons-message').classList.remove('active')
         }
         if (item.nextElementSibling.nextElementSibling) {
             if (e.target.value !== '') {
