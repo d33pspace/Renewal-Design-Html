@@ -156,6 +156,7 @@ p {
     padding: 0 25px;
     max-width: 1196px;
     margin: 0 auto;
+    position: relative;
 }
 
 .row {
@@ -649,4 +650,41 @@ main .caption {
         width: 100%;
         justify-content: center;
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 112px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px 50px;
+    border-width: 0px 2px 2px 2px;
+    border-style: solid;
+    z-index: 999999;
+    @media(max-width: 769px) {
+        top: 92px;
+        min-width: 85%;
+    }
+    &.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &.success {
+        border-color: #04B116;
+        background: #EFF7F0;
+    }
+    &.error {
+        border-color: #CE0538;
+        background: #FFEBF0;
+    }
+}
+
+.modal p {
+    margin: 0;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
 }
