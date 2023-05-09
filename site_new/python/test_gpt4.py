@@ -1,46 +1,59 @@
-import json
 import re
+from html.parser import HTMLParser
+import json
 
+html_file = "../news.html"
 variable_prefix_dict = {"header": "header", "main": "news", "footer": "footer"}
 variable_prefix = ""
 json_result = {}
 
-html_file = "../news.html"
+class MyHTMLParser(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        global variable_prefix
+        if tag in variable_prefix_dict:
+            variable_prefix = variable_prefix_dict[tag]
+        print(f"<{tag}", end="")
+        for attr in attrs:
+            print(f' {attr[0]}="{attr[1]}"', end="")
+        print(">", end="")
 
-output_lines = []
-
-def replace_text(match):
-    text = match.group(3).strip()
-    if len(text.split()) < 5:
-        variable_name = "_".join(text.split())
-    elif match.group(2):
-        variable_name = match.group(2)
-    else:
-        variable_name = "_".join(text.split()[:2])
-
-    variable_name = re.sub(r"[^a-zA-Z0-9]+", "_", variable_name).lower()
-
-    if variable_prefix:
-        json_result.setdefault(variable_prefix, {})[variable_name] = text
-        return f"<{match.group(1)}>{{{{{variable_prefix}.{variable_name}}}}}</{match.group(1)}>"
-    else:
-        json_result[variable_name] = text
-        return f"<{match.group(1)}>{{{{ {variable_name} }}}}</{match.group(1)}>"
-
-
-with open(html_file, "r", encoding="utf-8") as file:
-    for line in file:
-        if re.search(rf"<({ '|'.join(variable_prefix_dict.keys()) })>", line):
-            variable_prefix = variable_prefix_dict[re.search(rf"<({ '|'.join(variable_prefix_dict.keys()) })>", line).group(1)]
-        elif re.search(rf"</({ '|'.join(variable_prefix_dict.values()) })>", line):
+    def handle_endtag(self, tag):
+        global variable_prefix
+        if tag in variable_prefix_dict:
             variable_prefix = ""
+        print(f"</{tag}>", end="")
 
-        line = re.sub(r'<([\w-]+)(?: class="([\w-]+)")?>([^<>]+)</\1>', replace_text, line)
-        output_lines.append(line)
+    def handle_data(self, data):
+        global variable_prefix, json_result
+        if variable_prefix and data.strip():
+            class_name = ""
+            for match in re.finditer(r'class="([^"]+)"', self.get_starttag_text()):
+                class_name = match.group(1)
+            words = data.split()
+            if len(words) < 5:
+                variable_name = " ".join(words).replace(" ", "-").lower()
+            elif class_name:
+                variable_name = class_name.lower()
+            else:
+                variable_name = " ".join(words[:2]).replace(" ", "-").lower()
+            variable_name = re.sub(r'[\W_]+', '_', variable_name)
 
-generated_html = "".join(output_lines)
-print(generated_html)
-print("\n")
+            if variable_name in json_result.get(variable_prefix, {}):
+                i = 1
+                while f"{variable_name}_{i}" in json_result.get(variable_prefix, {}):
+                    i += 1
+                variable_name = f"{variable_name}_{i}"
 
-formatted_json = json.dumps(json_result, indent=2)
-print(formatted_json)
+            json_result.setdefault(variable_prefix, {})[variable_name] = data.strip()
+            print(f"{{{{{variable_prefix}.{variable_name}}}}}", end="")
+        else:
+            print(data, end="")
+
+
+parser = MyHTMLParser()
+
+with open(html_file, "r", encoding="utf-8") as f:
+    for line in f:
+        parser.feed(line)
+
+print("\n\n" + json.dumps(json_result, indent=2))

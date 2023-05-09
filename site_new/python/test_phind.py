@@ -37,6 +37,11 @@ class MyHTMLParser(HTMLParser):
             else:
                 variable_name = " ".join(words[:2]).replace(" ", "-").lower()
             variable_name = re.sub(r'[\W_]+', '_', variable_name)
+
+            # Check if variable_prefix.variable_name exists and the current text is different
+            if variable_prefix in json_result and variable_name in json_result[variable_prefix] and json_result[variable_prefix][variable_name] != data.strip():
+                variable_name += "_1"
+
             json_result.setdefault(variable_prefix, {})[variable_name] = data.strip()
             print(f"{{{{{variable_prefix}.{variable_name}}}}}", end="")
         else:
