@@ -29,7 +29,13 @@ class MyHTMLParser(HTMLParser):
             class_name = ""
             for match in re.finditer(r'class="([^"]+)"', self.get_starttag_text()):
                 class_name = match.group(1)
-            variable_name = (class_name or " ".join(data.split()[:2]).replace(" ", "-")).lower()
+            words = data.split()
+            if len(words) < 5:
+                variable_name = " ".join(words).replace(" ", "-").lower()
+            elif class_name:
+                variable_name = class_name.lower()
+            else:
+                variable_name = " ".join(words[:2]).replace(" ", "-").lower()
             variable_name = re.sub(r'[\W_]+', '_', variable_name)
             json_result.setdefault(variable_prefix, {})[variable_name] = data.strip()
             print(f"{{{{{variable_prefix}.{variable_name}}}}}", end="")
