@@ -1,41 +1,66 @@
-import json
-import os
+import sys
 import re
-from collections import defaultdict
+import json
 
-def parse_html_file(file_path):
-    var_dict = defaultdict(dict)
-    class_dict = {'header': 'header', 'main': 'news', 'footer': 'footer'}
+# Define the mapping of element classes to variable names
+class_to_var = {
+    "header": "header",
+    "main": "news",
+    "footer": "footer"
+}
 
-    with open(file_path, 'r') as f:
-        for line in f:
-            print(line)
-            matches = re.findall(r'<(\w+)[^>]*>([^<]+)</\1>', line)
-            for match in matches:
-                element = match[0]
-                text = match[1].strip()
+# Define the regex pattern for matching text within tags
+text_pattern = r">([^<]+)<"
 
-                var_name = ''
-                if element in class_dict:
-                    var_name += class_dict[element] + '.'
-                var_name += re.sub(r'\W+', '_', text[:2].lower())
+def process_html_file(html_file_path):
+    # Open the HTML file for reading
+    with open(html_file_path, "r") as html_file:
+        # Read all lines of the file into a list
+        lines = html_file.readlines()
 
-                line = line.replace(match[1], '{{' + var_name + '}}')
+    # Initialize an empty dictionary to store the variable-to-text mapping
+    var_to_text = {}
 
-                var_dict[class_dict.get(element, 'others')][var_name] = text
+    # Initialize the variable prefix as an empty string
+    var_prefix = ""
 
-            print(line, end='')
+    # Loop through each line of the HTML code
+    for line in lines:
+        # Set the variable prefix to an empty string if a closing tag is found
+        if "</" in line:
+            var_prefix = ""
+        else:
+            # Loop through each class-to-variable mapping
+            for class_name, var_prefix_candidate in class_to_var.items():
+                # Check if the line contains the class name
+                if f"class=\"{class_name}" in line:
+                    # Set the variable prefix as the class prefix
+                    var_prefix = var_prefix_candidate
+                    break
 
-    json_string = json.dumps(var_dict, indent=2)
-    print('')
-    print('--------------------------------------------')
-    print('')
-    print(json_string)
+            # If a variable prefix was not found based on class, use an empty string
+            if var_prefix == "":
+                # Set the variable name suffix as the first two letters of the match text
+                var_suffix = line.split(">")[1][:2].lower()
+            else:
+                # Set the variable name suffix as the class prefix plus the first two letters of the match text
+                var_suffix = f"{var_prefix}.{line.split('>')[1][:2].lower()}"
 
-if __name__ == '__main__':
-    #file_path = input("Enter HTML file path: ")
-    file_path = 'test.html'
-    if not os.path.exists(file_path):
-        print("Invalid file path.")
-    else:
-        parse_html_file(file_path)
+            # Replace the match text with the variable name surrounded by double curly braces
+            line = line.replace(re.findall(text_pattern, line)[0], f"{{{{ {var_suffix} }}}}")
+
+            # Add the variable-to-text mapping to the dictionary
+            if var_suffix not in var_to_text:
+                var_to_text[var_suffix] = re.findall(text_pattern, line)[0]
+
+        # Print the updated line
+        print(line)
+
+    # Convert the variable-to-text mapping dictionary to a pretty-printed JSON string
+    var_to_text_json = json.dumps({var_name: {var_name.split('.')[1]: text} for var_name, text in var_to_text.items()}, indent=2)
+
+    # Print the JSON string
+    print(var_to_text_json)
+
+# Call the process_html_file function with the first command line argument as the HTML file path
+process_html_file('test.html')
