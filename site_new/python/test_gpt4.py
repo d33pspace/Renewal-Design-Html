@@ -2,8 +2,8 @@ import re
 from html.parser import HTMLParser
 import json
 
-html_file = "../news.html"
-variable_prefix_dict = {"header": "header", "main": "news", "footer": "footer"}
+html_file = "../campaign.html"
+variable_prefix_dict = {"header": "header", "main": "campaign", "footer": "footer"}
 variable_prefix = ""
 json_result = {}
 
