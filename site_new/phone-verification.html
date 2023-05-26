@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Renewal</title>
+    <link type="image/x-icon" rel="shortcut icon" href="./img/favicon/favicon.ico">
+    <link type="image/png" sizes="16x16" rel="icon" href="./img/favicon/16x16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="./img/favicon/32x32.png">
+    <link type="image/png" sizes="180x180" rel="icon" href="./img/favicon/180x180.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="./img/favicon/192x192.png">
+    <link type="image/png" sizes="512x512" rel="icon" href="./img/favicon/512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/180x180.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileImage" content="./img/favicon/mstile-150x150.png">
+    <meta name="application-name" content="Deep Space">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/donate.css">
+    <link rel="stylesheet" href="./css/phone-verification.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="menu-desc">
+                <div class="header-menu">
+                    <nav>
+                        <a href="/" class="logo">
+                            <img alt="logo" src="./img/svg/logo.svg" />
+                        </a>
+                        <a href=".">What We Do</a>
+                        <a href=".">Who We Are</a>
+                        <a href=".">Your Impact</a>
+                    </nav>
+                </div>
+                <div class="sub-menu">
+                    <a href="/">Sign In</a>
+                    <a class="button small" href="/">Donate Now</a>
+                </div>
+            </div>
+            <div class="menu-mob">
+                <div class="menu">
+                    <a href="/" class="logo">
+                        <img alt="logo" src="./img/svg/logo.svg" />
+                    </a>
+                    <div class="menu-button">
+                        <a href="/">Sign In</a>
+                        <div class="menu-toggle"></div>
+                        <nav>
+                            <a href=".">What We Do</a>
+                            <a href=".">Who We Are</a>
+                            <a href=".">Your Impact</a>
+                            <a class="button small" href="/">Donate Now</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-50 mob-padding">
+                    <h2 style="margin-bottom:10px;">Sign in to your account</h2>
+                    <p style="margin-bottom:35px;">Existing donors may sign in to their account to change their information. To create an account, please <a href='#' class="link">make a donation.</a></p>
+                    <form class="donate-form-detail phone-verification-form"> 
+                        <div class="input-row step">
+                            <p class="input-title">Enter your phone number to begin</p>
+                            <div class="input-wrap">
+                                <input class="input active" id="phone" type="tel" maxlength="15" value="+86 " required>
+                                <label for="phone">Phone</label>
+                                <div class="error-message input-message">That phone number wasn't found in our records. If you are trying to create a new account, please <a href='#' class="link">make a gift</a>. Or you can try another number or <a href='#' class="link">contact us.</a></div>
+                            </div>
+                        </div>
+                        <div class="input-row step">
+                            <p class="input-title">Enter the code sent to your phone</p>
+                            <div class="input-wrap">
+                                <input class="input" id="verification" type="text" required maxlength="6" type="text">
+                                <label for='verification'>Verification code</label>
+                            </div>
+                            <label class="input-checkbox square" for="remeber">
+                                <input id="remeber" type="checkbox"> 
+                                <p>Remember me on this device</p>
+                            </label>
+                            <div class="error-message input-message">That code isn't valid. You can request new one.</div>
+                        </div>
+                        <div class="buttons-row">
+                            <div class="button no-arrow secondary start-over">Start Over</div>
+                            <div class="button no-arrow next inactive">Next</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-50"></div>
+            </div>
+        </div>
+    </main> 
+    <section class="modals"> 
+        <div class="modal success">
+            <p>Info updated!</p>
+        </div>
+        <div class="modal error">
+            <p>Info update failed. Please enter a valid email address.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper mob-padding">
+            <div class="nav">
+                <a href="/">Contact Us</a>
+                <a href="/">中文</a>
+            </div>
+            <p class="copyright">© Renewal 365 Inc, 2022</p>
+        </div>
+    </footer>
+    <script defer src="./js/inputs.js"></script>
+    <script defer src="./js/validate.js"></script>
+    <script defer src="./js/steps.js"></script>
+    <script defer src="./js/menu.js"></script>
+</body>

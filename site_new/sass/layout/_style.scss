@@ -85,6 +85,39 @@ p {
     width: 0%;
 }
 
+.step {
+    display:none;
+    &.active, &:first-child {
+        display: block;
+    }
+}
+
+.button.start-over {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.buttons-row {
+    display: flex;
+    gap: 15px;
+    @media(max-width: 480px) {
+        flex-direction: column-reverse !important;
+        &.long .button {
+            width: 100% !important;
+        }
+    }
+    &.long {
+        width: 100%;
+        .button {
+            width: calc(50% - 7.5px);
+            justify-content: center;
+
+        }
+    }
+}
+
 .button {
     padding: 13.5px 38px 13.5px 38px;
     border-radius: 5px;
@@ -138,13 +171,13 @@ p {
         }
     }
     &.inactive {
-        background: var(--light-grey);
-        border-color: var(--light-grey) !important;
+        background: var(--dark-grey);
+        border-color: var(--dark-grey) !important;
         color: #fff !important;
         cursor: default;
         &.secondary {
             background: transparent;
-            color: var(--light-grey) !important;
+            color: var(--dark-grey) !important;
         }
     }
     &.no-arrow::after {
