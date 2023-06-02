@@ -190,6 +190,9 @@ p {
   .buttons-row {
     flex-direction: column-reverse !important;
   }
+  .buttons-row.reverse {
+    flex-direction: column !important;
+  }
   .buttons-row.long .button {
     width: 100% !important;
   }
@@ -750,6 +753,7 @@ main .caption {
   }
 
   .link {
+    display: block;
     font-size: 14px;
     margin-bottom: 20px;
   }
