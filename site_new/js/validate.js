@@ -2,6 +2,9 @@ function validate(value) {
     return /^-?\d*$/.test(value) 
 }
 
+
+let nextButton = document.querySelector('.next')
+
 let phone = document.querySelector('#phone')
 if (phone) {
     phone.addEventListener('input', function(e) {
@@ -9,10 +12,11 @@ if (phone) {
         if (!validate(e.target.value.slice(4))) {
             e.target.value = e.target.value.slice(0, e.target.value.length - 1)
         }
+        e.target.value.length === 15 ? nextButton.classList.remove('inactive') : nextButton.classList.add('inactive')
     })
     
     phone.onblur = (e) => {
-        document.querySelector('.phone-filled').innerHTML = e.target.value
+        document.querySelector('.phone-filled') ?  document.querySelector('.phone-filled').innerHTML = e.target.value : ''
     }
 }
 
@@ -23,6 +27,7 @@ if (verification) {
         if (!validate(e.target.value)) {
             e.target.value = e.target.value.slice(0, e.target.value.length - 1)
         }
+        e.target.value.length === 6 ? nextButton.classList.remove('inactive') : nextButton.classList.add('inactive')
     })
 }
 

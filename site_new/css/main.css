@@ -168,6 +168,43 @@ p {
   width: 0%;
 }
 
+.step {
+  display: none;
+}
+.step.active, .step:first-child {
+  display: block;
+}
+
+.button.start-over {
+  display: none;
+}
+.button.start-over.active {
+  display: block;
+}
+
+.buttons-row {
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 480px) {
+  .buttons-row {
+    flex-direction: column-reverse !important;
+  }
+  .buttons-row.reverse {
+    flex-direction: column !important;
+  }
+  .buttons-row.long .button {
+    width: 100% !important;
+  }
+}
+.buttons-row.long {
+  width: 100%;
+}
+.buttons-row.long .button {
+  width: calc(50% - 7.5px);
+  justify-content: center;
+}
+
 .button {
   padding: 13.5px 38px 13.5px 38px;
   border-radius: 5px;
@@ -215,14 +252,14 @@ p {
   background: var(--main-red);
 }
 .button.inactive {
-  background: var(--light-grey);
-  border-color: var(--light-grey) !important;
+  background: var(--dark-grey);
+  border-color: var(--dark-grey) !important;
   color: #fff !important;
   cursor: default;
 }
 .button.inactive.secondary {
   background: transparent;
-  color: var(--light-grey) !important;
+  color: var(--dark-grey) !important;
 }
 .button.no-arrow::after {
   display: none;
@@ -716,6 +753,7 @@ main .caption {
   }
 
   .link {
+    display: block;
     font-size: 14px;
     margin-bottom: 20px;
   }

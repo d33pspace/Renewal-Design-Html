@@ -51,26 +51,6 @@
   margin-bottom: 30px;
 }
 
-.buttons-row {
-  display: flex;
-  gap: 15px;
-}
-@media (max-width: 480px) {
-  .buttons-row {
-    flex-direction: column-reverse !important;
-  }
-  .buttons-row.long .button {
-    width: 100% !important;
-  }
-}
-.buttons-row.long {
-  width: 100%;
-}
-.buttons-row.long .button {
-  width: calc(50% - 7.5px);
-  justify-content: center;
-}
-
 .no-card, .no-gift {
   display: none;
 }
