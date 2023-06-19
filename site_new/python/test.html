@@ -1,25 +1,37 @@
 <main>
     <div class="wrapper">
         <div class="row">
-            <div class="col-full mob-padding">
-                <div class="news-title-block">
-                    <p class="news">Re:news</p>
-                    <h2 class="title">How your gifts can transform lives in Shanghai</h2>
-                    <div class="meta">
-                        <p class="category">Issue 19</p>
-                        <p class="date">Autumn 2022</p>
+            <div class="col-50 mob-padding">
+                <h2 style="margin-bottom:10px;">Sign in to your account</h2>
+                <p style="margin-bottom:35px;">Existing donors may sign in to their account to change their information. To create an account, please <a href='#' class="link">make a donation.</a></p>
+                <form class="donate-form-detail phone-verification-form">
+                    <div class="input-row step">
+                        <p class="input-title">Enter your phone number to begin</p>
+                        <div class="input-wrap">
+                            <input class="input active" id="phone" type="tel" maxlength="15" value="+86 " required>
+                            <label for="phone">Phone</label>
+                            <div class="error-message input-message">That phone number wasn't found in our records. If you are trying to create a new account, please <a href='#' class="link">make a gift</a>. Or you can try another number or <a href='#' class="link">contact us.</a></div>
+                        </div>
                     </div>
-                </div>
+                    <div class="input-row step">
+                        <p class="input-title">Enter the code sent to your phone</p>
+                        <div class="input-wrap">
+                            <input class="input" id="verification" type="text" required maxlength="6" type="text">
+                            <label for='verification'>Verification code</label>
+                            <div class="error-message input-message">That code isn't valid. You can request new one.</div>
+                        </div>
+                        <label class="input-checkbox square" for="remeber">
+                            <input id="remeber" type="checkbox">
+                            <p>Remember me on this device</p>
+                        </label>
+                    </div>
+                    <div class="buttons-row reverse">
+                        <div class="button no-arrow secondary start-over">Start Over</div>
+                        <div class="button no-arrow next inactive">Next</div>
+                    </div>
+                </form>
             </div>
+            <div class="col-50"></div>
         </div>
-        </div>
-</main>
-<footer>
-    <div class="wrapper mob-padding">
-        <div class="nav">
-            <a href="/">Contact Us</a>
-            <a href="/">中文</a>
-        </div>
-        <p class="copyright">© Renewal 365 Inc, 2022</p>
     </div>
-</footer>
+</main>
