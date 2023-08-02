@@ -311,6 +311,64 @@ form {
   display: flex;
   flex-direction: column;
 }
+.input-wrap:has(textarea) {
+  width: 100%;
+  padding: 10px 30px;
+  border: 1px solid var(--light-grey);
+  outline: unset;
+  border-radius: 5px;
+  background: #fff;
+}
+@media (max-width: 768px) {
+  .input-wrap:has(textarea) {
+    padding: 10px 20px;
+  }
+}
+.input-wrap:has(textarea) textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  height: 30px;
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--black);
+}
+.input-wrap:has(textarea) textarea.filled {
+  height: 138px;
+}
+@media (max-width: 768px) {
+  .input-wrap:has(textarea) textarea.filled {
+    height: 164px;
+  }
+}
+.input-wrap:has(textarea) textarea + label {
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: var(--dark-grey);
+  left: 20px;
+  top: 15px;
+  cursor: text;
+  background: #fff;
+  padding: 0 10px;
+  transition: 0.2s;
+}
+@media (max-width: 768px) {
+  .input-wrap:has(textarea) textarea + label {
+    font-size: 14px;
+  }
+}
+.input-wrap:has(textarea) textarea.active + label {
+  font-size: 14px;
+  top: -10px;
+  left: 20px;
+}
 .input-wrap.error input {
   border-color: var(--main-red);
 }
@@ -331,7 +389,7 @@ form {
     width: 100%;
   }
 }
-.input-wrap input, .input-wrap textarea, .input-wrap select {
+.input-wrap input, .input-wrap select {
   resize: none;
   width: 100%;
   height: 50px;
@@ -349,19 +407,11 @@ form {
   background: #fff;
 }
 @media (max-width: 768px) {
-  .input-wrap input, .input-wrap textarea, .input-wrap select {
+  .input-wrap input, .input-wrap select {
     padding: 10px 20px;
   }
 }
-.input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
-  height: 158px;
-}
-@media (max-width: 768px) {
-  .input-wrap input.filled, .input-wrap textarea.filled, .input-wrap select.filled {
-    height: 164px;
-  }
-}
-.input-wrap input + label, .input-wrap textarea + label, .input-wrap select + label {
+.input-wrap input + label, .input-wrap select + label {
   position: absolute;
   font-weight: 400;
   font-size: 16px;
@@ -376,17 +426,18 @@ form {
   transition: 0.2s;
 }
 @media (max-width: 768px) {
-  .input-wrap input + label, .input-wrap textarea + label, .input-wrap select + label {
+  .input-wrap input + label, .input-wrap select + label {
     font-size: 14px;
   }
 }
-.input-wrap input.active + label, .input-wrap textarea.active + label, .input-wrap select.active + label {
+.input-wrap input.active + label, .input-wrap select.active + label {
   font-size: 14px;
   top: -10px;
   left: 20px;
 }
 .input-wrap textarea {
-  padding-top: 6px;
+  padding-top: 0px;
+  padding-bottom: 0;
 }
 .input-wrap select {
   color: var(--black);
@@ -571,14 +622,9 @@ form {
   display: none;
 }
 .input-checkbox input:checked + p::after {
-  width: 12px;
-  height: 12px;
-  background: var(--main-red);
-  border: 5px solid #fff;
-  outline: 1px solid var(--main-red);
-}
-.input-checkbox.square p:after {
-  border-radius: 4px;
+  background-image: url(../img/svg/check.svg);
+  background-repeat: no-repeat;
+  border-color: var(--main-red);
 }
 .input-checkbox p {
   font-weight: 400;
@@ -590,17 +636,19 @@ form {
 }
 .input-checkbox p::after {
   content: "";
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  border-radius: 6px;
+  border: 1px solid var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
   position: absolute;
   left: 0;
   top: 0;
-  width: 12px;
-  height: 12px;
-  border: 5px solid #fff;
-  outline: 1px solid #DEDEDE;
-  background: #DEDEDE;
-  border-radius: 50%;
-  transition: 0.2s;
-  cursor: pointer;
 }
 
 .input-card {
@@ -918,19 +966,15 @@ header .menu-mob .menu .menu-toggle {
   height: 40px;
   background: url("../img/svg/menu.svg");
   cursor: pointer;
+  border-radius: 5px;
 }
 header .menu-mob .menu .menu-toggle.active {
-  background: url("../img/svg/menu-close.svg");
+  background-image: url("../img/svg/menu-close.svg");
 }
-header .menu-mob .menu .menu-toggle.active + nav {
+header .menu-mob .menu .menu-toggle.active + .nav {
   left: 0;
 }
-header .menu-mob .menu nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+header .menu-mob .menu .nav {
   position: absolute;
   z-index: 99999;
   background: #fff;
@@ -939,16 +983,53 @@ header .menu-mob .menu nav {
   left: -100%;
   top: 92px;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
 }
-header .menu-mob .menu nav a {
+header .menu-mob .menu .nav nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+header .menu-mob .menu .nav nav a {
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
   text-transform: capitalize;
   color: var(--main-red);
 }
-header .menu-mob .menu nav .button {
+header .menu-mob .menu .nav nav .button {
   width: fit-content;
+}
+header .menu-mob .menu .nav .log-info {
+  padding: 35px 15px;
+  border-top: 2px solid var(--light-grey-bg);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  visibility: hidden;
+}
+header .menu-mob .menu .nav .log-info.active {
+  visibility: visible;
+}
+header .menu-mob .menu .nav .log-info .account {
+  color: var(--black);
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+}
+header .menu-mob .menu .nav .log-info .logout {
+  color: var(--main-red);
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: capitalize;
 }
 
 @media (max-width: 768px) {

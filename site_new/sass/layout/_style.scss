@@ -231,6 +231,58 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
+    &:has(textarea) {
+        width: 100%;
+        padding: 10px 30px;
+        border: 1px solid var(--light-grey);
+        outline: unset;
+        border-radius: 5px;
+        background: #fff;
+        @media(max-width: 768px) {
+            padding: 10px 20px;
+        }
+        textarea {
+            resize: none;
+            border: none;
+            outline: none;
+            overflow: hidden;
+            height: 30px;
+            transition: .3s;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.01em;
+            color: var(--black);
+            &.filled {
+                height: 138px;
+                @media(max-width: 768px) {
+                    height: 164px;
+                }
+            }
+            &+label {
+                position: absolute;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.01em;
+                color: var(--dark-grey);
+                left: 20px;
+                top: 15px;
+                cursor: text;
+                background: #fff;
+                padding: 0 10px;
+                transition: .2s;
+                @media(max-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+            &.active+label {
+                font-size: 14px;
+                top: -10px;
+                left: 20px;
+            }
+        }
+    }
     &.error {
         input {
             border-color: var(--main-red);  
@@ -253,7 +305,7 @@ form {
             width: 100%;
         }
     }
-    input, textarea, select {
+    input, select {
         resize: none;
         width: 100%;
         height: 50px;
@@ -271,12 +323,6 @@ form {
         background: #fff;
         @media(max-width: 768px) {
             padding: 10px 20px;
-        }
-        &.filled {
-            height: 158px;
-            @media(max-width: 768px) {
-                height: 164px;
-            }
         }
         &+label {
             position: absolute;
@@ -302,7 +348,8 @@ form {
         }
     }
     textarea {
-        padding-top: 6px;
+        padding-top: 0px;
+        padding-bottom: 0;
     }
     select {
         color: var(--black);
@@ -483,15 +530,10 @@ form {
     input {
         display: none;
         &:checked+p::after {
-            width: 12px;
-            height: 12px;
-            background: var(--main-red);
-            border: 5px solid #fff;
-            outline: 1px solid var(--main-red);
+            background-image: url(../img/svg/check.svg);
+            background-repeat: no-repeat;
+            border-color: var(--main-red);
         }
-    }
-    &.square p:after {
-        border-radius: 4px;
     }
     p {
         font-weight: 400;
@@ -501,18 +543,20 @@ form {
         color: var(--black);
         margin: 0;
         &::after {
-            content: '';
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-position: center;
+            border-radius: 6px;
+            border: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
             position: absolute;
             left: 0;
             top: 0;
-            width: 12px;
-            height: 12px;
-            border: 5px solid #fff;
-            outline: 1px solid #DEDEDE;
-            background: #DEDEDE;
-            border-radius: 50%;
-            transition: .2s;
-            cursor: pointer;
         }
     }
 }
