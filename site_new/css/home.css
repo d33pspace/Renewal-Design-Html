@@ -3,8 +3,108 @@ main h1 {
   margin-bottom: 25px;
 }
 
+.what-we-do {
+  gap: 35px;
+}
+.what-we-do .col-50 {
+  width: calc(50% - 17.5px);
+}
+@media (max-width: 768px) {
+  .what-we-do .col-50 {
+    width: 100%;
+  }
+}
+.what-we-do h1 {
+  margin-bottom: 35px;
+  width: 100%;
+  text-align: center;
+}
+.what-we-do .subtitle {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .what-we-do .subtitle {
+    text-align: left;
+  }
+}
+.what-we-do img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.what-we-do p {
+  margin-top: 15px;
+}
+
+.impact .col-full h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.who-we-are h1 {
+  text-align: center;
+  width: 100%;
+}
+.who-we-are h2 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.who-we-are .cards {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+}
+.who-we-are .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: inherit;
+}
+.who-we-are .cards .card h2 {
+  text-align: center;
+}
+.who-we-are .cards .card img {
+  width: 166px;
+  height: 166px;
+  margin-bottom: 25px;
+}
+.who-we-are .cards .card .position {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: var(--main-red);
+  margin: 10px 0 20px;
+}
+.who-we-are .cards .card p {
+  margin: 0;
+}
+
+.col-button {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
   main h1 {
     margin-bottom: 20px;
+  }
+
+  .who-we-are h2 {
+    margin-bottom: 20px;
+  }
+  .who-we-are .cards {
+    flex-direction: column;
+  }
+  .who-we-are .cards .card img {
+    margin-bottom: 15px;
+  }
+
+  .what-we-do {
+    gap: 30px;
+  }
+
+  .col-button {
+    margin-bottom: 0;
   }
 }
