@@ -8,7 +8,9 @@ input.forEach(item => {
     }
 
     item.onblur = (e) => {
-        item.nodeName == 'TEXTAREA' && e.relatedTarget == submit ? submit.click() : ''
+        if (submit) {
+            item.nodeName == 'TEXTAREA' && e.relatedTarget === submit ? submit.click() : ''
+        }
         item.nodeName == 'TEXTAREA' ? item.classList.remove('filled') : ''
         if (item.value == '') {
             item.classList.remove('active')

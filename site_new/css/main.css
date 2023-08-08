@@ -312,7 +312,7 @@ form {
   display: flex;
   flex-direction: column;
 }
-.input-wrap:has(textarea) {
+.input-wrap:is(:has(textarea), .has-textarea) {
   width: 100%;
   padding: 10px 30px;
   border: 1px solid var(--light-grey);
@@ -321,11 +321,11 @@ form {
   background: #fff;
 }
 @media (max-width: 768px) {
-  .input-wrap:has(textarea) {
+  .input-wrap:is(:has(textarea), .has-textarea) {
     padding: 10px 20px;
   }
 }
-.input-wrap:has(textarea) textarea {
+.input-wrap:is(:has(textarea), .has-textarea) textarea {
   resize: none;
   border: none;
   outline: none;
@@ -338,15 +338,15 @@ form {
   letter-spacing: 0.01em;
   color: var(--black);
 }
-.input-wrap:has(textarea) textarea.filled {
+.input-wrap:is(:has(textarea), .has-textarea) textarea.filled {
   height: 138px;
 }
 @media (max-width: 768px) {
-  .input-wrap:has(textarea) textarea.filled {
+  .input-wrap:is(:has(textarea), .has-textarea) textarea.filled {
     height: 164px;
   }
 }
-.input-wrap:has(textarea) textarea + label {
+.input-wrap:is(:has(textarea), .has-textarea) textarea + label {
   position: absolute;
   font-weight: 400;
   font-size: 16px;
@@ -361,11 +361,11 @@ form {
   transition: 0.2s;
 }
 @media (max-width: 768px) {
-  .input-wrap:has(textarea) textarea + label {
+  .input-wrap:is(:has(textarea), .has-textarea) textarea + label {
     font-size: 14px;
   }
 }
-.input-wrap:has(textarea) textarea.active + label {
+.input-wrap:is(:has(textarea), .has-textarea) textarea.active + label {
   font-size: 14px;
   top: -10px;
   left: 20px;

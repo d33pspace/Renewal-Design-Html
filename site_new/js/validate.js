@@ -12,7 +12,10 @@ if (phone) {
         if (!validate(e.target.value.slice(4))) {
             e.target.value = e.target.value.slice(0, e.target.value.length - 1)
         }
-        e.target.value.length === 15 ? nextButton.classList.remove('inactive') : nextButton.classList.add('inactive')
+        if (nextButton) {
+            e.target.value.length === 15 ? nextButton.classList.remove('inactive') : nextButton.classList.add('inactive')
+        }
+
     })
     
     phone.onblur = (e) => {
