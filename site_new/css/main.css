@@ -177,6 +177,7 @@ p {
 
 .button.start-over {
   display: none;
+  width: 220px;
 }
 .button.start-over.active {
   display: block;
@@ -256,6 +257,7 @@ p {
   border-color: var(--dark-grey) !important;
   color: #fff !important;
   cursor: default;
+  user-select: none;
 }
 .button.inactive.secondary {
   background: transparent;

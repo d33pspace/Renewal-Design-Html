@@ -3,7 +3,6 @@ let buttons = document.querySelectorAll('.button.inactive')
 
 options.forEach(item => {
     item.oninput = (e) => {
-        console.log(fieldValid(options))
         if (fieldValid(options)) {
             buttons.forEach(i => i.classList.remove('inactive'))
         } else {
