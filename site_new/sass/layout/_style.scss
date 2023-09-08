@@ -94,8 +94,8 @@ p {
 
 .button.start-over {
     display: none;
-    width: 220px;
-    &.active {
+    // width: 220px;
+    &.visible {
         display: block;
     }
 }
@@ -103,6 +103,42 @@ p {
 .buttons-row {
     display: flex;
     gap: 15px;
+    position: relative;
+    width: 100%;
+    .counter {
+        position: absolute;
+        bottom: -24px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding-left: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        &.inactive {
+            display: none;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: calc(50% - 8px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('../img/svg/info.svg');
+        }
+        @media(max-width: 768px) {
+            font-size: 14px;
+            padding-left: 20px;
+            &::after {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
     @media(max-width: 480px) {
         flex-direction: column-reverse !important;
         &.reverse {
@@ -382,13 +418,13 @@ form {
         &.error-message {
             color: var(--main-red);
             &:after {
-                background: url('../img/svg/error.svg');
+                background-image: url('../img/svg/error.svg');
             }
         }
         &.success-message {
             color: var(--success);
             &:after {
-                background: url('../img/svg/success.svg');
+                background-image: url('../img/svg/success.svg');
             }
         }
         &:after {

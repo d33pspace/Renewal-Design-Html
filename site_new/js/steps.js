@@ -1,12 +1,12 @@
 let steps = document.querySelectorAll('.step')
 let startOver = document.querySelector('.start-over')
 let stepCount = 0
-let initialText = startOver.innerHTML
+let counter = document.querySelector('.counter')
 
 nextButton.onclick = () => {
     if (!nextButton.classList.contains('inactive')) {
         nextStep()
-        timerStartOver(startOver)
+        timerStartOver(counter)
     }
 }
 
@@ -15,7 +15,9 @@ function nextStep() {
     if (stepCount !== steps.length - 1) {
         stepCount++
         steps[stepCount].classList.add('active')
-        startOver.classList.add('active')
+        console.log('i did it active', stepCount, steps.length)
+        startOver.classList.add('visible')
+        counter.classList.remove('inactive');
         nextButton.classList.add('inactive')
     } else {
         console.log('do submit function here')
@@ -33,24 +35,26 @@ startOver.onclick = () => {
                 item.value = ''
             }
         })
-        startOver.classList.remove('active')
+        startOver.classList.remove('visible')
+        startOver.classList.add('inactive')
         nextButton.classList.add('inactive')
-        startOver.innerHTML = initialText
     }
 
 }
 
-function timerStartOver(btn) {
-    const startOverContent = btn.innerHTML;
+function timerStartOver(counter) {
+    let timer = counter.querySelector('span')
     let timeLeft = 60;
-    interval();
+    timer.innerHTML = timeLeft;
     let startOverInterval = setInterval(interval, 1000);
 
     function interval() {
         timeLeft--
-        btn.innerHTML = startOverContent + " (" + (timeLeft) + "s)";
+        timer.innerHTML = timeLeft;
+
         if (timeLeft <= 0) {
-            btn.classList.remove('inactive');
+            startOver.classList.remove('inactive');
+            counter.classList.add('inactive');
             clearInterval(startOverInterval);
         }
     }
