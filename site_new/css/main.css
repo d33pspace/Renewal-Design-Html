@@ -1032,7 +1032,7 @@ header .menu-mob .menu .nav nav {
   padding-top: 50px;
   align-items: center;
   gap: 30px;
-  height: 100%;
+  height: calc(100% - 140px);
 }
 header .menu-mob .menu .nav nav a {
   font-weight: 500;
