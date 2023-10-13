@@ -1021,7 +1021,8 @@ header .menu-mob .menu .nav {
   width: 100%;
   height: calc(100vh - 92px);
   left: -100%;
-  top: 92px;
+  top: 100%;
+  margin-top: 2px;
   transition: 0.3s;
   display: flex;
   flex-direction: column;
