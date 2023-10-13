@@ -103,13 +103,13 @@ header .menu-mob {
             transition: .3s;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             nav {
                 display: flex;
                 flex-direction: column;
                 padding-top: 50px;
                 align-items: center;
                 gap: 30px;
-                height: calc(100% - 140px);
                 a {
                     font-weight: 500;
                     font-size: 20px;
