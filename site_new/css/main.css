@@ -1026,7 +1026,7 @@ header .menu-mob .menu .nav {
   transition: 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 header .menu-mob .menu .nav nav {
   display: flex;
@@ -1047,7 +1047,9 @@ header .menu-mob .menu .nav nav .button {
 }
 header .menu-mob .menu .nav .log-info {
   padding: 35px 15px;
+  margin-top: 20px;
   border-top: 2px solid var(--light-grey-bg);
+  border-bottom: 2px solid var(--light-grey-bg);
   display: flex;
   flex-direction: column;
   text-align: center;

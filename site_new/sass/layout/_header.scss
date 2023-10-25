@@ -104,7 +104,7 @@ header .menu-mob {
             transition: .3s;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
             nav {
                 display: flex;
                 flex-direction: column;
@@ -124,7 +124,9 @@ header .menu-mob {
             }
             .log-info {
                 padding: 35px 15px;
+                margin-top: 20px;
                 border-top: 2px solid var(--light-grey-bg);
+                border-bottom: 2px solid var(--light-grey-bg);
                 display: flex;
                 flex-direction: column;
                 text-align: center;
