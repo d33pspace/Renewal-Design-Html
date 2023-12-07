@@ -285,13 +285,14 @@ form {
             border: none;
             outline: none;
             overflow: hidden;
-            height: 30px;
+            height: 28px;
             transition: .3s;
             font-weight: 400;
             font-size: 16px;
             line-height: 120%;
             letter-spacing: 0.01em;
             color: var(--black);
+            padding-top: 5px;
             &.filled {
                 height: 138px;
                 @media(max-width: 768px) {

@@ -18,9 +18,9 @@ if (phone) {
 
     })
     
-    phone.onblur = (e) => {
-        document.querySelector('.phone-filled') ?  document.querySelector('.phone-filled').innerHTML = e.target.value : ''
-    }
+    // phone.onblur = (e) => {
+    //     document.querySelector('.phone-filled') ?  document.querySelector('.phone-filled').innerHTML = e.target.value : ''
+    // }
 }
 
 let verification = document.querySelector('#verification')
