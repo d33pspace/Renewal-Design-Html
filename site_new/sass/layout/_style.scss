@@ -13,7 +13,7 @@ body {
 
 a {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 120%;
     color: var(--main-red);
 }
@@ -52,7 +52,7 @@ h3 {
 
 p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 160%;
     letter-spacing: 0.01em;
     color: var(--black);
@@ -61,7 +61,7 @@ p {
 
 .link {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 120%;
     letter-spacing: 0.01em;
     color: var(--black);
@@ -113,7 +113,7 @@ p {
         margin: 0;
         padding-left: 24px;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 100%;
         letter-spacing: 0.01em;
         &.inactive {
@@ -193,7 +193,7 @@ p {
         }
     }
     &.small {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 120%;
         padding: 10px 20px 10px 20px;
         text-transform: capitalize;
@@ -288,7 +288,7 @@ form {
             height: 28px;
             transition: .3s;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 120%;
             letter-spacing: 0.01em;
             color: var(--black);
@@ -302,7 +302,7 @@ form {
             &+label {
                 position: absolute;
                 font-weight: 400;
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 20px;
                 letter-spacing: 0.01em;
                 color: var(--dark-grey);
@@ -351,7 +351,7 @@ form {
         height: 50px;
         padding: 10px 30px;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 120%;
         letter-spacing: 0.01em;
         color: var(--black);
@@ -367,7 +367,7 @@ form {
         &+label {
             position: absolute;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 20px;
             letter-spacing: 0.01em;
             color: var(--dark-grey);
@@ -412,7 +412,7 @@ form {
         margin-top: 8px;
         padding-left: 24px;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 120%;
         letter-spacing: 0.01em;
         position: relative;
@@ -490,14 +490,17 @@ form {
 
 .checkbox {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     color: var(--black);
     padding-left: 34px;
     position: relative;
     margin-bottom: 15px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    &.checkbox-input {
+        align-items: center;
+    }
     &.checkbox-phone {
         display: block;
     }
@@ -577,7 +580,7 @@ form {
     }
     p {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 24px;
         letter-spacing: 0.01em;
         color: var(--black);
