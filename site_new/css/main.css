@@ -1010,7 +1010,14 @@ header .menu-mob .menu .menu-button > a {
   color: var(--main-red);
   margin-right: 15px;
 }
+@media (max-width: 769px) {
+  header .menu-mob .menu .menu-button > a {
+    padding: 7px 20px;
+    height: 40px;
+  }
+}
 header .menu-mob .menu .menu-toggle {
+  min-width: 40px;
   width: 40px;
   height: 40px;
   background: url("../img/svg/menu.svg");
