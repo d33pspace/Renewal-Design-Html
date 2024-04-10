@@ -36,6 +36,7 @@
 .donate-form .checkbox .input-wrap {
   width: 70px;
   margin-right: 10px;
+  margin-bottom: 0 !important;
 }
 
 .location {

@@ -216,7 +216,7 @@ p {
 }
 @media (max-width: 768px) {
   .buttons-row .counter {
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 20px;
   }
   .buttons-row .counter::after {
@@ -402,11 +402,11 @@ form {
 }
 @media (max-width: 768px) {
   .input-wrap:is(:has(textarea), .has-textarea) textarea + label {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .input-wrap:is(:has(textarea), .has-textarea) textarea.active + label {
-  font-size: 14px;
+  font-size: 16px;
   top: -10px;
   left: 20px;
 }
@@ -468,11 +468,11 @@ form {
 }
 @media (max-width: 768px) {
   .input-wrap input + label, .input-wrap select + label {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .input-wrap input.active + label, .input-wrap select.active + label {
-  font-size: 14px;
+  font-size: 16px;
   top: -10px;
   left: 20px;
 }
@@ -492,7 +492,7 @@ form {
   background-position-x: calc(100% - 30px);
 }
 .input-wrap select + label {
-  font-size: 14px;
+  font-size: 16px;
   top: -10px;
   left: 30px;
 }
@@ -531,7 +531,7 @@ form {
 @media (max-width: 768px) {
   .input-wrap .input-message {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 20px;
   }
   .input-wrap .input-message::after {
@@ -584,11 +584,13 @@ form {
   padding-left: 34px;
   position: relative;
   margin-bottom: 15px;
-  display: flex;
-  align-items: flex-start;
 }
 .checkbox.checkbox-input {
+  display: flex;
   align-items: center;
+}
+.checkbox.checkbox-input::after {
+  top: calc(50% - 12px);
 }
 .checkbox.checkbox-phone {
   display: block;
@@ -596,14 +598,14 @@ form {
 @media (max-width: 769px) {
   .checkbox {
     line-height: 120%;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .checkbox::after {
   content: "";
   position: absolute;
   left: 0;
-  top: calc(50% - 12px);
+  top: 3px;
   width: 12px;
   height: 12px;
   border: 5px solid #fff;
@@ -841,12 +843,12 @@ main .caption {
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .link {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
 

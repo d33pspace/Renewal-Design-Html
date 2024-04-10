@@ -131,7 +131,7 @@ p {
             background-image: url('../img/svg/info.svg');
         }
         @media(max-width: 768px) {
-            font-size: 14px;
+            font-size: 16px;
             padding-left: 20px;
             &::after {
                 width: 14px;
@@ -313,11 +313,11 @@ form {
                 padding: 0 10px;
                 transition: .2s;
                 @media(max-width: 768px) {
-                    font-size: 14px;
+                    font-size: 16px;
                 }
             }
             &.active+label {
-                font-size: 14px;
+                font-size: 16px;
                 top: -10px;
                 left: 20px;
             }
@@ -378,11 +378,11 @@ form {
             padding: 0 10px;
             transition: .2s;
             @media(max-width: 768px) {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
         &.active+label {
-            font-size: 14px;
+            font-size: 16px;
             top: -10px;
             left: 20px;
         }
@@ -402,7 +402,7 @@ form {
         background-position-y: center;
         background-position-x: calc(100% - 30px);
         &+label {
-            font-size: 14px;
+            font-size: 16px;
             top: -10px;
             left: 30px;
         }
@@ -440,7 +440,7 @@ form {
         }
         @media(max-width: 768px) {
             margin-top: 5px;
-            font-size: 14px;
+            font-size: 16px;
             padding-left: 20px;
             &::after {
                 width: 14px;
@@ -496,23 +496,25 @@ form {
     padding-left: 34px;
     position: relative;
     margin-bottom: 15px;
-    display: flex;
-    align-items: flex-start;
     &.checkbox-input {
+        display: flex;
         align-items: center;
+        &::after {
+            top: calc(50% - 12px);
+        }
     }
     &.checkbox-phone {
         display: block;
     }
     @media(max-width: 769px) {
         line-height: 120%;
-        font-size: 14px;
+        font-size: 16px;
     }
     &::after {
         content: '';
         position: absolute;
         left: 0;
-        top: calc(50% - 12px);
+        top: 3px;
         width: 12px;
         height: 12px;
         border: 5px solid #fff;
@@ -739,11 +741,11 @@ main .caption {
         font-size: 20px;
     }
     p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .link {
         display: block;
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 20px;
     }
     .input-wrap { 
