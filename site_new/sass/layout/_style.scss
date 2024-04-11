@@ -499,6 +499,9 @@ form {
     &.checkbox-input {
         display: flex;
         align-items: center;
+        span {
+            margin-right: 5px;
+        }
         &::after {
             top: calc(50% - 12px);
         }
@@ -523,6 +526,9 @@ form {
         border-radius: 50%;
         transition: .2s;
         cursor: pointer;
+        @media(max-width: 769px) {
+            top: 2px;
+        }
     }
     &.active::after {
         width: 12px;
@@ -554,7 +560,6 @@ form {
     }
     span {
         font-weight: 700;
-        margin-right: 5px;
     }
 
     &>.input-wrap .input {

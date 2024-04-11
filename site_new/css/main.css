@@ -589,6 +589,9 @@ form {
   display: flex;
   align-items: center;
 }
+.checkbox.checkbox-input span {
+  margin-right: 5px;
+}
 .checkbox.checkbox-input::after {
   top: calc(50% - 12px);
 }
@@ -614,6 +617,11 @@ form {
   border-radius: 50%;
   transition: 0.2s;
   cursor: pointer;
+}
+@media (max-width: 769px) {
+  .checkbox::after {
+    top: 2px;
+  }
 }
 .checkbox.active::after {
   width: 12px;
@@ -645,7 +653,6 @@ form {
 }
 .checkbox span {
   font-weight: 700;
-  margin-right: 5px;
 }
 .checkbox > .input-wrap .input {
   height: 36px;
