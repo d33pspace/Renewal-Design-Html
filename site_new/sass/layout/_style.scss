@@ -131,7 +131,7 @@ p {
             background-image: url('../img/svg/info.svg');
         }
         @media(max-width: 768px) {
-            font-size: 16px;
+            font-size: 18px;
             padding-left: 20px;
             &::after {
                 width: 14px;
@@ -313,11 +313,11 @@ form {
                 padding: 0 10px;
                 transition: .2s;
                 @media(max-width: 768px) {
-                    font-size: 16px;
+                    font-size: 18px;
                 }
             }
             &.active+label {
-                font-size: 16px;
+                font-size: 18px;
                 top: -10px;
                 left: 20px;
             }
@@ -378,11 +378,11 @@ form {
             padding: 0 10px;
             transition: .2s;
             @media(max-width: 768px) {
-                font-size: 16px;
+                font-size: 18px;
             }
         }
         &.active+label {
-            font-size: 16px;
+            font-size: 18px;
             top: -10px;
             left: 20px;
         }
@@ -402,7 +402,7 @@ form {
         background-position-y: center;
         background-position-x: calc(100% - 30px);
         &+label {
-            font-size: 16px;
+            font-size: 18px;
             top: -10px;
             left: 30px;
         }
@@ -440,7 +440,7 @@ form {
         }
         @media(max-width: 768px) {
             margin-top: 5px;
-            font-size: 16px;
+            font-size: 18px;
             padding-left: 20px;
             &::after {
                 width: 14px;
@@ -511,7 +511,7 @@ form {
     }
     @media(max-width: 769px) {
         line-height: 120%;
-        font-size: 16px;
+        font-size: 18px;
     }
     &::after {
         content: '';
@@ -746,11 +746,11 @@ main .caption {
         font-size: 20px;
     }
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
     .link {
         display: block;
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 20px;
     }
     .input-wrap { 

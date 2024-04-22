@@ -216,7 +216,7 @@ p {
 }
 @media (max-width: 768px) {
   .buttons-row .counter {
-    font-size: 16px;
+    font-size: 18px;
     padding-left: 20px;
   }
   .buttons-row .counter::after {
@@ -402,11 +402,11 @@ form {
 }
 @media (max-width: 768px) {
   .input-wrap:is(:has(textarea), .has-textarea) textarea + label {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .input-wrap:is(:has(textarea), .has-textarea) textarea.active + label {
-  font-size: 16px;
+  font-size: 18px;
   top: -10px;
   left: 20px;
 }
@@ -468,11 +468,11 @@ form {
 }
 @media (max-width: 768px) {
   .input-wrap input + label, .input-wrap select + label {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .input-wrap input.active + label, .input-wrap select.active + label {
-  font-size: 16px;
+  font-size: 18px;
   top: -10px;
   left: 20px;
 }
@@ -492,7 +492,7 @@ form {
   background-position-x: calc(100% - 30px);
 }
 .input-wrap select + label {
-  font-size: 16px;
+  font-size: 18px;
   top: -10px;
   left: 30px;
 }
@@ -531,7 +531,7 @@ form {
 @media (max-width: 768px) {
   .input-wrap .input-message {
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 18px;
     padding-left: 20px;
   }
   .input-wrap .input-message::after {
@@ -601,7 +601,7 @@ form {
 @media (max-width: 769px) {
   .checkbox {
     line-height: 120%;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .checkbox::after {
@@ -850,12 +850,12 @@ main .caption {
   }
 
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .link {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
   }
 
