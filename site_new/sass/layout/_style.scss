@@ -510,7 +510,7 @@ form {
         display: block;
     }
     @media(max-width: 769px) {
-        line-height: 120%;
+        line-height: 160%;
         font-size: 18px;
     }
     &::after {
@@ -588,7 +588,7 @@ form {
     p {
         font-weight: 400;
         font-size: 18px;
-        line-height: 24px;
+        line-height: 160%;
         letter-spacing: 0.01em;
         color: var(--black);
         margin: 0;

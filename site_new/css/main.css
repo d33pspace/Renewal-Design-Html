@@ -80,6 +80,10 @@ a {
   text-decoration: none;
 }
 
+.zh {
+  font-family: "Noto Sans SC", sans-serif;
+}
+
 /*---LAYOUTS---*/
 body.noScroll {
   overflow-y: hidden;
@@ -600,7 +604,7 @@ form {
 }
 @media (max-width: 769px) {
   .checkbox {
-    line-height: 120%;
+    line-height: 160%;
     font-size: 18px;
   }
 }
@@ -682,7 +686,7 @@ form {
 .input-checkbox p {
   font-weight: 400;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 160%;
   letter-spacing: 0.01em;
   color: var(--black);
   margin: 0;
