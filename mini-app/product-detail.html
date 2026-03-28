@@ -148,7 +148,10 @@
             </div>
         </div>
 
-        <!-- Brewing Instructionguide-image">
+        <!-- Brewing Instructions -->
+        <div class="section">
+            <h3 class="section-title">Brewing Instructions</h3>
+            <div class="brewing-guide-image">
                 <img src="https://www.figma.com/api/mcp/asset/c69f17fd-9dd0-4e72-8fc3-82d306aeca63" alt="Tea Brewing Guide">
             </div>
             <div class="brewing-steps">
@@ -183,7 +186,19 @@
                     </div>
                 </div>
                 <div class="brewing-step">
-             Product Quality Features -->
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Enjoy</h4>
+                        <p>Can be steeped 8-10 times</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://www.figma.com/api/mcp/asset/c69f17fd-9dd0-4e72-8fc3-82d306aeca63" alt="Step 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Quality Features -->
         <div class="section">
             <h3 class="section-title">Product Quality</h3>
             <div class="quality-grid">
@@ -205,22 +220,53 @@
                 <div class="quality-item">
                     <img src="https://www.figma.com/api/mcp/asset/c69f17fd-9dd0-4e72-8fc3-82d306aeca63" alt="Origin">
                     <h4>Authentic Origin</h4>
-                    <p>Verified Bingdao region</p
-                        <p>Can be steeped 8-10 times</p>
-                    </div>
+                    <p>Verified Bingdao region</p>
                 </div>
             </div>
         </div>
 
-        <!-- Select Options -->
+        <!-- Product Detail Images -->
+        <div class="section detail-images-section">
+            <h3 class="section-title">Product Details</h3>
+            <div class="detail-images">
+                <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product Detail 1">
+                <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Product Detail 2">
+                <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Product Detail 3">
+                <img src="https://www.figma.com/api/mcp/asset/c69f17fd-9dd0-4e72-8fc3-82d306aeca63" alt="Product Detail 4">
+            </div>
+        </div>
+
+        <!-- Specification Summary (Clickable) -->
+        <div class="section spec-summary" onclick="openSpecModal('cart')">
+            <div class="spec-summary-content">
+                <div class="spec-summary-label">Selected Specification</div>
+                <div class="spec-summary-value" id="specSummaryText">80g · Ancient Tree White Tea</div>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </div>
+
+        <!-- Related Products -->
         <div class="section">
-            <h3 class="section-title">Select Options</h3>
-            <div class="option-group">
-                <label class="option-label">Package Size</label>
-                <div class="option-buttons">
-                    <button class="option-btn active" onclick="selectOption(this, 100)">120g - $100</button>
-                    <button class="option-btn" onclick="selectOption(this, 180)">240g - $180</button>
-                    <button class="option-btn" onclicopenSpecModal()">
+            <h3 class="section-title">You May Also Like</h3>
+            <div class="related-products">
+                <div class="related-card">
+                    <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Related Product">
+                    <h4>Ancient Tree Raw Pu-erh</h4>
+                    <p class="related-price">$ 78.00</p>
+                </div>
+                <div class="related-card">
+                    <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Related Product">
+                    <h4>Red Tea Shanhong</h4>
+                    <p class="related-price">$ 58.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Action Bar -->
+        <div class="action-bar">
+            <button class="add-to-cart-btn" onclick="openSpecModal('cart')">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <path d="M9 2L7 6M17 6L15 2M2 6H22L20 19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19L2 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -246,75 +292,29 @@
                 <div class="modal-product-preview">
                     <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product" id="modalProductImage">
                     <div class="modal-product-info">
-                        <p class="modal-product-price" id="modalPrice">$ 100.00</p>
-                        <p class="modal-product-stock">Stock: <span class="stock-count">247</span> available</p>
+                        <p class="modal-product-price" id="modalPrice">$ 58.00</p>
+                        <p class="modal-product-stock">Stock: <span class="stock-count">30</span></p>
+                        <p class="modal-product-selected">Selected: <span id="modalSelectedText">80g Ancient Tree White Tea</span></p>
                     </div>
                 </div>
 
-                <!-- Package Size Selection -->
+                <!-- Net Weight Selection -->
                 <div class="modal-section">
-                    <label class="modal-label">Package Size</label>
-                    <div class="modal-options">
-                        <div class="modal-option active" onclick="selectModalOption(this, 'size', 100)">
-                            <span class="option-name">120g (6 balls)</span>
-                            <span class="option-price">$100.00</span>
-                            <div class="option-check">✓</div>
-                        </div>
-                        <div class="modal-option" onclick="selectModalOption(this, 'size', 180)">
-                            <span class="option-name">240g (12 balls)</span>
-                            <span class="option-price">$180.00</span>
-                            <div class="option-check">✓</div>
-                        </div>
-                        <div class="modal-option" onclick="selectModalOption(this, 'size', 320)">
-                            <span class="option-name">480g (24 balls)</span>
-                            <span class="option-price">$320.00</span>
-                            <div class="option-check">✓</div>
-                        </div>
+                    <label class="modal-label">Net Weight</label>
+                    <div class="chip-options">
+                        <div class="chip-option active" onclick="selectModalOption(this, 'weight', '80g', 58)">80g</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '80g×2', 108)">80g×2</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '184g', 120)">184g</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '80g+184g', 168)">80g+184g</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '194g×2', 220)">194g×2</div>
                     </div>
                 </div>
 
-                <!-- Tea Type Selection -->
+                <!-- Flavor Selection -->
                 <div class="modal-section">
-                    <label class="modal-label">Tea Type</label>
-                    <div class="modal-options">
-                        <div class="modal-option active" onclick="selectModalOption(this, 'type', 0)">
-                            <span class="option-name">Raw Pu-erh (Sheng)</span>
-                            <div class="option-check">✓</div>
-                        </div>
-                        <div class="modal-option" onclick="selectModalOption(this, 'type', 0)">
-                            <span class="option-name">Ripe Pu-erh (Shou)</span>
-                            <div class="option-check">✓</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Packaging Selection -->
-                <div class="modal-section">
-                    <label class="modal-label">Packaging</label>
-                    <div class="modal-options horizontal">
-                        <div class="modal-option-small active" onclick="selectModalOption(this, 'packaging', 0)">
-                            <div class="option-image">
-                                <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Standard Box">
-                            </div>
-                            <span>Standard Box</span>
-                            <div class="option-check-small">✓</div>
-                        </div>
-                        <div class="modal-option-small" onclick="selectModalOption(this, 'packaging', 15)">
-                            <div class="option-image">
-                                <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Gift Box">
-                            </div>
-                            <span>Gift Box</span>
-                            <span class="extra-price">+$15</span>
-                            <div class="option-check-small">✓</div>
-                        </div>
-                        <div class="modal-option-small" onclick="selectModalOption(this, 'packaging', 30)">
-                            <div class="option-image">
-                                <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Premium Box">
-                            </div>
-                            <span>Premium Box</span>
-                            <span class="extra-price">+$30</span>
-                            <div class="option-check-small">✓</div>
-                        </div>
+                    <label class="modal-label">Flavor</label>
+                    <div class="chip-options">
+                        <div class="chip-option active" onclick="selectModalOption(this, 'flavor', 'Ancient Tree White Tea', 0)">Ancient Tree White Tea</div>
                     </div>
                 </div>
 
@@ -330,44 +330,10 @@
 
                 <!-- Modal Action Buttons -->
                 <div class="modal-actions">
-                    <div class="modal-total">
-                        <span>Total:</span>
-                        <span class="modal-total-price" id="modalTotalPrice">$ 100.00</span>
-                    </div>
-                    <button class="modal-confirm-btn" id="modalConfirmBtn" onclick="confirmSelection()">
-                        Add to Cart
-                    </button>
-                </div>
-            </div
-            <h3 class="section-title">You May Also Like</h3>
-            <div class="related-products">
-                <div class="related-card">
-                    <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Related Product">
-                    <h4>Ancient Tree Raw Pu-erh</h4>
-                    <p class="related-price">$ 78.00</p>
-                </div>
-                <div class="related-card">
-                    <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Related Product">
-                    <h4>Red Tea Shanhong</h4>
-                    <p class="related-price">$ 58.00</p>
+                    <button class="modal-buy-btn" onclick="confirmSelection('buy')">Buy Now</button>
+                    <button class="modal-add-btn" onclick="confirmSelection('cart')">Add To Cart</button>
                 </div>
             </div>
-        </div>
-
-        <!-- Bottom Action Bar -->
-        <div class="action-bar">
-            <div class="quantity-selector">
-                <button class="qty-btn" onclick="decrementQuantity()">−</button>
-                <input type="number" id="quantity" value="1" min="1" max="99" readonly>
-                <button class="qty-btn" onclick="incrementQuantity()">+</button>
-            </div>
-            <button class="add-to-cart-btn" onclick="addToCart()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 2L7 6M17 6L15 2M2 6H22L20 19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19L2 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Add to Cart
-            </button>
-            <button class="buy-now-btn" onclick="buyNow()">Buy Now</button>
         </div>
     </div>
 

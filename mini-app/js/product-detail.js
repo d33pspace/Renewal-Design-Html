@@ -1,17 +1,22 @@
 // Product Detail Page JavaScript
 
 // Product data
-let selectedPrice = 100;
-let quantity = 1;
 let isFavorite = false;
+
+// Weight options with prices
+const weightOptions = {
+    '80g': 58,
+    '80g×2': 108,
+    '184g': 120,
+    '80g+184g': 168,
+    '194g×2': 220
+};
 
 // Modal data
 let modalData = {
-    size: 100,
-    sizePrice: 100,
-    type: 'Raw Pu-erh (Sheng)',
-    packaging: 0,
-    packagingName: 'Standard Box',
+    weight: '80g',
+    weightPrice: 58,
+    flavor: 'Ancient Tree White Tea',
     quantity: 1,
     action: 'cart' // 'cart' or 'buy'
 };
@@ -95,57 +100,19 @@ function shareProduct() {
     }
 }
 
-// Select option
-function selectOption(button, price) {
-    // Remove active class from all buttons
-    const buttons = button.parentElement.querySelectorAll('.option-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    
-    // Add active class to clicked button
-    button.classList.add('active');
-    
-    // Update selected price
-    selectedPrice = price;
-    
-    // Update displayed price
-    document.querySelector('.current-price').textContent = `$ ${price}.00`;
-    
-    showToast('Package size updated');
-}
-
-// Quantity controls
-function incrementQuantity() {
-    const input = document.getElementById('quantity');
-    const currentValue = parseInt(input.value);
-    
-    if (currentValue < 99) {
-        input.value = currentValue + 1;
-        quantity = currentValue + 1;
-    }
-}
-
-function decrementQuantity() {
-    const input = document.getElementById('quantity');
-    const currentValue = parseInt(input.value);
-    
-    if (currentValue > 1) {
-        input.value = currentValue - 1;
-        quantity = currentValue - 1;
-    }
-}
-
 // Open specification modal
 function openSpecModal(action = 'cart') {
     modalData.action = action;
+    
+    // Reset to defaults
+    modalData.weight = '80g';
+    modalData.weightPrice = 58;
+    modalData.flavor = 'Ancient Tree White Tea';
     modalData.quantity = 1;
     
     // Update modal UI
     document.getElementById('modalQuantity').value = 1;
-    updateModalPrice();
-    
-    // Update button text
-    const confirmBtn = document.getElementById('modalConfirmBtn');
-    confirmBtn.textContent = action === 'buy' ? 'Buy Now' : 'Add to Cart';
+    updateModalDisplay();
     
     // Show modal
     const modal = document.getElementById('specModal');
@@ -161,9 +128,9 @@ function closeSpecModal() {
 }
 
 // Select modal option
-function selectModalOption(element, type, value) {
+function selectModalOption(element, type, value, price) {
     const parent = element.parentElement;
-    const siblings = parent.querySelectorAll('.modal-option, .modal-option-small');
+    const siblings = parent.querySelectorAll('.chip-option, .modal-option, .modal-option-small');
     
     // Remove active from siblings
     siblings.forEach(sibling => sibling.classList.remove('active'));
@@ -172,24 +139,27 @@ function selectModalOption(element, type, value) {
     element.classList.add('active');
     
     // Update modal data
-    if (type === 'size') {
-        modalData.sizePrice = value;
-        modalData.size = value;
-    } else if (type === 'type') {
-        modalData.type = element.querySelector('.option-name').textContent;
-    } else if (type === 'packaging') {
-        modalData.packaging = value;
-        modalData.packagingName = element.querySelector('span').textContent;
+    if (type === 'weight') {
+        modalData.weight = value;
+        modalData.weightPrice = price;
+    } else if (type === 'flavor') {
+        modalData.flavor = value;
     }
     
-    updateModalPrice();
+    updateModalDisplay();
 }
 
-// Update modal price
-function updateModalPrice() {
-    const total = (modalData.sizePrice + modalData.packaging) * modalData.quantity;
-    document.getElementById('modalPrice').textContent = `$ ${(modalData.sizePrice + modalData.packaging).toFixed(2)}`;
-    document.getElementById('modalTotalPrice').textContent = `$ ${total.toFixed(2)}`;
+// Update modal display
+function updateModalDisplay() {
+    const price = modalData.weightPrice * modalData.quantity;
+    document.getElementById('modalPrice').textContent = `$ ${modalData.weightPrice.toFixed(2)}`;
+    document.getElementById('modalSelectedText').textContent = `${modalData.weight} ${modalData.flavor}`;
+    
+    // Update spec summary in main page
+    const specSummary = document.getElementById('specSummaryText');
+    if (specSummary) {
+        specSummary.textContent = `${modalData.weight} · ${modalData.flavor}`;
+    }
 }
 
 // Modal quantity controls
@@ -200,7 +170,7 @@ function modalIncrementQuantity() {
     if (currentValue < 99) {
         input.value = currentValue + 1;
         modalData.quantity = currentValue + 1;
-        updateModalPrice();
+        updateModalDisplay();
     }
 }
 
@@ -211,37 +181,35 @@ function modalDecrementQuantity() {
     if (currentValue > 1) {
         input.value = currentValue - 1;
         modalData.quantity = currentValue - 1;
-        updateModalPrice();
+        updateModalDisplay();
     }
 }
 
 // Confirm selection
-function confirmSelection() {
+function confirmSelection(action) {
     const productName = document.querySelector('.product-name').textContent;
-    const total = ((modalData.sizePrice + modalData.packaging) * modalData.quantity).toFixed(2);
+    const total = (modalData.weightPrice * modalData.quantity).toFixed(2);
     
     console.log('Selection confirmed:', {
         product: productName,
-        size: modalData.size + 'g',
-        type: modalData.type,
-        packaging: modalData.packagingName,
+        weight: modalData.weight,
+        flavor: modalData.flavor,
         quantity: modalData.quantity,
         total: total,
-        action: modalData.action
+        action: action
     });
     
     closeSpecModal();
     
-    if (modalData.action === 'buy') {
+    if (action === 'buy') {
         // Redirect to checkout
         setTimeout(() => {
             const confirmed = confirm(
-                `Proceed to checkout?\\n\\n` +
-                `Product: ${productName}\\n` +
-                `Size: ${modalData.size}g\\n` +
-                `Type: ${modalData.type}\\n` +
-                `Packaging: ${modalData.packagingName}\\n` +
-                `Quantity: ${modalData.quantity}\\n` +
+                `Proceed to checkout?\n\n` +
+                `Product: ${productName}\n` +
+                `Weight: ${modalData.weight}\n` +
+                `Flavor: ${modalData.flavor}\n` +
+                `Quantity: ${modalData.quantity}\n` +
                 `Total: $${total}`
             );
             
@@ -263,6 +231,9 @@ function addToCart() {
 function buyNow() {
     openSpecModal('buy');
 }
+
+// Removed unused functions
+// selectOption, incrementQuantity, decrementQuantity are no longer needed
 
 // Show toast notification
 function showToast(message) {
