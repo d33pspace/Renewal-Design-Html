@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Tea Shop</title>
+    <link rel="stylesheet" href="css/product-detail.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor">
+                    <rect x="0" y="2" width="4" height="8" rx="1"/>
+                    <rect x="5" y="1" width="4" height="9" rx="1"/>
+                    <rect x="10" y="0" width="4" height="10" rx="1"/>
+                </svg>
+                <div class="battery">
+                    <div class="battery-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="page-title">Product Details</h1>
+            <div class="header-actions">
+                <button class="icon-btn" onclick="shareProduct()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M8.59 13.51L15.42 17.49M15.41 6.51L8.59 10.49" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="icon-btn" onclick="toggleFavorite()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="favorite-icon">
+                        <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.12831 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.12831 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6054C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39464C21.7564 5.72718 21.351 5.12083 20.84 4.61Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Product Image Gallery -->
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product" id="main-product-image">
+                <div class="image-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
+            <div class="thumbnail-gallery">
+                <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+                <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <h2 class="product-name">Jimi Bingdao Nanpo – Pu-erh Tea – Ancient Tree – Dragon Ball</h2>
+            <div class="product-meta">
+                <div class="rating">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                    </svg>
+                    <span>4.8</span>
+                    <span class="review-count">(128 reviews)</span>
+                </div>
+                <span class="stock-status in-stock">In Stock</span>
+            </div>
+            <p class="product-price">
+                <span class="current-price">$ 100.00</span>
+                <span class="original-price">$ 120.00</span>
+                <span class="discount-badge">-17%</span>
+            </p>
+        </div>
+
+        <!-- Product Description -->
+        <div class="section">
+            <h3 class="section-title">Description</h3>
+            <p class="product-description">
+                Premium ancient tree Pu-erh tea from the renowned Bingdao region. 
+                Hand-rolled into dragon ball shapes, this exceptional tea offers a 
+                smooth, complex flavor profile with notes of honey, dried fruit, 
+                and a subtle earthiness. Each dragon ball is carefully crafted from 
+                sun-dried ancient tree leaves, ensuring the highest quality and 
+                authentic taste.
+            </p>
+            <div class="description-images">
+                <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Dragon Ball Tea">
+                <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Ancient Tree Leaves">
+            </div>
+        </div>
+
+        <!-- Specifications -->
+        <div class="section">
+            <h3 class="section-title">Specifications</h3>
+            <div class="specs-list">
+                <div class="spec-item">
+                    <span class="spec-label">Net Weight</span>
+                    <span class="spec-value">120g (6 dragon balls)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Tea Type</span>
+                    <span class="spec-value">Raw Pu-erh (Sheng)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Origin</span>
+                    <span class="spec-value">Bingdao, Yunnan, China</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Harvest Year</span>
+                    <span class="spec-value">2023 Spring</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Storage</span>
+                    <span class="spec-value">Cool, dry place</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Shelf Life</span>
+                    <span class="spec-value">Improves with age</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flavor Profile -->
+        <div class="section">
+            <h3 class="section-title">Flavor Profile</h3>
+            <div class="flavor-tags">
+                <span class="flavor-tag">Sweet</span>
+                <span class="flavor-tag">Earthy</span>
+                <span class="flavor-tag">Honey Notes</span>
+                <span class="flavor-tag">Smooth</span>
+                <span class="flavor-tag">Complex</span>
+            </div>
+            <div class="feature-image">
+                <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Tea Flavor">
+            </div>
+        </div>
+
+        <!-- Brewing Instructionguide-image">
+                <img src="https://www.figma.com/api/mcp/asset/c69f17fd-9dd0-4e72-8fc3-82d306aeca63" alt="Tea Brewing Guide">
+            </div>
+            <div class="brewing-steps">
+                <div class="brewing-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Prepare</h4>
+                        <p>Use 1 dragon ball per 150ml of water</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Step 1">
+                    </div>
+                </div>
+                <div class="brewing-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Rinse</h4>
+                        <p>Quick rinse with hot water (95°C)</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Step 2">
+                    </div>
+                </div>
+                <div class="brewing-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Steep</h4>
+                        <p>First steep: 10-15 seconds</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Step 3">
+                    </div>
+                </div>
+                <div class="brewing-step">
+             Product Quality Features -->
+        <div class="section">
+            <h3 class="section-title">Product Quality</h3>
+            <div class="quality-grid">
+                <div class="quality-item">
+                    <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Ancient Tree">
+                    <h4>Ancient Tree Source</h4>
+                    <p>From 300+ year old tea trees</p>
+                </div>
+                <div class="quality-item">
+                    <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Handcrafted">
+                    <h4>Hand Crafted</h4>
+                    <p>Traditional rolling method</p>
+                </div>
+                <div class="quality-item">
+                    <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Quality">
+                    <h4>Premium Grade</h4>
+                    <p>Carefully selected leaves</p>
+                </div>
+                <div class="quality-item">
+                    <img src="https://www.figma.com/api/mcp/asset/c69f17fd-9dd0-4e72-8fc3-82d306aeca63" alt="Origin">
+                    <h4>Authentic Origin</h4>
+                    <p>Verified Bingdao region</p
+                        <p>Can be steeped 8-10 times</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Select Options -->
+        <div class="section">
+            <h3 class="section-title">Select Options</h3>
+            <div class="option-group">
+                <label class="option-label">Package Size</label>
+                <div class="option-buttons">
+                    <button class="option-btn active" onclick="selectOption(this, 100)">120g - $100</button>
+                    <button class="option-btn" onclick="selectOption(this, 180)">240g - $180</button>
+                    <button class="option-btn" onclicopenSpecModal()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 2L7 6M17 6L15 2M2 6H22L20 19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19L2 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Add to Cart
+            </button>
+            <button class="buy-now-btn" onclick="openSpecModal('buy')">Buy Now</button>
+        </div>
+
+        <!-- Specification Selection Modal -->
+        <div id="specModal" class="modal">
+            <div class="modal-backdrop" onclick="closeSpecModal()"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Select Specifications</h3>
+                    <button class="modal-close" onclick="closeSpecModal()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Modal Product Preview -->
+                <div class="modal-product-preview">
+                    <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product" id="modalProductImage">
+                    <div class="modal-product-info">
+                        <p class="modal-product-price" id="modalPrice">$ 100.00</p>
+                        <p class="modal-product-stock">Stock: <span class="stock-count">247</span> available</p>
+                    </div>
+                </div>
+
+                <!-- Package Size Selection -->
+                <div class="modal-section">
+                    <label class="modal-label">Package Size</label>
+                    <div class="modal-options">
+                        <div class="modal-option active" onclick="selectModalOption(this, 'size', 100)">
+                            <span class="option-name">120g (6 balls)</span>
+                            <span class="option-price">$100.00</span>
+                            <div class="option-check">✓</div>
+                        </div>
+                        <div class="modal-option" onclick="selectModalOption(this, 'size', 180)">
+                            <span class="option-name">240g (12 balls)</span>
+                            <span class="option-price">$180.00</span>
+                            <div class="option-check">✓</div>
+                        </div>
+                        <div class="modal-option" onclick="selectModalOption(this, 'size', 320)">
+                            <span class="option-name">480g (24 balls)</span>
+                            <span class="option-price">$320.00</span>
+                            <div class="option-check">✓</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tea Type Selection -->
+                <div class="modal-section">
+                    <label class="modal-label">Tea Type</label>
+                    <div class="modal-options">
+                        <div class="modal-option active" onclick="selectModalOption(this, 'type', 0)">
+                            <span class="option-name">Raw Pu-erh (Sheng)</span>
+                            <div class="option-check">✓</div>
+                        </div>
+                        <div class="modal-option" onclick="selectModalOption(this, 'type', 0)">
+                            <span class="option-name">Ripe Pu-erh (Shou)</span>
+                            <div class="option-check">✓</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Packaging Selection -->
+                <div class="modal-section">
+                    <label class="modal-label">Packaging</label>
+                    <div class="modal-options horizontal">
+                        <div class="modal-option-small active" onclick="selectModalOption(this, 'packaging', 0)">
+                            <div class="option-image">
+                                <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Standard Box">
+                            </div>
+                            <span>Standard Box</span>
+                            <div class="option-check-small">✓</div>
+                        </div>
+                        <div class="modal-option-small" onclick="selectModalOption(this, 'packaging', 15)">
+                            <div class="option-image">
+                                <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Gift Box">
+                            </div>
+                            <span>Gift Box</span>
+                            <span class="extra-price">+$15</span>
+                            <div class="option-check-small">✓</div>
+                        </div>
+                        <div class="modal-option-small" onclick="selectModalOption(this, 'packaging', 30)">
+                            <div class="option-image">
+                                <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Premium Box">
+                            </div>
+                            <span>Premium Box</span>
+                            <span class="extra-price">+$30</span>
+                            <div class="option-check-small">✓</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quantity Selection -->
+                <div class="modal-section">
+                    <label class="modal-label">Quantity</label>
+                    <div class="modal-quantity">
+                        <button class="modal-qty-btn" onclick="modalDecrementQuantity()">−</button>
+                        <input type="number" id="modalQuantity" value="1" min="1" max="99" readonly>
+                        <button class="modal-qty-btn" onclick="modalIncrementQuantity()">+</button>
+                    </div>
+                </div>
+
+                <!-- Modal Action Buttons -->
+                <div class="modal-actions">
+                    <div class="modal-total">
+                        <span>Total:</span>
+                        <span class="modal-total-price" id="modalTotalPrice">$ 100.00</span>
+                    </div>
+                    <button class="modal-confirm-btn" id="modalConfirmBtn" onclick="confirmSelection()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div
+            <h3 class="section-title">You May Also Like</h3>
+            <div class="related-products">
+                <div class="related-card">
+                    <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Related Product">
+                    <h4>Ancient Tree Raw Pu-erh</h4>
+                    <p class="related-price">$ 78.00</p>
+                </div>
+                <div class="related-card">
+                    <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Related Product">
+                    <h4>Red Tea Shanhong</h4>
+                    <p class="related-price">$ 58.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Action Bar -->
+        <div class="action-bar">
+            <div class="quantity-selector">
+                <button class="qty-btn" onclick="decrementQuantity()">−</button>
+                <input type="number" id="quantity" value="1" min="1" max="99" readonly>
+                <button class="qty-btn" onclick="incrementQuantity()">+</button>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 2L7 6M17 6L15 2M2 6H22L20 19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19L2 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Add to Cart
+            </button>
+            <button class="buy-now-btn" onclick="buyNow()">Buy Now</button>
+        </div>
+    </div>
+
+    <script src="js/product-detail.js"></script>
+</body>
+</html>
