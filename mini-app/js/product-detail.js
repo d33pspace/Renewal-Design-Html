@@ -235,6 +235,24 @@ function buyNow() {
 // Removed unused functions
 // selectOption, incrementQuantity, decrementQuantity are no longer needed
 
+// Contact support
+function contactSupport() {
+    showToast('Opening customer support...');
+    // In a real app, this would open a chat or contact form
+    setTimeout(() => {
+        alert('Connect with our support team:\nEmail: support@teashop.com\nPhone: 1-800-TEA-SHOP');
+    }, 500);
+}
+
+// Go to cart
+function goToCart() {
+    showToast('Opening shopping cart...');
+    // In a real app, navigate to cart page
+    setTimeout(() => {
+        window.location.href = 'shopping-cart.html';
+    }, 500);
+}
+
 // Show toast notification
 function showToast(message) {
     // Remove existing toast if any

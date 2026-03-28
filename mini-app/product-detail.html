@@ -266,13 +266,23 @@
 
         <!-- Bottom Action Bar -->
         <div class="action-bar">
-            <button class="add-to-cart-btn" onclick="openSpecModal('cart')">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 2L7 6M17 6L15 2M2 6H22L20 19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19L2 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <button class="icon-action-btn" onclick="contactSupport()" title="Contact Support">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 3C9.79086 3 8 4.79086 8 7V10C8 10.5523 7.55228 11 7 11H6C4.89543 11 4 11.8954 4 13V16C4 17.1046 4.89543 18 6 18H7C7.55228 18 8 17.5523 8 17V7C8 4.79086 9.79086 3 12 3ZM12 3C14.2091 3 16 4.79086 16 7V17C16 17.5523 16.4477 18 17 18H18C19.1046 18 20 17.1046 20 16V13C20 11.8954 19.1046 11 18 11H17C16.4477 11 16 10.5523 16 10V7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 20H14" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Add to Cart
             </button>
-            <button class="buy-now-btn" onclick="openSpecModal('buy')">Buy Now</button>
+            <button class="icon-action-btn" onclick="goToCart()" title="Shopping Cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3 3H5L5.4 5M5.4 5L7 13H17L19 5H5.4Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="8" cy="18" r="1.5" stroke-width="1.5"/>
+                    <circle cx="16" cy="18" r="1.5" stroke-width="1.5"/>
+                    <path d="M7 13H17L19 5H5.4L7 13Z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="add-to-cart-btn" onclick="openSpecModal('cart')">
+                Add to cart
+            </button>
         </div>
 
         <!-- Specification Selection Modal -->
