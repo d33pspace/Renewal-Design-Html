@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Tea Shop</title>
+    <link rel="stylesheet" href="css/product-detail.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor">
+                    <rect x="0" y="2" width="4" height="8" rx="1"/>
+                    <rect x="5" y="1" width="4" height="9" rx="1"/>
+                    <rect x="10" y="0" width="4" height="10" rx="1"/>
+                </svg>
+                <!-- WiFi icon -->
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor">
+                    <path d="M8 10.5C8.82843 10.5 9.5 9.82843 9.5 9C9.5 8.17157 8.82843 7.5 8 7.5C7.17157 7.5 6.5 8.17157 6.5 9C6.5 9.82843 7.17157 10.5 8 10.5Z"/>
+                    <path d="M4.22 6.22C5.22 5.22 6.56 4.5 8 4.5C9.44 4.5 10.78 5.22 11.78 6.22" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    <path d="M1.5 3.5C3.26 1.74 5.5 0.5 8 0.5C10.5 0.5 12.74 1.74 14.5 3.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                </svg>
+                <div class="battery">
+                    <div class="battery-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="page-title">Product Details</h1>
+            <div class="header-actions">
+                <button class="icon-btn" onclick="showMore()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="6" cy="12" r="2"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                </button>
+                <button class="icon-btn" onclick="showQR()">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <line x1="12" y1="2" x2="12" y2="5"/>
+                        <line x1="12" y1="19" x2="12" y2="22"/>
+                        <line x1="2" y1="12" x2="5" y2="12"/>
+                        <line x1="19" y1="12" x2="22" y2="12"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Product Image -->
+        <div class="product-hero">
+            <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product">
+        </div>
+
+        <!-- Price Banner -->
+        <div class="price-banner">
+            <span class="price-text">$ 58.00</span>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <h2 class="product-name">Ancient Tree White Tea-White Tea-Ancient Tree-Tea Cake</h2>
+            <p class="product-subtitle">Tranquil sky</p>
+        </div>
+
+        <!-- Info Rows -->
+        <div class="info-rows">
+            <div class="info-row" onclick="openSpecModal('cart')">
+                <span class="info-label">Select</span>
+                <span class="info-value" id="specSummaryText">Product Specification</span>
+                <svg class="info-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+            <div class="info-row" onclick="showShipping()">
+                <span class="info-label">Ship</span>
+                <span class="info-value">to  Address</span>
+                <svg class="info-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+            <div class="info-row" onclick="showService()">
+                <span class="info-label">Service</span>
+                <div class="info-value service-list">
+                    <span>Hassle-Free Return</span>
+                    <span>Fast Refund</span>
+                    <span>Free Shipping</span>
+                </div>
+                <svg class="info-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Specifications -->
+        <div class="section">
+            <h3 class="section-title">Specifications</h3>
+            <div class="specs-list">
+                <div class="spec-item">
+                    <span class="spec-label">Net Weight</span>
+                    <span class="spec-value">120g (6 dragon balls)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Tea Type</span>
+                    <span class="spec-value">Raw Pu-erh (Sheng)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Origin</span>
+                    <span class="spec-value">Bingdao, Yunnan, China</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Harvest Year</span>
+                    <span class="spec-value">2023 Spring</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Storage</span>
+                    <span class="spec-value">Cool, dry place</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Shelf Life</span>
+                    <span class="spec-value">Improves with age</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Detail Images (editorial scroll content) -->
+        <div class="detail-images">
+            <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product Detail">
+            <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Product Detail">
+            <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Product Detail">
+            <img src="https://www.figma.com/api/mcp/asset/c69f17fd-9dd0-4e72-8fc3-82d306aeca63" alt="Product Detail">
+        </div>
+
+        <!-- Bottom Action Bar -->
+        <div class="action-bar">
+            <button class="action-icon-btn" onclick="contactSupport()" title="Contact Support">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 3C9.79086 3 8 4.79086 8 7V10C8 10.5523 7.55228 11 7 11H6C4.89543 11 4 11.8954 4 13V16C4 17.1046 4.89543 18 6 18H7C7.55228 18 8 17.5523 8 17V7C8 4.79086 9.79086 3 12 3ZM12 3C14.2091 3 16 4.79086 16 7V17C16 17.5523 16.4477 18 17 18H18C19.1046 18 20 17.1046 20 16V13C20 11.8954 19.1046 11 18 11H17C16.4477 11 16 10.5523 16 10V7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 20H14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="action-icon-btn" onclick="goToCart()" title="Shopping Cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3 3H5L5.4 5M5.4 5L7 13H17L19 5H5.4Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="8" cy="18" r="1.5" stroke-width="1.5"/>
+                    <circle cx="16" cy="18" r="1.5" stroke-width="1.5"/>
+                </svg>
+            </button>
+            <button class="add-to-cart-btn" onclick="openSpecModal('cart')">
+                Add to cart
+            </button>
+        </div>
+
+        <!-- Specification Selection Modal -->
+        <div id="specModal" class="modal">
+            <div class="modal-backdrop" onclick="closeSpecModal()"></div>
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeSpecModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="#999" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+
+                <!-- Modal Product Preview -->
+                <div class="modal-product-preview">
+                    <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product" id="modalProductImage">
+                    <div class="modal-product-info">
+                        <p class="modal-product-price" id="modalPrice">$ 58.00</p>
+                        <p class="modal-product-stock">Stock: <span class="stock-count">30</span>.</p>
+                        <p class="modal-product-selected">Selected: <span id="modalSelectedText">80g<br>Ancient Tree White Tea</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Net Weight Selection -->
+                <div class="modal-section">
+                    <label class="modal-label">Net Weight</label>
+                    <div class="chip-options">
+                        <div class="chip-option active" onclick="selectModalOption(this, 'weight', '80g', 58)">80g</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '80g*2', 108)">80g*2</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '184', 120)">184</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '80g+184g', 168)">80g+184g</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '194g*2', 220)">194g*2</div>
+                    </div>
+                </div>
+
+                <!-- Flavor Selection -->
+                <div class="modal-section">
+                    <label class="modal-label">Flavor</label>
+                    <div class="chip-options">
+                        <div class="chip-option active" onclick="selectModalOption(this, 'flavor', 'Ancient Tree White Tea', 0)">Ancient Tree White Tea</div>
+                    </div>
+                </div>
+
+                <!-- Quantity Selection -->
+                <div class="modal-section quantity-section">
+                    <label class="modal-label">Quantity</label>
+                    <div class="modal-quantity">
+                        <button class="modal-qty-btn" onclick="modalDecrementQuantity()">−</button>
+                        <input type="number" id="modalQuantity" value="1" min="1" max="99" readonly>
+                        <button class="modal-qty-btn" onclick="modalIncrementQuantity()">+</button>
+                    </div>
+                </div>
+
+                <!-- Modal Action Buttons -->
+                <div class="modal-actions">
+                    <button class="modal-buy-btn" onclick="confirmSelection('buy')">Buy Now</button>
+                    <button class="modal-add-btn" onclick="confirmSelection('cart')">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

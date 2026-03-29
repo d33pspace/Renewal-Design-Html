@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Settlement - Tea Shop</title>
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <img src="https://www.figma.com/api/mcp/asset/7ba9c416-b2b6-4f7c-8ff1-faf1cce61e9e" alt="signal" class="icon-signal">
+                <img src="https://www.figma.com/api/mcp/asset/83a45447-d0c7-45a7-bb87-7324f6ca0856" alt="wifi" class="icon-wifi">
+                <div class="battery">
+                    <div class="battery-fill"></div>
+                    <div class="battery-cap"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="page-title">Order Settlement</h1>
+            <div class="header-icons">
+                <button class="icon-btn">
+                    <img src="https://www.figma.com/api/mcp/asset/5ad01e50-02b8-4b81-90d9-bfb429501c7c" alt="">
+                </button>
+                <button class="icon-btn">
+                    <img src="https://www.figma.com/api/mcp/asset/b98af988-1191-4db0-8429-3f337f44deb0" alt="">
+                </button>
+            </div>
+        </header>
+
+        <!-- Delivery Address -->
+        <div class="delivery-address" onclick="selectAddress()">
+            <div class="address-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="white" stroke-width="2"/>
+                    <circle cx="12" cy="10" r="3" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+            <span>Please select a delivery address</span>
+            <svg class="caret" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!-- Product Card -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://www.figma.com/api/mcp/asset/9c2c8d6c-2558-4b72-8548-30edf8950bb2" alt="Product">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Jimi Ancient Tree Shanhong - Red Tea - Ancient Tree - Loose Leaf</h3>
+                <p class="product-spec">Net weight:   50g per box</p>
+                <p class="product-spec">Flavor:   Ancient Tree Sun-dried Red</p>
+                <div class="product-footer">
+                    <span class="product-price">$ 76.00</span>
+                    <span class="product-quantity">1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delivery Time -->
+        <div class="option-row" onclick="selectDeliveryTime()">
+            <span class="option-label">Delivery time</span>
+            <div class="option-value">
+                <span>Anytime</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Order Notes -->
+        <div class="order-notes">
+            <div class="notes-header">
+                <span class="option-label">Order notes</span>
+                <span class="option-value">Optional</span>
+            </div>
+            <p class="notes-hint">it is recommended to communicate and confirm with the merchant before leaving a message</p>
+        </div>
+
+        <!-- Total Product Price -->
+        <div class="price-row">
+            <span class="price-label">Total product price</span>
+            <span class="price-value">$ 76.00</span>
+        </div>
+
+        <!-- Shipping Fee -->
+        <div class="price-row">
+            <span class="price-label">Shipping fee</span>
+            <span class="price-value">$ 0.00</span>
+        </div>
+
+        <!-- Checkout Bar -->
+        <div class="checkout-bar">
+            <div class="total">
+                <span class="total-label">Total:</span>
+                <span class="total-value">$ 76.00</span>
+            </div>
+            <button class="submit-btn" onclick="submitOrder()">Submit Order</button>
+        </div>
+    </div>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>
