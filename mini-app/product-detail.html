@@ -8,61 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <!-- Status Bar -->
-        <div class="status-bar">
-            <span class="time">9:41</span>
-            <div class="status-icons">
-                <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor">
-                    <rect x="0" y="2" width="4" height="8" rx="1"/>
-                    <rect x="5" y="1" width="4" height="9" rx="1"/>
-                    <rect x="10" y="0" width="4" height="10" rx="1"/>
-                </svg>
-                <!-- WiFi icon -->
-                <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor">
-                    <path d="M8 10.5C8.82843 10.5 9.5 9.82843 9.5 9C9.5 8.17157 8.82843 7.5 8 7.5C7.17157 7.5 6.5 8.17157 6.5 9C6.5 9.82843 7.17157 10.5 8 10.5Z"/>
-                    <path d="M4.22 6.22C5.22 5.22 6.56 4.5 8 4.5C9.44 4.5 10.78 5.22 11.78 6.22" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                    <path d="M1.5 3.5C3.26 1.74 5.5 0.5 8 0.5C10.5 0.5 12.74 1.74 14.5 3.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                </svg>
-                <div class="battery">
-                    <div class="battery-fill"></div>
-                </div>
-            </div>
-        </div>
-
         <!-- Header -->
         <header class="header">
             <button class="back-btn" onclick="history.back()">
-                <img src="Icons/Phosphor Icons/Property 1=CaretLeft.svg" width="24" height="24" alt="Back">
+                <img src="https://www.figma.com/api/mcp/asset/a1f9bce4-f1b0-4269-bbc2-52a945f6dc99" width="24" height="24" alt="Back">
             </button>
             <h1 class="page-title">Product Details</h1>
-            <div class="header-actions">
-                <button class="icon-btn" onclick="showMore()">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <circle cx="6" cy="12" r="2"/>
-                        <circle cx="12" cy="12" r="2"/>
-                    </svg>
-                </button>
-                <button class="icon-btn" onclick="showQR()">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <circle cx="12" cy="12" r="4"/>
-                        <line x1="12" y1="2" x2="12" y2="5"/>
-                        <line x1="12" y1="19" x2="12" y2="22"/>
-                        <line x1="2" y1="12" x2="5" y2="12"/>
-                        <line x1="19" y1="12" x2="22" y2="12"/>
-                    </svg>
-                </button>
-            </div>
         </header>
 
-        <!-- Hero Product Image -->
+        <!-- Hero Product Image with Price -->
         <div class="product-hero">
-            <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product">
-        </div>
-
-        <!-- Price Banner -->
-        <div class="price-banner">
-            <span class="price-text">$ 58.00</span>
+            <img src="https://www.figma.com/api/mcp/asset/885c98c8-19fb-4f96-b6f9-5f2530108b5c" alt="Product">
+            <div class="price-banner">
+                <span class="price-text">$ 58.00</span>
+            </div>
         </div>
 
         <!-- Product Info -->
@@ -76,71 +35,300 @@
             <div class="info-row" onclick="openSpecModal('cart')">
                 <span class="info-label">Select</span>
                 <span class="info-value" id="specSummaryText">Product Specification</span>
-                <img class="info-arrow" src="Icons/Phosphor Icons/Property 1=CaretRight.svg" width="20" height="20" alt="">
             </div>
             <div class="info-row" onclick="showShipping()">
                 <span class="info-label">Ship</span>
                 <span class="info-value">to  Address</span>
-                <img class="info-arrow" src="Icons/Phosphor Icons/Property 1=CaretRight.svg" width="20" height="20" alt="">
             </div>
-            <div class="info-row" onclick="showService()">
+            <div class="info-row">
                 <span class="info-label">Service</span>
                 <div class="info-value service-list">
                     <span>Hassle-Free Return</span>
                     <span>Fast Refund</span>
                     <span>Free Shipping</span>
-                </div>
-                <img class="info-arrow" src="Icons/Phosphor Icons/Property 1=CaretRight.svg" width="20" height="20" alt="">
-            </div>
-        </div>
-
-        <!-- Specifications -->
-        <div class="section">
-            <h3 class="section-title">Specifications</h3>
-            <div class="specs-list">
-                <div class="spec-item">
-                    <span class="spec-label">Net Weight</span>
-                    <span class="spec-value">120g (6 dragon balls)</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Tea Type</span>
-                    <span class="spec-value">Raw Pu-erh (Sheng)</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Origin</span>
-                    <span class="spec-value">Bingdao, Yunnan, China</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Harvest Year</span>
-                    <span class="spec-value">2023 Spring</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Storage</span>
-                    <span class="spec-value">Cool, dry place</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Shelf Life</span>
-                    <span class="spec-value">Improves with age</span>
+                    <span>Quality Assurance</span>
                 </div>
             </div>
         </div>
 
-        <!-- Product Detail Images (editorial scroll content) -->
-        <div class="detail-images">
-            <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product Detail">
-            <img src="https://www.figma.com/api/mcp/asset/4ffe85dc-af28-4853-9458-d9d2581a1e27" alt="Product Detail">
-            <img src="https://www.figma.com/api/mcp/asset/a2ba7b08-50f2-4cc7-93fc-da48f6c3d619" alt="Product Detail">
-            <img src="https://www.figma.com/api/mcp/asset/c69f17fd-9dd0-4e72-8fc3-82d306aeca63" alt="Product Detail">
+        <!-- Details Section -->
+        <div class="section details-section">
+            <div class="details-header">
+                <h3 class="section-title">Details</h3>
+                <img src="https://www.figma.com/api/mcp/asset/5e97dbea-5d84-4918-894e-0e7e7f78b279" width="32" height="32" alt="" class="details-arrow">
+            </div>
+            <div class="details-list">
+                <div class="detail-row">
+                    <span class="detail-label">Suitable for</span>
+                    <span class="detail-value">All</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Shape</span>
+                    <span class="detail-value">Tea Cake</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Tea Region</span>
+                    <span class="detail-value">LinCang Tea Region</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Applicable Scenarios</span>
+                    <span class="detail-value">Office&amp;Commute, Daily Home Use, Gift-Giving, Health Preservation, Tea Tasting</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Origin</span>
+                    <span class="detail-value">Yunnan Province</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Production Process</span>
+                    <span class="detail-value">White Tea Round Cake</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Manufacturer</span>
+                    <span class="detail-value">ShuangJiang Ancient Tea Vally tea factory</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Recommended</span>
+                    <span class="detail-value">Tea Ware Gaiwan</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Packaging</span>
+                    <span class="detail-value">Method   Individual Packaging</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Product Specifications</span>
+                    <span class="detail-value">8 pieces per pack, 10 packs per small box, 23 packs per large box</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Shelf Life</span>
+                    <span class="detail-value">Can be stored for an extended period under normal standard conditions</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Storage Method</span>
+                    <span class="detail-value">Keep away from odors, moisture, and direct sunlight</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Food Production License Number</span>
+                    <span class="detail-value">SC11453092525708</span>
+                </div>
+            </div>
+            <p class="details-description">"Ancient Tree White Tea", also known as Moonlight White, is a special type of tea originating from Yunnan Province, China. It is made from tender leaves and buds harvested from high mountains. The production process emphasizes handcrafting and natural fermentation, preserving the tea's natural characteristics, and is completed through sunlight drying.</p>
+        </div>
+
+        <!-- Source Section -->
+        <div class="editorial-section">
+            <div class="editorial-image rounded">
+                <img src="https://www.figma.com/api/mcp/asset/c35a9c3b-ea05-4620-84d9-0a940966202f" alt="Source">
+            </div>
+            <h3 class="editorial-title">Source</h3>
+            <p class="editorial-text">It is made from one bud and two or three leaves from ancient high mountain trees. The climate and soil conditions in Yunnan Province provide an excellent environment for the growth of white tea.</p>
+        </div>
+
+        <!-- Appearance Section -->
+        <div class="editorial-section shaded">
+            <div class="editorial-image rounded">
+                <img src="https://www.figma.com/api/mcp/asset/2b78994d-56ea-4334-83a0-041e014903fe" alt="Appearance">
+            </div>
+            <h3 class="editorial-title">Appearance</h3>
+            <p class="editorial-text">It has a small, round cake-like shape, tightly compressed and evenly formed. The bud heads are plump, with silvery-white pekoe that is neat and well-proportioned.</p>
+        </div>
+
+        <!-- Flavor Section -->
+        <div class="editorial-section">
+            <div class="editorial-image rounded">
+                <img src="https://www.figma.com/api/mcp/asset/92d4f711-f6f6-470b-ac96-deefa4933a14" alt="Flavor">
+            </div>
+            <h3 class="editorial-title">Flavor</h3>
+            <p class="editorial-text">The tea liquor is full-bodied, rich, mellow, and refreshing, with floral, fruity, and honey-like aromas, and it possesses a relatively gentle character.</p>
+        </div>
+
+        <!-- Tea Crafting Section -->
+        <div class="crafting-section">
+            <h2 class="crafting-main-title">Tea Crafting</h2>
+
+            <div class="crafting-item shaded">
+                <h3 class="crafting-title">Picking</h3>
+                <div class="crafting-image">
+                    <img src="https://www.figma.com/api/mcp/asset/1075c8ae-017b-47a1-9bb3-91cfa724588b" alt="Picking">
+                </div>
+                <p class="crafting-text">It is made from one bud and two or three leaves from ancient high mountain trees. The climate and soil conditions in Yunnan Province provide an excellent environment for the growth of white tea.</p>
+            </div>
+
+            <div class="crafting-item">
+                <h3 class="crafting-title">Withering</h3>
+                <div class="crafting-image">
+                    <img src="https://www.figma.com/api/mcp/asset/59a2540d-3e77-4f42-895e-7356939c884e" alt="Withering">
+                </div>
+                <p class="crafting-text">After harvesting, the tea leaves are spread out and naturally sun-dried, allowing them to gradually lose moisture, soften, and undergo a certain degree of oxidation. This process helps make the tea leaves easier to roll and ferment.</p>
+            </div>
+
+            <div class="crafting-item shaded">
+                <h3 class="crafting-title">Sun-drying</h3>
+                <div class="crafting-image">
+                    <img src="https://www.figma.com/api/mcp/asset/fdf10691-8cd2-497f-bb71-f75ccf1ebf32" alt="Sun-drying">
+                </div>
+                <p class="crafting-text">After sprinkling with water, the tea leaves are covered with burlap to promote the action of enzymes. This helps increase the temperature and humidity of the tea leaves while preventing clumping and overheating at the core.</p>
+            </div>
+        </div>
+
+        <!-- Quality Characteristics Section -->
+        <div class="characteristics-section">
+            <h2 class="characteristics-main-title">Quality Characteristics<br>of Ancient Tree White Tea</h2>
+
+            <div class="characteristic-item">
+                <img src="https://www.figma.com/api/mcp/asset/0c802d6a-605d-4895-bd0f-002922d67e76" width="60" height="60" alt="" class="characteristic-icon">
+                <h4 class="characteristic-title">Appearance</h4>
+                <p class="characteristic-text">Ancient tree white tea is made from vine shoot buds, resulting in slender, elongated leaves. The bud heads are plump, covered in silvery-white pekoe, with a neat and well-proportioned appearance and high sweetness.</p>
+            </div>
+
+            <div class="characteristic-item">
+                <img src="https://www.figma.com/api/mcp/asset/c80f4511-2ffe-4740-b609-c3418cf9110c" width="60" height="60" alt="" class="characteristic-icon">
+                <h4 class="characteristic-title">Aroma</h4>
+                <p class="characteristic-text">It has a fresh and rich fragrance with notes of floral, fruity, and honey-like scents.</p>
+            </div>
+
+            <div class="characteristic-item">
+                <img src="https://www.figma.com/api/mcp/asset/13a9554e-0dd5-428a-8c59-0f48d4ad4d7e" width="60" height="60" alt="" class="characteristic-icon">
+                <h4 class="characteristic-title">Tea Liquor</h4>
+                <p class="characteristic-text">The liquor of Moonlight White tea presents a pale yellow to amber hue, clear and bright.</p>
+            </div>
+
+            <div class="characteristic-item">
+                <img src="https://www.figma.com/api/mcp/asset/0eb848e6-8ced-4907-877b-2628ca057718" width="60" height="60" alt="" class="characteristic-icon">
+                <h4 class="characteristic-title">Infusion Resistance</h4>
+                <p class="characteristic-text">From the 2nd to 3rd infusion, the inner substances begin to release, with noticeable sweetness. This can last until around the 20th infusion. After the 20th infusion, the color of the liquor gradually lightens, the sweetness diminishes, and a watery taste emerges.</p>
+            </div>
+        </div>
+
+        <!-- Service Commitment Section -->
+        <div class="commitment-section">
+            <img src="https://www.figma.com/api/mcp/asset/559c781d-418d-4212-8ff4-1feed592375e" width="60" height="60" alt="" class="commitment-icon">
+            <h3 class="commitment-title">Service Commitment</h3>
+            <p class="commitment-text">We operate with integrity as our foundation and are committed to providing you with high-quality ancient tree white tea. If you have any questions or needs, please feel free to contact our customer service team. We are dedicated to serving you wholeheartedly. Thank you for choosing our products and joining us in savoring the unique charm of white tea.</p>
+        </div>
+
+        <!-- Tea Brewing Guide -->
+        <div class="brewing-section">
+            <h2 class="brewing-main-title">Tea Brewing Guide</h2>
+
+            <div class="brewing-step">
+                <div class="brewing-step-image">
+                    <img src="https://www.figma.com/api/mcp/asset/3c54a80b-13fc-425b-bc52-3ddd2151022a" alt="Step 1">
+                    <span class="step-label">Step 1</span>
+                </div>
+                <div class="brewing-step-content">
+                    <h4>Warming the Teacup</h4>
+                    <p>Allow the tea set to heat evenly.</p>
+                </div>
+            </div>
+
+            <div class="brewing-step">
+                <div class="brewing-step-image">
+                    <img src="https://www.figma.com/api/mcp/asset/1b5e2d45-f58b-41c8-b892-270ee3b0c730" alt="Step 2">
+                    <span class="step-label">Step 2</span>
+                </div>
+                <div class="brewing-step-content">
+                    <h4>Adding Tea</h4>
+                    <p>It is recommended to place 5-8 grams of tea leaves into the gaiwan (lidded bowl).</p>
+                </div>
+            </div>
+
+            <div class="brewing-step">
+                <div class="brewing-step-image">
+                    <img src="https://www.figma.com/api/mcp/asset/8ab5e709-aaa9-4e08-a17f-c175977c1c9e" alt="Step 3">
+                    <span class="step-label">Step 3</span>
+                </div>
+                <div class="brewing-step-content">
+                    <h4>Rinsing the Tea</h4>
+                    <p>Discard the initial rinse water. Water temperature should be 90-95°C.</p>
+                </div>
+            </div>
+
+            <div class="brewing-step">
+                <div class="brewing-step-image">
+                    <img src="https://www.figma.com/api/mcp/asset/b07c0724-ea0c-4a85-a603-6b474dc62a59" alt="Step 4">
+                    <span class="step-label">Step 4</span>
+                </div>
+                <div class="brewing-step-content">
+                    <h4>Brewing</h4>
+                    <p>Pour in hot water at 90-95°C and let it steep for 3-5 seconds.</p>
+                </div>
+            </div>
+
+            <div class="brewing-step">
+                <div class="brewing-step-image">
+                    <img src="https://www.figma.com/api/mcp/asset/dfecb316-91af-4aff-92ea-bb95e06e5a1b" alt="Step 5">
+                    <span class="step-label">Step 5</span>
+                </div>
+                <div class="brewing-step-content">
+                    <h4>Pouring the Tea</h4>
+                    <p>Pour the brewed tea into the fairness cup.</p>
+                </div>
+            </div>
+
+            <div class="brewing-step">
+                <div class="brewing-step-image">
+                    <img src="https://www.figma.com/api/mcp/asset/0ccbb60e-c7ad-46d8-8ff5-b00be2f0e171" alt="Step 6">
+                    <span class="step-label">Step 6</span>
+                </div>
+                <div class="brewing-step-content">
+                    <h4>Serving and Tasting</h4>
+                    <p>Observe the color of the tea, inhale its aroma, and savor the exquisite flavor.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Friendly Reminder -->
+        <div class="reminder-section">
+            <h3 class="reminder-title">Friendly Reminder</h3>
+            <p class="reminder-text">This tea can be steeped continuously 10–15 times. For each subsequent infusion, extend the steeping time by 5–10 seconds. Using mineral or purified water for brewing is recommended for better flavor. For black tea and white tea, the recommended tea-to-water ratio is 1:50. For raw Pu-erh and ripe Pu-erh, a tea-to-water ratio of 1:20–1:25 is suggested.</p>
+        </div>
+
+        <!-- A taste of nature and history -->
+        <div class="editorial-section">
+            <div class="editorial-image rounded">
+                <img src="https://www.figma.com/api/mcp/asset/b964a8b1-3983-42bf-9ff9-49763295ede2" alt="A taste of nature and history">
+            </div>
+            <h3 class="editorial-title large">A taste of nature<br>and history</h3>
+            <p class="editorial-text">Traveling through millennia, Ancient Tree White Tea carries a unique character and quality. Each leaf is a witness to time, every drop of tea a result of meticulous care. Rich in texture, lingering in sweetness, and abundant in aroma—savor the ancient charm and experience the profound allure of white tea. In dialogue with time, in harmony with nature, Ancient Tree White Tea embodies the elegance of enduring years.</p>
+        </div>
+
+        <!-- Bold and rich like a vintage wine -->
+        <div class="editorial-section shaded">
+            <div class="editorial-image rounded overlay-dark">
+                <img src="https://www.figma.com/api/mcp/asset/21cac5f0-f3cf-4126-a90f-143e6ee63581" alt="Bold and rich like a vintage wine">
+            </div>
+            <h3 class="editorial-title large">Bold and rich<br>like a vintage wine</h3>
+            <p class="editorial-text">We adhere to traditional methods, carefully sun-drying the tea leaves under natural sunlight. This process not only gives the tea its distinctive appearance but also preserves its rich and complex flavors within.</p>
+        </div>
+
+        <!-- The whisper of ancient trees -->
+        <div class="editorial-section">
+            <div class="editorial-image rounded overlay-dark">
+                <img src="https://www.figma.com/api/mcp/asset/5411bb91-72b7-4c11-8c2e-50ca579e8f7a" alt="The whisper of ancient trees">
+            </div>
+            <h3 class="editorial-title large">The whisper<br>of ancient trees</h3>
+            <p class="editorial-text">Pure and rich liquor, clear and bright in appearance, with a mellow texture and long-lasting sweet aftertaste. Each sip of Ancient Tree White Tea is a taste of nature, and every leaf is a tribute to history.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-section">
+            <img src="https://www.figma.com/api/mcp/asset/66980783-c5df-497a-b645-4c9a1da1a1cd" width="60" height="60" alt="" class="footer-icon">
+            <p class="footer-quote">After the rain clears and the wind stills, the awakened sunlight heralds a new day</p>
         </div>
 
         <!-- Bottom Action Bar -->
         <div class="action-bar">
-            <button class="action-icon-btn" onclick="contactSupport()" title="Contact Support">
-                <img src="Icons/Phosphor Icons/Property 1=Headset.svg" width="24" height="24" alt="Contact Support">
-            </button>
-            <button class="action-icon-btn" onclick="goToCart()" title="Shopping Cart">
-                <img src="Icons/Phosphor Icons/Property 1=ShoppingCart.svg" width="24" height="24" alt="Shopping Cart">
-            </button>
+            <div class="action-bar-icons">
+                <button class="action-icon-btn" onclick="contactSupport()" title="Contact Support">
+                    <img src="https://www.figma.com/api/mcp/asset/12dcb169-fb69-4853-90dd-00eeae9a765d" width="24" height="24" alt="Support">
+                </button>
+                <button class="action-icon-btn" onclick="goToCart()" title="Shopping Cart">
+                    <img src="https://www.figma.com/api/mcp/asset/c38b5441-6ef5-42f3-b6f4-366f1534cd80" width="24" height="24" alt="Cart">
+                </button>
+                <button class="action-icon-btn" onclick="shareProduct()" title="Share">
+                    <img src="https://www.figma.com/api/mcp/asset/5f6c0091-4194-4a5b-b625-c8cc89faeda4" width="24" height="24" alt="Share">
+                </button>
+            </div>
             <button class="add-to-cart-btn" onclick="openSpecModal('cart')">
                 Add to cart
             </button>
@@ -151,16 +339,16 @@
             <div class="modal-backdrop" onclick="closeSpecModal()"></div>
             <div class="modal-content">
                 <button class="modal-close" onclick="closeSpecModal()">
-                    <img src="Icons/Phosphor Icons/Property 1=Phosphor Icons, Property 2=X.svg" width="20" height="20" alt="Close">
+                    <img src="https://www.figma.com/api/mcp/asset/d861a09a-c8c6-48b6-be0d-945c3ff3e765" width="24" height="24" alt="Close">
                 </button>
 
                 <!-- Modal Product Preview -->
                 <div class="modal-product-preview">
-                    <img src="https://www.figma.com/api/mcp/asset/9c2f96f3-e9e8-45ce-b9e3-8e642ff97d21" alt="Product" id="modalProductImage">
+                    <img src="https://www.figma.com/api/mcp/asset/0e1dade8-0689-444c-9b6b-31f381d90a33" alt="Product" id="modalProductImage">
                     <div class="modal-product-info">
-                        <p class="modal-product-price" id="modalPrice">$ 58.00</p>
-                        <p class="modal-product-stock">Stock: <span class="stock-count">30</span>.</p>
-                        <p class="modal-product-selected">Selected: <span id="modalSelectedText">80g<br>Ancient Tree White Tea</span>.</p>
+                        <p class="modal-product-price" id="modalPrice">$ 100.00</p>
+                        <p class="modal-product-stock">Stock: <span class="stock-count">20</span>.</p>
+                        <p class="modal-product-selected">Selected: <span id="modalSelectedText">100g<br>Ancient Tree Raw Tea</span>.</p>
                     </div>
                 </div>
 
@@ -168,11 +356,8 @@
                 <div class="modal-section">
                     <label class="modal-label">Net Weight</label>
                     <div class="chip-options">
-                        <div class="chip-option active" onclick="selectModalOption(this, 'weight', '80g', 58)">80g</div>
-                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '80g*2', 108)">80g*2</div>
-                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '184', 120)">184</div>
-                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '80g+184g', 168)">80g+184g</div>
-                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '194g*2', 220)">194g*2</div>
+                        <div class="chip-option active" onclick="selectModalOption(this, 'weight', '100g', 100)">100g</div>
+                        <div class="chip-option" onclick="selectModalOption(this, 'weight', '100g*2', 188)">100g*2</div>
                     </div>
                 </div>
 
@@ -180,7 +365,7 @@
                 <div class="modal-section">
                     <label class="modal-label">Flavor</label>
                     <div class="chip-options">
-                        <div class="chip-option active" onclick="selectModalOption(this, 'flavor', 'Ancient Tree White Tea', 0)">Ancient Tree White Tea</div>
+                        <div class="chip-option active" onclick="selectModalOption(this, 'flavor', 'Ancient Tree Raw Tea', 0)">Ancient Tree Raw Tea</div>
                     </div>
                 </div>
 
@@ -188,16 +373,15 @@
                 <div class="modal-section quantity-section">
                     <label class="modal-label">Quantity</label>
                     <div class="modal-quantity">
-                        <button class="modal-qty-btn" onclick="modalDecrementQuantity()">−</button>
-                        <input type="number" id="modalQuantity" value="1" min="1" max="99" readonly>
-                        <button class="modal-qty-btn" onclick="modalIncrementQuantity()">+</button>
+                        <button class="modal-qty-btn minus" onclick="modalDecrementQuantity()">-</button>
+                        <span class="modal-qty-display" id="modalQuantity">1</span>
+                        <button class="modal-qty-btn plus" onclick="modalIncrementQuantity()">+</button>
                     </div>
                 </div>
 
-                <!-- Modal Action Buttons -->
+                <!-- Modal Action Button -->
                 <div class="modal-actions">
-                    <button class="modal-buy-btn" onclick="confirmSelection('buy')">Buy Now</button>
-                    <button class="modal-add-btn" onclick="confirmSelection('cart')">Add To Cart</button>
+                    <button class="modal-add-btn" onclick="confirmSelection('cart')">Add to cart</button>
                 </div>
             </div>
         </div>

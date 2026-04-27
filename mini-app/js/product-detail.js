@@ -2,67 +2,37 @@
 
 // Weight options with prices
 const weightOptions = {
-    '80g': 58,
-    '80g*2': 108,
-    '184': 120,
-    '80g+184g': 168,
-    '194g*2': 220
+    '100g': 100,
+    '100g*2': 188
 };
 
 // Modal data
 let modalData = {
-    weight: '80g',
-    weightPrice: 58,
-    flavor: 'Ancient Tree White Tea',
-    quantity: 1,
-    action: 'cart'
+    weight: '100g',
+    weightPrice: 100,
+    flavor: 'Ancient Tree Raw Tea',
+    quantity: 1
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Update time in status bar
-    function updateTime() {
-        const now = new Date();
-        const hours = now.getHours();
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const timeElement = document.querySelector('.time');
-        if (timeElement) {
-            timeElement.textContent = `${hours}:${minutes}`;
-        }
-    }
-    updateTime();
-    setInterval(updateTime, 60000);
+    // No status bar to update
 });
-
-// Header actions
-function showMore() {
-    showToast('More options');
-}
-
-function showQR() {
-    showToast('QR Scanner');
-}
 
 // Info row actions
 function showShipping() {
     showToast('Shipping to your address');
 }
 
-function showService() {
-    showToast('Hassle-Free Return · Fast Refund · Free Shipping');
-}
-
 // Open specification modal
-function openSpecModal(action) {
-    modalData.action = action || 'cart';
-
+function openSpecModal() {
     // Reset to defaults
-    modalData.weight = '80g';
-    modalData.weightPrice = 58;
-    modalData.flavor = 'Ancient Tree White Tea';
+    modalData.weight = '100g';
+    modalData.weightPrice = 100;
+    modalData.flavor = 'Ancient Tree Raw Tea';
     modalData.quantity = 1;
 
     // Reset UI
-    document.getElementById('modalQuantity').value = 1;
+    document.getElementById('modalQuantity').textContent = '1';
 
     // Reset chip selections
     var allChips = document.querySelectorAll('.chip-option');
@@ -111,31 +81,21 @@ function selectModalOption(element, type, value, price) {
 // Update modal display
 function updateModalDisplay() {
     document.getElementById('modalPrice').textContent = '$ ' + modalData.weightPrice.toFixed(2);
-    document.getElementById('modalSelectedText').innerHTML = modalData.weight + '<br>' + modalData.flavor;
-
-    // Update spec summary in main page
-    var specSummary = document.getElementById('specSummaryText');
-    if (specSummary) {
-        specSummary.textContent = 'Product Specification';
-    }
+    document.getElementById('modalSelectedText').innerHTML = modalData.weight + ' ' + modalData.flavor;
 }
 
 // Modal quantity controls
 function modalIncrementQuantity() {
-    var input = document.getElementById('modalQuantity');
-    var val = parseInt(input.value);
-    if (val < 99) {
-        input.value = val + 1;
-        modalData.quantity = val + 1;
+    if (modalData.quantity < 20) {
+        modalData.quantity++;
+        document.getElementById('modalQuantity').textContent = modalData.quantity;
     }
 }
 
 function modalDecrementQuantity() {
-    var input = document.getElementById('modalQuantity');
-    var val = parseInt(input.value);
-    if (val > 1) {
-        input.value = val - 1;
-        modalData.quantity = val - 1;
+    if (modalData.quantity > 1) {
+        modalData.quantity--;
+        document.getElementById('modalQuantity').textContent = modalData.quantity;
     }
 }
 
@@ -149,29 +109,11 @@ function confirmSelection(action) {
         weight: modalData.weight,
         flavor: modalData.flavor,
         quantity: modalData.quantity,
-        total: total,
-        action: action
+        total: total
     });
 
     closeSpecModal();
-
-    if (action === 'buy') {
-        setTimeout(function() {
-            var confirmed = confirm(
-                'Proceed to checkout?\n\n' +
-                'Product: ' + productName + '\n' +
-                'Weight: ' + modalData.weight + '\n' +
-                'Flavor: ' + modalData.flavor + '\n' +
-                'Quantity: ' + modalData.quantity + '\n' +
-                'Total: $' + total
-            );
-            if (confirmed) {
-                window.location.href = 'checkout.html';
-            }
-        }, 300);
-    } else {
-        showToast('Added ' + modalData.quantity + ' item(s) to cart!');
-    }
+    showToast('Added ' + modalData.quantity + ' item(s) to cart!');
 }
 
 // Contact support
@@ -182,6 +124,11 @@ function contactSupport() {
 // Go to cart
 function goToCart() {
     window.location.href = 'shopping-cart.html';
+}
+
+// Share product
+function shareProduct() {
+    showToast('Share link copied!');
 }
 
 // Show toast notification
