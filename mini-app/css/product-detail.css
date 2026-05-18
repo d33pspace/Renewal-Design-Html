@@ -252,7 +252,11 @@ body {
 }
 
 .editorial-image.rounded {
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.editorial-image.diagonal {
+    border-radius: 16px 0 16px 0;
 }
 
 .editorial-image.overlay-dark {
@@ -266,15 +270,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
+    background: linear-gradient(to top, rgba(30, 20, 20, 0.5) 0%, transparent 60%);
+    border-radius: inherit;
 }
 
 .editorial-image img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px;
+    border-radius: inherit;
 }
 
 .editorial-title {
@@ -292,7 +296,7 @@ body {
 
 .editorial-text {
     font-family: 'Roboto Slab', serif;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--tea-dark-grey);
     line-height: 1.6;
 }

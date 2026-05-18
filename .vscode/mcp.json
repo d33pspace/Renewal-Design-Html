@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp", "--figma-api-key=PASTE_YOUR_TOKEN_HERE"],
+      "type": "stdio"
+    }
+  }
+}
