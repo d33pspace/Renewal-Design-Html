@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Item data
     const items = [
-        { id: 'item1', price: 126.00, name: '茶叶冰岛道-普洱茶-古树-龙珠' },
-        { id: 'item2', price: 76.00, name: '茶叶古树普红-红茶-古树-散茶' }
+        { id: 'item1', price: 100.00, name: 'Jimi Bingdao Nanpo - Pu-erh Tea - Ancient Tree - Dragon Ball' },
+        { id: 'item2', price: 76.00, name: 'Jimi Ancient Tree Shanhong - Red Tea - Ancient Tree - Loose Leaf' }
     ];
 
     // Calculate total price
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        totalPriceElement.textContent = `¥${total.toFixed(2)}`;
-        checkoutBtn.textContent = `去结算(${checkedCount})`;
+        totalPriceElement.textContent = `$ ${total.toFixed(2)}`;
+        checkoutBtn.textContent = `Checkout`;
         
         return checkedCount;
     }
@@ -91,12 +91,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         if (checkedItems.length === 0) {
-            alert('请选择要结算的商品');
+            alert('Please select items to checkout.');
             return;
         }
         
-        console.log('准备结算:', checkedItems);
-        alert(`准备结算 ${checkedItems.length} 件商品`);
+        console.log('Checkout:', checkedItems);
+        window.location.href = 'checkout.html';
         // Here you would normally redirect to checkout page or trigger checkout process
     });
 
