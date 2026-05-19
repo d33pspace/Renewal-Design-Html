@@ -31,59 +31,7 @@ body {
     padding-bottom: 80px;
 }
 
-/* Status Bar */
-.status-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 16px 8px;
-    height: 47px;
-}
-
-.time {
-    font-family: 'SF Pro Text', -apple-system, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--tea-dark-grey);
-}
-
-.status-icons {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.icon-signal, .icon-wifi {
-    width: 18px;
-    height: 12px;
-}
-
-.battery {
-    width: 27px;
-    height: 13px;
-    border: 2px solid rgba(60, 60, 60, 0.35);
-    border-radius: 3px;
-    position: relative;
-    padding: 2px;
-}
-
-.battery-fill {
-    width: 80%;
-    height: 100%;
-    background-color: var(--tea-dark-grey);
-    border-radius: 1px;
-}
-
-.battery-cap {
-    position: absolute;
-    right: -3px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2px;
-    height: 4px;
-    background-color: rgba(60, 60, 60, 0.35);
-    border-radius: 0 2px 2px 0;
-}
+/* Status Bar removed */
 
 /* Header */
 .header {
@@ -98,9 +46,14 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-    color: var(--tea-dark-grey);
     display: flex;
     align-items: center;
+}
+
+.back-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 .page-title {
@@ -153,7 +106,7 @@ body {
     flex-shrink: 0;
 }
 
-.address-icon svg {
+.address-icon img {
     width: 20px;
     height: 20px;
 }
@@ -165,10 +118,14 @@ body {
     color: var(--tea-dark-grey);
 }
 
+.icon-white {
+    filter: brightness(0) invert(1);
+}
+
 .delivery-address .caret {
     width: 24px;
     height: 24px;
-    color: #999;
+    opacity: 0.5;
 }
 
 /* Product Card */
@@ -264,10 +221,10 @@ body {
     letter-spacing: -0.43px;
 }
 
-.option-value svg {
+.option-value img {
     width: 24px;
     height: 24px;
-    color: #999;
+    opacity: 0.5;
 }
 
 /* Order Notes */
