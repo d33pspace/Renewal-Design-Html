@@ -125,38 +125,26 @@ body {
     position: relative;
 }
 
-.checkbox-label::before {
-    content: '';
+.checkbox-label .check-off,
+.checkbox-label .check-on {
     display: block;
     width: 20px;
     height: 20px;
-    border: 1.5px solid #ccc;
-    border-radius: 50%;
-    background: #fff;
-    transition: all 0.2s;
-}
-
-.checkbox-label::after {
-    content: '';
-    display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg) scale(0);
-    width: 5px;
-    height: 8px;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transition: transform 0.2s;
+    top: 0;
+    left: 0;
 }
 
-.item-checkbox input[type="checkbox"]:checked + .checkbox-label::before {
-    background: #28785a;
-    border-color: #28785a;
+.checkbox-label .check-on {
+    display: none;
 }
 
-.item-checkbox input[type="checkbox"]:checked + .checkbox-label::after {
-    transform: translate(-60%, -65%) rotate(45deg) scale(1);
+.item-checkbox input[type="checkbox"]:checked + .checkbox-label .check-off {
+    display: none;
+}
+
+.item-checkbox input[type="checkbox"]:checked + .checkbox-label .check-on {
+    display: block;
 }
 
 /* Item Image */
@@ -353,45 +341,27 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
+    position: relative;
 }
 
-.select-all-label::before {
-    content: '';
+.select-all-label .check-off,
+.select-all-label .check-on {
     display: block;
     width: 20px;
     height: 20px;
-    border: 1.5px solid #ccc;
-    border-radius: 50%;
-    background: #fff;
     flex-shrink: 0;
-    transition: all 0.2s;
 }
 
-.select-all-label::after {
-    content: '';
+.select-all-label .check-on {
+    display: none;
+}
+
+#selectAll:checked + .select-all-label .check-off {
+    display: none;
+}
+
+#selectAll:checked + .select-all-label .check-on {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translate(-50%, -65%) rotate(45deg) scale(0);
-    width: 5px;
-    height: 8px;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transition: transform 0.2s;
-}
-
-#selectAll:checked + .select-all-label::before {
-    background: #28785a;
-    border-color: #28785a;
-}
-
-#selectAll:checked + .select-all-label::after {
-    transform: translate(-50%, -65%) rotate(45deg) scale(1);
-}
-
-.select-all-label {
-    position: relative;
 }
 
 .select-all-text {
