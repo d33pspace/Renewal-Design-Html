@@ -72,12 +72,22 @@ body {
     overflow: hidden;
     border: 3px solid white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #465a6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.avatar-icon {
+    width: 48px !important;
+    height: 48px !important;
+    filter: brightness(0) invert(1);
 }
 
 .user-name {
@@ -117,10 +127,12 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.action-card svg {
+.action-card svg,
+.action-card img {
     width: 28px;
     height: 28px;
     color: var(--tea-dark-blue);
+    filter: invert(33%) sepia(20%) saturate(600%) hue-rotate(165deg) brightness(90%) contrast(90%);
 }
 
 .action-card span {
@@ -230,9 +242,18 @@ body {
     transition: color 0.2s ease;
 }
 
-.nav-item svg {
+.nav-item svg,
+.nav-item img {
     width: 24px;
     height: 24px;
+}
+
+.nav-item img {
+    filter: invert(23%) sepia(10%) saturate(500%) hue-rotate(165deg) brightness(90%) contrast(90%);
+}
+
+.nav-item.active img {
+    filter: invert(33%) sepia(20%) saturate(600%) hue-rotate(165deg) brightness(90%) contrast(90%);
 }
 
 .nav-item span {
